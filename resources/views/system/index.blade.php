@@ -33,19 +33,7 @@
 
         @php
         $moduli = array(
-          array('system/narudzbe', 'Narudžbe', 'shopping-cart'),  
-          array('system/categories', 'Kategorije', 'folder'),
-          array('system/brands', 'Brend', 'bandcamp'),
-          array('system/proizvodi', 'Proizvodi', 'product-hunt'),
-          array('system/varijante', 'Varijante', 'check'),
-          array('system/podesavanja/1/edit', 'Podešavanja', 'cogs'),
-          array('system/slajder', 'Slajder', 'desktop'),
-          array('system/content', 'Sadrzaj', 'file-o'),
-          array('system/tekstovi', 'Tekstovi', 'font'),
-          array('system/baner', 'Baner', 'window-maximize'),
           array('system/users', 'Korisnici', 'users'),
-          array('system/discount/1/edit', 'Popusti', 'dollar'),
-          array('system/boja', 'Boje', 'tint'),
         );
         @endphp
 
