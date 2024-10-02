@@ -16,3 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes(['verify' => false, 'register' => false]);
+
+Route::group(['prefix' => 'system', 'middleware' => ['auth', 'active']], function() {
+
+    Route::get('/', function () { return view('system.index'); });
+    
+    Route::resource('users', 'App\Http\Controllers\UsersController')->except('show');
+    Route::post('users/ajax', 'App\Http\Controllers\UsersController@ajax');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
