@@ -1,11 +1,11 @@
-@extends('system.layout.container')
+@extends('cms.layout.container')
 
 @section('content')
 
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="{{ url('system') }}">POČETNA</a>
+        <a href="{{ url('cms') }}">POČETNA</a>
     </li>
     <li class="breadcrumb-item active">Tekstovi</li>
 </ol>
@@ -13,7 +13,7 @@
 <hr>
 <div class="row">
     <div class="col-md-12">
-        <form method="post" action="@if(!$editing) {{ url('system/tekstovi') }} @else {{ url('system/tekstovi/'.$text->id) }} @endif" enctype="multipart/form-data">
+        <form method="post" action="@if(!$editing) {{ url('cms/tekstovi') }} @else {{ url('cms/tekstovi/'.$text->id) }} @endif" enctype="multipart/form-data">
             @csrf
             @if($editing) @method('PUT') @endif
             <div class="row">
@@ -74,8 +74,8 @@
                     <div class="input-file-container" {!! $errors->has('image') ? 'style="border-color:red;"' : '' !!}>
                       <span class="img-placeholder">
                               @if(is_null($text->image))
-                              <a href="{{ asset('systemfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
-                                <img src="{{ asset('systemfiles/images/placeholder-images.jpg') }}" alt="img" id="changeImage">
+                              <a href="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
+                                <img src="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" alt="img" id="changeImage">
                               </a>
                               @else
                               <a href="{{ asset('storage/'.$text->image) }}" data-fancybox="gallery">
@@ -150,7 +150,7 @@
             var xhr, formData;
             xhr = new XMLHttpRequest();
             xhr.withCredentials = false;
-            xhr.open('POST', '{{ url('system/uploadImage') }}');
+            xhr.open('POST', '{{ url('cms/uploadImage') }}');
             var token = '{{ csrf_token() }}';
             xhr.setRequestHeader("X-CSRF-Token", token);
             xhr.setRequestHeader("Accept", "application/json");
@@ -185,7 +185,7 @@
                     $('#tmceGalleryModal').modal('show');
                     $('#tmceGalleryContainer').html('');
                     $.ajax({
-                        url: '{{ url('system/getImages') }}',
+                        url: '{{ url('cms/getImages') }}',
                         type: 'POST',
                         data: {
                             "_token": '{{ csrf_token() }}'
@@ -209,7 +209,7 @@
                     $('#tmceGalleryModal').modal('show');
                     $('#tmceGalleryContainer').html('');
                     $.ajax({
-                        url: '{{ url('system/getImages') }}',
+                        url: '{{ url('cms/getImages') }}',
                         type: 'POST',
                         data: {
                             "_token": '{{ csrf_token() }}'
@@ -235,7 +235,7 @@
             var searchQuery = $('#tmceGallerySearchInput').val();
 
             $.ajax({
-                url: '{{ url('system/getImages') }}',
+                url: '{{ url('cms/getImages') }}',
                 type: 'POST',
                 data: {
                     "searchQuery": searchQuery,

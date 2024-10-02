@@ -12,25 +12,25 @@
 
   <title>CMS</title>
   <!-- Bootstrap core CSS-->
-  <link rel="shortcut icon" href="{{ asset('systemfiles/images/favicon.png') }}" type="image/x-icon" />
-  <link href="{{ asset('systemfiles/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link rel="shortcut icon" href="{{ asset('cmsfiles/images/favicon.png') }}" type="image/x-icon" />
+  <link href="{{ asset('cmsfiles/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="{{ asset('systemfiles/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('cmsfiles/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
   <!-- Page level plugin CSS-->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" />
-  <link href="{{ asset('systemfiles/vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
+  <link href="{{ asset('cmsfiles/vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="{{ asset('systemfiles/css/jquery.datetimepicker.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('systemfiles/css/multi-select.css') }}" rel="stylesheet">
-  <link href="{{ asset('systemfiles/vendor/select2-4.0.13/css/select2.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('systemfiles/vendor/tagEditor/jquery.tag-editor.css') }}" rel="stylesheet">
-  <link href="{{ asset('systemfiles/css/sb-admin.css') }}" rel="stylesheet">
+  <link href="{{ asset('cmsfiles/css/jquery.datetimepicker.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('cmsfiles/css/multi-select.css') }}" rel="stylesheet">
+  <link href="{{ asset('cmsfiles/vendor/select2-4.0.13/css/select2.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('cmsfiles/vendor/tagEditor/jquery.tag-editor.css') }}" rel="stylesheet">
+  <link href="{{ asset('cmsfiles/css/sb-admin.css') }}" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark @if(($_COOKIE['sidenavToggler'] ?? null) == "false") sidenav-toggled @endif" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <a class="navbar-brand" href="{{ url('system') }}">Soft<span>4</span>Tech<span> CMS</span></a>
+    <a class="navbar-brand" href="{{ url('cms') }}">Soft<span>4</span>Tech<span> CMS</span></a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,7 +38,7 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         
         @php
-        $url = 'system';
+        $url = 'cms';
         $title = 'Kontrolna tabla';
         $icon = 'dashboard';
         $active = request()->is($url) ? 'active' : '';
@@ -52,7 +52,7 @@
 
         @php
         $moduli = array(
-            array('m1', 'system/users', 'Korisnici', 'users', ['Lista' => '/', 'Dodaj' => '/create']),
+            array('m1', 'cms/users', 'Korisnici', 'users', ['Lista' => '/', 'Dodaj' => '/create']),
         );
         @endphp
         
@@ -120,4 +120,4 @@
   </nav>
   <div class="content-wrapper">
     <div class="container-fluid">
-    @include('system.partials.messages')
+    @include('cms.partials.messages')

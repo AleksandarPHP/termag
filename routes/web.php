@@ -19,9 +19,9 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => false, 'register' => false]);
 
-Route::group(['prefix' => 'system', 'middleware' => ['auth', 'active']], function() {
+Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function() {
 
-    Route::get('/', function () { return view('system.index'); });
+    Route::get('/', function () { return view('cms.index'); });
     
     Route::resource('users', 'App\Http\Controllers\UsersController')->except('show');
     Route::post('users/ajax', 'App\Http\Controllers\UsersController@ajax');

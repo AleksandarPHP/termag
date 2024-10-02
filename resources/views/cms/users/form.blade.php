@@ -1,10 +1,10 @@
-@extends('system.layout.container')
+@extends('cms.layout.container')
 
 @section('content')
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="{{ url('system') }}">POČETNA</a>
+        <a href="{{ url('cms') }}">POČETNA</a>
     </li>
     <li class="breadcrumb-item active">Korisnici</li>
 </ol>
@@ -12,7 +12,7 @@
 <hr>
 <div class="row">
     <div class="col-md-12">
-        <form method="post" action="@if(!$editing) {{ url('system/users') }} @else {{ url('system/users/'.$user->id) }} @endif">
+        <form method="post" action="@if(!$editing) {{ url('cms/users') }} @else {{ url('cms/users/'.$user->id) }} @endif">
             @csrf
             @if($editing) @method('PUT') @endif
             <div class="row">

@@ -1,10 +1,10 @@
-@extends('system.layout.container')
+@extends('cms.layout.container')
 
 @section('content')
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="{{ url('system') }}">POČETNA</a>
+        <a href="{{ url('cms') }}">POČETNA</a>
     </li>
     <li class="breadcrumb-item active">{{ $title }}</li>
 </ol>

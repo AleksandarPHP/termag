@@ -11,13 +11,13 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>CMS</title>
-  <link rel="shortcut icon" href="{{ asset('systemfiles/images/favicon.png') }}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ asset('cmsfiles/images/favicon.png') }}" type="image/x-icon" />
   <!-- Bootstrap core CSS-->
-  <link href="{{ asset('systemfiles/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('cmsfiles/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="{{ asset('systemfiles/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('cmsfiles/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
-  <link href="{{ asset('systemfiles/css/sb-admin.css') }}" rel="stylesheet">
+  <link href="{{ asset('cmsfiles/css/sb-admin.css') }}" rel="stylesheet">
 </head>
 
 <body class="bg-dark">
@@ -25,7 +25,7 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header login-logo"><b>Soft<span>4</span>tech<span>.cms</span></b> | Login</div>
       <div class="card-body">
-        @include('system.partials.messages')
+        @include('cms.partials.messages')
         <form method="post" action="{{ route('login') }}">
           @csrf
           <div class="form-group">
@@ -48,11 +48,11 @@
     </div>
   </div>
   <!-- Bootstrap core JavaScript-->
-  <script src="{{ asset('systemfiles/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ asset('systemfiles/vendor/popper/popper.min.js') }}"></script>
-  <script src="{{ asset('systemfiles/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('cmsfiles/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('cmsfiles/vendor/popper/popper.min.js') }}"></script>
+  <script src="{{ asset('cmsfiles/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
   <!-- Core plugin JavaScript-->
-  <script src="{{ asset('systemfiles/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+  <script src="{{ asset('cmsfiles/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 </body>
 
 </html>

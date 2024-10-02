@@ -1,10 +1,10 @@
-@extends('system.layout.container')
+@extends('cms.layout.container')
 
 @section('content')
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="{{ url('system') }}">POČETNA</a>
+        <a href="{{ url('cms') }}">POČETNA</a>
     </li>
     <li class="breadcrumb-item active">Korisnici</li>
 </ol>
@@ -83,7 +83,7 @@ $(document).ready(function() {
     "bProcessing": true,
     "serverSide": true,
     "ajax": {
-        url: "{{ url('system/users/ajax') }}",
+        url: "{{ url('cms/users/ajax') }}",
         type: "post",
         headers: {
             'X-CSRF-Token': "{{ csrf_token() }}"

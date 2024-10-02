@@ -1,16 +1,15 @@
-@extends('system.layout.container')
+@extends('cms.layout.container')
 
 @section('content')
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="{{ url('system') }}">POČETNA</a>
+        <a href="{{ url('cms') }}">POČETNA</a>
     </li>
-    <li class="breadcrumb-item active">{{ $title }}</li>
+    <li class="breadcrumb-item active">Tekstovi</li>
 </ol>
-<h1>{{ $title }}</h1>
+<h1>Tekstovi</h1>
 <hr>
-<a href="{{ url('system/'.$route.'/sort') }}"><div class="btn btn-danger mb-3">Sortiraj</div></a>
 <div class="card mb-3">
     <div class="card-header">
         <i class="fa fa-table"></i> Lista</div>
@@ -19,19 +18,15 @@
             <table class="table table-bordered" id="dataTableSSR" width="100%" cellspacing="0">
                 <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Naziv</th>
-                    <th>Podnaslov</th>
-                    <th>Aktivan</th>
-                    <th class="nosort text-center" style="width:80px;">Akcija</th>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Naslov</th>
+                    <th class="nosort text-center">Akcija</th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
-                    <th>ID</th>
-                    <th>Naziv</th>
-                    <th>Podnaslov</th>
-                    <th>Aktivan</th>
+                    <th class="text-center">ID</th>
+                    <th class="text-center">Naslov</th>
                     <th class="nosort text-center">Akcija</th>
                 </tr>
                 </tfoot>
@@ -39,14 +34,16 @@
         </div>
     </div>
 </div>
+
 @endsection
 
 @section('scripts')
+
 <script type="text/javascript">
 $(function() {
    $(document).on('click', '.confirmation', function(e) {
        e.preventDefault();
-       if (confirm('Da li ste sigurni?')) $('#delete-form'+$(this).attr('data-id')).submit();
+       if (confirm('Da li ste sigurni da želite da obrišete ovaj zapis?')) $('#delete-form'+$(this).attr('data-id')).submit();
    });
 });
 
@@ -56,33 +53,27 @@ $(document).ready(function() {
         'bSortable': false,
         'aTargets': ['nosort']
     }],
-    'language': {
-        "sEmptyTable":     "Nema podataka u tabeli",
-        "sInfo":           "Prikaz _START_ do _END_ od ukupno _TOTAL_ zapisa",
-        "sInfoEmpty":      "Prikaz 0 do 0 od ukupno 0 zapisa",
-        "sInfoFiltered":   "(filtrirano od ukupno _MAX_ zapisa)",
-        "sInfoPostFix":    "",
-        "sInfoThousands":  ".",
-        "sLengthMenu":     "Prikaži _MENU_ zapisa",
-        "sLoadingRecords": "Učitavanje...",
-        "sProcessing":     "Obrada...",
-        "sSearch":         "Pretraga:",
-        "sZeroRecords":    "Nisu pronađeni odgovarajući zapisi",
+    "oLanguage": {
+        "sProcessing":   "Procesiranje u toku...",
+        "sLengthMenu":   "Prikaži _MENU_ elemenata",
+        "sZeroRecords":  "Nije pronađen nijedan rezultat",
+        "sInfo":         "Prikaz _START_ do _END_ od ukupno _TOTAL_ elemenata",
+        "sInfoEmpty":    "Prikaz 0 do 0 od ukupno 0 elemenata",
+        "sInfoFiltered": "(filtrirano od ukupno _MAX_ elemenata)",
+        "sInfoPostFix":  "",
+        "sSearch":       "Pretraga:",
+        "sUrl":          "",
         "oPaginate": {
             "sFirst":    "Početna",
-            "sLast":     "Poslednja",
+            "sPrevious": "Prethodna",
             "sNext":     "Sledeća",
-            "sPrevious": "Predhodna"
-        },
-        "oAria": {
-            "sSortAscending":  ": aktivirajte da sortirate kolonu uzlazno",
-            "sSortDescending": ": aktivirajte da sortirate kolonu silazno"
+            "sLast":     "Poslednja"
         }
     },
     "bProcessing": true,
     "serverSide": true,
     "ajax": {
-        url: "{{ url('system/'.$route.'/ajax') }}",
+        url: "{{ url('cms/tekstovi/ajax') }}",
         type: "post",
         headers: {
             'X-CSRF-Token': "{{ csrf_token() }}"
@@ -99,4 +90,5 @@ $(document).ready(function() {
   });
 });
 </script>
+
 @endsection

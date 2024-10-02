@@ -12,7 +12,7 @@ class UsersController extends Controller
 {
     public function index()
     {
-        return view('system.users.list');
+        return view('cms.users.list');
     }
 
     public function ajax(Request $request)
@@ -60,7 +60,7 @@ class UsersController extends Controller
                 '2' => $row->email,
                 '3' => '<span class="item-active text-'.($row->is_active ? 'success' : 'danger').'"><i class="fa fa-'.($row->is_active ? 'check-square-o' : 'times').'"></i></span>',
                 '4' => '<span class="item-active text-'.($row->email_notifications ? 'success' : 'danger').'"><i class="fa fa-'.($row->email_notifications ? 'check-square-o' : 'times').'"></i></span>',
-                '5' => '<a href="'.url('system/users/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a><a href="'.url('system/users').'" class="action-delete confirmation" data-id="'.$row->id.'"><i class="fa fa-trash-o"></i><form id="delete-form'.$row->id.'" action="'.url('system/users/'.$row->id).'" method="POST" style="display: none;">'.csrf_field().'<input type="hidden" name="_method" value="delete" /></form></a>',
+                '5' => '<a href="'.url('cms/users/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a><a href="'.url('cms/users').'" class="action-delete confirmation" data-id="'.$row->id.'"><i class="fa fa-trash-o"></i><form id="delete-form'.$row->id.'" action="'.url('cms/users/'.$row->id).'" method="POST" style="display: none;">'.csrf_field().'<input type="hidden" name="_method" value="delete" /></form></a>',
             ];
         }
         
@@ -76,7 +76,7 @@ class UsersController extends Controller
 
     public function create()
     {
-        return view('system.users.form', ['user' => new User(), 'editing' => false]);
+        return view('cms.users.form', ['user' => new User(), 'editing' => false]);
     }
 
     public function store(Request $request)
@@ -102,12 +102,12 @@ class UsersController extends Controller
 
         session()->flash('success', 'Dodato.');
 
-        return redirect('system/users');
+        return redirect('cms/users');
     }
     
     public function edit($id)
     {
-        return view('system.users.form', ['user' => User::findOrFail($id), 'editing' => true]);
+        return view('cms.users.form', ['user' => User::findOrFail($id), 'editing' => true]);
     }
 
     public function update(Request $request, $id)
@@ -136,7 +136,7 @@ class UsersController extends Controller
 
         session()->flash('success', 'Izmjenjeno.');
 
-        return redirect('system/users');
+        return redirect('cms/users');
     }
 
     public function destroy($id)
@@ -148,6 +148,6 @@ class UsersController extends Controller
 
         session()->flash('success', 'Obrisano.');
         
-        return redirect('system/users');
+        return redirect('cms/users');
     }
 }

@@ -1,10 +1,10 @@
-@extends('system.layout.container')
+@extends('cms.layout.container')
 
 @section('content')
     <!-- Breadcrumbs-->
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="{{ url('system') }}">POČETNA</a>
+            <a href="{{ url('cms') }}">POČETNA</a>
         </li>
         <li class="breadcrumb-item active">Kontrolna tabla</li>
     </ol>
@@ -14,7 +14,7 @@
     <div class="row cards">
         
         @php
-        $url = 'system';
+        $url = 'cms';
         $title = 'Kontrolna tabla';
         $icon = 'dashboard';
         @endphp
@@ -33,7 +33,7 @@
 
         @php
         $moduli = array(
-          array('system/users', 'Korisnici', 'users'),
+          array('cms/users', 'Korisnici', 'users'),
         );
         @endphp
 

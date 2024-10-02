@@ -1,10 +1,10 @@
-@extends('system.layout.container')
+@extends('cms.layout.container')
 
 @section('content')
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="{{ url('system') }}">POČETNA</a>
+        <a href="{{ url('cms') }}">POČETNA</a>
     </li>
     <li class="breadcrumb-item active">{{ $title }}</li>
 </ol>
@@ -12,7 +12,7 @@
 <hr>
 <div class="row">
     <div class="col-md-12">
-        <form method="post" action="@if(!$editing) {{ url('system/'.$route) }} @else {{ url('system/'.$route.'/'.$item->id) }} @endif" enctype="multipart/form-data">
+        <form method="post" action="@if(!$editing) {{ url('cms/'.$route) }} @else {{ url('cms/'.$route.'/'.$item->id) }} @endif" enctype="multipart/form-data">
             @csrf
             @if($editing) @method('PUT') @endif
             <div class="row">
@@ -227,8 +227,8 @@
                     <div class="input-file-container" {!! $errors->has($i) ? 'style="border-color:red;"' : '' !!}>
                       <span class="img-placeholder">
                               @if(is_null($item[$i]))
-                              <a href="{{ asset('systemfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
-                                <img src="{{ asset('systemfiles/images/placeholder-images.jpg') }}" alt="img">
+                              <a href="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
+                                <img src="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" alt="img">
                               </a>
                               @else
                               <a href="{{ asset('storage/'.$item[$i]) }}" data-fancybox="gallery">
