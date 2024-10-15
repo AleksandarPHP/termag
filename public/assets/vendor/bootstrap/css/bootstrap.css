@@ -3899,7 +3899,7 @@ tbody.collapse.show {
 
 .page-item.active .page-link {
   z-index: 2;
-  color: #fff;  
+  color: #fff;
   background-color: #0b3663;
   border-color: #0b3663;
 }
@@ -3923,7 +3923,7 @@ tbody.collapse.show {
 }
 
 .page-link:focus, .page-link:hover {
-  color: #0056b3;
+  color: #0b3663;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #ddd;

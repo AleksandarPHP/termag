@@ -58,9 +58,9 @@ class UsersController extends Controller
                 '0' => $row->id,
                 '1' => $row->name,
                 '2' => $row->email,
-                '3' => '<span class="item-active text-'.($row->is_active ? 'success' : 'danger').'"><i class="fa fa-'.($row->is_active ? 'check-square-o' : 'times').'"></i></span>',
-                '4' => '<span class="item-active text-'.($row->email_notifications ? 'success' : 'danger').'"><i class="fa fa-'.($row->email_notifications ? 'check-square-o' : 'times').'"></i></span>',
-                '5' => '<a href="'.url('cms/users/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a><a href="'.url('cms/users').'" class="action-delete confirmation" data-id="'.$row->id.'"><i class="fa fa-trash-o"></i><form id="delete-form'.$row->id.'" action="'.url('cms/users/'.$row->id).'" method="POST" style="display: none;">'.csrf_field().'<input type="hidden" name="_method" value="delete" /></form></a>',
+                '3' => '<span class="item-active" style="color: #0b3663;"><i class="fa fa-'.($row->is_active ? 'check-square' : 'times').'"></i></span>',
+                '4' => '<span class="item-active" style="color: #0b3663;"><i class="fa fa-'.($row->email_notifications ? 'check-square' : 'times').'"></i></span>',
+                '5' => '<a href="'.url('cms/users/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a><a href="'.url('cms/users').'" class="action-delete confirmation" data-id="'.$row->id.'"><i class="fa fa-trash"></i><form id="delete-form'.$row->id.'" action="'.url('cms/users/'.$row->id).'" method="POST" style="display: none;">'.csrf_field().'<input type="hidden" name="_method" value="delete" /></form></a>',
             ];
         }
         
