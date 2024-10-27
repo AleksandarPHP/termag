@@ -14,7 +14,31 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+Route::get('/prognoza', function () {
+    return view('prognoza');
+});
+Route::get('/karijera', function () {
+    return view('karijera');
+});
+Route::get('/galerija', function () {
+    return view('galerija');
+});
+Route::get('/virtuelna-setnja', function () {
+    return view('virtuelna-setnja');
+});
+Route::get('/team-building', function () {
+    return view('team-building');
+});
+Route::get('/team-building', function () {
+    return view('team-building');
+});
+Route::get('/konferencijska-sala', function () {
+    return view('konf-sala');
+});
+Route::get('/konferencija-i-seminari', function () {
+    return view('konferencija-i-seminari');
 });
 
 Auth::routes(['verify' => false, 'register' => false]);
