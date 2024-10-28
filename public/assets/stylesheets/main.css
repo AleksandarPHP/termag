@@ -28,6 +28,12 @@ html {
     color: var(--text-color-primary);
     opacity: 0.8;
 }
+.subtitle-smaller {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+    color: var(--text-color-primary);
+}
 .title {
     font-family: "Playfair Display", serif;
     font-weight: 600;
@@ -931,4 +937,40 @@ footer .cta-links a {
     text-align: center;
     width: 100%;
     margin: 0 auto;
+}
+
+.empty {
+    padding: 15rem 0;
+}
+
+.economic {
+    position: relative;
+    padding: 7.5rem 0;
+}
+.economic .bg {
+    opacity: 0.2;
+}
+.economic .title {
+    margin: 1rem 0 1.5rem 0;
+}
+
+.economic .economic-slider {
+    margin-top: 3rem;
+}
+
+.arrow-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding-top: 3rem;
+}
+
+.arrow-section div {
+    max-width: 85%;
+}
+
+.arrow-section h3 {
+    font-size: 4rem;
+    color: var(--text-color-primary);
+    font-family: "Playfair Display", serif;
 }

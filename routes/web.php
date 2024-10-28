@@ -40,6 +40,15 @@ Route::get('/konferencijska-sala', function () {
 Route::get('/konferencija-i-seminari', function () {
     return view('konferencija-i-seminari');
 });
+Route::get('/prevoz-jahorina', function () {
+    return view('prevoz-jahorina');
+});
+Route::get('/svadbe', function () {
+    return view('svadbe');
+});
+Route::get('/termag-hotelske-sobe', function () {
+    return view('termag-hotelske-sobe');
+});
 
 Auth::routes(['verify' => false, 'register' => false]);
 
