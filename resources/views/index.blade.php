@@ -111,7 +111,7 @@
             </section>
 
             <section class="abonos">
-                <div class="bg" style="background-image: url('{{asset("assets/images/abonos-bg.jpg")}}');"></div>
+                <div class="bg center" style="background-image: url('{{asset("assets/images/abonos-bg.jpg")}}');"></div>
             </section>
 
             <section class="wellness-spa konf-sala">

@@ -505,6 +505,10 @@ header .navbar .offcanvas-body .dropdown-item.active,
     z-index: -1;
 }
 
+.bg.center {
+    background-position: center;
+}
+
 .cardd {
     padding: 11rem;
     max-width: 84rem;
@@ -853,6 +857,10 @@ footer .cta-links a {
 
 .career h4 {
     color: #e5ddd2;
+    font-size: 1.8rem;
+    letter-spacing: 0.25rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
 }
 
 .career .content-wrapper {
@@ -973,4 +981,169 @@ footer .cta-links a {
     font-size: 4rem;
     color: var(--text-color-primary);
     font-family: "Playfair Display", serif;
+}
+
+.experience {
+    position: relative;
+    padding: 12.5rem 0 10rem 0;
+}
+
+.experience .bg {
+    opacity: 0.2;
+}
+
+.experience > img {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+}
+
+.experience h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 6rem;
+    color: var(--gold);
+    margin-bottom: 3rem;
+}
+
+.experience p {
+    margin-bottom: 5rem;
+}
+
+.experience figure {
+    position: relative;
+    box-shadow: 1px 17px 22.4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.experience figure figcaption {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    width: 100%;
+}
+.apartman {
+    position: relative;
+    padding: 10rem 0;
+}
+
+.apartman .bg {
+    opacity: 0.2;
+}
+
+.apartman h4 {
+    font-size: 2.8rem;
+    color: var(--text-color-primary);
+    letter-spacing: 0.025rem;
+    margin: 2rem 0 1rem 0;
+}
+.apartman h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 6rem;
+    font-weight: 600;
+    color: var(--title-color);
+}
+.apartman h2 span {
+    color: var(--gold);
+}
+
+.apartman .txt {
+    max-width: 75%;
+}
+
+.apartman .btnn {
+    margin-top: 3rem;
+}
+
+.apartman .btnn img {
+    margin-left: 2rem;
+}
+
+.apartman-2 {
+    padding: 7.5rem 0;
+    background-color: rgba(229, 221, 210, 1);
+}
+
+.apartman-2 .bg {
+    z-index: 1;
+}
+
+.apartman-2 .content-wrapper,
+.apartman-2 img {
+    position: relative;
+    z-index: 2;
+}
+
+.apartman .col-lg-5 img {
+    min-height: 100%;
+}
+
+.apartman img[alt="dekoracija"] {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.wellness-spa.reversed {
+    padding: 15rem 0;
+    background-color: rgba(229, 221, 210, 1);
+}
+
+.wellness-spa.reversed img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.villa-termag.villa-termag-b {
+    background-color: rgba(229, 221, 210, 1);
+}
+
+.career .btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.detox .content-wrapper h1 {
+    font-weight: 300;
+}
+
+.detox-services {
+    background-color: #e5ddd2;
+    z-index: -1;
+}
+
+.cardd-2 {
+    background: linear-gradient(
+        90deg,
+        #e5ddd2 18%,
+        rgba(229, 221, 210, 0.6) 100%
+    );
+}
+
+.nutrition::after {
+    background-image: url("../images/ishrana-bg.png");
+}
+
+.spa-hero .content-wrapper {
+    width: 100%;
+}
+
+.spa-hero .content-wrapper h4,
+.spa-hero .content-wrapper h1,
+.spa-hero .content-wrapper p {
+    color: var(--text-color-primary);
+}
+
+.spa-hero .content-wrapper a {
+    margin-top: 3rem;
 }

@@ -49,6 +49,39 @@ Route::get('/svadbe', function () {
 Route::get('/termag-hotelske-sobe', function () {
     return view('termag-hotelske-sobe');
 });
+Route::get('/apartmani', function () {
+    return view('apartmani');
+});
+Route::get('/villa-termag', function () {
+    return view('villa-termag');
+});
+Route::get('/detox', function () {
+    return view('detox');
+});
+Route::get('/spa', function () {
+    return view('spa');
+});
+Route::get('/organic-facts', function () {
+    return view('organic-facts');
+});
+Route::get('/o-nama', function () {
+    return view('o-nama');
+});
+Route::get('/eco', function () {
+    return view('eco');
+});
+Route::get('/atrakcije', function () {
+    return view('atrakcije');
+});
+Route::get('/koliba', function () {
+    return view('koliba');
+});
+Route::get('/kamin-sala', function () {
+    return view('kamin-sala');
+});
+Route::get('/hotelski-restoran', function () {
+    return view('hotelski-restoran');
+});
 
 Auth::routes(['verify' => false, 'register' => false]);
 
