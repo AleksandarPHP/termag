@@ -82,6 +82,24 @@ Route::get('/kamin-sala', function () {
 Route::get('/hotelski-restoran', function () {
     return view('hotelski-restoran');
 });
+Route::get('/ski-skola', function () {
+    return view('ski-skola');
+});
+Route::get('/visina-snega', function () {
+    return view('visina-snega');
+});
+Route::get('/ski-staze', function () {
+    return view('ski-staze');
+});
+Route::get('/ski-centar', function () {
+    return view('ski-centar');
+});
+Route::get('/ski-rental', function () {
+    return view('ski-rental');
+});
+Route::get('/ski-pass', function () {
+    return view('ski-pass');
+});
 
 Auth::routes(['verify' => false, 'register' => false]);
 

@@ -19,6 +19,10 @@ html {
     --gold: #b2916a;
 
     --white: #fff;
+
+    --duration: 30s;
+    --space: 5px;
+    --gap: 0;
 }
 
 .subtitle {
@@ -490,6 +494,12 @@ header .navbar .offcanvas-body .dropdown-item.active,
     margin-bottom: 3rem;
 }
 
+.accommodation h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 6rem;
+}
+
 .villa-termag {
     position: relative;
     padding: 13.5rem 0;
@@ -536,7 +546,8 @@ header .navbar .offcanvas-body .dropdown-item.active,
     opacity: 0.2;
 }
 
-.cardd h2 {
+.cardd h2,
+.cardd h1 {
     font-size: 6rem;
     color: var(--title-color);
     font-family: "Playfair Display", serif;
@@ -834,6 +845,7 @@ footer .cta-links a {
     max-width: 75%;
 }
 
+.wellness-spa ol li,
 .konf-sala ol li {
     color: var(--title-color);
     font-size: 2rem;
@@ -1146,4 +1158,160 @@ footer .cta-links a {
 
 .spa-hero .content-wrapper a {
     margin-top: 3rem;
+}
+
+/* marquee */
+
+.marquee {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+}
+
+.marquee__group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+}
+
+.marquee__group2 {
+    animation: scroll2 var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee__group {
+        animation-play-state: paused;
+    }
+}
+
+.marquee__group img {
+    max-width: clamp(10rem, 1rem + 28vmin, 20rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes scroll2 {
+    100% {
+        transform: translateX(0);
+    }
+
+    0% {
+        transform: translateX(-100%);
+    }
+}
+
+.get-to-know::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #ffffff, #ffffff),
+        linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.37),
+            rgba(255, 255, 255, 0.37)
+        );
+    opacity: 0.1;
+}
+
+.get-to-know h2,
+.get-to-know .container > p {
+    text-align: center;
+}
+
+.get-to-know .cardd {
+    padding: 3rem;
+    text-align: center;
+}
+.get-to-know .cardd h3 {
+    color: var(--gold);
+    font-size: 4rem;
+}
+
+.get-to-know .container > * {
+    z-index: 2;
+    position: relative;
+}
+
+.get-to-know .row {
+    row-gap: 3rem;
+}
+
+.accommodation2::after {
+    background-image: url("../images/smestaj-bg.jpg");
+}
+
+.ski-offers {
+    background-color: #e5ddd2;
+    z-index: 1;
+}
+.ski-offers h2,
+.ski-offers .container > p {
+    text-align: center;
+}
+.ski-offers h2 {
+    color: var(--gold);
+}
+.ski-offers .card {
+    z-index: 2;
+    position: relative;
+}
+
+.ski-offers .col-lg-6 img {
+    max-height: 36rem;
+}
+
+.ski-offers .col-lg-6 .card {
+    min-height: 68.5rem;
+}
+
+.ski-offers .col-lg-4 img {
+    max-height: 23.9rem;
+}
+
+.ski-offers .col-lg-4 .card {
+    min-height: 64rem;
+}
+
+.centered {
+    position: relative;
+    padding: 10rem 0;
+}
+
+.centered .cardd {
+    max-width: 99rem;
+    margin: 0 auto;
+}
+
+.ski-pass-hero {
+    padding: 15rem 0;
+}
+
+.ski-pass-hero::after {
+    background-image: url("../images/ski-pass-bg.png");
+    transform: rotateY(180deg);
+}
+
+.how-to-buy-ski-pass {
+    padding: 20rem 0;
+}
+
+.ski-info.reversed img {
+    max-width: 80rem;
+    top: 40%;
 }
