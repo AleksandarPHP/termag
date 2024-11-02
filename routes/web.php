@@ -100,6 +100,15 @@ Route::get('/ski-rental', function () {
 Route::get('/ski-pass', function () {
     return view('ski-pass');
 });
+Route::get('/triatlon', function () {
+    return view('triatlon');
+});
+Route::get('/challenge-race', function () {
+    return view('challenge-race');
+});
+Route::get('/mountainbike-marathon', function () {
+    return view('mountainbike-marathon');
+});
 
 Auth::routes(['verify' => false, 'register' => false]);
 

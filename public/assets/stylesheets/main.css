@@ -1116,6 +1116,10 @@ footer .cta-links a {
 .villa-termag.villa-termag-b {
     background-color: rgba(229, 221, 210, 1);
 }
+.villa-termag ul li {
+    font-size: 2rem;
+    color: var(--text-color-primary);
+}
 
 .career .btn-wrapper {
     display: flex;
@@ -1314,4 +1318,58 @@ footer .cta-links a {
 .ski-info.reversed img {
     max-width: 80rem;
     top: 40%;
+}
+
+.registration h3 {
+    font-size: 4.2rem;
+    color: var(--text-color-primary);
+}
+
+.registration img[alt="zamak termag"] {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.registration .row.row-2 {
+    row-gap: 2rem;
+    margin: 3rem 0 5rem 0;
+}
+
+.registration .row div div {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.registration .row div div p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: var(--text-color-primary);
+}
+.registration ul li {
+    color: var(--text-color-primary);
+    font-size: 2rem;
+}
+.registration .btn-wrapper {
+    margin-top: 3rem;
+    text-align: center;
+}
+.race .row .col-lg-4 {
+    padding: 0;
+}
+.registration-2 h2 {
+    color: var(--gold);
+}
+.registration-2 .title-smaller + .txt {
+    margin-bottom: 1rem;
+}
+.registration-2 ul {
+    display: inline-block;
+}
+
+.registration-2 ul li {
+    max-width: fit-content;
 }
