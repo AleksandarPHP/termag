@@ -118,6 +118,12 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
     
     Route::resource('users', 'App\Http\Controllers\UsersController')->except('show');
     Route::post('users/ajax', 'App\Http\Controllers\UsersController@ajax');
+
+    Route::resource('pages', 'App\Http\Controllers\PageController')->only('index','update','edit');
+    Route::post('pages/ajax', 'App\Http\Controllers\PageController@ajax');  
+    Route::get('pages/detail/{id}', 'App\Http\Controllers\PageController@detail'); 
+    Route::post('pages/ajax-detail', 'App\Http\Controllers\PageController@ajaxDetail');  
+    Route::get('pages/imagedelete/{id}', 'App\Http\Controllers\PageController@removeImage');
 });
 
 Auth::routes();

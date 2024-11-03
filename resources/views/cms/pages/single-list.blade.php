@@ -77,7 +77,7 @@ $(document).ready(function() {
     "bProcessing": true,
     "serverSide": true,
     "ajax": {
-        url: "{{ url('cms/pages/ajax') }}",
+        url: "{{ url('cms/pages/ajax-detail') }}",
         type: "post",
         headers: {
             'X-CSRF-Token': "{{ csrf_token() }}"

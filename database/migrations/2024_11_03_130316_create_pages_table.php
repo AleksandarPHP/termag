@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
+            $table->json('title')->nullable();
+            $table->unsignedBigInteger('parent_id')->nullable();
+            $table->json('subtitle')->nullable();
+            $table->json('text')->nullable();
+            $table->text('image')->nullable();
+            $table->text('image2')->nullable();
+            $table->text('url')->nullable();
+            $table->json('urlTitle')->nullable();
+            $table->text('url2')->nullable();
+            $table->json('urlTitle2')->nullable();
             $table->timestamps();
         });
     }
