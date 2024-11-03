@@ -128,4 +128,56 @@ class PageController extends Controller
             
         return json_encode($json_data);
     }
+
+    public function edit($id, Request $request)
+    {
+        $width = $height = 0;
+        $lang = $request->lang ?? 'sr';
+
+        return view('cms.pages.form', ['item' => Page::findOrFail($id), 'editing' => true, 'width' => $width, 'height' => $height, 'lang' => $lang]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $item = Page::findOrFail($id);
+        $lang = $request->language ?? 'sr';
+
+        $width = $height = 0;
+
+        $request->validate([
+            'title' => ['nullable', 'string', 'max:191'],
+            'subtitle' => ['nullable', 'string', 'max:191'],
+            'text' => ['nullable', 'string'],
+            'url' => ['nullable', 'string', 'max:191'],
+            'urlTitle' => ['nullable', 'string', 'max:191'],
+            'url2' => ['nullable', 'string', 'max:191'],
+            'urlTitle2' => ['nullable', 'string', 'max:191'],
+            'image' => ['nullable', 'mimes:jpeg,png,svg', 'image', 'max:5000', 'dimensions:min_width='.$width.',min_height='.$height],
+
+        ]);    
+
+        $image = $item->image;
+        if($request->hasFile('image')) $image = Helper::saveImage($request->image, 'Pages', $item->title, $image);
+        else if($item->title != $item->title && !is_null($image)) $image = Helper::renameImage($image, 'Pages', $item->title);
+
+        $item->setTranslation('title', $lang, $request->input('title'));
+        $item->setTranslation('subtitle', $lang, $request->input('subtitle'));
+        $item->setTranslation('text', $lang, $request->input('text'));
+        $item->setTranslation('urlTitle', $lang, $request->input('urlTitle'));
+        $item->setTranslation('urlTitle2', $lang, $request->input('urlTitle2'));
+
+        if($lang=='sr') {      
+            $item->image = $image;
+            $item->url = $request->url;
+            $item->url2 = $request->url2;
+        }
+
+        $item->save();
+
+        Cache::forget('texts-'.$item->id);
+
+        session()->flash('success', 'Izmjenjeno.');
+
+        return redirect('system/pages');
+    }
 }

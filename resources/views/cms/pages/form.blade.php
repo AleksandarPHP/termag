@@ -1,14 +1,14 @@
-@extends('system.layout.container')
+@extends('cms.layout.container')
 
 @section('content')
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">
-        <a href="{{ url('system') }}">POČETNA</a>
+        <a href="{{ url('cms') }}">POČETNA</a>
     </li>
-    <li class="breadcrumb-item active">{{ $title }}</li>
+    <li class="breadcrumb-item active">Stranice</li>
 </ol>
-<h1>{{ $title }}</h1>
+<h1>Stranice</h1>
 <hr>
 @if($editing) 
 <div class="row change-language">
@@ -20,12 +20,12 @@
 @endif
 <div class="row">
     <div class="col-md-12">
-        <form method="post" action="@if(!$editing) {{ url('system/'.$route) }} @else {{ url('system/'.$route.'/'.$item->id) }} @endif" enctype="multipart/form-data">
+        <form method="post" action="@if(!$editing) {{ url('cms/pages') }} @else {{ url('cms/pages/'.$item->id) }} @endif" enctype="multipart/form-data">
             @csrf
             @if($editing) @method('PUT') @endif
             <input type="hidden" value="{{ $lang }}" name="language">
             <div class="row">
-                @if($item->id!=2)
+                @if($item->id!=3)
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="title">Naziv</label>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 @endif
-                @if($item->id!=2&& $item->id!=4 && $item->id!=7 && $item->id!=8 && $item->id!=9 && $item->id!=11 && $item->id!=16)
+                @if($item->id!=3&& $item->id!=4 && $item->id!=7 && $item->id!=8 && $item->id!=9 && $item->id!=11 && $item->id!=16)
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-12">
                     <div class="form-group">
@@ -86,7 +86,7 @@
                 </div> 
                 <div class="col-md-12"><hr></div>
                 @endif
-                @if($item->id!=2 && $item->id!=4 && $item->id!=5 && $item->id!=7 && $item->id!=9 && $item->id!=10 && $item->id!=11 && $item->id!=12 && $item->id!=13 && $item->id!=15 && $item->id!=16 && $item->id!=17)
+                @if($item->id!=3 && $item->id!=4 && $item->id!=5 && $item->id!=7 && $item->id!=9 && $item->id!=10 && $item->id!=11 && $item->id!=12 && $item->id!=13 && $item->id!=15 && $item->id!=16 && $item->id!=17)
                 @if($lang=='sr')
                 <div class="col-md-3">
                     <div class="form-group">
@@ -94,12 +94,12 @@
                     </div>
                     <div class="input-file-container" {!! $errors->has('image') ? 'style="border-color:red;"' : '' !!}>
                         @if(!is_null($item->image))
-                            <a href="{{ url('system/'.$route.'/imagedelete/'.$item->id.'?image=image') }}"><span><i class="fa fa-close"></i></span></a>
+                            <a href="{{ url('cms/'.$route.'/imagedelete/'.$item->id.'?image=image') }}"><span><i class="fa fa-close"></i></span></a>
                         @endif
                         <span class="img-placeholder">
                               @if(is_null($item->image))
-                              <a href="{{ asset('systemfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
-                                <img src="{{ asset('systemfiles/images/placeholder-images.jpg') }}" alt="img">
+                              <a href="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
+                                <img src="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" alt="img">
                               </a>
                               @else
                               <a href="{{ asset('storage/'.$item->image) }}" data-fancybox="gallery">
