@@ -42,8 +42,8 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fullcalendar/core@4.4.0/main.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.4.0/main.min.css">
   <link href="//cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-  <link href="{{ asset('assets/stylesheets/fontawesome.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('assets/stylesheets/main.css?v=1.5.3') }}" rel="stylesheet">
+  <link href="{{ asset('cmsfiles/stylesheets/fontawesome.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('cmsfiles/stylesheets/main.css?v=1.5.3') }}" rel="stylesheet">
   <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/css/select2.min.css" rel="stylesheet" />
   <script>
     var url = "{{url('')}}",

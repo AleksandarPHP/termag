@@ -22,6 +22,7 @@
         @php
         $moduli = array(
           array('cms/users', 'Korisnici', 'users'),
+          array('cms/pages', 'Stranice', 'desktop'),
         );
         @endphp
         @foreach ($moduli as $modul)
