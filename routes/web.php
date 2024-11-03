@@ -109,6 +109,21 @@ Route::get('/challenge-race', function () {
 Route::get('/mountainbike-marathon', function () {
     return view('mountainbike-marathon');
 });
+Route::get('/igraonica', function () {
+    return view('igraonica');
+});
+Route::get('/kuglana', function () {
+    return view('kuglana');
+});
+Route::get('/biciklizam', function () {
+    return view('biciklizam');
+});
+Route::get('/quad-safari', function () {
+    return view('quad-safari');
+});
+Route::get('/ljetnje-avanture', function () {
+    return view('ljetne-avanture');
+});
 
 Auth::routes(['verify' => false, 'register' => false]);
 

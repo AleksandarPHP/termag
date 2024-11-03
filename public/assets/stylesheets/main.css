@@ -1357,7 +1357,8 @@ footer .cta-links a {
     margin-top: 3rem;
     text-align: center;
 }
-.race .row .col-lg-4 {
+.race .row .col-lg-4,
+.race .row .col-lg-3 {
     padding: 0;
 }
 .registration-2 h2 {
@@ -1372,4 +1373,34 @@ footer .cta-links a {
 
 .registration-2 ul li {
     max-width: fit-content;
+}
+
+.unforgetable-experience figure img {
+    max-height: 28rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hiking {
+    overflow: hidden;
+}
+
+.hiking video {
+    max-width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.hiking::after {
+    background: unset;
+}
+.alpinizam {
+    overflow: hidden;
+}
+.alpinizam video {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
 }
