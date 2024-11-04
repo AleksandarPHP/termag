@@ -12,9 +12,9 @@
 
         <div class="container">
             <div class="content-wrapper">
-                <h4>Kreirajte zajedničke uspomene na Jahorini</h4>
-                <h1>Ljetnje Avanture</h1>
-                <p>
+                <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Kreirajte zajedničke uspomene na Jahorini</h4>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">Ljetnje Avanture</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000">
                     Termag vam nudi mnoštvo aktivnosti i zabavnog sadržaja i
                     tokom ljetnih mjeseci. Na prelijepoj planini Jahorini,
                     doživite ljeto na potpuno novi način uz aktivnosti koje smo
@@ -32,25 +32,25 @@
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
         <div class="container">
             <div class="text-center">
-                <h2>Nezaboravno Iskustvo</h2>
-                <p class="txt">
+                <h2 data-aos="fade-down" data-aos-duration="600">Nezaboravno Iskustvo</h2>
+                <p class="txt" data-aos="fade-down" data-aos-duration="600">
                     Naša ponuda uključuje 71 sobu i 21 apartman, uključujući ekskluzivni predsjednički apartman. Svaki prostor je pažljivo dizajniran, sa ručno izrađenim namještajem od drveta i rustičnim elementima koji odražavaju bogatstvo pla
                 </p>
 
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/la-1.png')}}" alt="porodicna 8km">
                             <figcaption>Planinarenje</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/la-2.png')}}" alt="plava 24km">
                             <figcaption>Alpinizam</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/la-3.png')}}" alt="crvena 34km">
                             <figcaption>Karting</figcaption>
@@ -64,7 +64,7 @@
     <section class="accommodation hiking">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600">
                     <div class="content-wrapper">
                     <h2 class="title">Planinarenje</h2>
                     <p class="txt">
@@ -88,7 +88,7 @@
         </video>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <h2>Alpinizam</h2>
                     <p class="txt mb-4">
                         Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.

@@ -1,3 +1,5 @@
+AOS.init();
+
 $(function () {
     $("#checkIn").datepicker();
 });

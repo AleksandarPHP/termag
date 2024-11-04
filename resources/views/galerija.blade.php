@@ -132,7 +132,7 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/ponude-bg.jpg")}}');"></div>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <h2>Ponude</h2>
                     <p class="txt mb-4">
                         Vizuelno istražite posebne ponude i aranžmane koje smo pripremili za vas, kao i raznovrsnost iskustava koje vam nudimo. U našoj galeriji možete pronaći inspiraciju za planiranje savršenog odmora za vas.

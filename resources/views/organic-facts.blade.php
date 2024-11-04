@@ -5,7 +5,7 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/organic-bg.png")}}');"></div>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <h2>Organic Facts</h2>
                     <p class="txt">
                         Kako bi upotpunili doživljaj boravka u hotelu Termag, pored vrhunske arhitekture i dizajna, našim gostima nudimo značajan izbor organske hrane.
@@ -19,7 +19,7 @@
     <section class="wellness-spa">
         <div class="bg" style="background-image: url('{{asset("assets/images/domace.png")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Visokokvalitetne domaće namirnice</h2>
                 <p class="txt mb-4">
                     Na skoro svakom od drvenih stolova ugledat ćete visokokvalitetne domaće namirnice koje pravi naše osoblje, kao što je domaći hljeb, domaći džem od šljiva ili smokvi, domaći sok od borovnice, te zimska salata.

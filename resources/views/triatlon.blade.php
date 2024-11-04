@@ -5,8 +5,8 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/triatlon-bg.png")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1>Termag Triatlon</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Termag Triatlon</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
                     Termag triatlon je pravi izazov u planinskom raju Jahorine.
                     To je jedinstvena trka koja se održava na Jahorini i Ravnoj
                     planini. Ovaj izazov je namjenjen pravim avanturistima koji
@@ -21,7 +21,7 @@
     <section class="wellness-spa">
         <div class="bg" style="background-image: url('{{asset("assets/images/pripreme-bg.png")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Pripreme za Trku</h2>
                 <p class="txt">
                     Pripreme za trku su ključne za postizanje dobrih rezultata na ovom sportskom nadmetanju. Bitno je postaviti ciljeve i odrediti da li želite da oborite svoj lični rekord, da završite trku ili jednostavno samo želite učestvovati i doživjeti novo iskustvo. U skladu sa tim planirate svoj trening i određujete njegovu težinu. Tako ćete raditi na svojoj kondiciji i fizičkoj spremnosti kako biste mogli uspješno da odgovorite svim izazovima koje triatlon trka sa sobom nosi. Prilagodite ishranu svom treningu, unosite dovoljno hranljivih materija i na kraju odmarajte dovoljno. Odmor koji priredite vašem tijelu i mišićima će vam donijeti izuzetnu korist. Ako koristite posebnu opremu, testirajte je i uvjerite se da će vas poslužiti na pravi način tokom trke.
@@ -34,7 +34,7 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/kategorije-bg.png")}}');"></div>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <h2>Kategorije</h2>
                     <p class="txt mb-4">
                         Termag triatlon je dinamična trka koja se održava u nekoliko kategorija. Takmičenje se odvija u individualnoj i ekipnoj konkurenciji. Individualna konkurencija omogućava pojedincima da testiraju svoje granice. Što se tiče ekipne konkurencije broj članova ekipa je ograničen na tri člana. Ova kategorija je dodatno podjeljena prema polu na: mušku, žensku i mješovitu konkurenciju.

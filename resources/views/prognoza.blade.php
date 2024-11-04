@@ -21,7 +21,7 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/planiranje-bg.jpg")}}');"></div>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <h2>Planiranje dana</h2>
                     <p class="txt mb-4">
                     U skladu sa vremenskim prilikama isplanirajte svoj dan, kako biste maksimalno iskoristili svaki trenutak. Praćenje vremena je važno na planini jer tako možete rasporediti svoje aktivnosti u skladu sa vremenom. Sunčane zimske dane iskoristite za skijanje, dok oblačan dan možete provesti u wellnes centru ili u šetnji.
@@ -42,7 +42,7 @@
     <section class="wellness-spa konf-sala">
         <div class="bg" style="background-image: url('{{asset("assets/images/saveti-bg.jpg")}}');"></div>
         <div class="container-fluid">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Savjeti za skijaše</h2>
                 <p class="txt mb-4">
                     Pripremili smo nekoliko korisnih savjeta za skijaše, kako bi im olakšali planiranje i realizaciju dana sa ski stazi. Poštujući ove savjete, unaprijedite maksimalno skijaško iskustvo.

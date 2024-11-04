@@ -5,8 +5,8 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/ski-rental.png")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1>Ski Rental</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Ski Rental</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
                     Termag Hotel Jahorina predstavlja pravi ski-in ski-out jer se iz hotela direktno na skijama izlazi na stazu Poljice i polaznu stanicu gondole.
                 </p>
             </div>
@@ -17,7 +17,7 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/ski-rental-bg.png")}}');"></div>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <h2>Ski Rental</h2>
                     <p class="txt mb-4">
                         Termag Hotel Jahorina predstavlja pravi ski-in ski-out jer se iz hotela direktno na skijama izlazi na stazu Poljice i polaznu stanicu gondole. Takođe, nakon skijanja na skijama sa staze direktno dolazite do hotela. A, da biste uopšte skijali potrebna vam je i oprema. Ski rental hotela Termag je opremljen najnovijim modelima skija i skijaških cipela, adekvatnih vašem nivou skijaškog znanja. Bilo da ste početnik ili napredni skijaš imamo opremu koja odgovara baš vama.
@@ -41,7 +41,7 @@
     <section class="wellness-spa">
         <div class="bg centar" style="background-image: url('{{asset("assets/images/ski-servis-bg.png")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Ski Servis</h2>
                 <p class="txt mb-4">
                     U sklopu ski rentala posluje i ski servis hotela Termag. Posjedujemo vrhunsku opremu za servisiranje skija i snowboard sa kojom rukuje naše profesionalno osoblje.

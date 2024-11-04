@@ -11,10 +11,10 @@
 
         <div class="container">
             <div class="content-wrapper">
-                <h4>-- Specijalne Usluge</h4>
-                <h1>Romantični Paket</h1>
-                <p>Romansa u Termag-u - bijeg u zajednički raj</p>
-                <a href="#" class="btnn btn_primary mt-5">Book now</a>
+                <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">-- Specijalne Usluge</h4>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">Romantični Paket</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000">Romansa u Termag-u - bijeg u zajednički raj</p>
+                <a href="#" class="btnn btn_primary mt-5" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1200">Book now</a>
             </div>
         </div>
     </section>
@@ -341,7 +341,7 @@
     <section class="wellness-spa aktivni-izazov">
                <video  autoplay loop muted  src="{{asset('assets/videos/romance-2.mp4')}}"></video>
                 <div class="container">
-                    <div class="cardd">
+                    <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                         <h2>Specijalne Ponude</h2>
                         <p class="txt">
                         Uz specijalne ponude hotela Termag, doživite romantične momente. Svaki detalj je pažljivo osmišljen od romantičnog dočeka i smještaja u luksuzne smještajne jedinice pa do romantične večere uz flašu vina i svijeće. Uživajte u opuštajućoj kupki, relax masaži aromatičnim uljima i momentima u našem spa centru. Ukoliko ste aktivan par, vožnja biciklima po nestvarnim predjelima Jahorine će biti puno pogodak. Doručak za naše zaljubljene parove služimo u sobi, a postoji i mogućnost kasne odjave, kako biste što duže uživali u romantici.
@@ -360,7 +360,7 @@
                 </video>
                 <div class="container">
                     <div>
-                        <div class="cardd">
+                        <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                             <h2>Romantični Paket</h2>
                             <p class="txt">
                             Doživite čaroliju ljubavi u intimnoj atmosferi hotela Termag. Stvorite nezaboravne momente u potpunoj privatnosti sa svojom voljenom osobom. Priredićemo vam večeru u intimnom kutku restorana ili ćemo vam obezbjediti intimni spa tretman, kako biste se u potpunosti posvetili vašoj voljenoj osobi i podjelili nezaboravne momente. Romansa paket je namjenjen samo za vas dvoje, zato smo sve osmislili tako da zaljubljeni parovi osjećaju potpunu izolovanost od ostatka svijeta. Jedno je sigurno, ovi momenti će ostati u vašim najdražim uspomenama. Odvojite vaše vrijeme za ljubav i intimnost na Jahorini.
@@ -374,7 +374,7 @@
             <section class="wellness-spa aktivni-izazov">
                <video  autoplay loop muted  src="{{asset('assets/videos/intimate.mp4')}}"></video>
                 <div class="container">
-                    <div class="cardd">
+                    <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                         <h2>Intimna Atmosfera</h2>
                         <p class="txt">
                         Ukoliko želite da osvježite romantiku u predivnom ambijentu Jahorine, Romansa paket hotela Termag je tu da ispuni sva vaša očekivanja. U idealnom spoju luksuza i komfora, priredite svojoj voljenoj osobi nezaboravne momente i romantične aranžmane za pamćenje. Podjelite trenutke i stvorite zajedničke uspomene dok uživate u romantičnim šetnjama, danu provedenom u Spa centru, vrhunskoj hrani ili ledenim margaritama u bazenu. Uz pucketanje vatre u kaminu, i ukuse naših vrhunskih vina, nazdravite ljubavi i romansi.

@@ -5,8 +5,8 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/termag-sobe-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1>Termag Hotelske Sobe</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Termag Hotelske Sobe</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
                     Porodični izazov na Jahorini
                 </p>
             </div>

@@ -5,8 +5,8 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/relax-hero.png")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1>Relax Paket</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Relax Paket</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
                     Promjenite svakodnevnu rutinu i uronite u stanje potpunog blaženstva i opuštanja tokom odmora u našem hotelu.
                     U našem Wellnes&Spa centru doživite čari bezbrižnog odmora i uživanja u mirnom planinskom okruženju.
                 </p>

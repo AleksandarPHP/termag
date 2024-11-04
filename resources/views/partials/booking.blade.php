@@ -1,4 +1,4 @@
-<section class="booking">
+<section class="booking" data-aos="fade-up" data-aos-delay="1500">
     <div class="container">
         <form>
             <div>

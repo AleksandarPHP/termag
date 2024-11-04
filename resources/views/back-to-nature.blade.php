@@ -5,8 +5,8 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/btn.png")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1>Back to Nature</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Back to Nature</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
                 Promjenite svakodnevnu rutinu i uronite u stanje potpunog blaženstva i opuštanja tokom odmora u našem hotelu.
                 U našem Wellnes&Spa centru doživite čari bezbrižnog odmora i uživanja u mirnom planinskom okruženju.
                 </p>

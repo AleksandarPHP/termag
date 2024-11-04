@@ -211,6 +211,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
     position: absolute;
     inset: 0;
     width: 100%;
+    z-index: -12;
 }
 
 .hero > img {
@@ -516,6 +517,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
 .villa-termag {
     position: relative;
     padding: 13.5rem 0;
+    overflow: hidden;
 }
 
 .bg {
@@ -584,6 +586,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
 .wellness-spa {
     position: relative;
     padding: 10rem 0;
+    overflow: hidden;
 }
 
 .wellness-spa .cardd {
@@ -1473,4 +1476,18 @@ footer .cta-links a {
 }
 .py-20 {
     padding: 20rem 0;
+}
+
+/* animations */
+
+header .navbar .navbar-nav .dropdown-menu[data-bs-popper] {
+    transform: translateY(-100%);
+    opacity: 1;
+    z-index: -123;
+}
+
+header .navbar .navbar-nav .dropdown-menu[data-bs-popper].show {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: -123;
 }

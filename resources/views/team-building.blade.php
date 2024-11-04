@@ -12,8 +12,8 @@
 
         <div class="container">
             <div class="content-wrapper">
-                <h1>Termag Team Building</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Termag Team Building</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
                     Team building je bitan način jačanja timskog duha i
                     motivacije za rad unutar tima.  Izazovi, zabave, međusobna
                     druženja, snalaženje u nesvakidašnjim situacijama je sve ono
@@ -29,7 +29,7 @@
     <section class="wellness-spa">
         <div class="bg" style="background-image: url('{{asset("assets/images/ski-team-bg.jpg")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Personalizovani team building</h2>
                 <p class="txt mb-4">
                     Koncept team building programa podrazumijeva snalaženje u novom okruženju, daleko od radnog mjesta. Drugim riječima to je niz zabavnih, strateških igara koje tim vaših uposlenika mora riješiti. Moraju se snalaziti u novoj situaciji, zajedno pronalaziti i ostvarivati rješenja. Timova ima više i oni se međusobno takmiče za što bolje rezultate.
@@ -111,7 +111,7 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/reference-bg.jpg")}}');"></div>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <h2>Reference</h2>
                     <p class="txt">
                         Termag hotel izuzetnu pažnju pridaje organizaciji team building programa i upravo iz tog razloga smo osnovali naš tim animatora „PST“. Animacioni tim „PST“, broji 10 članova, većinom profesora fizičke kulture, koji su obučeni u izvođenju animaciono-rekreativnih sadržaja. Uz veliko iskustvo, odličnu obučenost i maksimalnu posvećenost „PST“ tim čini veoma bitan dio hotela Termag i u mogućnosti je da ispuni najkompleksnije zahtjeve naših klijenata. Do sada je „PST“ tim u više navrata radio team building za prestižne firme poput: OMV, PLIVA, FORD, RECA, BSP PROCESOR, ATLANTIC, PHILIP MORRIS, NOBEL, STIHL, PROMO TOURS...

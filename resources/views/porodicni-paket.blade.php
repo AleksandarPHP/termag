@@ -5,8 +5,8 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/fam-hero.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1>Porodični Paket</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Porodični Paket</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
                     Gastronomska raznolikost i tradicija u restoranu hotela Termag
                 </p>
             </div>
@@ -335,7 +335,7 @@
     <section class="wellness-spa">
         <div class="bg center" style="background-image: url('{{asset("assets/images/bazen-bg.jpg")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Relax i zabava za cijelu porodicu</h2>
                 <p class="txt">
                     Wellnes&Spa uživanje - U našem Wellnes&Spa centru doživite čari bezbrižnog odmora i uživanja u mirnom okruženju u kome će podjednako uživati i roditelji i djeca.
@@ -349,7 +349,7 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/free.jpg")}}');"></div>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <h2>Besplatan <br/> boravak za <br/> djecu</h2>
                     <p class="txt">
                         Za porodice koje odluče da odmor provedu u hotelu Termag, spremili smo posebne pogodnosti. Djeca do 12 godina starosti u našem hotelu mogu uživati besplatno.
@@ -363,7 +363,7 @@
     <section class="wellness-spa py-20">
         <div class="bg center" style="background-image: url('{{asset("assets/images/ture.png")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Biciklističke Ture</h2>
                 <p class="txt">
                     Biciklističke avanture - Naše biciklističke ture su posebni avanturistički događaji koji su puni smijeha i uzbuđenja.
@@ -377,7 +377,7 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/food.png")}}');"></div>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <h2>Gastronomska ponuda</h2>
                     <p class="txt">
                         Porodični objedi su nešto što sa sobom nosi jednu posebnu crtu bliskosti i tradicije. Naša gastronomska ponuda će biti pravi užitak za sva čula te će porodicama obezbjediti divne momente degustacije ukusnih jela.
@@ -393,25 +393,25 @@
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
         <div class="container">
             <div class="text-center">
-                <h2>Nezaboravno Iskustvo</h2>
-                <p class="txt">
+                <h2 data-aos="fade-down" data-aos-duration="600">Nezaboravno Iskustvo</h2>
+                <p class="txt" data-aos="fade-down" data-aos-duration="600">
                     Vaše zadovoljstvo boravka kod nas nam je najbitnije, zato smo sa posebnom pažnjom pristupili svakom detalju planiranja prostora i uređenja. Na taj način smo vam obezbijedili savršene uslove boravka u našim smještajnim jedinicima, te ćemo vam omogućiti odmor za pamćenje. Poklonite nam vaše povjerenje a mi ćemo ispuniti sva vaša očekivanja. 
                 </p>
 
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-1.jpg')}}" alt="kuglana">
                             <figcaption>Kuglana</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-2.jpg')}}" alt="kuglana">
                             <figcaption>Igraonica za decu</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-3.jpg')}}" alt="kuglana">
                             <figcaption>Foaje</figcaption>

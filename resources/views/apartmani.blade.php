@@ -5,9 +5,9 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/apartmani-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h4>Kreirajte zajedničke uspomene na Jahorini</h4>
-                <h1>Apartmani</h1>
-                <p>
+                <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Kreirajte zajedničke uspomene na Jahorini</h4>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">Apartmani</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000">
                     Kada je smještaj u našem hotelu u pitanju, našim dragim gostima su na raspolaganju 71 elegantno uređena soba, 21 apartman modernog dizajna i predsjednicki apartman. Svakom detalju enterijera smo posvetili posebnu pažnju, a svaki komad namještaja je ručno izrađeno umjetničko djelo.
                 </p>
             </div>
@@ -21,25 +21,25 @@
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
         <div class="container">
             <div class="text-center">
-                <h2>Nezaboravno Iskustvo</h2>
-                <p class="txt">
+                <h2 data-aos="fade-down" data-aos-duration="600">Nezaboravno Iskustvo</h2>
+                <p class="txt"  data-aos="fade-down" data-aos-duration="600">
                     Vaše zadovoljstvo boravka kod nas nam je najbitnije, zato smo sa posebnom pažnjom pristupili svakom detalju planiranja prostora i uređenja. Na taj način smo vam obezbijedili savršene uslove boravka u našim smještajnim jedinicima, te ćemo vam omogućiti odmor za pamćenje. Poklonite nam vaše povjerenje a mi ćemo ispuniti sva vaša očekivanja. 
                 </p>
 
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4"  data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-1.jpg')}}" alt="kuglana">
                             <figcaption>Kuglana</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-2.jpg')}}" alt="kuglana">
                             <figcaption>Igraonica za decu</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-3.jpg')}}" alt="kuglana">
                             <figcaption>Foaje</figcaption>
@@ -54,10 +54,10 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600">
                     <img src="{{asset('assets/images/apartmani-img-left-1.jpg')}}" alt="apartman" class="img-fluid">
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7" data-aos="fade-left" data-aos-duration="600">
                     <img src="{{asset('assets/images/apartmani-img-right-1.png')}}" alt="apartman" class="img-fluid">
                     <div class="content-wrapper"> 
                         <h4>Luksuz i ugodjaj u savršenom skladu</h4>
@@ -78,7 +78,7 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-7" data-aos="fade-right" data-aos-duration="600">
                     <img src="{{asset('assets/images/apartmani-img-left-2.png')}}" alt="apartman" class="img-fluid">
                     <div class="content-wrapper"> 
                         <h2><span>Lux</span> Apartman <span>(H3)</span></h2>
@@ -93,7 +93,7 @@
                         </span></a>
                     </div>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-5" data-aos="fade-left" data-aos-duration="600">
                     <img src="{{asset('assets/images/apartmani-img-right-2.png')}}" alt="apartman" class="img-fluid">
                 </div>
             </div>
@@ -105,10 +105,10 @@
         <img src="{{asset('assets/images/section-decor.png')}}" alt="dekoracija">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600">
                     <img src="{{asset('assets/images/basic-1.png')}}" alt="apartman" class="img-fluid">
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-7" data-aos="fade-left" data-aos-duration="600">
                     <img src="{{asset('assets/images/basic-2.png')}}" alt="apartman" class="img-fluid">
                     <div class="content-wrapper"> 
                         <h4>Luksuz i ugodjaj u savršenom skladu</h4>
@@ -132,12 +132,12 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12" data-aos="fade-down" data-aos-duration="600">
                     <img src="{{asset('assets/images/eco-1.png')}}" alt="apartman" class="img-fluid">
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="600">
                     <div class="content-wrapper"> 
                         <h2><span>Economy</span> Apartman <span>(H3)</span></h2>
                         <p class="txt mb-4">
@@ -151,7 +151,7 @@
                         </span></a>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="600">
                     <img src="{{asset('assets/images/eco-2.png')}}" alt="apartman" class="img-fluid">
                 </div>
             </div>

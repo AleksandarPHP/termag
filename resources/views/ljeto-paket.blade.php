@@ -5,8 +5,8 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/btn.png")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1>Termag ljeto paket</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Termag ljeto paket</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
                 Ukoliko želite savršen odmor za Vas i Vašu porodicu, isplaniran do poslednjeg detalja onda je Termag ljeto za porodice kao stvoren za Vas! Mnoštvo zabavnog sadržaja u kom učestvuje cijela porodica, aktivnosti na otvorenom, uživanje u prirodi, edukativni sadržaji, slobodno vrijeme za roditelje... Da, mislili smo o svemu, Vaše je samo da dođete i da se prepustite!
                 </p>
             </div>

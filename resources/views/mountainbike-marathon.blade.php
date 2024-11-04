@@ -5,8 +5,8 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/bike-marathon.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1>Atrakcije oko Nas</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Atrakcije oko Nas</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
                     Olimpijska planina Jahorina zauzima centralnu poziciju u Bosni i Hercegovini I udaljena je od Sarajeva i međunarodnog aerodroma na samo pola sata vožnje. Centralna pozicija omogućava odličnu povezanost sa drugim destinacijama i atrakcijama u okruženju, tako da Jahorina predstavlja odličnu bazu i za odmor tokom kojeg želite da upoznate region.
                 </p>
             </div>
@@ -16,9 +16,9 @@
     <section class="wellness-spa">
         <div class="bg" style="background-image: url('{{asset("assets/images/bike.jpg")}}');"></div>
         <div class="container">
-            <div class="cardd">
-                <h2>Pripreme za Trku</h2>
-                <p class="txt">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
+                <h2 data-aos="fade-down" data-aos-duration="600">Pripreme za Trku</h2>
+                <p class="txt" data-aos="fade-down" data-aos-duration="600">
                     Pripreme za trku su ključne za postizanje dobrih rezultata na ovom sportskom nadmetanju. Bitno je postaviti ciljeve i odrediti da li želite da oborite svoj lični rekord, da završite trku ili jednostavno samo želite učestvovati i doživjeti novo iskustvo. U skladu sa tim planirate svoj trening i određujete njegovu težinu. Tako ćete raditi na svojoj kondiciji i fizičkoj spremnosti kako biste mogli uspješno da odgovorite svim izazovima koje triatlon trka sa sobom nosi. Prilagodite ishranu svom treningu, unosite dovoljno hranljivih materija i na kraju odmarajte dovoljno. Odmor koji priredite vašem tijelu i mišićima će vam donijeti izuzetnu korist. Ako koristite posebnu opremu, testirajte je i uvjerite se da će vas poslužiti na pravi način tokom trke.
                 </p>
                 <a href="#" class="btnn btn_primary">Book now</a>
@@ -36,19 +36,19 @@
                 </p>
 
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/kat-1.png')}}" alt="porodicna 8km">
                             <figcaption>Porodična (8km)</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/kat-2.jpg')}}" alt="plava 24km">
                             <figcaption>Plava (24km)</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/kat-3.jpg')}}" alt="crvena 34km">
                             <figcaption>Crvena (34km)</figcaption>
@@ -62,7 +62,7 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/porodicno.png")}}');"></div>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <h2>Porodično učestvovanje</h2>
                     <p class="txt">
                         Trka može biti pravi porodični dan jer je obezbjeđeno učešće za cijelu porodicu. Podijelite svoj takmičarski duh sa vašim najvoljenijima i osjetite jedan potpuno novi doživljaj ovog sportskog nadmetanja. Istražujte zajedno prirodne ljepote Jahorine dok učestvujete u ovoj nevjerovatnoj sportskoj avanturi. Termag challenge race ima staze koje su prilagođene svima od najmlađih do najstarijih učesnika sa različitim stepenom zahtjevnosti.
@@ -75,7 +75,7 @@
     <section class="wellness-spa">
         <div class="bg" style="background-image: url('{{asset("assets/images/sportski-duh.jpg")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Sportski duh</h2> 
                 <p class="txt">
                     Sportsko takmičenje naglašava sportski duh te kombinuje zajedništvo i  obožavanje prirode u jednom. Termag challenge race podstiče timski duh te naglašava važnost podrške i duha zajedništva. To nije samo trka, mnogo je više od toga. Pravi je izazov ne samo za vaše fizičke spostobnosti nego i za vaše lične osobine i način življenja. Istražite vaše granice izdržljivosti kroz ovu trku koja će vam ponuditi mnogo više od sportskog takmičenja.

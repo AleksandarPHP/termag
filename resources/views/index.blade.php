@@ -12,9 +12,9 @@
 
                 <div class="container">
                     <div class="content-wrapper">
-                        <h4>Kreirajte zajedničke uspomene na Jahorini</h4>
-                        <h1>Hotel Termag</h1>
-                        <p>
+                        <h4 data-aos="fade-down" data-aos-delay="250" data-aos-duration="1500">Kreirajte zajedničke uspomene na Jahorini</h4>
+                        <h1 data-aos="zoom-in" data-aos-delay="750" data-aos-duration="2000">Hotel Termag</h1>
+                        <p data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1500">
                             Na olimpijskoj ljepotici, planini Jahorini, smješten
                             je pravi raj za ljubitelje prirode, aktivnog odmora
                             i skijanja. Pozicioniran na idealnom mjestu, odmah
@@ -39,7 +39,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5">
-                            <div class="content-wrapper">
+                            <div class="content-wrapper" data-aos="fade-right" data-aos-duration="600">
                             <h4 class="subtitle">Luksuz i ugođaj u savršenom skladu</h4>
                             <h2 class="title">Smještaj Hotela</h2>
                             <p class="txt">Nasa ponuda uključuje 71 sobu i 21 apartman uključujući i ekskluzivni predsjednički apartman. Svaka smještajna jedinica u našem hotelu je dizajnirana sa posebnom pažnjom uz akcenat na ručno izrađenom drvenom namještaju i rustičnim elementima koji savršeno dočaravaju idiličnu planinsku atmosferu. Od SUPERIOR apartmana sa francuskim ležajevima do FAMILY apartmana koji su idealni za porodični odmor, svaki apartman nudi vrhunski komfor, modernu opremljenost brzim internetom, kablovskom tv i mini barom. Doživite nezaboravne trenutke u Termag hotelu gdje svaki detalj govori priču o gostoprimstvu i toplini.</p>
@@ -55,7 +55,7 @@
                 <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
                 <div class="container">
                     <div>
-                        <div class="cardd">
+                        <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                             <h2>Villa Termag  (H3)</h2>
                             <p class="txt mb-4">
                                 Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
@@ -66,7 +66,7 @@
                             </p>
                             <a href="#" class="btnn btn_primary">Book now</a>
                         </div>
-                        <img class="img-fluid" src="{{asset('assets/images/villa-termag-inner.jpg')}}" alt="villa termag">
+                        <img  class="img-fluid" src="{{asset('assets/images/villa-termag-inner.jpg')}}" alt="villa termag">
                     </div>
                 </div>
             </section>
@@ -74,7 +74,7 @@
             <section class="wellness-spa">
                 <div class="bg" style="background-image: url('{{asset("assets/images/wellness-spa-bg.jpg")}}');"></div>
                 <div class="container">
-                    <div class="cardd">
+                    <div class="cardd" data-aos="fade-left" data-aos-duration="800">
                         <h2>Wellness & Spa</h2>
                         <p class="txt mb-4">
                             Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
@@ -95,7 +95,7 @@
                 </video>
                 <div class="container">
                     <div>
-                        <div class="cardd">
+                        <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                             <h2>Ukus Jahorine</h2>
                             <p class="txt mb-4">
                                 Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
@@ -117,7 +117,7 @@
             <section class="wellness-spa konf-sala">
                 <div class="bg" style="background-image: url('{{asset("assets/images/konf-sala-bg.jpg")}}');"></div>
                 <div class="container-fluid">
-                    <div class="cardd">
+                    <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                         <h2>Konferencijska sala</h2>
                         <p class="txt mb-4">
                             Konferencijska sala Hotela Termag na Jahorini predstavlja savršen prostor za poslovne i društvene događaje. Sala je dizajnirana sa autentičnim stilom i opremljena najsavremenijom tehnologijom. Posjeduje kapacitet do 350 ljudi u bioskopskoj postavci, a zahvaljujući fleksibilnom dizajnu može se podijeliti na četiri manje sale, svaka sa prirodnom osvjetljenošću. 
@@ -139,7 +139,7 @@
                 </div>
                
                 <div class="container">
-                    <div class="cardd">
+                    <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                         <h2>Skijaško Carstvo</h2>
                         <p class="txt mb-4">
                             Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
@@ -159,7 +159,7 @@
                     />
                 </video>
                 <div class="container-fluid">
-                    <div class="cardd">
+                    <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                         <h2>Termag Aktivni Izazovi</h2>
                         <p class="txt">
                             U hotelu Termag radimo na jačanju timskog duha i unapređenju sportskih vještina. Kroz aktivnosti i izazove zajedno promovišemo sportski duh, timsku saradnju, ali i jačamo energiju ekipe. Tu smo da vam ponudimo organizaciju team buildinga, challenge race-a, triatlona, biciklizma, hikinga… Ovi izazovi nisu samo fizičke aktivnosti nego i prilika za druženje i izgradnju boljih međuljudskih odnosa kroz radost zdravog življenja.
@@ -172,14 +172,14 @@
             <section class="special">
                 <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
                 <div class="container">
-                    <h2 class="title-smaller">Specijalne Usluge</h2>
-                    <p class="txt">
+                    <h2 class="title-smaller" data-aos="fade-right" data-aos-duration="800">Specijalne Usluge</h2>
+                    <p class="txt" data-aos="fade-right" data-aos-duration="800">
                         Naša ponuda uključuje 71 sobu i 21 apartman, uključujući ekskluzivni predsjednički apartman. Svaki prostor je pažljivo dizajniran, sa ručno izrađenim namještajem od drveta i rustičnim elementima koji odražavaju bogatstvo planinske tradicije. Od SUPERIOR apartmana sa francuskim ležajevima do FAMILY apartmana idealnih za porodični odmor, svaki apartman nudi vrhunski komfor, modernu opremljenost sa brzim internetom, kablovskom TV i mini barom. Doživite nezaboravne trenutke u Termag hotelu, gde svaki detalj govori priču o gostoprimstvu i toplini.
                     </p>
 
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="card" >
+                            <div class="card" data-aos="fade-right" data-aos-duration="800">
                                 <img src="{{asset('assets/images/special-1.jpg')}}" class="card-img-top" alt="porodicni paket">
                                 <div class="card-body">
                                   <h5>Porodični Paket</h5>
@@ -191,7 +191,7 @@
                               </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="card" >
+                            <div class="card" data-aos="fade-left" data-aos-duration="800">
                                 <img src="{{asset('assets/images/special-2.jpg')}}" class="card-img-top" alt="Romantični Paket">
                                 <div class="card-body">
                                   <h5>Porodični Paket</h5>
@@ -206,7 +206,7 @@
 
                     <div class="row">
                         <div class="col-lg-4">
-                            <div class="card" >
+                            <div class="card" data-aos="fade-right" data-aos-duration="800">
                                 <img src="{{asset('assets/images/special-3.jpg')}}" class="card-img-top" alt="Relax Paket">
                                 <div class="card-body">
                                   <h5>Relax Paket</h5>
@@ -218,7 +218,7 @@
                               </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="card" >
+                            <div class="card" data-aos="fade-up" data-aos-duration="800">
                                 <img src="{{asset('assets/images/special-4.jpg')}}" class="card-img-top" alt="Detox Paket">
                                 <div class="card-body">
                                   <h5>Detox Paket</h5>
@@ -230,7 +230,7 @@
                               </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="card" >
+                            <div class="card" data-aos="fade-left" data-aos-duration="800">
                                 <img src="{{asset('assets/images/special-5.jpg')}}" class="card-img-top" alt="Back to Nature">
                                 <div class="card-body">
                                   <h5>Back to Nature</h5>
@@ -245,7 +245,7 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="card">
+                            <div class="card" data-aos="zoom-in" data-aos-duration="800">
                                 <div class="row">
                                     <div class="col-lg-5">
                                         <h5>✈️ Prevoz sa aerodroma </h5>

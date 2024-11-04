@@ -4,7 +4,7 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/eco-bg.jpg")}}');"></div>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <h2>Eco Friendly</h2>
                     <p class="txt">
                         Kao svaki dobar domaćin, tako i Termag Hotel, želi da se svi njegovi gosti osjećaju kao kod kuće, a misija Termag kuće je : "Život u skladu sa prirodom!". I, nije to samo fraza, već način življenja, način bavljenja biznisom, način našeg posmatranja na Svijet.
@@ -19,7 +19,7 @@
     <section class="wellness-spa">
         <div class="bg" style="background-image: url('{{asset("assets/images/mount-bike-bg.jpg")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Mountainbike – brdski biciklizam</h2>
                 <p class="txt">
                     Jahorina je planina koja se proteže na velikom prostoru a povezana je i sa Ravnom planinom na sjeveru. Upravo ta veza Jahorine i Ravne planine sa velikim brojem šumskih puteva i staza je pravi mali raj za ljubitelje biciklizma. Staze se protežu kroz šumu i pružaju vrhunski užitak vožnje kroz prirodu i ugodnu hladovinu. Konfiguracija terena je takva da možete kombinovati lakše staze ali i one zhtjevnije, u zavisnosti od vaše fizičke prirpemljenosti. Staze su pogodne i za rekreativce i za one malo kativnije bicikliste.

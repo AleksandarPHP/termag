@@ -16,7 +16,7 @@
     <section class="wellness-spa">
         <div class="bg" style="background-image: url('{{asset("assets/images/3d-bg.jpg")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>3D tehnologija</h2>
                 <p class="txt">
                     Kako biste na potpuno realan način doživjeli impozantnu prirodu Jahorine, koristimo 3D tehnologiju i pružamo vam mogućnost da istražite svaki kutak. Jasno i precizno ćete doživjeti svaki segment ove planinske ljepotice.</p>

@@ -5,7 +5,7 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/igraonica.jpg")}}');"></div>
         <div class="container">
             <div>
-                <div class="cardd">
+                <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     <p class="txt mb-4">
                         Radno vrijeme igraonice je od 9.00 - 22.00 u zimskom periodu. Termin od 19.30-22.00 je rezervisan za animaciju.
                     </p>
@@ -25,7 +25,7 @@
     <section class="wellness-spa">
         <div class="bg" style="background-image: url('{{asset("assets/images/letnja-igraonica.jpg")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Ljetnja Igraonica</h2>
                 <p class="txt">
                     Proljeće, ljeto ili jesen na planini je posebno vrijeme u godini kada nam priroda nudi svoje najljepše boje i prosto mami da uživamo u njoj. 

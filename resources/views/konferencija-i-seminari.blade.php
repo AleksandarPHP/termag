@@ -5,9 +5,9 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/konf-sala-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h4>Autentičan Dizajn u Formalnom Ruhu</h4>
-                <h1>Konferencijska Sala</h1>
-                <p>
+                <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Autentičan Dizajn u Formalnom Ruhu</h4>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">Konferencijska Sala</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000">
                     Hotel Termag raspolaže izuzetno dobro opremljenom konferencijskom salom, autentičnog dizajna, kapaciteta do 350 mjesta. Ona je idealan prostor za vaša poslovna događanja u profesionalnom ambijentu naglašavajući kombinaciju formalnosti i estetike.  Prostor odiše jedinstvenošću uz naglašenu estetiku i zagarantovanu funkcionalnost koja će unaprijediti vaše poslovne poduhvate.
                 </p>
             </div>
@@ -19,7 +19,7 @@
                 <div class="bg" style="background-image: url('{{asset("assets/images/seminars-bg.jpg")}}');"></div>
                 <div class="container">
                     <div>
-                        <div class="cardd">
+                        <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                             <h2>Konferencije i seminari</h2>
                             <p class="txt mb-4">
                             Termag Hotel Jahorina je do sada bio domaćin velikom broju MICE događaja. Ogroman broj seminara iz oblasti medicine, farmacije, prava, organizacija kick off i sales konferencija, retail bussines, pa sve do umjetničkih izložbi, modnih revija, koncerata, političkih skupova visokog ranga, garant su iskustva i vrhunskog profesioanlizma našeg osoblja koje može uspješno odgovoriti najkompleksnijim zahtjevima.
@@ -36,7 +36,7 @@
             <section class="wellness-spa">
                 <div class="bg" style="background-image: url('{{asset("assets/images/location.jpg")}}');"></div>
                 <div class="container">
-                    <div class="cardd">
+                    <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                         <h2>Lokacija</h2>
                         <p class="txt mb-4">
                         Termag Hotel Jahorina se nalazi u samom središtu ski centra Jahorina, na nadmorskoj visini od 1550 m n/v, a od aerodroma je udaljen 30 km ili pola sata vožnje.
@@ -62,7 +62,7 @@
                 <div class="bg" style="background-image: url('{{asset("assets/images/flexibility-bg.jpg")}}');"></div>
                 <div class="container">
                     <div>
-                        <div class="cardd">
+                        <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                             <h2>Konferencije i seminari</h2>
                             <p class="txt">
                             Kada organizujete seminar, kongres ili konferenciju brojni zahtjevi se postavljaju pred vas: dovoljan broj soba, funkcionalna seminar sala, dobra hrana, vrhunska usluga, parking, blizina aerodroma, mogućnost transfera, fleksibilnost i mogućnost brzog odogovora na specifične zahtjeve… Sve ovo može da zada pravu glavobolju ali ako odaberete Termag Hotel za vaš slijedeći događaj sve vaše brige postaju prošlost i možete biti sigurni u uspjeh vašeg eventa.

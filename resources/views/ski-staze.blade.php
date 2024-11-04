@@ -12,8 +12,8 @@
 
         <div class="container">
             <div class="content-wrapper">
-                <h4>Upoznajte ski staze na Jahorini</h4>
-                <h1>Ski Staze</h1>
+                <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Upoznajte ski staze na Jahorini</h4>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">Ski Staze</h1>
             </div>
         </div>
     </section>
@@ -90,7 +90,7 @@
     <section class="accommodation accommodation2">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600">
                     <div class="content-wrapper">
                     <h4 class="subtitle">Luksuz i ugođaj u savršenom skladu</h4>
                     <h2 class="title">Smještaj Hotela</h2>
@@ -106,7 +106,7 @@
     <section class="wellness-spa ">
         <div class="bg" style="background-image: url('{{asset("assets/images/saveti-bg.jpg")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Savjeti za skijaše</h2>
                 <p class="txt mb-4">
                     Pripremili smo nekoliko korisnih savjeta za skijaše, kako bi im olakšali planiranje i realizaciju dana sa ski stazi. Poštujući ove savjete, unaprijedite maksimalno skijaško iskustvo.

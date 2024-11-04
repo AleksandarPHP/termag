@@ -5,8 +5,8 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/karijera-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1>Karijera</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Karijera</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
                     Naš posao je da ugostimo ljude sa svih strana Svijeta i
                     učinimo da se u hotelu Termag osjećaju kao kod kuće.
                 </p>
@@ -19,7 +19,7 @@
     <section class="wellness-spa">
         <div class="bg" style="background-image: url('{{asset("assets/images/belief-bg.jpg")}}');"></div>
         <div class="container">
-            <div class="cardd">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Termag hotel vjeruje u tebe!</h2>
                 <p class="txt mb-4">
                     Naš ambijent jeste udoban i privlačan ali ono što mu daje pravu toplinu jesu ljudi!

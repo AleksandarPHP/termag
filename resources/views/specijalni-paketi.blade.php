@@ -5,8 +5,8 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/sp-hero.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1>Specijalni Paketi</h1>
-                <p>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Specijalni Paketi</h1>
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
                     Posebne ponude hotela Termag su kreirane na način da udovolje vašim interesovanjima bilo da ste hedonista, ljubitelj prirode ili avanturista, sportista, ili ljubitelj masaža. Dolazite u paru i potrebna vam je intimnija atmosfera ili je u pitanju porodični odmor, nudimo sadržaje koji će vašem boravku u hotelu Termag dati posebnu čar.
                     Romatnični, Porodični, Relax, Back to nature ili Termag ljeto, izaberite paket po vašoj mjeri. 
                 </p>
