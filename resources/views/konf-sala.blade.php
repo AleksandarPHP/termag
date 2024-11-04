@@ -19,7 +19,7 @@
     <section class="wellness-spa konf-sala">
         <div class="bg" style="background-image: url('{{asset("assets/images/konf-sala-bg.jpg")}}');"></div>
         <div class="container-fluid">
-            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
+            <div class="cardd">
                 <h2>Fleksibilnost prostora</h2>
                 <p class="txt">
                     Prostor naše konferencijske sale je u skladu sa visokim standardima savremenog poslovnog okruženja. To znači da će vam pružiti sve ono što vam je u poslovnom smislu potrebno za realizaciju vaših zamisli. Naša konferencijska sala je djeljiva u četiri manje sale koje, i u slučaju djeljenja prostora, i dalje zadržavaju prirodno osvjetljenje. U skladu sa tim, pogodna je za održavanje različitih vrsta poslovnih događaja, te za različite veličine skupova.
@@ -49,7 +49,7 @@
     <section class="wellness-spa konf-sala">
         <div class="bg" style="background-image: url('{{asset("assets/images/flexibility-bg.jpg")}}');"></div>
         <div class="container-fluid">
-            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
+            <div class="cardd">
                 <h2>Fleksibilnost prostora</h2>
                 <p class="txt">
                     Prostor naše konferencijske sale je u skladu sa visokim standardima savremenog poslovnog okruženja. To znači da će vam pružiti sve ono što vam je u poslovnom smislu potrebno za realizaciju vaših zamisli. Naša konferencijska sala je djeljiva u četiri manje sale koje, i u slučaju djeljenja prostora, i dalje zadržavaju prirodno osvjetljenje. U skladu sa tim, pogodna je za održavanje različitih vrsta poslovnih događaja, te za različite veličine skupova.

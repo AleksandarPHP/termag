@@ -17,8 +17,8 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/bike.jpg")}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
-                <h2 data-aos="fade-down" data-aos-duration="600">Pripreme za Trku</h2>
-                <p class="txt" data-aos="fade-down" data-aos-duration="600">
+                <h2 >Pripreme za Trku</h2>
+                <p class="txt">
                     Pripreme za trku su ključne za postizanje dobrih rezultata na ovom sportskom nadmetanju. Bitno je postaviti ciljeve i odrediti da li želite da oborite svoj lični rekord, da završite trku ili jednostavno samo želite učestvovati i doživjeti novo iskustvo. U skladu sa tim planirate svoj trening i određujete njegovu težinu. Tako ćete raditi na svojoj kondiciji i fizičkoj spremnosti kako biste mogli uspješno da odgovorite svim izazovima koje triatlon trka sa sobom nosi. Prilagodite ishranu svom treningu, unosite dovoljno hranljivih materija i na kraju odmarajte dovoljno. Odmor koji priredite vašem tijelu i mišićima će vam donijeti izuzetnu korist. Ako koristite posebnu opremu, testirajte je i uvjerite se da će vas poslužiti na pravi način tokom trke.
                 </p>
                 <a href="#" class="btnn btn_primary">Book now</a>

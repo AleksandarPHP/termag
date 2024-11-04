@@ -42,7 +42,7 @@
     <section class="wellness-spa konf-sala">
         <div class="bg" style="background-image: url('{{asset("assets/images/saveti-bg.jpg")}}');"></div>
         <div class="container-fluid">
-            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
+            <div class="cardd">
                 <h2>Savjeti za skijaše</h2>
                 <p class="txt mb-4">
                     Pripremili smo nekoliko korisnih savjeta za skijaše, kako bi im olakšali planiranje i realizaciju dana sa ski stazi. Poštujući ove savjete, unaprijedite maksimalno skijaško iskustvo.
