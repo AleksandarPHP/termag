@@ -466,6 +466,27 @@
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                ENG
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#"
+                                        >ENG</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">DE</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                     <div>
                         <a href="/kontakt" type="button">Kontakt</a>

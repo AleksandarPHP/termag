@@ -140,8 +140,21 @@ header .navbar .navbar-nav li a {
     font-weight: 600;
 }
 
-header .navbar .navbar-nav .nav-item .dropdown-toggle::after {
+header .navbar .navbar-nav .nav-item:not(:last-child) .dropdown-toggle::after {
     display: none;
+}
+
+header .navbar .navbar-nav .nav-item .dropdown-toggle::after {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+header
+    .navbar
+    .navbar-nav
+    .nav-item
+    .dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
 }
 
 header .navbar .navbar-nav .dropdown-menu[data-bs-popper] {
@@ -1330,6 +1343,7 @@ footer .cta-links a {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    z-index: -1;
 }
 
 .registration .row.row-2 {
@@ -1383,6 +1397,7 @@ footer .cta-links a {
 
 .hiking {
     overflow: hidden;
+    padding: 13rem 0;
 }
 
 .hiking video {
@@ -1403,4 +1418,59 @@ footer .cta-links a {
     position: absolute;
     z-index: -1;
     inset: 0;
+}
+
+.career::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.packages img[alt="zamak termag"] {
+    top: 40%;
+}
+
+.packages .nav-tabs {
+    border: none;
+    justify-content: center;
+    margin-bottom: 5rem;
+    gap: 4rem;
+}
+.packages .nav-tabs .nav-link {
+    padding: 1rem 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 2.4rem;
+    background-color: transparent;
+    color: var(--text-color-primary);
+    border-radius: 10rem;
+}
+
+.packages h2 {
+    color: var(--gold);
+}
+
+.packages .nav-tabs .nav-link.active {
+    background-color: var(--text-color-primary);
+    color: #fff;
+    border: 1px solid var(--text-color-primary);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.packages .porodicni-paket {
+    padding-top: 10rem;
+}
+
+.packages-2 {
+    background-color: #e5ddd2;
+    z-index: 1;
+}
+.career-2 .content-wrapper h1 {
+    color: var(--gold);
+}
+.py-20 {
+    padding: 20rem 0;
 }

@@ -124,6 +124,24 @@ Route::get('/quad-safari', function () {
 Route::get('/ljetnje-avanture', function () {
     return view('ljetne-avanture');
 });
+Route::get('/specijalni-paketi', function () {
+    return view('specijalni-paketi');
+});
+Route::get('/relax-paket', function () {
+    return view('relax-paket');
+});
+Route::get('/back-to-nature', function () {
+    return view('back-to-nature');
+});
+Route::get('/ljeto-paket', function () {
+    return view('ljeto-paket');
+});
+Route::get('/romanticni-paket', function () {
+    return view('romanticni-paket');
+});
+Route::get('/porodicni-paket', function () {
+    return view('porodicni-paket');
+});
 
 Auth::routes(['verify' => false, 'register' => false]);
 
