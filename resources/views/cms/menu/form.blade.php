@@ -25,6 +25,16 @@
             @if($editing) @method('PUT') @endif
             <input type="hidden" value="{{ $lang }}" name="language">
             <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="parent_id">parent_id</label>
+                        <select name="parent_id" class="form-control" id="parent_id" {!! $errors->has('parent_id') ? 'style="border-color:red;"' : '' !!}>
+                        @foreach ($item as $i)
+                          {{-- <option value="{{ $i->id }}" @if(($errors->any() && in_array($i->id, old('products', []))) || (!$errors->any() && $item->products->contains($i->id))) selected @endif>{{ $i->title.' (ID: '.$i->id.')' }}</option> --}}
+                        @endforeach
+                        </select>
+                    </div>
+                </div>
                 @if($item->id!=3)
                 <div class="col-md-12">
                     <div class="form-group">
@@ -33,42 +43,16 @@
                     </div>
                 </div>
                 @endif
-                @if($item->id!=3&& $item->id!=4 && $item->id!=7 && $item->id!=8 && $item->id!=9 && $item->id!=11 && $item->id!=16)
+                
                 <div class="col-md-12"><hr></div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="subtitle">Podnaslov</label>
-                        <input name="subtitle" type="text" class="form-control" id="subtitle" placeholder="Podnaslov" value="{{ old('subtitle', $item->getTranslation('subtitle', $lang, false)) }}" {!! $errors->has('subtitle') ? 'style="border-color:red;"' : '' !!}>
-                    </div>
-                </div>
-                @endif
-                @if($item->id!=3 && $item->id!=4 && $item->id!=5 && $item->id!=17)
-                <div class="col-md-12"><hr></div>
-                <div class="col-md-12">
-                    <div class="form-group" {!! $errors->has('text') ? 'style="border:1px solid red;"' : '' !!}>
-                        <label for="text">Tekst</label>
-                        <textarea name="text" id="text" class="form-control">{{ old('text', $item->getTranslation('text', $lang, false)) }}</textarea>
-                    </div>
-                </div>
-                @endif
-                <div class="col-md-12"><hr></div>
-                @if($item->id==1)
                 @if($lang=='sr')
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="url">URL</label>
-                        <input name="url" type="text" class="form-control" id="url" placeholder="URL" value="{{ old('url', $item->url) }}" {!! $errors->has('url') ? 'style="border-color:red;"' : '' !!}>
+                        <input name="url" type="text" class="form-control" id="url" placeholder="URL" value="{{ old('url', $item->link) }}" {!! $errors->has('url') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div> 
                 @endif
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="urlTitle">URL naslov</label>
-                        <input name="urlTitle" type="text" class="form-control" id="urlTitle" placeholder="URL naslov" value="{{ old('urlTitle', $item->getTranslation('urlTitle', $lang, false)) }}" {!! $errors->has('urlTitle') ? 'style="border-color:red;"' : '' !!}>
-                    </div>
-                </div> 
-                @endif
-                @if($item->id==1)
                 @if($lang=='sr')
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-6">
@@ -77,55 +61,6 @@
                         <input name="url2" type="text" class="form-control" id="url2" placeholder="URL 2" value="{{ old('url2', $item->url2) }}" {!! $errors->has('url2') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div> 
-                @endif
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="urlTitle2">URL naslov 2</label>
-                        <input name="urlTitle2" type="text" class="form-control" id="urlTitle2" placeholder="URL naslov 2" value="{{ old('urlTitle2', $item->getTranslation('urlTitle2', $lang, false)) }}" {!! $errors->has('urlTitle2') ? 'style="border-color:red;"' : '' !!}>
-                    </div>
-                </div> 
-                <div class="col-md-12"><hr></div>
-                @endif
-                @if($item->id!=3 && $item->id!=4 && $item->id!=5 && $item->id!=7 && $item->id!=9 && $item->id!=10 && $item->id!=11 && $item->id!=12 && $item->id!=13 && $item->id!=15 && $item->id!=16 && $item->id!=17)
-                @if($lang=='sr')
-                <div class="col-md-3">
-                    <div class="form-group">
-                        {{-- <label>Min: {{ $width }}x{{ $height }}px</label> --}}
-                    </div>
-                    <div class="input-file-container" {!! $errors->has('image') ? 'style="border-color:red;"' : '' !!}>
-                        @if(!is_null($item->image))
-                            <a href="{{ url('cms/'.$route.'/imagedelete/'.$item->id.'?image=image') }}"><span><i class="fa fa-close"></i></span></a>
-                        @endif
-                        <span class="img-placeholder">
-                              @if(is_null($item->image))
-                              <a href="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
-                                <img src="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" alt="img">
-                              </a>
-                              @else
-                              <a href="{{ asset('storage/'.$item->image) }}" data-fancybox="gallery">
-                                <img src="{{ asset('storage/'.$item->image) }}" alt="img">
-                              </a>
-                              @endif
-                      </span>
-                    <input name="image" class="input-file input-file1" id="my-file1" type="file">
-                    <label tabindex="0" for="my-file1" class="input-file-trigger input-file-trigger1">Odaberite sliku...</label>
-                    </div>
-                    <script>
-                        var fileInput = document.querySelector(".input-file1"),
-                            button = document.querySelector(".input-file-trigger1");
-
-                        button.addEventListener("keydown", function (event) {
-                            if (event.keyCode == 13 || event.keyCode == 32) {
-                                fileInput.focus();
-                            }
-                        });
-                        button.addEventListener("click", function () {
-                            fileInput.focus();
-                            return false;
-                        });
-                    </script>
-                </div>
-                @endif
                 @endif
             </div>
             <button type="submit" class="btn btn-danger mb-3">Sačuvaj</button>

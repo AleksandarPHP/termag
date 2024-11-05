@@ -6,9 +6,9 @@
     <li class="breadcrumb-item">
         <a href="{{ url('cms') }}">POČETNA</a>
     </li>
-    <li class="breadcrumb-item active">Stranice</li>
+    <li class="breadcrumb-item active">Meni</li>
 </ol>
-<h1>Stranice</h1>
+<h1>Meni</h1>
 <hr>
 <div class="card mb-3">
     <div class="card-header">
@@ -77,7 +77,7 @@ $(document).ready(function() {
     "bProcessing": true,
     "serverSide": true,
     "ajax": {
-        url: "{{ url('cms/pages/ajax') }}",
+        url: "{{ url('cms/menu/ajax') }}",
         type: "post",
         headers: {
             'X-CSRF-Token': "{{ csrf_token() }}"
