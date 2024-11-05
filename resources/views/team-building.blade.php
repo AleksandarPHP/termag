@@ -56,7 +56,7 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="card" >
+                    <div class="card" data-aos="fade-right" data-aos-duration="600">
                         <img src="{{asset('assets/images/aktivnost-1.jpg')}}" class="card-img-top" alt="porodicni paket">
                         <div class="card-body">
                           <h5>Team Building u Zatvorenom Prostoru</h5>
@@ -65,7 +65,7 @@
                       </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card" >
+                    <div class="card" data-aos="fade-left" data-aos-duration="600">
                         <img src="{{asset('assets/images/aktivnost-2.jpg')}}" class="card-img-top" alt="Romantični Paket">
                         <div class="card-body">
                           <h5>Team building na otvorenom prostoru</h5>
@@ -77,7 +77,7 @@
 
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="card" >
+                    <div class="card" data-aos="fade-right" data-aos-duration="600">
                         <img src="{{asset('assets/images/aktivnost-3.jpg')}}" class="card-img-top" alt="Relax Paket">
                         <div class="card-body">
                           <h5>Adrenalin team building</h5>
@@ -86,7 +86,7 @@
                       </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card" >
+                    <div class="card" data-aos="fade-up" data-aos-duration="600">
                         <img src="{{asset('assets/images/aktivnost-4.jpg')}}" class="card-img-top" alt="Detox Paket">
                         <div class="card-body">
                           <h5>Zimski team building na otvorenom prostoru</h5>
@@ -95,7 +95,7 @@
                       </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card" >
+                    <div class="card" data-aos="fade-left" data-aos-duration="600">
                         <img src="{{asset('assets/images/aktivnost-5.jpg')}}" class="card-img-top" alt="Back to Nature">
                         <div class="card-body">
                           <h5>Zimski Adrenalin team building</h5>

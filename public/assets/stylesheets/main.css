@@ -668,6 +668,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
 .special {
     position: relative;
     padding: 10rem 0;
+    overflow: hidden;
 }
 .special .title-smaller {
     margin-bottom: 1.5rem;
@@ -1246,13 +1247,13 @@ footer .cta-links a {
 }
 
 .apartman-2 .bg {
-    z-index: 1;
+    z-index: 0;
 }
 
-.apartman-2 .content-wrapper,
+.apartman-2 .content-wrapper > *,
 .apartman-2 img {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .apartman .col-lg-5 img {
@@ -1640,3 +1641,123 @@ header .navbar .navbar-nav .dropdown-menu[data-bs-popper].show {
     transform: translateY(0);
     z-index: -123;
 }
+
+@media only screen and (max-width: 1600px) {
+    .hero .content-wrapper p,
+    .career .content-wrapper p,
+    .txt {
+        font-size: 1.7rem;
+    }
+    .subtitle {
+        font-size: 2.4rem;
+    }
+    .title {
+        font-size: 5.5rem;
+    }
+    .btnn {
+        font-size: 2rem;
+    }
+    .skijanje div img {
+        display: none;
+    }
+    .aktivni-izazov video {
+        width: unset;
+    }
+    .weather .wrapper {
+        padding-top: 5rem;
+    }
+    .sponsors .wrapper {
+        grid-template-columns: repeat(6, 1fr);
+        row-gap: 3rem;
+    }
+    .arrow-section h3 {
+        font-size: 3.2rem;
+    }
+    .wellness-spa ol li,
+    .konf-sala ol li {
+        font-size: 1.7rem;
+    }
+    .cardd h2,
+    .cardd h1 {
+        font-size: 5.5rem;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .gallery-intro {
+        padding: 7.5rem 0 3.5rem 0;
+    }
+    .career .content-wrapper h1 {
+        font-size: 6.5rem;
+    }
+    .special .card h5 {
+        font-size: 3rem;
+    }
+    .tb-activities .col-lg-6 .card {
+        min-height: 55rem;
+    }
+    .tb-activities .col-lg-4 .card {
+        min-height: 60rem;
+    }
+    .career .content-wrapper {
+        top: 45%;
+    }
+    .sponsors .wrapper {
+        align-items: end;
+    }
+    .sponsors .wrapper a img {
+        max-width: 75%;
+    }
+    .experience figure figcaption {
+        font-size: 2.4rem;
+    }
+    .apartman h2,
+    .title-smaller,
+    .experience h2,
+    .accommodation h1 {
+        font-size: 4.5rem;
+    }
+    .registration .row div div p {
+        font-size: 1.6rem;
+    }
+    .ski-pass-hero {
+        padding: 0;
+    }
+    .title {
+        font-size: 5rem;
+    }
+    .hero .content-wrapper h1 {
+        font-size: 5rem;
+    }
+    .hero .content-wrapper h4 {
+        font-size: 1.5rem;
+    }
+    .booking {
+        position: relative;
+        background: linear-gradient(
+            0deg,
+            rgba(229, 221, 210, 1) 100%,
+            rgba(229, 221, 210, 0.03) 100%
+        );
+    }
+    .hero video,
+    .career video {
+        min-height: 100%;
+        width: unset;
+    }
+    .hero .content-wrapper {
+        top: 60%;
+    }
+    .get-to-know .cardd h3 {
+        font-size: 3rem;
+    }
+    .booking.empty {
+        display: none;
+    }
+}
+
+/* @media only screen and (min-width: 1400px) {
+    .container {
+        max-width: 1500px !important;
+    }
+} */

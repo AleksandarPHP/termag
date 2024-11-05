@@ -63,7 +63,21 @@
             </div>
         </div>
     </section>
-    <p style="text-align:center;color:red;font-size:30px">WELLNESS AKTIVNOSTI</p>
+   
+    <section class="wellness-spa">
+        <div class="bg center" style="background-image: url('{{asset("assets/images/wa-bg.jpg")}}');"></div>
+        <div class="container">
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
+                <h2>Wellness Aktivnosti</h2>
+        
+                <p class="txt">
+                Nije samo promjena načina ishrane ono što je potrebno vašem organizmu da bi se očistilo od toksina. Tu su i razne wellnes aktivnosti koje će doprinijeti tom procesu, a dostupne su kod nas, u Termag-u. Ove aktivnosti su dizajnirane sa namjerom da vas fizički ali i mentalno dovedu u stanje apsolutne ravnoteže, što doprinosi generalnom zdravlju vašeg organizma. Uz razne terapeutske masaže, kupke, detox saune i brojne druge aktivnosti, vaše tijelo će biti prepušteno apsoulutnoj revitalizaciji. Wellnes aktivnosti u kombinaciji sa adekvatnom isplaniranom ishranom priuštiće vašem organizmu kompletnu detoksikaciju na kojoj će vam vaše tijelo biti zahvalno.
+                </p>
+                <a href="#" class="btnn btn_primary">Book now</a>
+            </div>
+        </div>
+    </section>
+
     <section class="accommodation nutrition" >
         <div class="container">
             <div class="row">

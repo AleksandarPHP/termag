@@ -33,7 +33,7 @@
     </head>
     <body>
     <header>
-    <nav class="navbar fixed-top navbar-expand-lg">
+    <nav class="navbar fixed-top navbar-expand-xxl">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img

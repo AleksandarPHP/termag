@@ -29,7 +29,7 @@
             </p>
 
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="600">
                     <div class="cardd" >
                           <h3>Ski staza Poljice</h3>
                           <p class="txt">
@@ -38,7 +38,7 @@
                           <a href="#" class="btnn btn_gold">Saznaj Više</a>
                       </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="600">
                     <div class="cardd" >
                           <h3>Ski staza Ogorjelica 1</h3>
                           <p class="txt">
@@ -47,7 +47,7 @@
                           <a href="#" class="btnn btn_gold">Saznaj Više</a>
                       </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="600">
                     <div class="cardd" >
                           <h3>Ski staza Ogorjelica 2</h3>
                           <p class="txt">
@@ -56,7 +56,7 @@
                           <a href="#" class="btnn btn_gold">Saznaj Više</a>
                       </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="600">
                     <div class="cardd" >
                           <h3>Rajska dolina</h3>
                           <p class="txt">
@@ -65,7 +65,7 @@
                           <a href="#" class="btnn btn_gold">Saznaj Više</a>
                       </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="600">
                     <div class="cardd" >
                           <h3>Ski staza Novak Djokovic</h3>
                           <p class="txt">
@@ -74,7 +74,7 @@
                           <a href="#" class="btnn btn_gold">Saznaj Više</a>
                       </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="600">
                     <div class="cardd" >
                           <h3>Olimpijski slalom i Olimpijski spust</h3>
                           <p class="txt">
@@ -136,7 +136,7 @@
 
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="card" >
+                    <div class="card" data-aos="fade-right" data-aos-duration="600">
                         <img src="{{asset('assets/images/offer-1.png')}}" class="card-img-top" alt="porodicni paket">
                         <div class="card-body">
                           <h5>Noćno skijanje</h5>
@@ -147,7 +147,7 @@
                       </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card" >
+                    <div class="card" data-aos="fade-left" data-aos-duration="600">
                         <img src="{{asset('assets/images/offer-2.png')}}" class="card-img-top" alt="Romantični Paket">
                         <div class="card-body">
                           <h5>Škola Skijanja</h5>
@@ -161,7 +161,7 @@
 
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="card" >
+                    <div class="card" data-aos="fade-right" data-aos-duration="600">
                         <img src="{{asset('assets/images/offer-3.jpg')}}" class="card-img-top" alt="Relax Paket">
                         <div class="card-body">
                           <h5>wellness & spa</h5>
@@ -171,7 +171,7 @@
                       </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card" >
+                    <div class="card" data-aos="fade-up" data-aos-duration="600">
                         <img src="{{asset('assets/images/offer-4.jpg')}}" class="card-img-top" alt="Detox Paket">
                         <div class="card-body">
                           <h5>Gastronomska ponuda</h5>
@@ -182,7 +182,7 @@
                       </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card" >
+                    <div class="card" data-aos="fade-left" data-aos-duration="600">
                         <img src="{{asset('assets/images/offer-5.png')}}" class="card-img-top" alt="Back to Nature">
                         <div class="card-body">
                           <h5>Turističke agencije</h5>
