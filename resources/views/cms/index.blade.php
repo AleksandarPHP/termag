@@ -23,7 +23,7 @@
         $moduli = array(
           array('cms/users', 'Korisnici', 'users'),
           array('cms/pages', 'Stranice', 'desktop'),
-          array('cms/settings', 'Podesavaja', 'cog'),
+          array('settings/1/edit', 'Podesavaja', 'cog'),
           array('cms/menu', 'Meni', 'bars'),
           array('cms/menu', 'Paketi', 'th-list'),
           array('cms/menu', 'Galerija', 'camera-retro'),

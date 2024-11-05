@@ -24,8 +24,8 @@
       <li @if(request()->is('cms/pages'))class="active"@endif>
         <a href="{{ url('cms/pages') }}"><i class="fas fa-th-list"></i>Paketi</a>
       </li>
-      <li @if(request()->is('cms/settings'))class="active"@endif>
-        <a href="{{ url('cms/settings') }}"><i class="fas fa-cog"></i>Podesavaja</a>
+      <li @if(request()->is('cms/settings/1/edit'))class="active"@endif>
+        <a href="{{ url('cms/settings/1/edit') }}"><i class="fas fa-cog"></i>Podesavaja</a>
       </li>
     </ul>
   </nav>
