@@ -157,6 +157,9 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
     Route::get('pages/detail/{id}', 'App\Http\Controllers\PageController@detail'); 
     Route::post('pages/ajax-detail', 'App\Http\Controllers\PageController@ajaxDetail');  
     Route::get('pages/imagedelete/{id}', 'App\Http\Controllers\PageController@removeImage');
+
+    Route::resource('settings', 'App\Http\Controllers\SettingsController')->only('update', 'edit');
+
 });
 
 Auth::routes();

@@ -12,6 +12,21 @@
       <li @if(request()->is('cms/pages'))class="active"@endif>
         <a href="{{ url('cms/pages') }}"><i class="fas fa-desktop"></i>Stranice</a>
       </li>
+      <li @if(request()->is('cms/menu'))class="active"@endif>
+        <a href="{{ url('cms/menu') }}"><i class="fas fa-bars"></i>Meni</a>
+      </li>
+      <li @if(request()->is('cms/pages'))class="active"@endif>
+        <a href="{{ url('cms/pages') }}"><i class="fas fa-camera-retro"></i>Galerija</a>
+      </li>
+      <li @if(request()->is('cms/pages'))class="active"@endif>
+        <a href="{{ url('cms/pages') }}"><i class="fas fa-envelope"></i>Inbox</a>
+      </li>
+      <li @if(request()->is('cms/pages'))class="active"@endif>
+        <a href="{{ url('cms/pages') }}"><i class="fas fa-th-list"></i>Paketi</a>
+      </li>
+      <li @if(request()->is('cms/settings'))class="active"@endif>
+        <a href="{{ url('cms/settings') }}"><i class="fas fa-cog"></i>Podesavaja</a>
+      </li>
     </ul>
   </nav>
 </aside>
