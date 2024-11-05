@@ -856,9 +856,158 @@ footer .cta-links a {
     text-align: center;
 }
 
-.weather .wrapper p {
+.weather .wrapper > p {
     margin: 5rem auto;
     max-width: 75%;
+}
+
+.weather .weather-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather .weather-cards .weather-card {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+    color: #fff;
+}
+
+.weather .weather-cards .weather-card .bg {
+    border-radius: 3rem;
+}
+
+.weather .weather-cards .weather-card:first-of-type {
+    min-height: 66rem;
+    min-width: 50rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 3rem 7.5rem 3rem;
+}
+
+.weather .weather-cards .weather-card:first-of-type::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3rem;
+}
+
+.weather .weather-cards .weather-card:first-of-type div + div {
+    position: relative;
+    z-index: 2;
+}
+
+.weather .weather-cards .weather-card:first-of-type h3 {
+    font-weight: 700;
+    font-size: 3.7rem;
+}
+
+.weather .weather-cards .weather-card:first-of-type .date {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.weather .weather-cards .weather-card:first-of-type .date + p {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.weather .weather-cards .weather-card:first-of-type h4 {
+    font-weight: 700;
+    font-size: 5rem;
+}
+.weather .weather-cards .weather-card:first-of-type h5 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.weather .weather-cards .weather-card:last-of-type {
+    background-color: rgba(178, 145, 106, 0.58);
+    padding: 4rem;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+.weather .weather-cards .weather-card:last-of-type div:not(.row) div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather .weather-cards .weather-card:last-of-type div div h5 {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.weather .weather-cards .weather-card:last-of-type div div h5 + p {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+.weather .weather-cards .weather-card:last-of-type .row div {
+    padding: 0;
+}
+
+.weather .weather-cards .weather-card:last-of-type .row div div {
+    background-color: var(--text-color-primary);
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+
+.weather .weather-cards .weather-card:last-of-type .row div div:hover {
+    background-color: #fff;
+}
+
+.weather .weather-cards .weather-card:last-of-type .row div div:hover h6,
+.weather .weather-cards .weather-card:last-of-type .row div div:hover p {
+    color: #000;
+}
+.weather .weather-cards .weather-card:last-of-type .row div div:hover img {
+    filter: brightness(0);
+}
+
+.weather .weather-cards .weather-card:last-of-type .row {
+    margin: 4rem 0;
+}
+
+.weather .weather-cards .weather-card:last-of-type .row div div img {
+    max-height: 5rem;
+}
+
+.weather .weather-cards .weather-card:last-of-type .row div div h6 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.weather .weather-cards .weather-card:last-of-type .row div div p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.weather .weather-cards .weather-card:last-of-type .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather .weather-cards .weather-card:last-of-type .location p {
+    background-color: var(--text-color-primary);
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+    max-width: fit-content;
+    font-size: 1.8rem;
 }
 
 .wellness-spa ol li,

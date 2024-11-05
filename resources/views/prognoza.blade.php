@@ -9,8 +9,80 @@
                 <p class="txt">
                     Uživajte u raznolikosti vremenskih prilika na Jahorini. Na nadmorskoj visini od skoro 2000 metara, doživite spoj planinske svježine i i bistrog vazduha. Zimski mjeseci donose obilan sniježni pokrivač pogodan za zimske radosti uz dosta niske temperature. U ljetnjim mjesecima imamo osvježavajuće toplu klimu koja je idealna za razne vanjske aktivnosti i istraživanje prirodnih ljepota Jahorine.
                 </p>
-                <!-- todo potrebno vise informacija -->
-                <img src="{{asset('assets/images/weather.png')}}" alt="weather" class="img-fluid">
+                <div class="weather-cards">
+                    <div class="weather-card">
+                    <div class="bg center" style="opacity: 1;background-image: url('{{asset("assets/images/weather-card-bg.png")}}');"></div>
+
+                        <div>
+                            <h3>Tuesday</h3>
+                            <p class="date">20 Jun 2022</p>
+                            <p>
+                                <img src="{{asset('assets/images/lokacija.svg')}}" alt="lokacija">
+                                Jahorina
+                            </p>
+                        </div>
+                        <div>
+                            <img src="{{asset('assets/images/sun.svg')}}" alt="suncano">
+                            <h4>29 °C</h4>
+                            <h5>Sunny</h5>
+                        </div>
+                    </div>
+                    <div class="weather-card">
+                    <div class="bg center" style="opacity:0.2;background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+                        <div>
+                            <div>
+                                <h5>PRECIPITATION</h5>
+                                <p>0%</p>
+                            </div>
+                            <div>
+                                <h5>HUMIDITY</h5>
+                                <p>42%</p>
+                            </div>
+                            <div>
+                                <h5>WIND</h5>
+                                <p>3 km/h</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div>
+                                    <img src="{{asset('assets/images/t-sunny.svg')}}" alt="suncano">
+                                    <h6>Tue</h6>
+                                    <p><strong>30 °C</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div>
+                                    <img src="{{asset('assets/images/t-clouds.svg')}}" alt="suncano">
+                                    <h6>Tue</h6>
+                                    <p><strong>30 °C</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div>
+                                    <img src="{{asset('assets/images/t-rain.svg')}}" alt="suncano">
+                                    <h6>Tue</h6>
+                                    <p><strong>30 °C</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div>
+                                    <img src="{{asset('assets/images/t-sunny.svg')}}" alt="suncano">
+                                    <h6>Tue</h6>
+                                    <p><strong>30 °C</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="location">
+                            <p>
+                                <img src="{{asset('assets/images/lokacija.svg')}}" alt="lokacija">
+                                Jahorina
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
