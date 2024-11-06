@@ -40,10 +40,10 @@
     <section class="race">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3"><img src="{{asset('assets/images/b-1.jpg')}}" alt="" class="img-fluid"></div>
-                <div class="col-lg-3"><img src="{{asset('assets/images/b-2.jpg')}}" alt="" class="img-fluid"></div>
-                <div class="col-lg-3"><img src="{{asset('assets/images/b-3.jpg')}}" alt="" class="img-fluid"></div>
-                <div class="col-lg-3"><img src="{{asset('assets/images/b-4.jpg')}}" alt="" class="img-fluid"></div>
+                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-1.jpg')}}" alt="" class="img-fluid"></div>
+                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-2.jpg')}}" alt="" class="img-fluid"></div>
+                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-3.jpg')}}" alt="" class="img-fluid"></div>
+                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-4.jpg')}}" alt="" class="img-fluid"></div>
             </div>
         </div>
     </section>

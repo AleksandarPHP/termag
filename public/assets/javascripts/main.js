@@ -147,3 +147,9 @@ $(".lux-slider").slick({
         // instead of a settings object
     ],
 });
+
+const booking = document.querySelector(".booking");
+
+if (window.innerWidth < 991) {
+    booking.removeAttribute("data-aos");
+}

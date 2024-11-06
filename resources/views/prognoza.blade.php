@@ -45,28 +45,28 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-3">
+                            <div class="col-md-3 col-sm-6">
                                 <div>
                                     <img src="{{asset('assets/images/t-sunny.svg')}}" alt="suncano">
                                     <h6>Tue</h6>
                                     <p><strong>30 °C</strong></p>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-md-3 col-sm-6">
                                 <div>
                                     <img src="{{asset('assets/images/t-clouds.svg')}}" alt="suncano">
                                     <h6>Tue</h6>
                                     <p><strong>30 °C</strong></p>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-md-3 col-sm-6">
                                 <div>
                                     <img src="{{asset('assets/images/t-rain.svg')}}" alt="suncano">
                                     <h6>Tue</h6>
                                     <p><strong>30 °C</strong></p>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
+                            <div class="col-md-3 col-sm-6">
                                 <div>
                                     <img src="{{asset('assets/images/t-sunny.svg')}}" alt="suncano">
                                     <h6>Tue</h6>

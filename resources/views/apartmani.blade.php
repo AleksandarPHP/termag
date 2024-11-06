@@ -27,19 +27,19 @@
                 </p>
 
                 <div class="row">
-                    <div class="col-lg-4"  data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
+                    <div class="col-lg-4 col-sm-6"  data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-1.jpg')}}" alt="kuglana">
                             <figcaption>Kuglana</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-2.jpg')}}" alt="kuglana">
                             <figcaption>Igraonica za decu</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-3.jpg')}}" alt="kuglana">
                             <figcaption>Foaje</figcaption>

@@ -1525,7 +1525,8 @@ footer .cta-links a {
     text-align: center;
 }
 .race .row .col-lg-4,
-.race .row .col-lg-3 {
+.race .row .col-md-3,
+.race .row .col-sm-4 {
     padding: 0;
 }
 .registration-2 h2 {
@@ -1630,16 +1631,20 @@ footer .cta-links a {
 
 /* animations */
 
-header .navbar .navbar-nav .dropdown-menu[data-bs-popper] {
-    transform: translateY(-100%);
-    opacity: 1;
-    z-index: -123;
+header .navbar .navbar-nav .dropdown-menu {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-header .navbar .navbar-nav .dropdown-menu[data-bs-popper].show {
+header
+    .navbar
+    .navbar-nav
+    .dropdown-toggle[aria-expanded="true"]
+    + .dropdown-menu {
+    transform: scaleY(1);
     opacity: 1;
-    transform: translateY(0);
-    z-index: -123;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -1753,6 +1758,162 @@ header .navbar .navbar-nav .dropdown-menu[data-bs-popper].show {
     }
     .booking.empty {
         display: none;
+    }
+
+    header .navbar .offcanvas-body {
+        display: block;
+    }
+    header .navbar .navbar-nav .nav-item:not(:last-child) {
+        margin-right: 0;
+    }
+    header .navbar .navbar-nav .dropdown-menu[data-bs-popper]::before {
+        background: #fff;
+    }
+    header .navbar .navbar-nav {
+        margin-bottom: 2rem;
+        padding-left: 3rem;
+    }
+    header .navbar .offcanvas-body div a {
+        margin-left: 3rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .hero {
+        min-height: 50dvh;
+    }
+    .booking {
+        padding: 1.5rem 0 4rem 0;
+    }
+    .booking form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .booking form > div:last-child {
+        grid-column: 1 / -1;
+        margin-top: 2rem;
+    }
+    .booking form > div:last-child button {
+        max-width: fit-content;
+        margin: 0 auto;
+        padding: 1rem 5rem;
+    }
+    .accommodation {
+        background: #e5ddd2;
+    }
+    .accommodation::after {
+        display: none;
+    }
+    .ukus-jahorine video {
+        width: unset;
+    }
+    .abonos {
+        min-height: 60rem;
+    }
+    .skijanje {
+        padding: 10rem 0;
+    }
+    .aktivni-izazov {
+        min-height: 70rem;
+    }
+    .special .bg {
+        display: none;
+    }
+    .special .row {
+        row-gap: 3rem;
+    }
+    footer .row {
+        row-gap: 5rem;
+    }
+    footer .col-lg-6 {
+        order: 3;
+    }
+    footer .col-lg-2:first-of-type div > a {
+        max-width: fit-content;
+        padding: 1rem 3rem;
+    }
+    .weather .weather-cards {
+        flex-direction: column;
+    }
+    .weather .weather-cards .weather-card:first-of-type {
+        width: 100%;
+        min-height: 50rem;
+    }
+    .weather .weather-cards .weather-card:last-of-type {
+        width: 100%;
+    }
+    .career {
+        min-height: 39dvh;
+    }
+    .gallery {
+        padding-bottom: 5rem;
+    }
+    .gallery .gallery-wrapper {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .title-larger {
+        font-size: 6rem;
+    }
+    .apartman .col-lg-5 img {
+        display: none;
+    }
+    .apartman-2 .row:last-child {
+        row-gap: 3rem;
+    }
+    .wellness-spa.reversed {
+        padding: 8rem 0;
+    }
+    .wellness-spa.reversed img {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        transform: translateY(0);
+    }
+    .villa-termag div img {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        transform: translateY(0);
+        width: 100%;
+    }
+    .career .content-wrapper {
+        top: 50%;
+    }
+
+    .packages .nav-tabs .nav-link {
+        font-size: 1.6rem;
+    }
+    .registration h3 {
+        font-size: 3rem;
+    }
+    .packages img {
+        max-width: 5.5rem;
+        max-height: 5.5rem;
+    }
+    .packages .row div div p {
+        font-size: 1.4rem;
+    }
+    .aktivni-izazov video,
+    .ukus-jahorine video {
+        height: 100%;
+    }
+    .get-to-know .cardd h3 {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+    .ski-offers .col-md-6 .card {
+        min-height: 65rem;
+    }
+    .ski-pass-hero {
+        padding: 12rem 0 5rem 0;
+    }
+    .ski-info img {
+        display: none;
+    }
+    .registration .row div div p {
+        font-size: 1.4rem;
+    }
+    .unforgetable-experience figure img {
+        max-height: 23rem;
     }
 }
 
