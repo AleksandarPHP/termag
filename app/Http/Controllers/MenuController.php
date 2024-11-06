@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Menu;
+use Cache;
 
 class MenuController extends Controller
 {
@@ -31,7 +32,7 @@ class MenuController extends Controller
 
         $sortable = [0, 1];
 
-        $sqlRec = Menu::query()->whereNull('parent_id');
+        $sqlRec = Menu::query();
 
 
         $search = $request['search']['value'];
@@ -72,10 +73,74 @@ class MenuController extends Controller
         return json_encode($json_data);
     }
 
+    public function create()
+    {
+
+        $lang = $request->lang ?? 'sr';
+        $menus = Menu::where('is_active', 1)->get();
+
+        return view('cms.menu.form', ['item' => new Menu, 'editing' => false, 'lang' => $lang, 'menus' => $menus]);
+    }
+
+    public function store(Request $request)
+    {
+        $lang = $request->language ?? 'sr';
+
+        $request->validate([
+            'title' => ['nullable', 'string', 'max:191'],
+            'link' => ['nullable', 'string'],
+            'parent_id' => ['nullable', 'string', 'max:191'],
+            'order' => ['nullable', 'string', 'max:191'],
+            'is_active' => ['nullable', 'string', 'in:1'],
+        ]);    
+
+        $menu = new Menu;
+        $menu->setTranslation('title', $lang, $request->title);
+        $menu->setTranslation('link', $lang, $request->link);
+        $menu->parent_id = $request->parent_id;
+        $menu->order = $request->order;
+        $menu->is_active = $request->is_active;
+        $menu->save();
+
+        Cache::forget('menu');
+
+        session()->flash('success', 'dodano.');
+
+        return redirect('cms/menu');
+    }
+
     public function edit(Request $request, $id) {
 
         $lang = $request->lang ?? 'sr';
+        $menus = Menu::where('is_active', 1)->get();
 
-        return view('cms.menu.form', ['item' => Menu::findOrFail($id), 'editing' => true, 'lang' => $lang]);
+        return view('cms.menu.form', ['item' => Menu::findOrFail($id), 'editing' => true, 'lang' => $lang, 'menus' => $menus]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $menu = Menu::findOrFail($id);0;
+        $lang = $request->language ?? 'sr';
+
+        $request->validate([
+            'title' => ['nullable', 'string', 'max:191'],
+            'link' => ['nullable', 'string'],
+            'parent_id' => ['nullable', 'string', 'max:191'],
+            'order' => ['nullable', 'string', 'max:191'],
+            'is_active' => []
+        ]);  
+
+        $menu->setTranslation('title', $lang, $request->input('title'));
+        $menu->setTranslation('link', $lang, $request->input('link'));
+        $menu->parent_id = $request->parent_id;
+        $menu->order = $request->order;
+        $menu->is_active = $request->is_active;
+        $menu->save();
+
+        Cache::forget('menu-'.$menu->id);
+
+        session()->flash('success', 'Izmjenjeno.');
+
+        return redirect('cms/menu');
     }
 }

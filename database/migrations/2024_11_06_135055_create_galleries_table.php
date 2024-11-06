@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('menus', function (Blueprint $table) {
+        Schema::create('galleries', function (Blueprint $table) {
             $table->id();
-            $table->json('title')->nullable();
-            $table->unsignedBigInteger('parent_id')->nullable();
-            $table->json('link')->nullable();
-            $table->integer('order')->default(0)->nullable();
-            $table->boolean('is_active')->default(true);
+            $table->text('image');
+            $table->text('original_name')->nullable();
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('menus');
+        Schema::dropIfExists('galleries');
     }
 };

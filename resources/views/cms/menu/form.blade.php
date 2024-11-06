@@ -20,48 +20,51 @@
 @endif
 <div class="row">
     <div class="col-md-12">
-        <form method="post" action="@if(!$editing) {{ url('cms/pages') }} @else {{ url('cms/pages/'.$item->id) }} @endif" enctype="multipart/form-data">
+        <form method="post" action="@if(!$editing) {{ url('cms/menu') }} @else {{ url('cms/menu/'.$item->id) }} @endif" enctype="multipart/form-data">
             @csrf
             @if($editing) @method('PUT') @endif
             <input type="hidden" value="{{ $lang }}" name="language">
             <div class="row">
+                @if($lang=='sr')
+
                 <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="parent_id">parent_id</label>
+                    <div class="mb-3">
+                        <label for="parent_id">Meni </label>
                         <select name="parent_id" class="form-control" id="parent_id" {!! $errors->has('parent_id') ? 'style="border-color:red;"' : '' !!}>
-                        @foreach ($item as $i)
+                        <option value="">Izaberi</option>
+                        @foreach ($menus as $menu)
+                        <option value="{{$menu->id}}" @selected(old('parent_id') == $menu->id )>{{$menu->title}}</option>
                           {{-- <option value="{{ $i->id }}" @if(($errors->any() && in_array($i->id, old('products', []))) || (!$errors->any() && $item->products->contains($i->id))) selected @endif>{{ $i->title.' (ID: '.$i->id.')' }}</option> --}}
                         @endforeach
                         </select>
                     </div>
                 </div>
-                @if($item->id!=3)
                 <div class="col-md-12">
-                    <div class="form-group">
+                    <div class="mb-3">
+                        <label for="order">Prioritet</label>
+                        <input name="order" type="number" class="form-control" id="order" placeholder="Prioritet" value="{{ old('order', $item->order) }}" {!! $errors->has('order') ? 'style="border-color:red;"' : '' !!}>
+                    </div>
+                </div>
+                @endif
+                <div class="col-md-12">
+                    <div class="mb-3">
                         <label for="title">Naziv</label>
                         <input name="title" type="text" class="form-control" id="title" placeholder="Naziv" value="{{ old('title', $item->getTranslation('title', $lang, false)) }}" {!! $errors->has('title') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
-                @endif
-                
-                <div class="col-md-12"><hr></div>
-                @if($lang=='sr')
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="url">URL</label>
-                        <input name="url" type="text" class="form-control" id="url" placeholder="URL" value="{{ old('url', $item->link) }}" {!! $errors->has('url') ? 'style="border-color:red;"' : '' !!}>
+                    <div class="mb-3">
+                        <label for="link">URL</label>
+                        <input name="link" type="text" class="form-control" id="link" placeholder="link" value="{{ old('link', $item->getTranslation('link', $lang, false)) }}" {!! $errors->has('link') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div> 
-                @endif
-                @if($lang=='sr')
-                <div class="col-md-12"><hr></div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="url2">URL 2</label>
-                        <input name="url2" type="text" class="form-control" id="url2" placeholder="URL 2" value="{{ old('url2', $item->url2) }}" {!! $errors->has('url2') ? 'style="border-color:red;"' : '' !!}>
+                <div class="col-md-12">
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Aktivan?</label>
+                    <div class="form-check form-switch">
+                        <input name="is_active" value="1" class="form-check-input" style="padding-left: 35px; padding-top:20px;" type="checkbox" role="switch" id="flexSwitchCheckChecked" @checked(old('is_active', $item->is_active))>
                     </div>
-                </div> 
-                @endif
+                </div>
+                <div class="col-md-12"><hr></div>
             </div>
             <button type="submit" class="btn btn-danger mb-3">Sačuvaj</button>
         </form>

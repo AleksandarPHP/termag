@@ -12,8 +12,8 @@
   <meta property="og:description" content="" />
   <meta name="twitter:description" content="" />
 
-  <meta property="og:image" content="{{ asset('assets/images/share.png') }}"/>
-  <meta name="twitter:image" content="{{ asset('assets/images/share.png') }}" />
+  <meta property="og:image" content="{{ asset('cmsfiles/images/share.png') }}"/>
+  <meta name="twitter:image" content="{{ asset('cmsfiles/images/share.png') }}" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ url()->full() }}" />
@@ -30,12 +30,12 @@
   <meta property="og:title" content="Finance Soft4Tech" />
   <meta name="twitter:title" content="Finance Soft4Tech" />
   <title>Soft4Tech</title>
-  <link rel="icon" href="{{asset('assets/images/cropped-favicon-32x32.png')}}" sizes="32x32" />
-  <link rel="icon" href="{{asset('assets/images/cropped-favicon-192x192.png')}}" sizes="192x192" />
-  <link rel="apple-touch-icon" href="{{asset('assets/images/cropped-favicon-180x180.png')}}" />
-  <meta name="msapplication-TileImage" content="{{asset('assets/images/cropped-favicon-270x270.png')}}" />  <!-- stylesheets -->
+  <link rel="icon" href="{{asset('cmsfiles/images/cropped-favicon-32x32.png')}}" sizes="32x32" />
+  <link rel="icon" href="{{asset('cmsfiles/images/cropped-favicon-192x192.png')}}" sizes="192x192" />
+  <link rel="apple-touch-icon" href="{{asset('cmsfiles/images/cropped-favicon-180x180.png')}}" />
+  <meta name="msapplication-TileImage" content="{{asset('cmsfiles/images/cropped-favicon-270x270.png')}}" />  <!-- stylesheets -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link href="//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fullcalendar/core@4.4.0/main.min.css">

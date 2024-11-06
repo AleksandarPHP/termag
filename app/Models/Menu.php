@@ -14,7 +14,8 @@ class Menu extends Model
         'title',
         'parent_id',
         'link',
-        'order'
+        'order',
+        'is_active'
     ];
 
     public $translatable = [
