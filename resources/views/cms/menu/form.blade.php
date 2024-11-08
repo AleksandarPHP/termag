@@ -86,8 +86,6 @@
 
     
 
-    $('#parent_id').select2({
-    
-    });
+    $('#parent_id').select2();
 </script>
 @endsection
