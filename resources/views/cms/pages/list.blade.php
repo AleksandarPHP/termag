@@ -20,6 +20,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Naziv</th>
+                    <th class="nosort text-center" style="width:80px;">Meta edit</th>
                     <th class="nosort text-center" style="width:80px;">Akcija</th>
                 </tr>
                 </thead>
@@ -27,6 +28,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Naziv</th>
+                    <th class="nosort text-center" style="width:80px;">Meta edit</th>
                     <th class="nosort text-center">Akcija</th>
                 </tr>
                 </tfoot>

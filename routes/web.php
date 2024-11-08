@@ -70,6 +70,7 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
         Route::post('pages/ajax',  'ajax');  
         Route::get('pages/detail/{id}', 'detail'); 
         Route::post('pages/ajax-detail', 'ajaxDetail');  
+        Route::get('pages/meta/{id}/edit', 'meta');  
         Route::get('pages/imagedelete/{id}', 'removeImage');
     });
 

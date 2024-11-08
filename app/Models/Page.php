@@ -20,7 +20,9 @@ class Page extends Model
         'url',
         'urlTitle',
         'url2',
-        'urlTitle2'
+        'urlTitle2',
+        'meta_title',
+        'meta_description'
     ];
 
     public $translatable = [
@@ -29,5 +31,7 @@ class Page extends Model
         'text',
         'urlTitle',
         'urlTitle2',
+        'meta_title',
+        'meta_description'
     ];
 }

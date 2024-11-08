@@ -26,7 +26,8 @@ class PageController extends Controller
         $columns = array( 
             0 =>'id',
             1 =>'title',
-            2 =>'action'
+            2 =>'meta',
+            3 =>'action'
         );
 
         $sortable = [0, 1];
@@ -58,7 +59,8 @@ class PageController extends Controller
             $data[] = [
                 '0' => $row->id,
                 '1' => $row->title,
-                '2' => '<a href="'.url('cms/pages/detail/'.$row->id).'" class="action-edit"><i class="fa fa-edit"></i></a>',
+                '2' => '<a href="'.url('cms/pages/meta/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a>',
+                '3' => '<a href="'.url('cms/pages/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a>',
             ];
         }
         
@@ -138,6 +140,14 @@ class PageController extends Controller
         return view('cms.pages.form', ['item' => Page::findOrFail($id), 'editing' => true, 'width' => $width, 'height' => $height, 'lang' => $lang]);
     }
 
+    public function meta($id, Request $request)
+    {
+        $width = $height = 0;
+        $lang = $request->lang ?? 'sr';
+
+        return view('cms.pages.form-meta', ['item' => Page::findOrFail($id), 'editing' => true, 'width' => $width, 'height' => $height, 'lang' => $lang]);
+    }
+
     public function update(Request $request, $id)
     {
         $item = Page::findOrFail($id);
@@ -166,6 +176,9 @@ class PageController extends Controller
         $item->setTranslation('text', $lang, $request->input('text'));
         $item->setTranslation('urlTitle', $lang, $request->input('urlTitle'));
         $item->setTranslation('urlTitle2', $lang, $request->input('urlTitle2'));
+        $item->setTranslation('meta_title', $lang, $request->input('meta_title'));
+        $item->setTranslation('meta_description', $lang, $request->input('meta_description'));
+
 
         if($lang=='sr') {      
             $item->image = $image;
