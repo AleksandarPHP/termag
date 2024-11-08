@@ -6,23 +6,23 @@
       <li @if(request()->path() === 'cms') class="active" @endif>
         <a href="{{ url('cms') }}"><i class="fas fa-home"></i>Kontrolna tabla</a>
       </li>
-      <li @if(request()->is('cms/users'))class="active"@endif>
+      <li @if(request()->is('cms/users*'))class="active"@endif>
         <a href="{{ url('cms/users') }}"><i class="fas fa-users"></i>Korisnici</a>
       </li>
-      <li @if(request()->is('cms/pages'))class="active"@endif>
+      <li @if(request()->is('cms/pages*'))class="active"@endif>
         <a href="{{ url('cms/pages') }}"><i class="fas fa-desktop"></i>Stranice</a>
       </li>
-      <li @if(request()->is('cms/menu'))class="active"@endif>
+      <li @if(request()->is('cms/menu*'))class="active"@endif>
         <a href="{{ url('cms/menu') }}"><i class="fas fa-bars"></i>Meni</a>
       </li>
-      <li @if(request()->is('cms/pages'))class="active"@endif>
-        <a href="{{ url('cms/pages') }}"><i class="fas fa-camera-retro"></i>Galerija</a>
+      <li @if(request()->is('cms/gallery'))class="active"@endif>
+        <a href="{{ url('cms/gallery') }}"><i class="fas fa-camera-retro"></i>Galerija</a>
       </li>
-      <li @if(request()->is('cms/pages'))class="active"@endif>
-        <a href="{{ url('cms/pages') }}"><i class="fas fa-envelope"></i>Inbox</a>
+      <li @if(request()->is('cms/inbox'))class="active"@endif>
+        <a href="{{ url('cms/inbox') }}"><i class="fas fa-envelope"></i>Inbox</a>
       </li>
-      <li @if(request()->is('cms/pages'))class="active"@endif>
-        <a href="{{ url('cms/pages') }}"><i class="fas fa-th-list"></i>Paketi</a>
+      <li @if(request()->is('cms/packages*'))class="active"@endif>
+        <a href="{{ url('cms/packages') }}"><i class="fas fa-th-list"></i>Paketi</a>
       </li>
       <li @if(request()->is('cms/settings/1/edit'))class="active"@endif>
         <a href="{{ url('cms/settings/1/edit') }}"><i class="fas fa-cog"></i>Podesavaja</a>

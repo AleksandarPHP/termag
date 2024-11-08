@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Gallery;
 use App\Helpers\Helper;
 use Cache;
+use Illuminate\Support\Facades\Log;
 
 class GalleryController extends Controller
 {
@@ -17,6 +18,7 @@ class GalleryController extends Controller
 
     public function upload(Request $request)
     {
+
         $request->validate([
             'files' => ['required', 'mimes:jpeg,png', 'image', 'max:5000'],
         ], [
@@ -28,7 +30,7 @@ class GalleryController extends Controller
         
         $image = $request->file('files');
         $name = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
-        
+
         $name = 'gallery-'.$name;
         
         $galleryname = Helper::saveImage($image, 'gallery', $name);
@@ -45,7 +47,7 @@ class GalleryController extends Controller
 
     public function destroy($id)
     {
-        $item = $this->model::findOrFail($id);
+        $item = Gallery::findOrFail($id);
         
         if(Helper::deleteImage($item->image)) {
             $item->delete();
@@ -53,7 +55,7 @@ class GalleryController extends Controller
             return back()->withErrors('Došlo je do greške.');
         }
 
-        Cache::forget('pozicije');
+        Cache::forget('gallery');
 
         session()->flash('success', 'Obrisano.');
 

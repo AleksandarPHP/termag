@@ -66,10 +66,12 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
     Route::post('users/ajax', 'App\Http\Controllers\UsersController@ajax');
 
     Route::resource('pages', 'App\Http\Controllers\PageController')->only('index','update','edit');
-    Route::post('pages/ajax', 'App\Http\Controllers\PageController@ajax');  
-    Route::get('pages/detail/{id}', 'App\Http\Controllers\PageController@detail'); 
-    Route::post('pages/ajax-detail', 'App\Http\Controllers\PageController@ajaxDetail');  
-    Route::get('pages/imagedelete/{id}', 'App\Http\Controllers\PageController@removeImage');
+    Route::controller(App\Http\Controllers\PageController::class)->group(function () {
+        Route::post('pages/ajax',  'ajax');  
+        Route::get('pages/detail/{id}', 'detail'); 
+        Route::post('pages/ajax-detail', 'ajaxDetail');  
+        Route::get('pages/imagedelete/{id}', 'removeImage');
+    });
 
     Route::resource('gallery', 'App\Http\Controllers\GalleryController')->only('index', 'destroy');
     Route::post('gallery/upload', 'App\Http\Controllers\GalleryController@upload');

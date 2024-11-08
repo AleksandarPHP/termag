@@ -90,7 +90,7 @@ $(document).ready(function() {
     "createdRow": function (row, data, index) {
         $(row).addClass("text-center");
     },
-    "order": [[ 0, "desc"]],
+    "order": [[ 0, "asc"]],
   });
 });
 </script>

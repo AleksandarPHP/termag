@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Page;
+use Cache;
 
 class PageController extends Controller
 {
@@ -178,6 +179,6 @@ class PageController extends Controller
 
         session()->flash('success', 'Izmjenjeno.');
 
-        return redirect('system/pages');
+        return redirect('cms/pages');
     }
 }

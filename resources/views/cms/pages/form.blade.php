@@ -25,15 +25,12 @@
             @if($editing) @method('PUT') @endif
             <input type="hidden" value="{{ $lang }}" name="language">
             <div class="row">
-                @if($item->id!=3)
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="title">Naziv</label>
                         <input name="title" type="text" class="form-control" id="title" placeholder="Naziv" value="{{ old('title', $item->getTranslation('title', $lang, false)) }}" {!! $errors->has('title') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
-                @endif
-                @if($item->id!=3&& $item->id!=4 && $item->id!=7 && $item->id!=8 && $item->id!=9 && $item->id!=11 && $item->id!=16)
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-12">
                     <div class="form-group">
@@ -41,8 +38,6 @@
                         <input name="subtitle" type="text" class="form-control" id="subtitle" placeholder="Podnaslov" value="{{ old('subtitle', $item->getTranslation('subtitle', $lang, false)) }}" {!! $errors->has('subtitle') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
-                @endif
-                @if($item->id!=3 && $item->id!=4 && $item->id!=5 && $item->id!=17)
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-12">
                     <div class="form-group" {!! $errors->has('text') ? 'style="border:1px solid red;"' : '' !!}>
@@ -50,9 +45,7 @@
                         <textarea name="text" id="text" class="form-control">{{ old('text', $item->getTranslation('text', $lang, false)) }}</textarea>
                     </div>
                 </div>
-                @endif
                 <div class="col-md-12"><hr></div>
-                @if($item->id==1)
                 @if($lang=='sr')
                 <div class="col-md-6">
                     <div class="form-group">
@@ -67,8 +60,6 @@
                         <input name="urlTitle" type="text" class="form-control" id="urlTitle" placeholder="URL naslov" value="{{ old('urlTitle', $item->getTranslation('urlTitle', $lang, false)) }}" {!! $errors->has('urlTitle') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div> 
-                @endif
-                @if($item->id==1)
                 @if($lang=='sr')
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-6">
@@ -85,8 +76,6 @@
                     </div>
                 </div> 
                 <div class="col-md-12"><hr></div>
-                @endif
-                @if($item->id!=3 && $item->id!=4 && $item->id!=5 && $item->id!=7 && $item->id!=9 && $item->id!=10 && $item->id!=11 && $item->id!=12 && $item->id!=13 && $item->id!=15 && $item->id!=16 && $item->id!=17)
                 @if($lang=='sr')
                 <div class="col-md-3">
                     <div class="form-group">
@@ -125,7 +114,6 @@
                         });
                     </script>
                 </div>
-                @endif
                 @endif
             </div>
             <button type="submit" class="btn btn-danger mb-3">Sačuvaj</button>
