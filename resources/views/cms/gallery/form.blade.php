@@ -57,7 +57,7 @@
                                         <span><i class="fa fa-close"></i></span>
                                     </a>
                                     <div>
-                                        <img src="{{ asset('storage/'.$image->image) }}" class="img-responsive">
+                                        <img src="{{ asset('storage/'.$image->image) }}" class="img-responsive" width="200px">
                                     </div>
                                 </figure>
                             </div>
