@@ -1,7 +1,7 @@
 @include('partials/header')
 
 <main>
-    <section class="career">
+    <section class="career vt">
         <video autoplay muted loop>
             <source
                 src="{{ asset('assets/videos/villa-termag.mov') }}"

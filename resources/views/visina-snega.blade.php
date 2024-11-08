@@ -1,7 +1,7 @@
 @include('partials/header')
 
 <main>
-    <section class="weather">
+    <section class="weather snow-height">
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <div class="container">
             <div class="wrapper">

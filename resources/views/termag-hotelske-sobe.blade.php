@@ -1,7 +1,7 @@
 @include('partials/header')
 
 <main>
-<section class="career">
+<section class="career hotel-rooms">
         <div class="bg" style="background-image: url('{{asset("assets/images/termag-sobe-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">

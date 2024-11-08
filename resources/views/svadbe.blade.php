@@ -1,7 +1,7 @@
 @include('partials/header')
 
 <main>
-    <section class="career">
+    <section class="career svadbe">
         <div class="bg" style="background-image: url('{{asset("assets/images/svadbe-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">

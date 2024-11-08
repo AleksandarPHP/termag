@@ -1,7 +1,7 @@
 @include('partials/header')
 
 <main>
-    <section class="career">
+    <section class="career apartmants">
         <div class="bg" style="background-image: url('{{asset("assets/images/apartmani-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
@@ -18,7 +18,7 @@
 
     <section class="experience">
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
-        <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
+        <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag" class="img-fluid">
         <div class="container">
             <div class="text-center">
                 <h2 data-aos="fade-down" data-aos-duration="600">Nezaboravno Iskustvo</h2>

@@ -194,13 +194,13 @@
     <section class="race">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-6">
                     <img src="{{asset('assets/images/race-1.png')}}" alt="trka" class="img-fluid">
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-6">
                     <img src="{{asset('assets/images/race-2.png')}}" alt="trka" class="img-fluid">
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-6">
                     <img src="{{asset('assets/images/race-3.png')}}" alt="trka" class="img-fluid">
                 </div>
             </div>

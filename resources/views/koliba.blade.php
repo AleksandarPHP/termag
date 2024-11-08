@@ -5,7 +5,7 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/koliba-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Atrakcije oko Nas</h1>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Kamin Sala</h1>
                 <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
                     Olimpijska planina Jahorina zauzima centralnu poziciju u Bosni i Hercegovini I udaljena je od Sarajeva i međunarodnog aerodroma na samo pola sata vožnje. Centralna pozicija omogućava odličnu povezanost sa drugim destinacijama i atrakcijama u okruženju, tako da Jahorina predstavlja odličnu bazu i za odmor tokom kojeg želite da upoznate region.
                 </p>

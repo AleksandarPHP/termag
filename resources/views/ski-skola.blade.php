@@ -1,7 +1,7 @@
 @include('partials/header')
 
 <main>
-    <section class="villa-termag">
+    <section class="villa-termag ski-skola">
         <div class="bg center" style="background-image: url('{{asset("assets/images/ski-skola-bg.png")}}');"></div>
         <div class="container">
             <div>
