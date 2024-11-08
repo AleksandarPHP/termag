@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use Exception;
 use Illuminate\Support\Facades\Log;
 use App\Models\Gallery;
+use App\Models\Menu;
 
 
 class Helper {
@@ -69,5 +70,30 @@ class Helper {
     {
         $query = Gallery::query();
         return $query->get();
+    }
+
+    public static function menu($id, $parent_id, $title, $link)
+    {
+        $code = '';
+        $models = Menu::where('is_active', 1)->where('parent_id', $id)->get(); 
+    
+        if ($parent_id) {
+            $code .= '<li>
+                        <a class="dropdown-item" href="'.$link.'">'.$title.'</a>
+                      </li>';
+        } else {
+            $code .= '<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">'.$title.'</a>
+                        <ul class="dropdown-menu">';
+    
+            foreach ($models as $model) {
+                $code .= self::menu($model->id, $model->parent_id, $model->title, $model->link);
+            }
+    
+            $code .= '</ul>
+                      </li>';
+        }
+    
+        return $code;
     }
 }

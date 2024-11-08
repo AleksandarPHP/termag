@@ -31,11 +31,10 @@
                     <div class="mb-3">
                         <label for="parent_id">Meni </label>
                         <select name="parent_id" class="form-control" id="parent_id" {!! $errors->has('parent_id') ? 'style="border-color:red;"' : '' !!}>
-                        <option value="">Izaberi</option>
-                        @foreach ($menus as $menu)
-                        <option value="{{$menu->id}}" @selected(old('parent_id') == $menu->id )>{{$menu->title}}</option>
-                          {{-- <option value="{{ $i->id }}" @if(($errors->any() && in_array($i->id, old('products', []))) || (!$errors->any() && $item->products->contains($i->id))) selected @endif>{{ $i->title.' (ID: '.$i->id.')' }}</option> --}}
-                        @endforeach
+                            <option value="">Izaberi</option>
+                            @foreach ($menus as $menu)
+                                <option value="{{$menu->id}}" @selected(old('parent_id', $menu->id) == $item->parent_id )>{{$menu->title}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -82,6 +81,13 @@
         selector : "textarea",
         plugins : ["advlist autolink lists link charmap print preview anchor", "searchreplace visualblocks code fullscreen", "insertdatetime media table paste "],
         toolbar : "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link code",
+    });
+
+
+    
+
+    $('#parent_id').select2({
+    
     });
 </script>
 @endsection

@@ -68,73 +68,10 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                Hotel Termag
-                            </a>
-                            
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Apartmani</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Villa Termag</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Hotelski Restoran</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Kamin Sala</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Koliba restoran</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Igraonica</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Brošure</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Galerija</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">Video</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Shuttle</a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#"
-                                        >Newslletter</a
-                                    >
-                                </li>
-                            </ul>
-                        </li>
+                        @foreach ($menuList as $menu)
+                            {!! Helper::menu($menu->id, $menu->parent_id, $menu->title, $menu->link) !!}
+                        @endforeach
+
                         <li class="nav-item dropdown">
                             <a
                                 class="nav-link dropdown-toggle"
