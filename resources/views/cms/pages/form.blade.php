@@ -97,7 +97,7 @@
                     </div>
                     <div class="input-file-container" {!! $errors->has('image') ? 'style="border-color:red;"' : '' !!}>
                         @if(!is_null($item->image))
-                            <a href="{{ url('cms/'.$route.'/imagedelete/'.$item->id.'?image=image') }}"><span><i class="fa fa-close"></i></span></a>
+                            <a href="{{ url('cms/pages/imagedelete/'.$item->id.'?image=image') }}"><span><i class="fa fa-close"></i></span></a>
                         @endif
                         <span class="img-placeholder">
                               @if(is_null($item->image))

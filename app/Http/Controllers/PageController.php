@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Page;
+use App\Helpers\Helper;
 use Cache;
 
 class PageController extends Controller
@@ -193,5 +194,31 @@ class PageController extends Controller
         session()->flash('success', 'Izmjenjeno.');
 
         return redirect('cms/pages');
+    }
+
+    public function removeImage(Request $request, $id)
+    {
+        $checkArray = ['image'];
+
+        $checkArray = implode(",", $checkArray);
+
+        $request->validate([
+            'image' => ['required', 'in:'.$checkArray],
+        ]);
+
+        $item = Page::findOrFail($id);
+
+        if(Helper::deleteImage($item[$request->image])) {
+            $item[$request->image] = null;
+            $item->save();
+        } else {
+            session()->flash('error', 'Došlo je do greške.');
+            return back()->with('error', 'Failed to find that resource');
+        }
+
+        Cache::forget('texts-'.$item->id);
+
+        session()->flash('success', 'Izmjenjeno.');
+        return back();
     }
 }

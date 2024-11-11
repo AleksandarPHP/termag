@@ -12,9 +12,12 @@ use App\Models\Menu;
 
 
 class Helper {
-    public static function saveImage($image, $folder, $name) 
+    public static function saveImage($image, $folder, $name, $oldImage = null) 
     {
         try {
+
+            if(!is_null($oldImage) && Storage::exists('public/'.$oldImage)) Storage::delete('public/'.$oldImage);
+
             if ($name === "" || !is_string($name))
                 $name = Str::random(40);
 
@@ -63,6 +66,28 @@ class Helper {
             return true;
         } catch (Exception $e) {
             return false;
+        }
+    }
+
+    public static function renameImage($oldImage, $folder, $title)
+    {
+        try {
+            if($title === "" || !is_string($title)) $title = Str::random(40);
+
+            $time = time();
+            $date = date('d-m-Y');
+            $filename = $time.'_'.Str::limit(Str::slug($title), 100, '').'.'.pathinfo($oldImage, PATHINFO_EXTENSION);
+            $br = 2;
+            while(Storage::exists('public/'.$folder.'/'.$date.'/'.$filename)) {
+                $filename = $time.'_'.Str::limit(Str::slug($title), 100, '').'-'.$br.'.'.pathinfo($oldImage, PATHINFO_EXTENSION);
+                $br++;
+            }
+
+            Storage::move('public/'.$oldImage, 'public/'.$folder.'/'.$date.'/'.$filename);
+
+            return $folder.'/'.$date.'/'.$filename;
+        } catch (Exception $e) {
+            return null;
         }
     }
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Settings;
-use Helper;
+use App\Helpers\Helper;
 use Cache;
 
 class SettingsController extends Controller
