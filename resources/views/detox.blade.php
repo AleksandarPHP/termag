@@ -22,19 +22,19 @@
         <div class="container">
             <div class="text-center">
                 <div class="row">
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/detox-1.png')}}" alt="kuglana">
                             <figcaption>Nutricionističko <br/> savjetovanje</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/detox-2.jpg')}}" alt="kuglana">
                             <figcaption>Wellness Aktivnosti</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/detox-3.png')}}" alt="kuglana">
                             <figcaption>Prirodna Ishrana</figcaption>

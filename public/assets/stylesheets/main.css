@@ -1224,6 +1224,7 @@ footer .cta-links a {
     font-size: 6rem;
     font-weight: 600;
     color: var(--title-color);
+    margin-bottom: 2rem;
 }
 .apartman h2 span {
     color: var(--gold);
@@ -1525,7 +1526,8 @@ footer .cta-links a {
     text-align: center;
 }
 .race .row .col-lg-4,
-.race .row .col-lg-3 {
+.race .row .col-md-3,
+.race .row .col-sm-4 {
     padding: 0;
 }
 .registration-2 h2 {
@@ -1588,6 +1590,7 @@ footer .cta-links a {
 
 .packages .nav-tabs {
     border: none;
+    display: flex;
     justify-content: center;
     margin-bottom: 5rem;
     gap: 4rem;
@@ -1630,16 +1633,20 @@ footer .cta-links a {
 
 /* animations */
 
-header .navbar .navbar-nav .dropdown-menu[data-bs-popper] {
-    transform: translateY(-100%);
-    opacity: 1;
-    z-index: -123;
+header .navbar .navbar-nav .dropdown-menu {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-header .navbar .navbar-nav .dropdown-menu[data-bs-popper].show {
+header
+    .navbar
+    .navbar-nav
+    .dropdown-toggle[aria-expanded="true"]
+    + .dropdown-menu {
+    transform: scaleY(1);
     opacity: 1;
-    transform: translateY(0);
-    z-index: -123;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -1753,6 +1760,482 @@ header .navbar .navbar-nav .dropdown-menu[data-bs-popper].show {
     }
     .booking.empty {
         display: none;
+    }
+
+    header .navbar .offcanvas-body {
+        display: block;
+    }
+    header .navbar .navbar-nav .nav-item:not(:last-child) {
+        margin-right: 0;
+    }
+    header .navbar .navbar-nav .dropdown-menu[data-bs-popper]::before {
+        background: #fff;
+    }
+    header .navbar .navbar-nav {
+        margin-bottom: 2rem;
+        padding-left: 3rem;
+    }
+    header .navbar .offcanvas-body div a {
+        margin-left: 3rem;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .hero {
+        min-height: 50dvh;
+    }
+    .booking {
+        padding: 1.5rem 0 4rem 0;
+    }
+    .booking form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .booking form > div:last-child {
+        grid-column: 1 / -1;
+        margin-top: 2rem;
+    }
+    .booking form > div:last-child button {
+        max-width: fit-content;
+        margin: 0 auto;
+        padding: 1rem 5rem;
+    }
+    .accommodation {
+        background: #e5ddd2;
+    }
+    .accommodation::after {
+        display: none;
+    }
+    .ukus-jahorine video {
+        width: unset;
+    }
+    .abonos {
+        min-height: 60rem;
+    }
+    .skijanje {
+        padding: 10rem 0;
+    }
+    .aktivni-izazov {
+        min-height: 70rem;
+    }
+    .special .bg {
+        display: none;
+    }
+    .special .row {
+        row-gap: 3rem;
+    }
+    footer .row {
+        row-gap: 5rem;
+    }
+    footer .col-lg-6 {
+        order: 3;
+    }
+    footer .col-lg-2:first-of-type div > a {
+        max-width: fit-content;
+        padding: 1rem 3rem;
+    }
+    .weather .weather-cards {
+        flex-direction: column;
+    }
+    .weather .weather-cards .weather-card:first-of-type {
+        width: 100%;
+        min-height: 50rem;
+    }
+    .weather .weather-cards .weather-card:last-of-type {
+        width: 100%;
+    }
+    .career {
+        min-height: 39dvh;
+    }
+    .gallery {
+        padding-bottom: 5rem;
+    }
+    .gallery .gallery-wrapper {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .title-larger {
+        font-size: 6rem;
+    }
+    .apartman .col-lg-5 img {
+        display: none;
+    }
+    .apartman-2 .row:last-child {
+        row-gap: 3rem;
+    }
+    .wellness-spa.reversed {
+        padding: 8rem 0;
+    }
+    .wellness-spa.reversed img {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        transform: translateY(0);
+    }
+    .villa-termag div img {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        transform: translateY(0);
+        width: 100%;
+    }
+    .career .content-wrapper {
+        top: 50%;
+    }
+
+    .packages .nav-tabs .nav-link {
+        font-size: 1.6rem;
+    }
+    .registration h3 {
+        font-size: 3rem;
+    }
+    .packages img {
+        max-width: 5.5rem;
+        max-height: 5.5rem;
+    }
+    .packages .row div div p {
+        font-size: 1.4rem;
+    }
+    .aktivni-izazov video,
+    .ukus-jahorine video {
+        height: 100%;
+    }
+    .get-to-know .cardd h3 {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+    }
+    .ski-offers .col-md-6 .card {
+        min-height: 65rem;
+    }
+    .ski-pass-hero {
+        padding: 12rem 0 5rem 0;
+    }
+    .ski-info img {
+        display: none;
+    }
+    .registration .row div div p {
+        font-size: 1.4rem;
+    }
+    .unforgetable-experience figure img {
+        max-height: 23rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        min-height: 60dvh;
+    }
+    .hero .content-wrapper h4 {
+        font-size: 1.4rem;
+    }
+    .accommodation {
+        padding: 5rem 0;
+    }
+    .villa-termag {
+        padding: 5rem 0;
+    }
+    .txt {
+        font-size: 1.6rem;
+    }
+    .cardd h2,
+    .cardd h1 {
+        font-size: 4rem;
+    }
+    .btnn {
+        font-size: 1.6rem;
+    }
+    .cardd {
+        padding: 7.5rem;
+    }
+    .konf-sala {
+        min-height: 75rem;
+    }
+    .hero .content-wrapper {
+        min-width: 85%;
+    }
+    .apartman {
+        overflow: hidden;
+    }
+    .title {
+        font-size: 4rem;
+    }
+    .career {
+        min-height: unset;
+        padding: 30rem 0;
+    }
+    .gallery .gallery-wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .ski-pass-hero {
+        padding: 12.5rem 0;
+    }
+    .how-to-buy-ski-pass {
+        padding: 7.5rem 0;
+    }
+    .weather .weather-cards {
+        row-gap: 3rem;
+    }
+    .konf-sala {
+        min-height: unset;
+        padding: 5rem 2.5rem;
+    }
+    .konf-sala .cardd {
+        position: relative;
+        transform: unset;
+    }
+    .container,
+    .container-fluid {
+        padding: 0 2rem;
+    }
+    .title-larger {
+        font-size: 4rem;
+    }
+    .weather .wrapper > p {
+        margin: 2rem 0;
+        max-width: 100%;
+    }
+    .weather .wrapper {
+        padding: 0;
+    }
+    .gallery-intro {
+        padding: 12.5rem 0 5rem 0;
+    }
+    .organic-facts {
+        padding: 12.5rem 0 5rem 0;
+    }
+    .packages img {
+        max-width: 4rem;
+        max-height: 4rem;
+    }
+
+    .eco {
+        padding: 12.5rem 0 5rem 0;
+    }
+
+    .snow-height,
+    .ski-centar,
+    .ski-skola {
+        padding: 12.5rem 0 5rem 0;
+    }
+    .special .col-md-6 img {
+        max-width: 4rem;
+        max-height: 4rem;
+    }
+    .experience {
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero {
+        min-height: 100dvh;
+    }
+    .hero .content-wrapper p,
+    .career .content-wrapper p,
+    .txt {
+        font-size: 1.5rem;
+    }
+    .booking form {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .wrapper-dropdown.active .dropdown {
+        z-index: 30;
+    }
+
+    .accommodation .content-wrapper {
+        z-index: 1;
+    }
+    .cardd h2,
+    .cardd h1 {
+        font-size: 3.2rem;
+    }
+    .abonos {
+        min-height: 28rem;
+    }
+    .cardd {
+        padding: 4rem;
+    }
+    .container {
+        padding: 0 2.5rem !important;
+    }
+    .socials .wrapper {
+        gap: 7rem;
+    }
+    .weather .weather-cards .weather-card:last-of-type .row {
+        row-gap: 2rem;
+    }
+    .weather .weather-cards .weather-card:first-of-type {
+        min-width: unset;
+    }
+    .weather .weather-cards .weather-card:first-of-type h4 {
+        margin: 1.5rem 0;
+        font-size: 4rem;
+    }
+    .weather .weather-cards .weather-card:last-of-type div div h5 + p,
+    .weather .weather-cards .weather-card:last-of-type div div h5 {
+        font-size: 2rem;
+    }
+    .weather .weather-cards .weather-card:last-of-type .row div div p {
+        font-size: 1.8rem;
+    }
+    .weather .weather-cards .weather-card:last-of-type .row div div h6 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    .weather .weather-cards .weather-card:last-of-type .row div {
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+    }
+    .weather .weather-cards .weather-card:last-of-type .row div div {
+        padding: 2rem 0;
+    }
+    .weather .weather-cards .weather-card {
+        border-radius: 2rem;
+    }
+    .wellness-spa ol li,
+    .konf-sala ol li {
+        font-size: 1.5rem;
+    }
+    footer .col-lg-2 img {
+        max-width: 35%;
+    }
+    footer h2 {
+        font-size: 2.4rem;
+    }
+    footer .cta-wrapper p a {
+        font-size: 1.8rem;
+    }
+    footer .cta-wrapper {
+        gap: 3rem;
+    }
+    .gallery .gallery-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .gallery-intro {
+        padding: 5rem 0;
+    }
+    .career .content-wrapper h1 {
+        font-size: 4rem;
+    }
+    .tb-activities .col-lg-6 .card,
+    .tb-activities .col-lg-4 .card {
+        min-height: unset;
+    }
+    .special .card h5 {
+        font-size: 2.4rem;
+    }
+    .career {
+        padding: 35rem 0;
+    }
+    .career h4 {
+        font-size: 1.4rem;
+    }
+    .sponsors .wrapper {
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+    }
+
+    .wellness-spa {
+        padding: 5rem 0;
+    }
+    .apartmants {
+        padding: 30rem 0;
+    }
+    .apartman,
+    .apartman-2 {
+        padding: 3.5rem 0;
+    }
+    .arrow-section {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }
+    .arrow-section div {
+        max-width: 100%;
+    }
+    .arrow-section h3 {
+        font-size: 2.4rem;
+    }
+    .economic {
+        padding: 3rem 0;
+    }
+    .title {
+        font-size: 3.6rem;
+        text-align: left;
+    }
+    .txt {
+        text-align: left;
+    }
+    .apartman h2,
+    .title-smaller,
+    .experience h2,
+    .accommodation h1 {
+        font-size: 3.2rem;
+        margin-bottom: 1.5rem;
+    }
+    .experience {
+        padding: 5rem 0;
+    }
+    .apartman h4 {
+        font-size: 1.8rem;
+    }
+    .team-building,
+    .svadbe,
+    .hotel-rooms,
+    .vt {
+        padding: 25rem 0;
+    }
+    .wellness-spa.reversed {
+        padding: 5rem 0;
+    }
+    .wellness-spa.reversed img,
+    .villa-termag div img {
+        height: 100%;
+    }
+    .packages .nav-tabs {
+        flex-wrap: nowrap;
+        overflow: auto;
+        justify-content: start;
+    }
+    .packages .nav-tabs::-webkit-scrollbar {
+        display: none;
+    }
+    .packages .nav-tabs .nav-link {
+        flex: 0 0 auto;
+    }
+    .special {
+        padding: 3rem 0 5rem 0;
+    }
+    .career .btn-wrapper {
+        flex-direction: column;
+        align-items: start;
+    }
+    .experience figure figcaption {
+        font-size: 2rem;
+    }
+    .special h2 {
+        text-align: left;
+    }
+
+    .special .title-smaller + .txt {
+        text-align: left;
+    }
+    .subtitle {
+        font-size: 1.8rem;
+    }
+    .ski-offers .col-md-6 img {
+        max-width: unset;
+        max-height: unset;
+    }
+    .ski-offers .col-md-6 .card {
+        min-height: unset;
+    }
+    .registration ul li {
+        font-size: 1.5rem;
+    }
+
+    .special .text-center {
+        text-align: left !important;
+    }
+    .bicklizam {
+        padding: 20rem 0;
     }
 }
 

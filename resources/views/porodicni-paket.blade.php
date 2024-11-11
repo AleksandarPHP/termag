@@ -39,7 +39,7 @@
                             Aranžman obuhvata smještaj za 2 osobe u LUX sobi, 3 noći
                         </p>
                         <div class="row row-2">
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div>
                                     <img src="{{asset('assets/images/ri-13.svg')}}" alt="ikonica">
                                     <p>
@@ -47,7 +47,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div>
                                     <img src="{{asset('assets/images/ri-14.svg')}}" alt="ikonica">
                                     <p>
@@ -55,7 +55,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div>
                                     <img src="{{asset('assets/images/ri-15.svg')}}" alt="ikonica">
                                     <p>
@@ -63,7 +63,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div>
                                     <img src="{{asset('assets/images/ri-16.svg')}}" alt="ikonica">
                                     <p>
@@ -71,7 +71,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div>
                                     <img src="{{asset('assets/images/ri-17.svg')}}" alt="ikonica">
                                     <p>
@@ -79,7 +79,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div>
                                     <img src="{{asset('assets/images/ri-18.svg')}}" alt="ikonica">
                                     <p>
@@ -87,7 +87,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div>
                                     <img src="{{asset('assets/images/ri-19.svg')}}" alt="ikonica">
                                     <p>
@@ -95,7 +95,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div>
                                     <img src="{{asset('assets/images/ri-20.svg')}}" alt="ikonica">
                                     <p>
@@ -103,7 +103,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div>
                                     <img src="{{asset('assets/images/ri-21.svg')}}" alt="ikonica">
                                     <p>
@@ -111,7 +111,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div>
                                     <img src="{{asset('assets/images/ri-22.svg')}}" alt="ikonica">
                                     <p>
@@ -137,7 +137,7 @@
                                 Aranžman obuhvata smještaj za 2 osobe u LUX sobi, 3 noći
                             </p>
                             <div class="row row-2">
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div>
                                         <img src="{{asset('assets/images/ri-13.svg')}}" alt="ikonica">
                                         <p>
@@ -145,7 +145,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div>
                                         <img src="{{asset('assets/images/ri-14.svg')}}" alt="ikonica">
                                         <p>
@@ -153,7 +153,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div>
                                         <img src="{{asset('assets/images/ri-15.svg')}}" alt="ikonica">
                                         <p>
@@ -161,7 +161,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div>
                                         <img src="{{asset('assets/images/ri-16.svg')}}" alt="ikonica">
                                         <p>
@@ -169,7 +169,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div>
                                         <img src="{{asset('assets/images/ri-17.svg')}}" alt="ikonica">
                                         <p>
@@ -177,7 +177,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div>
                                         <img src="{{asset('assets/images/ri-18.svg')}}" alt="ikonica">
                                         <p>
@@ -185,7 +185,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div>
                                         <img src="{{asset('assets/images/ri-19.svg')}}" alt="ikonica">
                                         <p>
@@ -193,7 +193,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div>
                                         <img src="{{asset('assets/images/ri-20.svg')}}" alt="ikonica">
                                         <p>
@@ -201,7 +201,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div>
                                         <img src="{{asset('assets/images/ri-21.svg')}}" alt="ikonica">
                                         <p>
@@ -209,7 +209,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div>
                                         <img src="{{asset('assets/images/ri-22.svg')}}" alt="ikonica">
                                         <p>
@@ -236,7 +236,7 @@
                                     Aranžman obuhvata smještaj za 2 osobe u LUX sobi, 3 noći
                                 </p>
                                 <div class="row row-2">
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <div>
                                             <img src="{{asset('assets/images/ri-13.svg')}}" alt="ikonica">
                                             <p>
@@ -244,7 +244,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <div>
                                             <img src="{{asset('assets/images/ri-14.svg')}}" alt="ikonica">
                                             <p>
@@ -252,7 +252,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <div>
                                             <img src="{{asset('assets/images/ri-15.svg')}}" alt="ikonica">
                                             <p>
@@ -260,7 +260,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <div>
                                             <img src="{{asset('assets/images/ri-16.svg')}}" alt="ikonica">
                                             <p>
@@ -268,7 +268,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <div>
                                             <img src="{{asset('assets/images/ri-17.svg')}}" alt="ikonica">
                                             <p>
@@ -276,7 +276,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <div>
                                             <img src="{{asset('assets/images/ri-18.svg')}}" alt="ikonica">
                                             <p>
@@ -284,7 +284,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <div>
                                             <img src="{{asset('assets/images/ri-19.svg')}}" alt="ikonica">
                                             <p>
@@ -292,7 +292,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <div>
                                             <img src="{{asset('assets/images/ri-20.svg')}}" alt="ikonica">
                                             <p>
@@ -300,7 +300,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <div>
                                             <img src="{{asset('assets/images/ri-21.svg')}}" alt="ikonica">
                                             <p>
@@ -308,7 +308,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-md-6">
                                         <div>
                                             <img src="{{asset('assets/images/ri-22.svg')}}" alt="ikonica">
                                             <p>
@@ -399,19 +399,19 @@
                 </p>
 
                 <div class="row">
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-1.jpg')}}" alt="kuglana">
                             <figcaption>Kuglana</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-2.jpg')}}" alt="kuglana">
                             <figcaption>Igraonica za decu</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-3.jpg')}}" alt="kuglana">
                             <figcaption>Foaje</figcaption>

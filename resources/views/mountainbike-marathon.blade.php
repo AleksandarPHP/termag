@@ -36,19 +36,19 @@
                 </p>
 
                 <div class="row">
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/kat-1.png')}}" alt="porodicna 8km">
                             <figcaption>Porodična (8km)</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/kat-2.jpg')}}" alt="plava 24km">
                             <figcaption>Plava (24km)</figcaption>
                         </figure>
                     </div>
-                    <div class="col-lg-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/kat-3.jpg')}}" alt="crvena 34km">
                             <figcaption>Crvena (34km)</figcaption>
@@ -111,7 +111,7 @@
                 </div>
 
                 <div class="row row-2">
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-1.svg')}}" alt="ikonica">
                             <p>
@@ -119,7 +119,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-2.svg')}}" alt="ikonica">
                             <p>
@@ -127,7 +127,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-3.svg')}}" alt="ikonica">
                             <p>
@@ -135,7 +135,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-4.svg')}}" alt="ikonica">
                             <p>
@@ -143,7 +143,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-5.svg')}}" alt="ikonica">
                             <p>
@@ -151,7 +151,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-6.svg')}}" alt="ikonica">
                             <p>
@@ -159,7 +159,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-7.svg')}}" alt="ikonica">
                             <p>
@@ -167,7 +167,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-8.svg')}}" alt="ikonica">
                             <p>
@@ -175,7 +175,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-9.svg')}}" alt="ikonica">
                             <p>
@@ -183,7 +183,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-10.svg')}}" alt="ikonica">
                             <p>
@@ -191,7 +191,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-11.svg')}}" alt="ikonica">
                             <p>
@@ -199,7 +199,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div>
                             <img src="{{asset('assets/images/ri-12.svg')}}" alt="ikonica">
                             <p>
