@@ -104,7 +104,7 @@ class MenuController extends Controller
 
         Cache::forget('menu');
 
-        session()->flash('success', 'dodano.');
+        session()->flash('success', 'Izmjenjeno.');
 
         return redirect('cms/menu');
     }

@@ -74,6 +74,14 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
         Route::get('pages/imagedelete/{id}', 'removeImage');
     });
 
+    Route::resource('packages', 'App\Http\Controllers\PackageController')->except('show');
+    Route::controller(App\Http\Controllers\PackageController::class)->group(function () {
+        Route::post('packages/ajax',  'ajax');  
+        Route::get('packages/options', 'options');
+    });
+
+    Route::resource('options', 'App\Http\Controllers\PackageOptionController')->except('show');
+
     Route::resource('gallery', 'App\Http\Controllers\GalleryController')->only('index', 'destroy');
     Route::post('gallery/upload', 'App\Http\Controllers\GalleryController@upload');
 

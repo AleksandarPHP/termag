@@ -25,10 +25,4 @@
     </button>
   </div>
 </header>
-@include('partials.messages')
-<div class="FormSuccessMessageGlobal" style="display:none;">
-  <div class="alert alert-success">
-    <strong>Uspjeh!</strong><br>
-    <div class="message"></div>
-  </div>
-</div>
+@include('cms.partials.messages')
