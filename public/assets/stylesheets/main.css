@@ -118,6 +118,7 @@ body {
 header .navbar {
     padding: 0 3rem;
     background-color: #e5ddd2;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 header .navbar .offcanvas-body {
