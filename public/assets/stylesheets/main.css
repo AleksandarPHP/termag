@@ -57,7 +57,7 @@ html {
     color: var(--title-color);
 }
 .txt {
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: var(--text-color-primary);
     line-height: 1.25;
 }
@@ -685,7 +685,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
 }
 
 .special .card h5 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     font-family: "Playfair Display", serif;
     color: var(--gold);
     text-align: center;
@@ -744,6 +744,9 @@ header .navbar .offcanvas-body .dropdown-item.active,
     justify-content: center;
     align-items: center;
     gap: 10rem;
+}
+.socials img {
+    max-width: 75%;
 }
 
 footer {
@@ -1096,11 +1099,11 @@ footer .cta-links a {
 }
 
 .tb-activities .col-lg-6 .card {
-    min-height: 61rem;
+    min-height: 53rem;
 }
 
 .tb-activities .col-lg-4 .card {
-    min-height: 74rem;
+    min-height: 58rem;
 }
 
 .reference p a {
@@ -1441,6 +1444,7 @@ footer .cta-links a {
 .ski-offers .card {
     z-index: 2;
     position: relative;
+    min-height: 63rem;
 }
 
 .ski-offers .col-lg-6 img {
@@ -1456,7 +1460,7 @@ footer .cta-links a {
 }
 
 .ski-offers .col-lg-4 .card {
-    min-height: 64rem;
+    min-height: 55rem;
 }
 
 .centered {
@@ -1649,6 +1653,46 @@ header
     opacity: 1;
 }
 
+/* datepicker  */
+
+.ui-datepicker {
+    font-size: 1.2em;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    padding: 0.5em;
+    background-color: transparent;
+}
+
+.ui-datepicker table {
+    margin: 0.5em 0;
+}
+
+.ui-datepicker td .ui-state-default {
+    padding: 0.6em 0.8em;
+}
+
+.ui-datepicker {
+    width: 300px;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    color: #000;
+}
+
+.lastline {
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 2rem 0;
+    margin: 3rem 0 0 0;
+    background-color: #888;
+    color: #fff;
+}
+
+.lastline a {
+    color: #fff;
+}
+
 @media only screen and (max-width: 1600px) {
     .hero .content-wrapper p,
     .career .content-wrapper p,
@@ -1687,6 +1731,28 @@ header
     .cardd h2,
     .cardd h1 {
         font-size: 5.5rem;
+    }
+    header .offcanvas-body img {
+        position: absolute;
+        top: 0;
+        left: 5%;
+    }
+    .offcanvas-header .btn-close {
+        position: absolute;
+        top: 3.5%;
+        right: 5%;
+        font-size: 2rem;
+        color: var(--text-color-primary);
+    }
+    header .navbar .offcanvas-body .navbar-nav {
+        margin-top: 5rem;
+    }
+    header .navbar .offcanvas-body {
+        display: block;
+    }
+    header .navbar .navbar-nav {
+        margin-bottom: 2rem;
+        padding-left: 3rem;
     }
 }
 
@@ -1762,21 +1828,18 @@ header
         display: none;
     }
 
-    header .navbar .offcanvas-body {
-        display: block;
-    }
     header .navbar .navbar-nav .nav-item:not(:last-child) {
         margin-right: 0;
     }
     header .navbar .navbar-nav .dropdown-menu[data-bs-popper]::before {
         background: #fff;
     }
-    header .navbar .navbar-nav {
-        margin-bottom: 2rem;
-        padding-left: 3rem;
-    }
+
     header .navbar .offcanvas-body div a {
         margin-left: 3rem;
+    }
+    section {
+        overflow: hidden;
     }
 }
 
@@ -1917,6 +1980,9 @@ header
     .unforgetable-experience figure img {
         max-height: 23rem;
     }
+    header .navbar .navbar-nav {
+        margin-top: 10rem;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -2021,6 +2087,11 @@ header
     }
     .experience {
         overflow: hidden;
+    }
+    .weather .wrapper > p,
+    .career .content-wrapper p,
+    .apartman .txt {
+        max-width: 100%;
     }
 }
 
@@ -2236,6 +2307,19 @@ header
     }
     .bicklizam {
         padding: 20rem 0;
+    }
+    footer {
+        padding: 5rem 0 0 0;
+    }
+    footer .col-lg-2 {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+    }
+    footer .col-lg-2:first-of-type > div {
+        margin-top: 0;
+    }
+    footer .col-lg-2 img {
+        max-width: 70%;
     }
 }
 
