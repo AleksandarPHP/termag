@@ -2322,10 +2322,68 @@ header
     footer .col-lg-2 img {
         max-width: 70%;
     }
+
+    /* testing  */
+
+    .villa-termag,
+    .wellness-spa {
+        padding: 15rem 0 5rem 0;
+    }
+
+    .wellness-spa .bg {
+        background-size: contain;
+    }
+
+    .cardd {
+        padding: 3rem;
+    }
+
+    .villa-termag video,
+    .wellness-spa video {
+        height: 50%;
+    }
+
+    .vt-1 .bg {
+        background-size: contain;
+    }
+
+    .vt-1 div img {
+        display: none;
+    }
+
+    .jv-0 {
+        margin-top: 7rem;
+    }
+
+    .jv-1 {
+        margin-top: 5rem;
+    }
+
+    .jv-2 {
+        margin-top: 11rem;
+    }
+
+    .jv-3 {
+        margin-top: 12rem;
+    }
+
+    .jv-4 {
+        margin-top: 14rem;
+    }
+
+    .jv-5 {
+        margin-top: 10rem;
+    }
+
+    .ukus-jahorine video,
+    .wellness-spa video {
+        height: 37%;
+        width: 100%;
+    }
 }
 
-/* @media only screen and (min-width: 1400px) {
-    .container {
-        max-width: 1500px !important;
+@media only screen and (min-width: 1399px) {
+    .navbar .offcanvas-body img {
+        display: none;
     }
-} */
+}
