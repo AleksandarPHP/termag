@@ -77,10 +77,15 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
     Route::resource('packages', 'App\Http\Controllers\PackageController')->except('show');
     Route::controller(App\Http\Controllers\PackageController::class)->group(function () {
         Route::post('packages/ajax',  'ajax');  
-        Route::get('packages/options', 'options');
+        Route::get('packages/{id}/options', 'options');
+        Route::get('packages/imagedelete/{id}', 'removeImage');
     });
 
     Route::resource('options', 'App\Http\Controllers\PackageOptionController')->except('show');
+    Route::controller(App\Http\Controllers\PackageOptionController::class)->group(function () {
+        Route::post('options/ajax/{id}',  'ajax');  
+        Route::get('options/{id}/imagedelete/{image}', 'removeImage');
+    });
 
     Route::resource('gallery', 'App\Http\Controllers\GalleryController')->only('index', 'destroy');
     Route::post('gallery/upload', 'App\Http\Controllers\GalleryController@upload');

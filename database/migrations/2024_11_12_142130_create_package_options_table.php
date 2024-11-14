@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('package_options', function (Blueprint $table) {
             $table->id();
+            $table->json('title')->nullable();
             $table->unsignedBigInteger('package_id')->nullable();
             $table->integer('nights');
-            $table->decimal('price', 12, 2);
+            $table->json('price')->nullable();
             $table->json('options')->nullable();
             $table->boolean('is_active')->default(true);
             $table->timestamps();

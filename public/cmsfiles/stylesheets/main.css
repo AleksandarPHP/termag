@@ -246,6 +246,50 @@ hr {
   width: auto;
   max-width: 300px;
 }
+.input-file-options {
+  float: left;
+  margin-right: 20px;
+  position: relative;
+  width: 150px;
+  height: 100px;
+  border: 1px solid lightgray;
+  margin-bottom: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  display: table;
+}
+.input-file-options a span {
+  position: absolute;
+  z-index: 5;
+  right: 0px;
+  top: 0px;
+  display: inline-block;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  width: 30px;
+  background-color: #343a40;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+.input-file-options a span:hover {
+  background-color: #00ccff;
+}
+.img-placeholder {
+  display: table-cell;
+  vertical-align: middle;
+}
+.input-file-options a {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+.input-file-options img {
+  max-height: 198px;
+  width: auto;
+  max-width: 150px;
+}
 .input-file-trigger {
   display: block;
   padding: 14px 45px;

@@ -60,7 +60,7 @@ class PackageController extends Controller
             $data[] = [
                 '0' => $row->id,
                 '1' => $row->title,
-                '2' => '<a href="'.url('cms/packages/options/'.$row->id).'" class="action-edit"><i class="fa-solid fa-plus"></i></a>',
+                '2' => '<a href="'.url('cms/packages/'.$row->id.'/options').'" class="action-edit"><i class="fa-solid fa-plus"></i></a>',
                 '3' => '<a href="'.url('cms/packages/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a>',
                 '4' => '<a href="'.url('cms/packages').'" class="action-delete confirmation" data-id="'.$row->id.'"><i class="fa fa-trash"></i><form id="delete-form'.$row->id.'" action="'.url('cms/packages/'.$row->id).'" method="POST" style="display: none;">'.csrf_field().'<input type="hidden" name="_method" value="delete" /></form></a>',
             ];
@@ -74,6 +74,11 @@ class PackageController extends Controller
                     );
             
         return json_encode($json_data);
+    }
+
+    public function options($id)
+    {
+        return view('cms.options.list', ['id' => $id]);
     }
 
     public function create()
@@ -119,7 +124,7 @@ class PackageController extends Controller
         return redirect('cms/packages');
     }
 
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
         $lang = $request->lang ?? 'sr';
 
