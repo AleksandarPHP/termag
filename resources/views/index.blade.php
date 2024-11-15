@@ -51,11 +51,11 @@
                 </div>
             </section>
 
-            <section class="villa-termag">
+            <section class="villa-termag vt-1">
                 <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
                 <div class="container">
                     <div>
-                        <div class="cardd" data-aos="fade-right" data-aos-duration="600">
+                        <div class="cardd jv-0" data-aos="fade-right" data-aos-duration="600">
                             <h2>Villa Termag  (H3)</h2>
                             <p class="txt mb-4">
                                 Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
@@ -74,7 +74,7 @@
             <section class="wellness-spa">
                 <div class="bg" style="background-image: url('{{asset("assets/images/wellness-spa-bg.jpg")}}');"></div>
                 <div class="container">
-                    <div class="cardd" data-aos="fade-left" data-aos-duration="800">
+                    <div class="cardd jv-1" data-aos="fade-left" data-aos-duration="800">
                         <h2>Wellness & Spa</h2>
                         <p class="txt mb-4">
                             Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
@@ -95,7 +95,7 @@
                 </video>
                 <div class="container">
                     <div>
-                        <div class="cardd" data-aos="fade-right" data-aos-duration="600">
+                        <div class="cardd jv-2" data-aos="fade-right" data-aos-duration="600">
                             <h2>Ukus Jahorine</h2>
                             <p class="txt mb-4">
                                 Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
@@ -117,7 +117,7 @@
             <section class="wellness-spa konf-sala">
                 <div class="bg" style="background-image: url('{{asset("assets/images/konf-sala-bg.jpg")}}');"></div>
                 <div class="container-fluid">
-                    <div class="cardd">
+                    <div class="cardd jv-3">
                         <h2>Konferencijska sala</h2>
                         <p class="txt mb-4">
                             Konferencijska sala Hotela Termag na Jahorini predstavlja savršen prostor za poslovne i društvene događaje. Sala je dizajnirana sa autentičnim stilom i opremljena najsavremenijom tehnologijom. Posjeduje kapacitet do 350 ljudi u bioskopskoj postavci, a zahvaljujući fleksibilnom dizajnu može se podijeliti na četiri manje sale, svaka sa prirodnom osvjetljenošću. 
@@ -139,7 +139,7 @@
                 </div>
                
                 <div class="container">
-                    <div class="cardd" data-aos="fade-left" data-aos-duration="600">
+                    <div class="cardd jv-4" data-aos="fade-left" data-aos-duration="600">
                         <h2>Skijaško Carstvo</h2>
                         <p class="txt mb-4">
                             Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
@@ -159,7 +159,7 @@
                     />
                 </video>
                 <div class="container-fluid">
-                    <div class="cardd">
+                    <div class="cardd jv-5">
                         <h2>Termag Aktivni Izazovi</h2>
                         <p class="txt">
                             U hotelu Termag radimo na jačanju timskog duha i unapređenju sportskih vještina. Kroz aktivnosti i izazove zajedno promovišemo sportski duh, timsku saradnju, ali i jačamo energiju ekipe. Tu smo da vam ponudimo organizaciju team buildinga, challenge race-a, triatlona, biciklizma, hikinga… Ovi izazovi nisu samo fizičke aktivnosti nego i prilika za druženje i izgradnju boljih međuljudskih odnosa kroz radost zdravog življenja.
