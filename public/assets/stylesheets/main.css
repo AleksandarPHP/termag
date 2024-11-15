@@ -536,7 +536,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
 }
 
 .cardd {
-    padding: 11rem;
+    padding: 8rem;
     max-width: 84rem;
     position: relative;
     background: linear-gradient(
@@ -1745,15 +1745,21 @@ header
         font-size: 2rem;
         color: var(--text-color-primary);
     }
-    header .navbar .offcanvas-body .navbar-nav {
-        margin-top: 5rem;
-    }
+
     header .navbar .offcanvas-body {
         display: block;
     }
+}
+
+@media only screen and (max-width: 1399px) {
     header .navbar .navbar-nav {
-        margin-bottom: 2rem;
         padding-left: 3rem;
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    header .navbar .offcanvas-body div a {
+        margin-left: 3rem;
     }
 }
 
@@ -2097,6 +2103,9 @@ header
 }
 
 @media only screen and (max-width: 480px) {
+    header .navbar {
+        padding: 0 1rem 0 0;
+    }
     .hero {
         min-height: 100dvh;
     }
@@ -2379,6 +2388,20 @@ header
     .wellness-spa video {
         height: 37%;
         width: 100%;
+    }
+
+    .booking form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wrapper-dropdown {
+        min-width: unset;
+    }
+
+    .booking form div div:not(.dropdown) h4,
+    .selected-display,
+    .booking form input {
+        font-size: 1.4rem;
     }
 }
 
