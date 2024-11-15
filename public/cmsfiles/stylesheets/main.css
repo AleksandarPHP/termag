@@ -1803,6 +1803,23 @@ hr {
   margin-bottom: 45px;
 }
 
+.table-responsive .row:first-child .col-sm-12:last-child {
+  display: flex;
+  justify-content: end;
+}
+
+thead tr {
+  background-color: #194d84;
+  color: white;
+  border: 2px;
+}
+
+tfoot tr {
+  background-color: #194d84;
+  border: 2px;
+  color: white;
+
+}
 
 @media only screen and (max-width: 1399.98px) {
   .app_calendar_col,
