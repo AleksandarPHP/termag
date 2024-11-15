@@ -14,7 +14,7 @@
                     <div class="content-wrapper">
                         <h4 data-aos="fade-down" data-aos-delay="250" data-aos-duration="1500">Kreirajte zajedničke uspomene na Jahorini</h4>
                         <h1 data-aos="zoom-in" data-aos-delay="750" data-aos-duration="2000">Hotel Termag</h1>
-                        <p data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1500">
+                        {{-- <p data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1500">
                             Na olimpijskoj ljepotici, planini Jahorini, smješten
                             je pravi raj za ljubitelje prirode, aktivnog odmora
                             i skijanja. Pozicioniran na idealnom mjestu, odmah
@@ -28,7 +28,7 @@
                             vam konferencijske sale koje posjeduju svu potrebnu
                             opremu. Dođjite nam u goste i dopustite da vam hotel
                             Termag priušti odmor kakav zaslužujete.
-                        </p>
+                        </p> --}}
                     </div>
                 </div>
             </section>
