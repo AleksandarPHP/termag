@@ -2336,10 +2336,6 @@ header
         padding: 15rem 0 5rem 0;
     }
 
-    .wellness-spa .bg {
-        background-size: contain;
-    }
-
     .cardd {
         padding: 3rem;
     }
@@ -2349,36 +2345,12 @@ header
         height: 50%;
     }
 
-    .vt-1 .bg {
-        background-size: contain;
-    }
-
     .vt-1 div img {
         display: none;
     }
 
-    .jv-0 {
-        margin-top: 7rem;
-    }
-
-    .jv-1 {
-        margin-top: 5rem;
-    }
-
-    .jv-2 {
-        margin-top: 11rem;
-    }
-
-    .jv-3 {
-        margin-top: 12rem;
-    }
-
-    .jv-4 {
-        margin-top: 14rem;
-    }
-
-    .jv-5 {
-        margin-top: 9.2rem;
+    .cardd {
+        margin-top: 15rem;
     }
 
     .ukus-jahorine video,
@@ -2399,6 +2371,25 @@ header
     .selected-display,
     .booking form input {
         font-size: 1.4rem;
+    }
+
+    .bg {
+        max-height: 300px;
+        background-position: center;
+    }
+
+    .abonos {
+        margin-bottom: 3rem;
+    }
+
+    .villa-termag video,
+    .wellness-spa video {
+        height: unset;
+    }
+
+    .villa-termag:has(video) .cardd,
+    .wellness-spa:has(video) .cardd {
+        margin-top: 8.5rem;
     }
 }
 
