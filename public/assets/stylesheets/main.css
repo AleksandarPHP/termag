@@ -536,7 +536,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
 }
 
 .cardd {
-    padding: 8rem;
+    padding: 6rem;
     max-width: 84rem;
     position: relative;
     background: linear-gradient(
@@ -2134,9 +2134,6 @@ header
     .cardd {
         padding: 4rem;
     }
-    .container {
-        padding: 0 2.5rem !important;
-    }
     .socials .wrapper {
         gap: 7rem;
     }
@@ -2381,7 +2378,7 @@ header
     }
 
     .jv-5 {
-        margin-top: 10rem;
+        margin-top: 9.2rem;
     }
 
     .ukus-jahorine video,
