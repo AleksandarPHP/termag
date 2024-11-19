@@ -501,6 +501,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
 .accommodation .content-wrapper {
     position: relative;
     z-index: 2;
+    padding: 20px;
 }
 .accommodation .content-wrapper .title {
     margin-bottom: 1.5rem;
