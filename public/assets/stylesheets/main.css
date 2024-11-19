@@ -727,6 +727,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
 }
 
 .special .row .col-lg-12 .card .col-lg-5 h5,
+.special .row .col-lg-12 .card .col-lg-5 div,
 .special .row .col-lg-12 .card .col-lg-5 .txt {
     text-align: left;
 }
@@ -2345,6 +2346,10 @@ header
         height: 50%;
     }
 
+    .vt-1 {
+        margin-top: 3rem;
+    }
+
     .vt-1 div img {
         display: none;
     }
@@ -2373,7 +2378,7 @@ header
         font-size: 1.4rem;
     }
 
-    .bg {
+    section:not(.career) .bg {
         max-height: 300px;
         background-position: center;
     }
@@ -2399,6 +2404,12 @@ header
         width: 96.35%;
         margin: 0 auto;
     }
+
+    .special .row .col-lg-12 .card .col-lg-5 h5,
+    .special .row .col-lg-12 .card .col-lg-5 div,
+    .special .row .col-lg-12 .card .col-lg-5 .txt {
+    text-align: center;
+}
 }
 
 @media only screen and (min-width: 1399px) {

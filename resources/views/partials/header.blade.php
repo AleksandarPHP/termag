@@ -67,7 +67,9 @@
                     ></button>
                 </div>
                 <div class="offcanvas-body">
-                    <img src="{{asset('assets/images/logo.svg')}}" alt="logo" class="img-fluid">
+                    <a href="{{ url('/') }}">
+                        <img src="{{asset('assets/images/logo.svg')}}" alt="logo" class="img-fluid">
+                    </a>
                     <ul class="navbar-nav">
                         @foreach ($menuList as $menu)
                             {!! Helper::menu($menu->id, $menu->parent_id, $menu->title, $menu->link) !!}

@@ -22,11 +22,13 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img
+                <a href="https://maps.app.goo.gl/VxJB2sWoA1AwoTRM7" target="_blank">
+                    <img
                     src="{{ asset('assets/images/mapa.png') }}"
                     alt="mapa"
                     class="img-fluid"
-                />
+                    />
+                </a>
             </div>
             <div class="col-lg-3">
                 <h5>Budimo u</h5>
@@ -92,8 +94,8 @@
     </div>
 
     <p class="lastline">
-        Hotel Termag 2024 created by
-        <a href="https://soft4tech.com/">soft4tech</a>
+        Copyright 2024 © Hotel Termag. Sva prava zadržana. Created by 
+        <a href="https://soft4tech.com/">SoftTech</a>
     </p>
 </footer>
 

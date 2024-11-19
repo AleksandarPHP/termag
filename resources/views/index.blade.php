@@ -252,7 +252,9 @@
                                         <p class="txt">
                                             Udobnost i zadovoljstvo naših gostiju nam je na prvom mjestu, zato smo odlučili da vam brige oko putovanja svedemo na minimum. Zbog toga smo organizovali uslugu prevoza sa aerodroma do našeg hotela, kako biste iskustvo bezbrižnog boravka u hotelu Termag započeli što ranije. Vaše je da uživate u putovanju, naše je da se brinemo o svim detaljima.
                                         </p>
-                                        <a href="#" class="btnn btn_gold">Saznaj Više</a>
+                                        <div>
+                                            <a href="#" class="btnn btn_gold">Saznaj Više</a>
+                                        </div>
                                     </div>
                                     <div class="col-lg-7">
                                         <div class="bg" style="background-image: url('{{asset("assets/images/special-6.jpg")}}');"></div>
