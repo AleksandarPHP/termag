@@ -2389,7 +2389,15 @@ header
 
     .villa-termag:has(video) .cardd,
     .wellness-spa:has(video) .cardd {
-        margin-top: 8.5rem;
+        margin-top: 8rem;
+    }
+
+    .villa-termag video,
+    .wellness-spa video,
+    .villa-termag .bg,
+    .wellness-spa .bg {
+        width: 96.35%;
+        margin: 0 auto;
     }
 }
 
