@@ -13,48 +13,60 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/','index');
-Route::view('prognoza','prognoza');
-Route::view('karijera','karijera');
-Route::view('galerija','galerija');
-Route::view('virtuelna-setnja','virtuelna-setnja');
-Route::view('team-building','team-building');
-Route::view('konferencijska-sala','konferencijska-sala');
-Route::view('konferencija-i-seminari','konferencija-i-seminari');
-Route::view('prevoz-jahorina','prevoz-jahorina');
-Route::view('svadbe','svadbe');
-Route::view('termag-hotelske-sobe','termag-hotelske-sobe');
-Route::view('apartmani','apartmani');
-Route::view('villa-termag','villa-termag');
-Route::view('detox','detox');
-Route::view('spa','spa');
-Route::view('organic-facts','organic-facts');
-Route::view('o-nama','o-nama');
-Route::view('eco','eco');
-Route::view('atrakcije','atrakcije');
-Route::view('koliba','koliba');
-Route::view('kamin-sala','kamin-sala');
-Route::view('hotelski-restoran','hotelski-restoran');
-Route::view('ski-skola','ski-skola');
-Route::view('visina-snega','visina-snega');
-Route::view('ski-staze','ski-staze');
-Route::view('ski-centar','ski-centar');
-Route::view('ski-rental','ski-rental');
-Route::view('ski-pass','ski-pass');
-Route::view('triatlon','triatlon');
-Route::view('challenge-race','challenge-race');
-Route::view('mountainbike-marathon','mountainbike-marathon');
-Route::view('igraonica','igraonica');
-Route::view('kuglana','kuglana');
-Route::view('biciklizam','biciklizam');
-Route::view('quad-safari','quad-safari');
-Route::view('ljetnje-avanture','ljetnje-avanture');
-Route::view('specijalni-paketi','specijalni-paketi');
-Route::view('relax-paket','relax-paket');
-Route::view('back-to-nature','back-to-nature');
-Route::view('ljeto-paket','ljeto-paket');
-Route::view('romanticni-paket','romanticni-paket');
-Route::view('porodicni-paket','porodicni-paket');
+$routes = [
+    '/' => 'index',
+    'prognoza' => 'prognoza',
+    'karijera' => 'karijera',
+    'galerija' => 'galerija',
+    'virtuelna-setnja' => 'virtuelna-setnja',
+    'team-building' => 'team-building',
+    'konferencijska-sala' => 'konferencijska-sala',
+    'konferencija-i-seminari' => 'konferencija-i-seminari',
+    'prevoz-jahorina' => 'prevoz-jahorina',
+    'svadbe' => 'svadbe',
+    'termag-hotelske-sobe' => 'termag-hotelske-sobe',
+    'apartmani' => 'apartmani',
+    'villa-termag' => 'villa-termag',
+    'detox' => 'detox',
+    'spa' => 'spa',
+    'organic-facts' => 'organic-facts',
+    'o-nama' => 'o-nama',
+    'eco' => 'eco',
+    'atrakcije' => 'atrakcije',
+    'koliba' => 'koliba',
+    'kamin-sala' => 'kamin-sala',
+    'hotelski-restoran' => 'hotelski-restoran',
+    'ski-skola' => 'ski-skola',
+    'visina-snega' => 'visina-snega',
+    'ski-staze' => 'ski-staze',
+    'ski-centar' => 'ski-centar',
+    'ski-rental' => 'ski-rental',
+    'ski-pass' => 'ski-pass',
+    'triatlon' => 'triatlon',
+    'challenge-race' => 'challenge-race',
+    'mountainbike-marathon' => 'mountainbike-marathon',
+    'igraonica' => 'igraonica',
+    'kuglana' => 'kuglana',
+    'biciklizam' => 'biciklizam',
+    'quad-safari' => 'quad-safari',
+    'ljetnje-avanture' => 'ljetnje-avanture',
+    'specijalni-paketi' => 'specijalni-paketi',
+    'relax-paket' => 'relax-paket',
+    'back-to-nature' => 'back-to-nature',
+    'ljeto-paket' => 'ljeto-paket',
+    'romanticni-paket' => 'romanticni-paket',
+    'porodicni-paket' => 'porodicni-paket',
+];
+
+foreach ($routes as $uri => $view) {
+    Route::get($uri, fn() => view($view));
+}
+
+Route::group(['prefix' => 'en'], function () use ($routes) {
+    foreach ($routes as $uri => $view) {
+        Route::get($uri, fn() => view($view));
+    }
+});
 
 Auth::routes(['verify' => false, 'register' => false]);
 

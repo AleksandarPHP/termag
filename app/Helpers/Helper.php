@@ -9,6 +9,9 @@ use Exception;
 use Illuminate\Support\Facades\Log;
 use App\Models\Gallery;
 use App\Models\Menu;
+use App\Models\Page;
+use Illuminate\Http\Request;
+use Cache;
 
 
 class Helper {
@@ -120,5 +123,35 @@ class Helper {
         }
     
         return $code;
+    }
+
+    public static function text($id)
+    {
+        return Cache::rememberForever('texts-'.$id, function() use ($id) {
+            return Page::find($id);
+        });
+    }
+
+    public static function url($url='')
+    {
+        $locale = Request::segment(1);
+        if($locale == "en")
+            return url('en/'.$url);
+        else
+            return url($url);
+    }
+
+    public static function description($id)
+    {
+        return Cache::rememberForever('meta_description-'.$id, function() use ($id) {
+            return Page::where('id', $id)->value('meta_description');
+        });
+    }
+
+    public static function title($id)
+    {
+        return Cache::rememberForever('meta_title-'.$id, function() use ($id) {
+            return Page::where('id', $id)->value('meta_title');
+        });
     }
 }
