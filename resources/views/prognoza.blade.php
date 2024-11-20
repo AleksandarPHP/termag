@@ -12,67 +12,58 @@
                 <div class="weather-cards">
                     <div class="weather-card">
                     <div class="bg center" style="opacity: 1;background-image: url('{{asset("assets/images/weather-card-bg.png")}}');"></div>
-
+                    @php
+                        $current = cache()->get('current');
+                        $today = now();
+                    @endphp
                         <div>
-                            <h3>Tuesday</h3>
-                            <p class="date">20 Jun 2022</p>
+                            <h3>{{$today->format('l')}}</h3>
+                            <p class="date">{{$today->format('d M Y')}}</p>
                             <p>
                                 <img src="{{asset('assets/images/lokacija.svg')}}" alt="lokacija">
                                 Jahorina
                             </p>
                         </div>
+                        @isset($current)
                         <div>
-                            <img src="{{asset('assets/images/sun.svg')}}" alt="suncano">
-                            <h4>29 °C</h4>
-                            <h5>Sunny</h5>
+                            <img src="{{ $current['condition']['icon'] }}" alt="suncano">
+                            <h4>{{$current['temp_c'] / 2}}</h4>
+                            <h5>{{ $current['condition']['text'] }}</h5>
                         </div>
+                        @endisset
                     </div>
                     <div class="weather-card">
                     <div class="bg center" style="opacity:0.2;background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
                         <div>
                             <div>
                                 <h5>PRECIPITATION</h5>
-                                <p>0%</p>
+                                <p>{{isset($current['precip_in']) ? $current['precip_in'] : 0}}%</p>
                             </div>
                             <div>
                                 <h5>HUMIDITY</h5>
-                                <p>42%</p>
+                                <p>{{isset($current['humidity']) ? $current['humidity'] : 0}}%</p>
                             </div>
                             <div>
                                 <h5>WIND</h5>
-                                <p>3 km/h</p>
+                                <p>{{isset($current['wind_mph']) ? $current['wind_mph'] : 0}} km/h</p>
                             </div>
                         </div>
-
+                        @php
+                            $weathers = cache()->get('weathers');
+                        @endphp
                         <div class="row">
-                            <div class="col-md-3 col-6">
-                                <div>
-                                    <img src="{{asset('assets/images/t-sunny.svg')}}" alt="suncano">
-                                    <h6>Tue</h6>
-                                    <p><strong>30 °C</strong></p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6">
-                                <div>
-                                    <img src="{{asset('assets/images/t-clouds.svg')}}" alt="suncano">
-                                    <h6>Tue</h6>
-                                    <p><strong>30 °C</strong></p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6">
-                                <div>
-                                    <img src="{{asset('assets/images/t-rain.svg')}}" alt="suncano">
-                                    <h6>Tue</h6>
-                                    <p><strong>30 °C</strong></p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-6">
-                                <div>
-                                    <img src="{{asset('assets/images/t-sunny.svg')}}" alt="suncano">
-                                    <h6>Tue</h6>
-                                    <p><strong>30 °C</strong></p>
-                                </div>
-                            </div>
+                            @isset($weathers)
+                                @foreach($weathers as $date => $data)
+                                    @continue($loop->first)
+                                    <div class="col-md-3 col-6">
+                                        <div>
+                                            <img src="{{ $data['icon'] }}" alt="vremenska ikonica">
+                                            <h6>{{ $date }}</h6>
+                                            <p><strong>{{ $data['avgtemp'] }}°C</strong></p>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endisset
                         </div>
 
                         <div class="location">

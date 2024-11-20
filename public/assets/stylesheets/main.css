@@ -982,7 +982,7 @@ footer .cta-links a {
     color: #000;
 }
 .weather .weather-cards .weather-card:last-of-type .row div div:hover img {
-    filter: brightness(0);
+    filter: brightness(1);
 }
 
 .weather .weather-cards .weather-card:last-of-type .row {

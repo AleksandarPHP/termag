@@ -33,15 +33,24 @@ class WeatherForecastJob implements ShouldQueue
         $weathers = $this->weatherForecast->getResults();
 
         if (!is_null($weathers)) {
+
+            $todayDate =  $weathers['current'];
+            Cache::put('current', $todayDate);
+
             $weatherData = [];
             foreach($weathers['forecast']['forecastday'] as $weather){
                 $date = Carbon::parse($weather['date'])->format('d.m');
                 
                 $avgtemp = intval(ceil($weather['day']['avgtemp_c']));
-                $weatherData[$date] = $avgtemp;
+
+                $iconPath = $weather['day']['condition']['icon'];
+                $weatherData[$date] = [
+                    'avgtemp' => $avgtemp,
+                    'icon' => $iconPath,
+                ];
             }
     
-            Cache::put('weathers', $weatherData);
+            Cache::put( 'weathers', $weatherData);
         }
         
     }

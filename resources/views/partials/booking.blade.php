@@ -1,11 +1,14 @@
 <section class="booking" data-aos="fade-up">
     <div class="container">
-        <form action="https://secure.phobs.net/booking.php" method="get" target="_blank">
+        <form action="https://secure.phobs.net/booking.php" method="GET" target="_blank">
             <input type="hidden" name="company_id" value="ef330cb3f8f74caf95689177209df3e4">
             <input type="hidden" name="hotel" value="d720302542a2930329ff91e521d142aa">
             <input type="hidden" name="lang" value="rs">
-            <input type="hidden" name="unit_select" value="1">
+            <input type="hidden" name=" " value="1">
             <input type="hidden" name="units" value="1">
+            <input value="2" type="hidden" name="adults[1]" id="inputAdults" readonly="true" >
+            <input value="0" type="hidden" name="chd[1]" id="inputChildren" readonly="true" >
+
             <div>
                 <div>
                     <img
@@ -14,7 +17,7 @@
                     />
                     <h4>Check in</h4>
                 </div>
-                <input type="text" id="checkIn" name="date"/>
+                <input type="text" id="checkIn" name="date" value="2024-12-19"/>
             </div>
             <div>
                 <div>
@@ -24,7 +27,7 @@
                     />
                     <h4>Check out</h4>
                 </div>
-                <input type="text" id="checkOut" name="odlazak"/>
+                <input type="text" id="checkOut" name="odlazak" value="2024-12-22"/>
             </div>
             <div>
                 <div>
@@ -58,6 +61,10 @@
                     </svg>
                     <ul class="dropdown">
                         <li class="item">1 Adult</li>
+                        <li class="item">2 Adult</li>
+                        <li class="item">3 Adult</li>
+                        <li class="item">4 Adult</li>
+
                     </ul>
                 </div>
             </div>
@@ -65,12 +72,10 @@
                 <div>
                     <div>
                         <img
-                            src="{{
-                                asset('assets/images/accommodation-icon.svg')
-                            }}"
-                            alt="smestaj"
+                        src="{{ asset('assets/images/person-icon.svg') }}"
+                        alt="osoba"
                         />
-                        <h4>Accommodation</h4>
+                        <h4>Children</h4>
                     </div>
                 </div>
                 <div class="wrapper-dropdown" id="dropdown">
@@ -96,10 +101,9 @@
                         ></path>
                     </svg>
                     <ul class="dropdown">
-                        <li class="item">Option 1</li>
-                        <li class="item">Option 2</li>
-                        <li class="item">Option 3</li>
-                        <li class="item">Option 4</li>
+                        <li class="item">Child 1</li>
+                        <li class="item">Children 2</li>
+                        <li class="item">Children 3</li>
                     </ul>
                 </div>
             </div>
@@ -112,45 +116,3 @@
         </form>
     </div>
 </section>
-
-{{-- <form  onsubmit="return CreateBookDates();">
-    <div class="input calendar Activate">
-        <small>Dolazak</small>
-        <input placeholder="Dolazak" id="dolazak" value="19.11.2024" class="datepicker hasDatepicker" readonly="true" fdprocessedid="ft8t38">
-        <i class="fa fa-calendar"></i>
-    </div>
-    <div class="input calendar Activate">
-        <small>Odlazak</small>
-        <input placeholder="Odlazak" name="odlazak" id="odlazak" value="20.11.2024" class="datepicker hasDatepicker" readonly="true" fdprocessedid="ar1zb8">
-        <i class="fa fa-calendar"></i>
-    </div>
-    <div class="input persons">
-        <small>Odraslih</small>
-        <span class="Decr"><i class="fa fa-minus"></i></span>
-        <span class="Value">
-            <input value="2" name="adults[1]" id="inputAdults" readonly="true" fdprocessedid="2qoogf">
-        </span>
-        <span class="Inc"><i class="fa fa-plus"></i></span>
-    </div>
-    <div class="input persons">
-        <small>Djece</small>
-        <span class="Decr"><i class="fa fa-minus"></i></span>                    
-        <span class="Value">
-            <input value="0" name="chd[1]" id="inputChildren" readonly="true" fdprocessedid="0uw3jh">
-        </span>
-        <span class="Inc"><i class="fa fa-plus"></i></span>
-        <div id="ChildAgeSelector"></div>
-    </div>
-    <div class="input promocode Activate">
-        <small>Promo kod</small>
-        <input placeholder="Promo code" name="partners_access" fdprocessedid="r6lzx">
-        <i class="fa fa-tag"></i>
-    </div>
-    <div class="input submit">
-        <div class="block left-align">
-            <a href="https://secure.phobs.net/booking.php?lang=en&amp;company_id=ef330cb3f8f74caf95689177209df3e4&amp;view_cancel=1" id="CancelOrder" target="_blank">Promeni / Otkaži rezervaciju</a>
-        </div>  
-        <input type="hidden" value="1" name="nights" id="ReserveNights">
-        <button type="submit" class="btn-bordered" fdprocessedid="8iyjji">Rezervišite</button>
-    </div>
-</form> --}}

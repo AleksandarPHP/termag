@@ -1,10 +1,14 @@
 AOS.init();
 
 $(function () {
-    $("#checkIn").datepicker();
+    $("#checkIn").datepicker({
+        dateFormat: "yy-mm-dd"
+    });
 });
 $(function () {
-    $("#checkOut").datepicker();
+    $("#checkOut").datepicker({
+        dateFormat: "yy-mm-dd"
+    });
 });
 
 const selectedAll = document.querySelectorAll(".wrapper-dropdown");
