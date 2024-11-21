@@ -61,7 +61,7 @@ class PageController extends Controller
                 '0' => $row->id,
                 '1' => $row->title,
                 '2' => '<a href="'.url('cms/pages/meta/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a>',
-                '3' => '<a href="'.url('cms/pages/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a>',
+                '3' => '<a href="'.url('cms/pages/detail/'.$row->id).'" class="action-edit"><i class="fa fa-edit"></i></a>',
             ];
         }
         
@@ -164,7 +164,7 @@ class PageController extends Controller
             'urlTitle' => ['nullable', 'string', 'max:191'],
             'url2' => ['nullable', 'string', 'max:191'],
             'urlTitle2' => ['nullable', 'string', 'max:191'],
-            'image' => ['nullable', 'mimes:jpeg,png,svg', 'image', 'max:5000', 'dimensions:min_width='.$width.',min_height='.$height],
+            'image' => ['nullable', 'mimes:jpeg,png,svg,webp', 'image', 'max:5000', 'dimensions:min_width='.$width.',min_height='.$height],
 
         ]);    
 

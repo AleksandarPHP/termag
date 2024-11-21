@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Log;
 use App\Models\Gallery;
 use App\Models\Menu;
 use App\Models\Page;
-use Illuminate\Http\Request;
+use Request;
 use Cache;
 
 

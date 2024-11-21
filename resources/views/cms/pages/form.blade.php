@@ -40,20 +40,6 @@
                 </div>
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="meta_title">Meta Title</label>
-                        <input name="meta_title" type="meta_title" class="form-control" id="meta_title" placeholder="Meta Title" value="{{ old('meta_title', $item->getTranslation('meta_title', $lang, false)) }}" {!! $errors->has('meta_title') ? 'style="border-color:red;"' : '' !!}>
-                    </div>
-                </div>
-                <div class="col-md-12"><hr></div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="meta_description">Meta Description</label>
-                        <input name="meta_description" type="text" class="form-control" id="meta_description" placeholder="Meta Description" value="{{ old('meta_description', $item->getTranslation('meta_description', $lang, false)) }}" {!! $errors->has('meta_description') ? 'style="border-color:red;"' : '' !!}>
-                    </div>
-                </div>
-                <div class="col-md-12"><hr></div>
-                <div class="col-md-12">
                     <div class="form-group" {!! $errors->has('text') ? 'style="border:1px solid red;"' : '' !!}>
                         <label for="text">Tekst</label>
                         <textarea name="text" id="text" class="form-control">{{ old('text', $item->getTranslation('text', $lang, false)) }}</textarea>
@@ -110,7 +96,7 @@
                               </a>
                               @endif
                       </span>
-                    <input name="image" class="input-file input-file1" id="my-file1" type="file">
+                    <input name="image" class="input-file input-file1" id="my-file1" accept=".jpg,.jpeg,.png,.webp" type="file">
                     <label tabindex="0" for="my-file1" class="input-file-trigger input-file-trigger1">Odaberite sliku...</label>
                     </div>
                     <script>

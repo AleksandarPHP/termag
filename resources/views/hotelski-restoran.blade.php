@@ -68,7 +68,7 @@
     <section class="wellness-spa aktivni-izazov">
         <video autoplay muted loop>
             <source
-                src="{{ asset('assets/videos/ukus-jahorine.mov') }}"
+                src="{{ asset('assets/videos/ukus-jahorine.webm') }}"
                 type="video/mp4"
             />
         </video>

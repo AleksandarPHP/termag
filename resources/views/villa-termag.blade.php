@@ -73,7 +73,7 @@
     </section>
     @include('partials/socials')
     <section class="villa-termag villa-termag-b">
-        <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.webp")}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
