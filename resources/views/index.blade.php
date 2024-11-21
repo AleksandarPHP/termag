@@ -7,7 +7,7 @@
           <section class="hero">
               <video autoplay muted loop>
                   <source
-                      src="{{ asset('assets/videos/hero.webm') }}"
+                      src="https://termag.soft4tech.com/assets/videos/hero.webm"
                       type="video/mp4"
                   />
               </video>

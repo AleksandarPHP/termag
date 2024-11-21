@@ -1,6 +1,8 @@
 <header class="row app_header">
   <div class="col-md-5">
-    <h3 style="font-size: 32px; color: #0b3663;">Hotel Termag Jahorina</h3>
+    <a href="{{url('/')}}">
+      <h3 style="font-size: 32px; color: #0b3663;">Hotel Termag Jahorina</h3>
+    </a>
   </div>
   <div class="col-md-5 text-right">
     <a href="{{ url('/') }}" class="app_header_home">
