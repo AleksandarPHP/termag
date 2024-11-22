@@ -1,15 +1,15 @@
-@include('partials/header')
-
+@extends('layouts.app')
+    @section('title', Helper::title(14))
+    @section('description', Helper::description(14))
+    @section('content')
 <main>
     <section class="career apartmants">
+        @php $text =  Helper::text(15) @endphp
         <div class="bg" style="background-image: url('{{asset("assets/images/apartmani-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Kreirajte zajedničke uspomene na Jahorini</h4>
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">Apartmani</h1>
-                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000">
-                    Kada je smještaj u našem hotelu u pitanju, našim dragim gostima su na raspolaganju 71 elegantno uređena soba, 21 apartman modernog dizajna i predsjednicki apartman. Svakom detalju enterijera smo posvetili posebnu pažnju, a svaki komad namještaja je ručno izrađeno umjetničko djelo.
-                </p>
+                @isset($text->subtitle)<h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->subtitle}}</h4>@endisset
+                @isset($text->title)<h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">{{$text->title}}</h1>@endisset
             </div>
         </div>
     </section>
@@ -17,14 +17,17 @@
     @include('partials/socials')
 
     <section class="experience">
+        @php $text =  Helper::text(16) @endphp
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag" class="img-fluid">
         <div class="container">
             <div class="text-center">
-                <h2 data-aos="fade-down" data-aos-duration="600">Nezaboravno Iskustvo</h2>
+                @isset($text->title) <h2 data-aos="fade-down" data-aos-duration="600">{{$text->title}}</h2>@endisset
+
                 <p class="txt"  data-aos="fade-down" data-aos-duration="600">
-                    Vaše zadovoljstvo boravka kod nas nam je najbitnije, zato smo sa posebnom pažnjom pristupili svakom detalju planiranja prostora i uređenja. Na taj način smo vam obezbijedili savršene uslove boravka u našim smještajnim jedinicima, te ćemo vam omogućiti odmor za pamćenje. Poklonite nam vaše povjerenje a mi ćemo ispuniti sva vaša očekivanja. 
-                </p>
+                    @isset($text->text)
+                    {!! $text->text !!}
+                @endisset                </p>
 
                 <div class="row">
                     <div class="col-lg-4 col-sm-6"  data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
@@ -54,20 +57,26 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <div class="container">
             <div class="row">
+                @php $text =  Helper::text(17) @endphp
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600">
                     <img src="{{asset('assets/images/apartmani-img-left-1.jpg')}}" alt="apartman" class="img-fluid">
                 </div>
                 <div class="col-lg-7" data-aos="fade-left" data-aos-duration="600">
                     <img src="{{asset('assets/images/apartmani-img-right-1.png')}}" alt="apartman" class="img-fluid">
                     <div class="content-wrapper"> 
-                        <h4>Luksuz i ugodjaj u savršenom skladu</h4>
-                        <h2><span>Prijedsednički </span>Apartman,</h2>
-                        <p class="txt">
-                            Predsjednički apartman našeg hotela predstavlja vrhunac komfora i luksuza koji smo pripremili za prave hedoniste. Prostranost ovog apartman pruža osjećaj slobode i širine, te će doprinijeti da se osjećate komforno i udobno dok boravite u njemu. Opremljen je u planinskom ali u isto vrijeme i modernom stilu, sastoji se iz četiri spavaće sobe, tri kupatila, jednog wc-a, dva đakuzija, dvije tuš kabine, a tu su i opremljena kuhinja, bar, biblioteka. Privatna terasa će vam omogućiti da uživate u nestvarnom pogledu na prirodne ljepote Jahorine i skijaške staze. Naš predsjednički apartman odiše ekstravagancijom i spreman je da odgovori na sve vaše individualne zahtjeve. Za one posebne romantične momente, tu je i kamin koji će napraviti nezaboravnu toplu atmosferu. Doživite posebnu vrstu raskoša boravkom u ovoj luksuznoj, elegantoj i izuzetno prostranoj smještajnoj jedinici u kojoj sve poziva na apsolutni hedonizam.
-                        </p>
-                        <a href="#" class="btnn btn_gold">Book now <span>
+                        @isset($text->subtitle)
+                        <h4>{{$text->subtitle}}</h4>                            
+                        @endisset
+                        @isset($text->title)
+                        <h2>{!!$text->title!!}</h2>
+                        @endisset
+                        @isset($text->text)
+                            {!!$text->text!!}
+                        @endisset
+                        @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_gold">{{$text->urlTitle}} <span>
                             <img src="{{asset('assets/images/arrow-gold.svg')}}" alt="strelica">
-                        </span></a>
+                        </span></a>@endif
+                        
                     </div>
                 </div>
             </div>
@@ -77,20 +86,20 @@
     <section class="apartman apartman-2">
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <div class="container">
+            @php $text =  Helper::text(18) @endphp
             <div class="row">
                 <div class="col-lg-7" data-aos="fade-right" data-aos-duration="600">
                     <img src="{{asset('assets/images/apartmani-img-left-2.png')}}" alt="apartman" class="img-fluid">
                     <div class="content-wrapper"> 
-                        <h2><span>Lux</span> Apartman <span>(H3)</span></h2>
-                        <p class="txt mb-4">
-                            Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
-                        </p>
-                        <p class="txt">
-                            Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
-                        </p>
-                        <a href="#" class="btnn btn_gold">Book now <span>
+                        @isset($text->title)
+                        <h2>{!!$text->title!!}</h2>
+                        @endisset
+                        @isset($text->text)
+                            {!!$text->text!!}
+                        @endisset
+                        @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_gold">{{$text->urlTitle}} <span>
                             <img src="{{asset('assets/images/arrow-gold.svg')}}" alt="strelica">
-                        </span></a>
+                        </span></a>@endif
                     </div>
                 </div>
                 <div class="col-lg-5" data-aos="fade-left" data-aos-duration="600">
@@ -104,6 +113,7 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <img src="{{asset('assets/images/section-decor.png')}}" alt="dekoracija">
         <div class="container">
+            @php $text =  Helper::text(19) @endphp
             <div class="row">
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600">
                     <img src="{{asset('assets/images/basic-1.png')}}" alt="apartman" class="img-fluid">
@@ -111,17 +121,14 @@
                 <div class="col-lg-7" data-aos="fade-left" data-aos-duration="600">
                     <img src="{{asset('assets/images/basic-2.png')}}" alt="apartman" class="img-fluid">
                     <div class="content-wrapper"> 
-                        <h4>Luksuz i ugodjaj u savršenom skladu</h4>
-                        <h2><span>Basic</span> Apartman <span>(H3)</span></h2>
-                        <p class="txt mb-4">
-                        Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
-                        </p>
-                        <p class="txt">
-                        Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka. 
-                        </p>
-                        <a href="#" class="btnn btn_gold">Book now <span>
+                        @isset($text->subtitle)<h4>{{$text->subtitle}}</h4>@endisset
+                        @isset($text->title)<h2>{!!$text->title !!}</h2>@endisset
+                        @isset($text->text)
+                            {!!$text->text!!}
+                        @endisset
+                        @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_gold">{{$text->urlTitle}} <span>
                             <img src="{{asset('assets/images/arrow-gold.svg')}}" alt="strelica">
-                        </span></a>
+                        </span></a>@endif
                     </div>
                 </div>
             </div>
@@ -136,19 +143,17 @@
                     <img src="{{asset('assets/images/eco-1.png')}}" alt="apartman" class="img-fluid">
                 </div>
             </div>
+            @php $text =  Helper::text(19) @endphp
             <div class="row">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="600">
                     <div class="content-wrapper"> 
-                        <h2><span>Economy</span> Apartman <span>(H3)</span></h2>
-                        <p class="txt mb-4">
-                            Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
-                        </p>
-                        <p class="txt">
-                            Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
-                        </p>
-                        <a href="#" class="btnn btn_gold">Book now <span>
+                        @isset($text->title)<h2>{!!$text->title !!}</h2>@endisset
+                        @isset($text->text)
+                            {!!$text->text!!}
+                        @endisset
+                        @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_gold">{{$text->urlTitle}} <span>
                             <img src="{{asset('assets/images/arrow-gold.svg')}}" alt="strelica">
-                        </span></a>
+                        </span></a>@endif
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-duration="600">
@@ -159,4 +164,4 @@
     </section>
 </main>
 
-@include('partials/footer')
+@endsection

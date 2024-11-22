@@ -23,11 +23,11 @@
         $moduli = array(
           array('cms/users', 'Korisnici', 'users'),
           array('cms/pages', 'Stranice', 'desktop'),
-          array('settings/1/edit', 'Podesavaja', 'cog'),
+          array('cms/settings/1/edit', 'Podesavaja', 'cog'),
           array('cms/menu', 'Meni', 'bars'),
-          array('cms/menu', 'Paketi', 'th-list'),
-          array('cms/menu', 'Galerija', 'camera-retro'),
-          array('cms/menu', 'Inbox', 'envelope'),
+          array('cms/packages', 'Paketi', 'th-list'),
+          array('cms/gallery', 'Galerija', 'camera-retro'),
+          array('cms/inbox', 'Inbox', 'envelope'),
         );
         @endphp
         @foreach ($moduli as $modul)

@@ -77,10 +77,10 @@ class PageController extends Controller
 
     public function detail(Request $request, $id) 
     {
-        return view('cms.pages.single-list');
+        return view('cms.pages.single-list', ['id' => $id]);
     }
 
-    public function ajaxDetail(Request $request)
+    public function ajaxDetail(Request $request, $id)
     {       
 
         $data = [];
@@ -93,7 +93,7 @@ class PageController extends Controller
 
         $sortable = [0, 1];
 
-        $sqlRec = Page::query()->where('parent_id', 1);
+        $sqlRec = Page::query()->where('parent_id',  $id);
 
         $search = $request['search']['value'];
         if(!empty($search) && !is_null($search) && is_string($search) && $search!="") {
@@ -158,7 +158,7 @@ class PageController extends Controller
 
         $request->validate([
             'title' => ['nullable', 'string', 'max:191'],
-            'subtitle' => ['nullable', 'string', 'max:191'],
+            'subtitle' => ['nullable', 'string'],
             'text' => ['nullable', 'string'],
             'url' => ['nullable', 'string', 'max:191'],
             'urlTitle' => ['nullable', 'string', 'max:191'],

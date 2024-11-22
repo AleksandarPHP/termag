@@ -30,7 +30,7 @@
                       <div class="col-lg-5">
                           <div class="content-wrapper" data-aos="fade-right" data-aos-duration="600">
                           @if($text->subtitle!='')<h4 class="subtitle">{{ $text->subtitle }}</h4> @endif
-                          @if($text->subtitle!='')<h2 class="title">{{ $text->title }}</h2>@endif 
+                          @if($text->title!='')<h2 class="title">{{ $text->title }}</h2>@endif 
                           @isset($text->text)
                             {!! $text->text !!}
                           @endisset
@@ -246,7 +246,7 @@ y          </section>
                                       </div>
                                   </div>
                                   <div class="col-lg-7">
-                                      <div class="bg" style="background-image: url('{{asset("storage/".$text->image         )}}');"></div>
+                                      <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
                                   </div>
                               </div>
                           </div>
