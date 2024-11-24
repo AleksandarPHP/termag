@@ -1,59 +1,84 @@
-@include('partials/header') 
-
+@extends('layouts.app')
+    @section('title', Helper::title(34))
+    @section('description', Helper::description(34))
+    @section('content')
 <main>
     <section class="career">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/kamin-sala-bg.png")}}');"></div>
+        @php $text =  Helper::text(35) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Kamin Sala</h1>
+                @isset($text->title)
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->title}}</h1>
+                @endisset
+                @isset($text->subtitle)
                 <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
-                    > Ekskluzivni apartmani na Jahorini
+                    {{$text->subtitle}}
                 </p>
+                @endisset
             </div>
         </div>
     </section>
     @include('partials/booking')
     <section class="villa-termag">
-        <div class="bg" style="background-image: url('{{asset("assets/images/ambijent-bg.jpg")}}');"></div>
+        @php $text =  Helper::text(36) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Rustični ambijent kamin sale u hotelu Termag</h2>
+                    @isset($text->title)
+                    <h2>{{$text->title}}</h2>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Kamin sala, mjesto gdje se rustični ambijent spaja sa pucketanjem vatre iz kamina stvarajući harmoniju. Sa posebno dizajniranim enterijerom u kome dominiraju momenti od punog drveta i prirodnih materijala, ova prostorija ima jednu specifičnu energiju koja je stvorena za momente uživanja na Jahorini. Predivni kamin, koji je smješten u središtu sale, daje ušuškanu atmosferu i toplinu cijeloj prostoriji. Magični pogled iz kamin sale na ski staze i šume Jahorine, dodatno oplemenjuje cijeli prostor.  Uživajte u momentima opuštanja i mira u Kamin sali uz laganu ambijentalnu muziku koju smo odabrali posebno za vas.
+                        {!!$text->text!!}
                     </p>
-                    <a href="#" class="btnn btn_primary">Book now</a>
+                    @endisset
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
     </section>
     <section class="wellness-spa">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/vino-bg.jpg")}}');"></div>
+        @php $text =  Helper::text(37) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
-                <h2>Selekcija vina</h2>
+                @isset($text->title)
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->text)
                 <p class="txt">
-                    Kako biste upotpunili svoj boravak u našoj kamin sali, za vas smo pripremili bogatu selekciju vina koja će naglasiti posebnost svakog momenta. U ponudi su vrhunska domaća ali i uvozna vina, pažljivo birana kako bi zadovoljila ukuse pravih ljubitelja vina. Ukoliko imate nedoumice koje vino iz naše bogate ponude odabrate, naše osoblje je tu da vam svojim savjetima i stručnošću izađe u susret.  Dobra čaša vina kraj kamina, kreira momente apsolutne relakcasije dok boravite u našoj Kamin sali.
+                    {!!$text->text!!}
                 </p>
-                <a href="#" class="btnn btn_primary">Book now</a>
+                @endisset
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
     @include('partials/socials')
     <section class="villa-termag">
-        <div class="bg" style="background-image: url('{{asset("assets/images/desert-bg.png")}}');"></div>
+        @php $text =  Helper::text(38) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Tradicionalne poslastice</h2>
+                    @isset($text->title)
+                    <h2>{{$text->title}}</h2>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        U tradicionalnom ambijentu naše Kamin sale, uživajte u tradicionalnim poslasticama koje smo vam pripremili sa ljubavlju. Ukusi i mirisi ovih poslastica, pripremljeni u poslastičari hotela Termag,  će vas u potpunosti osvojiti i prirediti pravi užitak za vaša nepca. U kombinaciji sa adekvatnim vinom, ove slasne delicije će vam prirediti slatke momente za pamćenje.
+                        {!!$text->text!!}
                     </p>
-                    <a href="#" class="btnn btn_primary">Book now</a>
+                    @endisset
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
     </section>
 </main>
 
-@include('partials/footer')
+@endsection

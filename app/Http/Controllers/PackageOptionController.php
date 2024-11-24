@@ -91,8 +91,8 @@ class PackageOptionController extends Controller
         $request->validate([
             'title' => ['nullable', 'string', 'max:191'],
             'package_id' => ['nullable', 'string'],
-            'nights' => ['nullable', 'numeric', 'max:191'],
-            'price' => ['nullable', 'numeric', 'max:191'],
+            'nights' => ['nullable', 'numeric', 'max:9999'],
+            'price' => ['nullable', 'numeric', 'max:9999'],
             // 'options_key.*' => ['nullable', 'string', 'max:200'],
             // 'option_value.*' => ['nullable', 'string', 'max:200'],
             'is_active' => ['nullable', 'string', 'in:1'],
@@ -142,8 +142,8 @@ class PackageOptionController extends Controller
         $request->validate([
             'title' => ['nullable', 'string', 'max:191'],
             'package_id' => ['nullable', 'string'],
-            'nights' => ['nullable', 'numeric', 'max:191'],
-            'price' => ['nullable', 'numeric', 'max:191'],
+            'nights' => ['nullable', 'numeric', 'max:9999'],
+            'price' => ['nullable', 'numeric', 'max:9999'],
             // 'options_key.*' => ['nullable', 'string', 'max:200'],
             // 'option_value.*' => ['nullable', 'string', 'max:200'],
             'is_active' => ['nullable', 'string', 'in:1'],
