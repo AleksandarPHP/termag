@@ -57,6 +57,11 @@ a:active {
   outline: 0 !important;
 }
 
+input[type=checkbox] {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 button,
 input,
 select,
@@ -90,6 +95,9 @@ hr {
   display: inline-block;
   text-align: center;
   font-weight: 600;
+}
+.fa-edit {
+  margin-right: 10px;
 }
 .button i,
 .button:active i,
@@ -1131,7 +1139,7 @@ input[name="lang"] {
 
 .link_box {
   display: flex;
-  justify-cotent start;
+  justify-cotent: start;
   align-items: center;
   gap: 15px;
   border: 1px solid #e6e6e6;

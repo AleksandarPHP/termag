@@ -744,6 +744,11 @@ footer.sticky-footer {
   font-size: 20px;
 }
 
+input[type=checkbox] {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 .input-file-container {
   float: left;
   margin-right: 20px;
