@@ -10,7 +10,7 @@
 </ol>
 <h1>Opcije u paketima</h1>
 <hr>
-<a href="{{ url()->full().'/create'}}" class="btn btn-primary mb-3">Dodaj <i class="fa-solid fa-plus"></i></a>
+<a href="{{ url('cms/options/create') }}" class="btn btn-primary mb-3">Dodaj <i class="fa-solid fa-plus"></i></a>
 <div class="card mb-3">
     <div class="card-header">
         <i class="fa fa-table"></i> Lista</div>

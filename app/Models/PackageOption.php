@@ -13,6 +13,7 @@ class PackageOption extends Model
 
     protected $fillable = [
         'title',
+        'subtitle',
         'package_id',
         'nights',
         'price',
@@ -23,6 +24,7 @@ class PackageOption extends Model
     public $translatable = [
         'title',
         'price',
+        'subtitle',
         'options'
     ];
 

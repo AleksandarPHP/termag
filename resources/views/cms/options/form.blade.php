@@ -54,6 +54,12 @@
                         <input name="title" type="text" class="form-control" id="title" placeholder="Naziv" value="{{ old('title', $item->getTranslation('title', $lang, false)) }}" {!! $errors->has('title') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <label for="subtitle">Subtitle</label>
+                        <input name="subtitle" type="text" class="form-control" id="subtitle" placeholder="Naziv" value="{{ old('subtitle', $item->getTranslation('subtitle', $lang, false)) }}" {!! $errors->has('subtitle') ? 'style="border-color:red;"' : '' !!}>
+                    </div>
+                </div>
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="price">Cijena</label>

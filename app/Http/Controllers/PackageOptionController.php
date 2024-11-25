@@ -121,7 +121,7 @@ class PackageOptionController extends Controller
 
         session()->flash('success', 'Dodano.');
 
-        return redirect('cms/options');
+        return redirect()->back();
     }
 
     public function edit(Request $request, $id)
@@ -179,7 +179,7 @@ class PackageOptionController extends Controller
 
         session()->flash('success', 'Dodano.');
 
-        return redirect('cms/options');
+        return redirect()->back();
     }
 
     public function destroy($id)
@@ -192,7 +192,7 @@ class PackageOptionController extends Controller
 
         session()->flash('success', 'Obrisano.');
         
-        return redirect('cms/options');
+        return redirect()->back();
     }
 
     public function removeImage($id, $image)
