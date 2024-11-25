@@ -27,7 +27,7 @@
           array('cms/menu', 'Meni', 'bars'),
           array('cms/packages', 'Paketi', 'th-list'),
           array('cms/gallery', 'Galerija', 'camera-retro'),
-          array('cms/inbox', 'Inbox', 'envelope'),
+          array('cms/messages', 'Inbox', 'envelope'),
         );
         @endphp
         @foreach ($moduli as $modul)

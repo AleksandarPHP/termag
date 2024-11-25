@@ -105,6 +105,9 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
     Route::resource('menu', 'App\Http\Controllers\MenuController')->except('show');
     Route::post('menu/ajax', 'App\Http\Controllers\MenuController@ajax');  
 
+    Route::resource('messages', 'App\Http\Controllers\MessageController')->except('show');
+    Route::post('messages/ajax', 'App\Http\Controllers\MessageController@ajax');  
+
     Route::resource('settings', 'App\Http\Controllers\SettingsController')->only('update', 'edit');
 
 });

@@ -98,7 +98,7 @@ class UsersController extends Controller
             'email_verified_at' => Carbon::now()
         ]);
 
-        Cache::tags(['users'])->flush();
+        Cache::forget( 'users');
 
         session()->flash('success', 'Dodato.');
 
@@ -132,7 +132,7 @@ class UsersController extends Controller
         
         $user->save();
 
-        Cache::tags(['users'])->flush();
+        Cache::forget( 'users');
 
         session()->flash('success', 'Izmjenjeno.');
 
@@ -144,7 +144,7 @@ class UsersController extends Controller
         $user = User::findOrFail($id);    
         $user->delete();
 
-        Cache::tags(['users'])->flush();
+        Cache::forget( 'users');
 
         session()->flash('success', 'Obrisano.');
         

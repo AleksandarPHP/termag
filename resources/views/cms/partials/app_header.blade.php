@@ -1,6 +1,6 @@
 <header class="row app_header">
   <div class="col-md-5">
-    <a href="{{url('/')}}">
+    <a href="{{url('/')}}" target="_blank">
       <h3 style="font-size: 32px; color: #0b3663;">Hotel Termag Jahorina</h3>
     </a>
   </div>
