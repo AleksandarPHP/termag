@@ -114,14 +114,14 @@ class PackageOptionController extends Controller
 
         $option->package_id = $request->package_id;
         $option->nights = $request->nights;
-        $option->is_active = $request->is_active;
+        $option->is_active = $request->is_active ? 1 : 0;
         $option->save();
 
         Cache::forget('option');
 
         session()->flash('success', 'Dodano.');
 
-        return redirect()->back();
+        return redirect('cms/packages');
     }
 
     public function edit(Request $request, $id)

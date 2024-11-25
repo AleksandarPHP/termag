@@ -114,7 +114,7 @@ class PackageController extends Controller
 
         $package->url = $request->url;
         $package->image = $image;
-        $package->is_active = $request->is_active;
+        $package->is_active = $request->is_active ? 1 : 0;
         $package->save();
 
         Cache::forget('package');
@@ -155,7 +155,7 @@ class PackageController extends Controller
 
         $package->url = $request->url;
         $package->image = $image;
-        $package->is_active = $request->is_active;
+        $package->is_active = $request->is_active ? 1 : 0;
         $package->save();
 
         Cache::forget('package');

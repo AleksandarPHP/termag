@@ -99,7 +99,7 @@ class MenuController extends Controller
         $menu->setTranslation('link', $lang, $request->link);
         $menu->parent_id = $request->parent_id;
         $menu->order = $request->order;
-        $menu->is_active = $request->is_active;
+        $menu->is_active = $request->is_active ? 1 : 0;
         $menu->save();
 
         Cache::forget('menu');
@@ -127,14 +127,14 @@ class MenuController extends Controller
             'link' => ['nullable', 'string'],
             'parent_id' => ['nullable', 'string', 'max:191'],
             'order' => ['nullable', 'string', 'max:191'],
-            'is_active' => []
+            'is_active' => ['nullable', 'string', 'in:1']
         ]);  
 
         $menu->setTranslation('title', $lang, $request->input('title'));
         $menu->setTranslation('link', $lang, $request->input('link'));
         $menu->parent_id = $request->parent_id;
         $menu->order = $request->order;
-        $menu->is_active = $request->is_active;
+        $menu->is_active = $request->is_active ? 1 : 0;
         $menu->save();
 
         Cache::forget('menu-'.$menu->id);
