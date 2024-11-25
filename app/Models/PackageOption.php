@@ -17,6 +17,8 @@ class PackageOption extends Model
         'package_id',
         'nights',
         'price',
+        'from_date',
+        'to_date',
         'options',
         'is_active'
     ];

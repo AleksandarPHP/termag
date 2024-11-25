@@ -67,6 +67,22 @@
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>
+
+                @if($lang=='sr')
+                <div class="col-md-12 mb-3">
+                    <div class="form-group">
+                        <label for="from_date">Od </label>
+                        <input name="from_date" type="date" class="form-control" id="from_date" placeholder="Od" value="{{ old('from_date', $item->from_date) }}" {!! $errors->has('from_date') ? 'style="border-color:red;"' : '' !!}>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="to_date">Do</label>
+                        <input name="to_date" type="date" class="form-control" id="to_date" placeholder="Do" value="{{ old('to_date', $item->to_date) }}" {!! $errors->has('to_date') ? 'style="border-color:red;"' : '' !!}>
+                    </div>
+                </div>
+                @endif
+                <div class="col-md-12"><hr></div>
                 @for ($i = 0; $i <= 11; $i++)
                 <div class="col-md-3 mb-3">
                     <div class="form-group">

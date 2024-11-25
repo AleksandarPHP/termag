@@ -93,8 +93,8 @@ class PackageOptionController extends Controller
             'package_id' => ['nullable', 'string'],
             'nights' => ['nullable', 'numeric', 'max:9999'],
             'price' => ['nullable', 'numeric', 'max:9999'],
-            // 'options_key.*' => ['nullable', 'string', 'max:200'],
-            // 'option_value.*' => ['nullable', 'string', 'max:200'],
+            'from_date' => ['required', 'date'],
+            'to_date' => ['required', 'date'],
             'is_active' => ['nullable', 'string', 'in:1'],
         ]);
         
@@ -114,6 +114,8 @@ class PackageOptionController extends Controller
 
         $option->package_id = $request->package_id;
         $option->nights = $request->nights;
+        $option->from_date = $request->from_date;
+        $option->to_date = $request->to_date;
         $option->is_active = $request->is_active ? 1 : 0;
         $option->save();
 
@@ -144,8 +146,8 @@ class PackageOptionController extends Controller
             'package_id' => ['nullable', 'string'],
             'nights' => ['nullable', 'numeric', 'max:9999'],
             'price' => ['nullable', 'numeric', 'max:9999'],
-            // 'options_key.*' => ['nullable', 'string', 'max:200'],
-            // 'option_value.*' => ['nullable', 'string', 'max:200'],
+            'from_date' => ['required', 'date'],
+            'to_date' => ['required', 'date'],
             'is_active' => ['nullable', 'string', 'in:1'],
         ]);
 
@@ -171,6 +173,8 @@ class PackageOptionController extends Controller
         if($lang=='sr') {     
             $option->package_id = $request->package_id;
             $option->nights = $request->nights;
+            $option->from_date = $request->from_date;
+            $option->to_date = $request->to_date;
             $option->is_active = $request->is_active ? 1 : 0;
         }
         $option->save();
