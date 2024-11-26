@@ -353,7 +353,7 @@
 
                     </ul>
                     <div>
-                        <a href="/kontakt" type="button">Kontakt</a>
+                        <a href="/kontakt" type="button">Rezervacija</a>
                     </div>
                 </div>
             </div>
