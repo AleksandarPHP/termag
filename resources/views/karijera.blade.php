@@ -37,7 +37,71 @@
         </div>
     </section>
 
-    <!-- todo form -->
+    <section class="wellness-spa job-full">
+        <div class="bg" style="background-image: url('{{asset("assets/images/job.jpg")}}');"></div>
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="cardd">
+                    <h2 class="title-smaller">Aplicirajte lako!</h2>
+
+                    <form action="#" >
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="title">Title</label>
+                                <input type="text" placeholder="Field text goes here">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="tel">Mobile number</label>
+                                    <input type="text" placeholder="Number goes here">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="title">Datum Rodjenja</label>
+                                <input type="text" id="birthdate" name="date" value="1998-10-19"/>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="title">Email Adresa</label>
+                                <input type="email" placeholder="hello@gmail.com">
+                            </div>
+                            <div class="col-md-12">
+                                <label for="title">Kratka biografija</label>
+                                <textarea name="" id="" placeholder="Message text goes here" rows="5" cols="10"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="file">Priloži Fajl</label>
+                                <ul class="uploaded-files">  
+                                    <li>
+                                        <div>
+                                            <img src="{{asset('assets/images/link.svg')}}" alt="">
+                                            <p>imagename</p>
+                                        </div>
+                                        <button>
+                                            <img src="{{asset('assets/images/delete.svg')}}" alt="">
+                                        </button>
+                                    </li>
+                                </ul>
+                                <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+                                <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+                                <div class="dropzone" id="form-upload">
+                                    <img src="{{asset('assets/images/upload.svg')}}" alt="upload" class="img-fluid">
+                                    <h3>Drop here to attach or <span class="upload-btn">upload</span></h3>
+                                    <p>Max size: 5GB</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="position">Pozicija</label>
+                                <select name="" id="">
+                                    <option value="" selected disabled>Molimo da odaberete poziciju</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btnn btn_primary w-100">Pošalji</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     @include('partials/socials')
 

@@ -2,14 +2,19 @@ AOS.init();
 
 $(function () {
     $("#checkIn").datepicker({
-        dateFormat: "yy-mm-dd"
+        dateFormat: "yy-mm-dd",
     });
 });
 $(function () {
     $("#checkOut").datepicker({
-        dateFormat: "yy-mm-dd"
+        dateFormat: "yy-mm-dd",
     });
 });
+// $(function () {
+//     $("#birthdate").datepicker({
+//         dateFormat: "yy-mm-dd",
+//     });
+// });
 
 const selectedAll = document.querySelectorAll(".wrapper-dropdown");
 
@@ -157,3 +162,27 @@ const booking = document.querySelector(".booking");
 if (window.innerWidth < 991) {
     booking.removeAttribute("data-aos");
 }
+
+// form upload
+document.querySelector(".upload-btn").addEventListener("click", () => {
+    document.querySelector(".dropzone .dz-button").click();
+});
+Dropzone.autoDiscover = false;
+
+const dropzone = new Dropzone("#form-upload", {
+    url: "http://127.0.0.1:8000/cms/gallery/upload",
+    maxFilesize: 5,
+    acceptedFiles: ".jpeg,.jpg,.png,.gif", // Dozvoljeni fajlovi
+    addRemoveLinks: true,
+    dictDefaultMessage: "",
+    init: function () {
+        this.on("success", function (file, response) {
+            console.log("File uploaded successfully", response);
+        });
+        this.on("error", function (file, errorMessage) {
+            console.error("Upload error", errorMessage);
+        });
+    },
+});
+
+console.log(dropzone);

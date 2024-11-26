@@ -1696,6 +1696,95 @@ header
     color: #fff;
 }
 
+.job-full .row {
+    row-gap: 2rem;
+}
+
+.job-full .cardd {
+    max-width: unset;
+}
+
+.job-full label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.job-full input,
+.job-full select,
+.job-full textarea {
+    width: 100%;
+    min-height: 4rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    outline: none;
+    resize: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.job-full textarea {
+    padding-top: 1rem;
+}
+
+.job-full .dropzone {
+    position: relative;
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.job-full .dropzone span {
+    color: #2563eb;
+    cursor: pointer;
+}
+
+.job-full .dropzone p {
+    color: #4b5563;
+    font-size: 12px;
+}
+
+.job-full .dz-default {
+    display: none;
+}
+
+.job-full .uploaded-files {
+    list-style: none;
+    padding-left: 0;
+}
+
+.job-full .uploaded-files li {
+    width: 100%;
+    border: 1px solid #60a5fa;
+    border-radius: 5px;
+    background-color: #eff6ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.job-full .uploaded-files li div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.job-full .uploaded-files li p {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+}
+
+.job-full .uploaded-files li button {
+    background-color: transparent;
+    border: none;
+}
+
 @media only screen and (max-width: 1600px) {
     .hero .content-wrapper p,
     .career .content-wrapper p,
@@ -2409,8 +2498,8 @@ header
     .special .row .col-lg-12 .card .col-lg-5 h5,
     .special .row .col-lg-12 .card .col-lg-5 div,
     .special .row .col-lg-12 .card .col-lg-5 .txt {
-    text-align: center;
-}
+        text-align: center;
+    }
 }
 
 @media only screen and (min-width: 1399px) {
