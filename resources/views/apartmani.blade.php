@@ -58,10 +58,10 @@
         <div class="container">
             <div class="row">
                 @php $text =  Helper::text(17) @endphp
-                <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600">
+                <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400">
                     <img src="{{asset('assets/images/apartmani-img-left-1.jpg')}}" alt="apartman" class="img-fluid">
                 </div>
-                <div class="col-lg-7" data-aos="fade-left" data-aos-duration="600">
+                <div class="col-lg-7" data-aos="fade-left" data-aos-duration="600" data-aos-delay="400">
                     <img src="{{asset('assets/images/apartmani-img-right-1.png')}}" alt="apartman" class="img-fluid">
                     <div class="content-wrapper"> 
                         @isset($text->subtitle)

@@ -20,7 +20,7 @@
             <div class="gallery-wrapper">
                 @foreach ($gallerise as $gallery)
                     <a href="{{asset('storage/'. $gallery->image)}}" data-fancybox="gallery">
-                        <img class="img-fluid" src="{{asset('storage/'. $gallery->image)}}  " />
+                        <img class="img-fluid" src="{{asset('storage/'. $gallery->image)}} " width="250px" height="250px"/>
                     </a>
                 @endforeach
             </div>

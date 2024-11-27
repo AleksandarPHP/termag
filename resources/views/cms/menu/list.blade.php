@@ -89,7 +89,7 @@ $(document).ready(function() {
         }
     },
     "createdRow": function (row, data, index) {
-        $(row).addClass("text-center");
+        $(row).find('td:eq(2)').addClass("text-center");
     },
     "order": [[ 0, "desc"]],
   });

@@ -66,6 +66,7 @@
                 <div class="col-md-12"><hr></div>
             </div>
             <button type="submit" class="btn btn-danger mb-3">Sačuvaj</button>
+            <a href="{{ url()->previous() }}" class="btn btn-secondary mb-3 ml-auto" style="margin-left: 10px">Odustani</a>
         </form>
     </div>
 </div>

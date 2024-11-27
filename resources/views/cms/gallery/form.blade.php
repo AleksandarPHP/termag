@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-md-12">
                 <div class="form-group">
-                            <label>Slike koje će biti prikazane na slajderu na početnoj strani u sekciji 'Ambijent'</label>
+                            <label>Slike koje će biti prikazane na stranici 'Galerija'</label>
                         </div>
                     <div class="row">
                         <div class="col-md-12">
