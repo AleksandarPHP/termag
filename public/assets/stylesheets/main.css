@@ -1864,6 +1864,10 @@ header
     .special .card h5 {
         font-size: 3rem;
     }
+    .img-gallery {
+        max-width: 100%;
+        height: auto;
+    }
     .tb-activities .col-lg-6 .card {
         min-height: 55rem;
     }
@@ -1968,6 +1972,10 @@ header
     }
     .ukus-jahorine video {
         width: unset;
+    }
+    .img-gallery {
+        max-width: 100%;
+        height: auto;
     }
     .abonos {
         min-height: 60rem;
@@ -2093,6 +2101,10 @@ header
     .accommodation {
         padding: 5rem 0;
     }
+    .img-gallery {
+        max-width: 100%;
+        height: auto;
+    }
     .villa-termag {
         padding: 5rem 0;
     }
@@ -2196,6 +2208,10 @@ header
 @media only screen and (max-width: 480px) {
     header .navbar {
         padding: 0 1rem 0 0;
+    }
+    .img-gallery {
+        max-width: 100%;
+        height: auto;
     }
     .hero {
         min-height: 100dvh;

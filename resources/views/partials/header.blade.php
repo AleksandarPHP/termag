@@ -8,6 +8,7 @@
     
         <meta name="keywords" content="{{ $settings->keywords }}" />
         <meta name="author" content="soft4tech.com" />
+        <meta property="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}"/>
     
         @if (trim($__env->yieldContent('description')))
         <meta name="description" content="@yield('description')" />
