@@ -32,20 +32,24 @@
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>
+                @if ($item->id==4 || $item->id==5 || $item->id==15 || $item->id==17 || $item->id==19 || $item->id==22 || $item->id==28 || $item->id==35 || $item->id==40 || $item->id==45 || $item->id==112 || $item->id==130 || $item->id==145 || $item->id==160 || $item->id==162 || $item->id==176 || $item->id==182 || $item->id==183 || $item->id==184 || $item->id==185 || $item->id==187)
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="subtitle">Podnaslov</label>
                         <input name="subtitle" type="text" class="form-control" id="subtitle" placeholder="Podnaslov" value="{{ old('subtitle', $item->getTranslation('subtitle', $lang, false)) }}" {!! $errors->has('subtitle') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
-                <div class="col-md-12"><hr></div>
+                <div class="col-md-12"><hr></div>   
+                @endif
+                @if ($item->id!=1 && $item->id!=14 && $item->id!=21 && $item->id!=22 && $item->id!=27 && $item->id!=28 && $item->id!=34 && $item->id!=35 && $item->id!=39 && $item->id!=44 && $item->id!=48 && $item->id!=49 && $item->id!=50 && $item->id!=51 && $item->id!=52 && $item->id!=53 && $item->id!=54 && $item->id!=55 && $item->id!=56 && $item->id!=59 && $item->id!=64 && $item->id!=69 && $item->id!=72 && $item->id!=75 && $item->id!=76 && $item->id!=80 && $item->id!=81 && $item->id!=84 && $item->id!=85 && $item->id!=89 && $item->id!=90 && $item->id!=92 && $item->id!=93 && $item->id!=98 && $item->id!=99 && $item->id!=103 && $item->id!=106 && $item->id!=107 && $item->id!=112 && $item->id!=113 && $item->id!=114 && $item->id!=120 && $item->id!=124 && $item->id!=125 && $item->id!=127 && $item->id!=128 && $item->id!=129 && $item->id!=130 && $item->id!=134 && $item->id!=140 && $item->id!=144 && $item->id!=145 && $item->id!=148 && $item->id!=151 && $item->id!=152 && $item->id!=162 && $item->id!=168 && $item->id!=169 && $item->id!=170 && $item->id!=171 && $item->id!=172 && $item->id!=173 && $item->id!=174 && $item->id!=175 && $item->id!=176 && $item->id!=179 && $item->id!=182 && $item->id!=183 && $item->id!=184 && $item->id!=185 && $item->id!=187 && $item->id!=189 && $item->id!=193 && $item->id!=197)
                 <div class="col-md-12">
                     <div class="form-group" {!! $errors->has('text') ? 'style="border:1px solid red;"' : '' !!}>
                         <label for="text">Tekst</label>
                         <textarea name="text" id="text" class="form-control">{{ old('text', $item->getTranslation('text', $lang, false)) }}</textarea>
                     </div>
                 </div>
-                <div class="col-md-12"><hr></div>
+                <div class="col-md-12"><hr></div>  
+                @endif
                 @if($lang=='sr')
                 <div class="col-md-6">
                     <div class="form-group">
@@ -60,6 +64,7 @@
                         <input name="urlTitle" type="text" class="form-control" id="urlTitle" placeholder="URL naslov" value="{{ old('urlTitle', $item->getTranslation('urlTitle', $lang, false)) }}" {!! $errors->has('urlTitle') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div> 
+                @if ($item->id==2 || $item->id==3)
                 @if($lang=='sr')
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-6">
@@ -75,8 +80,10 @@
                         <input name="urlTitle2" type="text" class="form-control" id="urlTitle2" placeholder="URL naslov 2" value="{{ old('urlTitle2', $item->getTranslation('urlTitle2', $lang, false)) }}" {!! $errors->has('urlTitle2') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div> 
+                @endif
                 <div class="col-md-12"><hr></div>
                 @if($lang=='sr')
+                @if($item->id!=1 && $item->id!=4 && $item->id!=5 && $item->id!=8 && $item->id!=10 && $item->id!=11 && $item->id!=12 && $item->id!=14 && $item->id!=15 && $item->id!=16 && $item->id!=17 && $item->id!=18 && $item->id!=19 && $item->id!=20 && $item->id!=21 && $item->id!=22 && $item->id!=23 && $item->id!=27 && $item->id!=33 && $item->id!=34 && $item->id!=39 && $item->id!=40 && $item->id!=44 && $item->id!=48 && $item->id!=49 && $item->id!=50 && $item->id!=51 && $item->id!=52 && $item->id!=53 && $item->id!=54 && $item->id!=56 && $item->id!=59 && $item->id!=64 && $item->id!=68 && $item->id!=69 && $item->id!=72 && $item->id!=75 && $item->id!=79 && $item->id!=80 && $item->id!=84 && $item->id!=85 && $item->id!=86 && $item->id!=87 && $item->id!=88 && $item->id!=89 && $item->id!=91 && $item->id!=92 && $item->id!=95 && $item->id!=98 && $item->id!=103 && $item->id!=105 && $item->id!=106 && $item->id!=112 && $item->id!=113 && $item->id!=114 && $item->id!=120 && $item->id!=121 && $item->id!=124 && $item->id!=125 && $item->id!=127 && $item->id!=128 && $item->id!=129 && $item->id!=130 && $item->id!=131 && $item->id!=132 && $item->id!=133 && $item->id!=134 && $item->id!=138 && $item->id!=140 && $item->id!=141 && $item->id!=144 && $item->id!=148 && $item->id!=151 && $item->id!=152 && $item->id!=153 && $item->id!=154 && $item->id!=155 && $item->id!=156 && $item->id!=157 && $item->id!=158 && $item->id!=159 && $item->id!=160 && $item->id!=161 && $item->id!=162 && $item->id!=168 && $item->id!=169 && $item->id!=170 && $item->id!=171 && $item->id!=172 && $item->id!=173 && $item->id!=174 && $item->id!=175 && $item->id!=179 && $item->id!=180 && $item->id!=182 && $item->id!=189 && $item->id!=193 && $item->id!=194 && $item->id!=196 && $item->id!=197 && $item->id!=198)
                 <div class="col-md-3">
                     <div class="form-group">
                         {{-- <label>Min: {{ $width }}x{{ $height }}px</label> --}}
@@ -96,7 +103,7 @@
                               </a>
                               @endif
                       </span>
-                    <input name="image" class="input-file input-file1" id="my-file1" accept=".jpg,.jpeg,.png,.webp" type="file">
+                    <input name="image" class="input-file input-file1" id="my-file1" type="file">
                     <label tabindex="0" for="my-file1" class="input-file-trigger input-file-trigger1">Odaberite sliku...</label>
                     </div>
                     <script>
@@ -114,6 +121,7 @@
                         });
                     </script>
                 </div>
+                @endif
                 @endif
             </div>
             <button type="submit" class="btn btn-danger mb-3">Sačuvaj</button>
