@@ -19,15 +19,15 @@
             <table class="table table-bordered" id="dataTableSSR" width="100%" cellspacing="0">
                 <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Naziv</th>
+                    <th>Isporuceno</th>
+                    <th>Ime i prezime</th>
                     <th class="nosort text-center" style="width:80px;">Akcija</th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
-                    <th>ID</th>
-                    <th>Naziv</th>
+                    <th>Isporuceno</th>
+                    <th>Ime i prezime</th>
                     <th class="nosort text-center">Akcija</th>
                 </tr>
                 </tfoot>
@@ -89,7 +89,8 @@ $(document).ready(function() {
         }
     },
     "createdRow": function (row, data, index) {
-        $(row).addClass("text-center");
+        $(row).find('td:eq(2)').addClass("text-center");
+        $(row).find('td:eq(3)').addClass("text-center");
     },
     "order": [[ 0, "desc"]],
   });

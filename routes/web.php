@@ -67,7 +67,7 @@ Route::group(['prefix' => 'en'], function () use ($routes) {
         Route::get($uri, fn() => view($view));
     }
 });
-
+Route::post('kontakt', 'App\Http\Controllers\MessageController@kontakt'); 
 Auth::routes(['verify' => false, 'register' => false]);
 
 Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function() {

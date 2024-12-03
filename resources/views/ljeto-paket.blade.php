@@ -1,14 +1,16 @@
-@include('partials/header')
-
+@extends('layouts.app')
+    @section('title', Helper::title(89))
+    @section('description', Helper::description(89))
+    @section('content')
 <main>
     <section class="career">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/btn.png")}}');"></div>
+        @php $text =  Helper::text(90) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Termag ljeto paket</h1>
-                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
-                Ukoliko želite savršen odmor za Vas i Vašu porodicu, isplaniran do poslednjeg detalja onda je Termag ljeto za porodice kao stvoren za Vas! Mnoštvo zabavnog sadržaja u kom učestvuje cijela porodica, aktivnosti na otvorenom, uživanje u prirodi, edukativni sadržaji, slobodno vrijeme za roditelje... Da, mislili smo o svemu, Vaše je samo da dođete i da se prepustite!
-                </p>
+                @isset($text->title)
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">{{$text->title}}</h1>
+                @endisset
             </div>
         </div>
     </section>
@@ -196,4 +198,4 @@
 
 </main>
 
-@include('partials/footer')
+@endsection

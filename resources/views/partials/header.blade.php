@@ -54,6 +54,7 @@
         @endif
 
         <link rel="shortcut icon" href="{{asset('favicon.png')}}">
+        <link rel="stylesheet" href="{{asset('assets/stylesheets/jquery.toast.css')}}">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{asset('assets/slick-1.8.1/slick/slick.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{asset('assets/slick-1.8.1/slick/slick-theme.css')}}"/>
@@ -78,6 +79,7 @@
         />
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+        <script src="{{asset('assets/javascripts/jquery.toast.js')}}"></script>
 
         <title>Termag</title>
     </head>

@@ -1,5 +1,7 @@
-@include('partials/header')
-
+@extends('layouts.app')
+    @section('title', Helper::title(84))
+    @section('description', Helper::description(84))
+    @section('content')
 <main>
     <section class="career">
         <video autoplay muted loop>
@@ -11,32 +13,33 @@
         <div class="overlay"></div>
 
         <div class="container">
+        @php $text =  Helper::text(76) @endphp
             <div class="content-wrapper">
-                <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Kreirajte zajedničke uspomene na Jahorini</h4>
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">Ljetnje Avanture</h1>
-                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000">
-                    Termag vam nudi mnoštvo aktivnosti i zabavnog sadržaja i
-                    tokom ljetnih mjeseci. Na prelijepoj planini Jahorini,
-                    doživite ljeto na potpuno novi način uz aktivnosti koje smo
-                    pripremili samo za vas. Bez obzira da li ste pravi
-                    avanturisti ili ste ipak mirnijeg duha, na našoj planini
-                    ćete pronaći aktivnosti u kojima ćete uživati.
-                </p>
+                @isset($text->subtitle)
+                <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->subtitle}}</h4>
+                @endisset
+                @isset($text->title)
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">{{$text->title}}</h1>
+                @endisset
             </div>
         </div>
     </section>
     @include('partials/booking')
     @include('partials/socials')
     <section class="experience unforgetable-experience">
+        @php $text =  Helper::text(86) @endphp
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
         <div class="container">
             <div class="text-center">
-                <h2 data-aos="fade-down" data-aos-duration="600">Nezaboravno Iskustvo</h2>
+                @isset($text->title)
+                <h2 data-aos="fade-down" data-aos-duration="600">{{$text->title}}</h2>
+                @endisset
+                @isset($text->text)
                 <p class="txt" data-aos="fade-down" data-aos-duration="600">
-                    Naša ponuda uključuje 71 sobu i 21 apartman, uključujući ekskluzivni predsjednički apartman. Svaki prostor je pažljivo dizajniran, sa ručno izrađenim namještajem od drveta i rustičnim elementima koji odražavaju bogatstvo pla
+                    {!!$text->text!!}
                 </p>
-
+                @endisset
                 <div class="row">
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
@@ -64,20 +67,24 @@
     <section class="accommodation hiking">
         <div class="container">
             <div class="row">
+                @php $text =  Helper::text(87) @endphp
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600">
-                    <div class="content-wrapper">
-                    <h2 class="title">Planinarenje</h2>
+                    @isset($text->title)
+                    <h2>{{$text->title}}</h2>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
+                        {!!$text->text!!}
                     </p>
-                    <a href="#" class="btnn btn_gold">Saznaj više</a>
+                    @endisset
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_gold">{{$text->urlTitle}}</a>@endif
                 </div>
-                </div>
+            </div>
                 <div class="col-lg-7">
                     <video autoplay muted loop src="{{asset('assets/videos/planinarenje.mp4')}}"></video>
                 </div>
             </div>
-        </div>
     </section>
     <section class="villa-termag alpinizam">
         <video autoplay muted loop>
@@ -87,20 +94,23 @@
             />
         </video>
         <div class="container">
+            @php $text =  Helper::text(88) @endphp
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Alpinizam</h2>
-                    <p class="txt mb-4">
-                        Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
-                    </p>
+                    @isset($text->title)
+                    <h2>{{$text->title}}</h2>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Za stranicu posvećenu smještaju i sobama u vašem hotelu, važno je da naziv sekcije jasno prenosi ideju kvaliteta, udobnosti i jedinstvenog iskustva boravka.
+                        {!!$text->text!!}
                     </p>
-                    <a href="#" class="btnn btn_primary">Book now</a>
+                    @endisset
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
     </section>
 </main>
 
-@include('partials/footer')
+@endsection

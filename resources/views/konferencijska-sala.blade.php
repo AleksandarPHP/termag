@@ -1,15 +1,20 @@
-@include('partials/header')
+@extends('layouts.app')
+    @section('title', Helper::title(75))
+    @section('description', Helper::description(75))
+    @section('content')
 
 <main>
     <section class="career">
-        <div class="bg" style="background-image: url('{{asset("assets/images/konf-hero-bg.jpg")}}');"></div>
+        @php $text =  Helper::text(76) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Autentičan Dizajn u Formalnom Ruhu</h4>
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">Konferencijska Sala</h1>
-                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="1000">
-                    Hotel Termag raspolaže izuzetno dobro opremljenom konferencijskom salom, autentičnog dizajna, kapaciteta do 350 mjesta. Ona je idealan prostor za vaša poslovna događanja u profesionalnom ambijentu naglašavajući kombinaciju formalnosti i estetike.  Prostor odiše jedinstvenošću uz naglašenu estetiku i zagarantovanu funkcionalnost koja će unaprijediti vaše poslovne poduhvate.
-                </p>
+                @isset($text->subtitle)
+                <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->subtitle}}</h4>
+                @endisset
+                @isset($text->title)
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">{{$text->title}}</h1>
+                @endisset
             </div>
         </div>
     </section>
@@ -17,14 +22,20 @@
     @include('partials/booking')
 
     <section class="wellness-spa konf-sala">
-        <div class="bg" style="background-image: url('{{asset("assets/images/konf-sala-bg.jpg")}}');"></div>
+        @php $text =  Helper::text(77) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container-fluid">
             <div class="cardd">
-                <h2>Fleksibilnost prostora</h2>
+                @isset($text->title)
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->text)
                 <p class="txt">
-                    Prostor naše konferencijske sale je u skladu sa visokim standardima savremenog poslovnog okruženja. To znači da će vam pružiti sve ono što vam je u poslovnom smislu potrebno za realizaciju vaših zamisli. Naša konferencijska sala je djeljiva u četiri manje sale koje, i u slučaju djeljenja prostora, i dalje zadržavaju prirodno osvjetljenje. U skladu sa tim, pogodna je za održavanje različitih vrsta poslovnih događaja, te za različite veličine skupova.
+                    {!!$text->text!!}
                 </p>
-                <a href="#" class="btnn btn_primary">Book Now</a>
+                @endisset
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
@@ -32,32 +43,44 @@
     @include('partials/socials')
 
     <section class="villa-termag">
-        <div class="bg" style="background-image: url('{{asset("assets/images/modern-tech-bg.jpg")}}');"></div>
+        @php $text =  Helper::text(78) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Savremena tehnička opremljenost</h2>
+                    @isset($text->title)
+                    <h2>{{$text->title}}</h2>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Konferencijska sala hotela Termag se može pohvaliti izuzetnom tehničkom opremljenošću koja sa uspjehom može da odgovori i najzatjevnijim poslovnim događajima. Posjedujemo najnovije laserske projektore, vrhunsko osvjetljenje, kabine za simultano prevođenje uz audio opremu i bežični internet koji će stvoriti savršen ambijent za poslovne sastanke, konferencije, poslovne prezentacije. Tu smo da vam ponudimo rješenja za sve vaše posebne zahtjeve uz tehničku opremljenost koja će zadovoljiti sve vaše kriterijume.
+                        {!!$text->text!!}
                     </p>
-                    <a href="#" class="btnn btn_primary">Book now</a>
+                    @endisset
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
     </section>
 
     <section class="wellness-spa konf-sala">
-        <div class="bg" style="background-image: url('{{asset("assets/images/flexibility-bg.jpg")}}');"></div>
+        @php $text =  Helper::text(79) @endphp
+        <div class="bg" style="background-image: url('assets/images/flexibility-bg.jpg');"></div>
         <div class="container-fluid">
             <div class="cardd">
-                <h2>Fleksibilnost prostora</h2>
+                @isset($text->title)
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->text)
                 <p class="txt">
-                    Prostor naše konferencijske sale je u skladu sa visokim standardima savremenog poslovnog okruženja. To znači da će vam pružiti sve ono što vam je u poslovnom smislu potrebno za realizaciju vaših zamisli. Naša konferencijska sala je djeljiva u četiri manje sale koje, i u slučaju djeljenja prostora, i dalje zadržavaju prirodno osvjetljenje. U skladu sa tim, pogodna je za održavanje različitih vrsta poslovnih događaja, te za različite veličine skupova.
+                    {!!$text->text!!}
                 </p>
-                <a href="#" class="btnn btn_primary">Book Now</a>
+                @endisset
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
 </main>
 
-@include('partials/footer')
+@endsection

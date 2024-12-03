@@ -42,33 +42,36 @@
         <div class="container">
             <div class="col-lg-12">
                 <div class="cardd">
+                    @if ($errors->any())
+                        <h1>error</h1>
+                    @endif
                     <h2 class="title-smaller">Aplicirajte lako!</h2>
-
-                    <form action="#" >
+                    <form action="{{ url('kontakt') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
-                                <label for="title">Title</label>
-                                <input type="text" placeholder="Field text goes here">
+                                <label for="title">Ime i prezime</label>
+                                <input type="text" name="name" placeholder="Field text goes here">
                             </div>
                             <div class="col-md-6">
                                 <label for="tel">Mobile number</label>
-                                    <input type="text" placeholder="Number goes here">
+                                    <input type="text" name="tel" placeholder="Number goes here">
                             </div>
                             <div class="col-md-6">
                                 <label for="title">Datum Rodjenja</label>
-                                <input type="text" id="birthdate" name="date" value="1998-10-19"/>
+                                <input type="date" id="birthdate" name="date" onload="getDate()"  value="" />
                             </div>
                             <div class="col-md-6">
                                 <label for="title">Email Adresa</label>
-                                <input type="email" placeholder="hello@gmail.com">
+                                <input type="email" name="email" placeholder="hello@gmail.com">
                             </div>
                             <div class="col-md-12">
                                 <label for="title">Kratka biografija</label>
-                                <textarea name="" id="" placeholder="Message text goes here" rows="5" cols="10"></textarea>
+                                <textarea name="description" id="" placeholder="Message text goes here" rows="5" cols="10"></textarea>
                             </div>
                             <div class="col-md-12">
                                 <label for="file">Priloži Fajl</label>
-                                <ul class="uploaded-files">  
+                                {{-- <ul class="uploaded-files">  
                                     <li>
                                         <div>
                                             <img src="{{asset('assets/images/link.svg')}}" alt="">
@@ -78,20 +81,14 @@
                                             <img src="{{asset('assets/images/delete.svg')}}" alt="">
                                         </button>
                                     </li>
-                                </ul>
+                                </ul> --}}
                                 <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
                                 <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
                                 <div class="dropzone" id="form-upload">
                                     <img src="{{asset('assets/images/upload.svg')}}" alt="upload" class="img-fluid">
                                     <h3>Drop here to attach or <span class="upload-btn">upload</span></h3>
-                                    <p>Max size: 5GB</p>
+                                    <p>Max size: 5MB</p>
                                 </div>
-                            </div>
-                            <div class="col-md-12">
-                                <label for="position">Pozicija</label>
-                                <select name="" id="">
-                                    <option value="" selected disabled>Molimo da odaberete poziciju</option>
-                                </select>
                             </div>
                             <div class="col-md-12">
                                 <button type="submit" class="btnn btn_primary w-100">Pošalji</button>
@@ -106,5 +103,38 @@
     @include('partials/socials')
 
 </main>
-
+<script>
+    $(document).ready(function(e) {
+      @if(session('status'))
+      $.toast({
+        heading: 'Uspijeh.',
+        text: {!! json_encode(session('status')) !!},
+        hideAfter: 6000,
+        position: 'top-right',
+        icon: 'success',
+        loader: true,
+        loaderBg: '#2492D1'
+      });
+      @endif
+      @if($errors->any())
+      $.toast({
+        heading: 'Error.',
+        text: [
+          @foreach($errors->all() as $error)
+          {!! json_encode($error) !!},
+          @endforeach
+        ],
+        hideAfter: 7000,
+        position: 'top-right',
+        icon: 'error',
+        loader: true,
+        loaderBg: '#2492D1'
+      });
+      @endif
+    })
+    function getDate(){
+        var today = new Date();
+        document.getElementById("date").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+    }
+</script>
 @include('partials/footer')

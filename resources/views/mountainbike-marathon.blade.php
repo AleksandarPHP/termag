@@ -1,39 +1,54 @@
-@include('partials/header')
+@extends('layouts.app')
+    @section('title', Helper::title(92))
+    @section('description', Helper::description(92))
+    @section('content')
 
 <main>
     <section class="career">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/bike-marathon.jpg")}}');"></div>
+        @php $text =  Helper::text(93) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Atrakcije oko Nas</h1>
-                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
-                    Olimpijska planina Jahorina zauzima centralnu poziciju u Bosni i Hercegovini I udaljena je od Sarajeva i međunarodnog aerodroma na samo pola sata vožnje. Centralna pozicija omogućava odličnu povezanost sa drugim destinacijama i atrakcijama u okruženju, tako da Jahorina predstavlja odličnu bazu i za odmor tokom kojeg želite da upoznate region.
-                </p>
+                @isset($text->title)
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">{{$text->title}}</h1>
+                @endisset
             </div>
         </div>
     </section>
     <section class="booking empty"></section>
+    @php $text =  Helper::text(94) @endphp
     <section class="wellness-spa">
-        <div class="bg" style="background-image: url('{{asset("assets/images/bike.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
-                <h2 >Pripreme za Trku</h2>
+                @isset($text->title)
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->text)
                 <p class="txt">
-                    Pripreme za trku su ključne za postizanje dobrih rezultata na ovom sportskom nadmetanju. Bitno je postaviti ciljeve i odrediti da li želite da oborite svoj lični rekord, da završite trku ili jednostavno samo želite učestvovati i doživjeti novo iskustvo. U skladu sa tim planirate svoj trening i određujete njegovu težinu. Tako ćete raditi na svojoj kondiciji i fizičkoj spremnosti kako biste mogli uspješno da odgovorite svim izazovima koje triatlon trka sa sobom nosi. Prilagodite ishranu svom treningu, unosite dovoljno hranljivih materija i na kraju odmarajte dovoljno. Odmor koji priredite vašem tijelu i mišićima će vam donijeti izuzetnu korist. Ako koristite posebnu opremu, testirajte je i uvjerite se da će vas poslužiti na pravi način tokom trke.
+                    {!!$text->text!!}
                 </p>
-                <a href="#" class="btnn btn_primary">Book now</a>
+                @endisset
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
     <section class="experience">
+    @php $text =  Helper::text(95) @endphp
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
         <div class="container">
             <div class="text-center">
-                <h2>Kategorije</h2>
+                @isset($text->title)
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->text)
                 <p class="txt">
-                    Termag mountainbike marathon je dinamična trka koja se održava u nekoliko kategorija. Takmičenje se odvija u individualnoj, muškoj i ženskoj,  konkurenciji, a poseban kuriozitet je porodična trka koja ima za cilj jačanje porodice kroz sport i osnaživanje sportskog duha.
+                    {!!$text->text!!}
                 </p>
+                @endisset
 
                 <div class="row">
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
@@ -59,28 +74,40 @@
         </div>
     </section>
     <section class="villa-termag">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/porodicno.png")}}');"></div>
+    @php $text =  Helper::text(96) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Porodično učestvovanje</h2>
+                    @isset($text->title)
+                    <h2>{{$text->title}}</h2>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Trka može biti pravi porodični dan jer je obezbjeđeno učešće za cijelu porodicu. Podijelite svoj takmičarski duh sa vašim najvoljenijima i osjetite jedan potpuno novi doživljaj ovog sportskog nadmetanja. Istražujte zajedno prirodne ljepote Jahorine dok učestvujete u ovoj nevjerovatnoj sportskoj avanturi. Termag challenge race ima staze koje su prilagođene svima od najmlađih do najstarijih učesnika sa različitim stepenom zahtjevnosti.
+                        {!!$text->text!!}
                     </p>
-                    <a href="#" class="btnn btn_primary">Book now</a>
+                    @endisset
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
     </section>
     <section class="wellness-spa">
-        <div class="bg" style="background-image: url('{{asset("assets/images/sportski-duh.jpg")}}');"></div>
+    @php $text =  Helper::text(97) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
-                <h2>Sportski duh</h2> 
+                @isset($text->title)
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->text)
                 <p class="txt">
-                    Sportsko takmičenje naglašava sportski duh te kombinuje zajedništvo i  obožavanje prirode u jednom. Termag challenge race podstiče timski duh te naglašava važnost podrške i duha zajedništva. To nije samo trka, mnogo je više od toga. Pravi je izazov ne samo za vaše fizičke spostobnosti nego i za vaše lične osobine i način življenja. Istražite vaše granice izdržljivosti kroz ovu trku koja će vam ponuditi mnogo više od sportskog takmičenja.
+                    {!!$text->text!!}
                 </p>
-                <a href="#" class="btnn btn_primary">Book now</a>
+                @endisset
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
@@ -231,4 +258,4 @@
     </section>
 </main>
 
-@include('partials/footer')
+@endsection
