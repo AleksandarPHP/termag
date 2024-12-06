@@ -77,7 +77,7 @@
     </section>
     @include('partials/socials')
     <section class="villa-termag villa-termag-b">
-        <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.webp")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
         <div class="container">
             @php $text =  Helper::text(26) @endphp
             <div>
