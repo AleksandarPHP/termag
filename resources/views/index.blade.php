@@ -85,12 +85,20 @@
           </section>
 
           <section class="villa-termag ukus-jahorine">
-              <video autoplay muted loop>
+              <video autoplay muted loop preload="none" id="ukus-jahorine" poster="{{asset('assets/images/ukus-jahorine.png')}}">
                   <source
-                      src="{{ asset('assets/videos/ukus-jahorine.webm') }}"
+                      src="https://termag.soft4tech.com/assets/videos/ukus-jahorine.webm"
                       type="video/mp4"
                   />
-              </video>
+              </video>            
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const video = document.getElementById("ukus-jahorine");
+                    const source = video.querySelector("source");
+                    source.src = source.getAttribute("data-src");
+                    video.load();
+                });
+            </script>
               <div class="container">
                 @php $text =  Helper::text(8) @endphp
                   <div>
@@ -143,12 +151,20 @@ y          </section>
           </section>
 
           <section class="wellness-spa konf-sala aktivni-izazov">
-              <video autoplay muted loop>
+              <video autoplay muted loop preload="none" id="planinarenje" poster="{{asset('assets/images/planinarenje.png')}}">
                   <source
-                      src="{{ asset('assets/videos/termag-izazovi.webm') }}"
+                      src="https://termag.soft4tech.com/assets/videos/termag-izazovi.webm"
                       type="video/mp4"
                   />
               </video>
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const video = document.getElementById("planinarenje");
+                    const source = video.querySelector("source");
+                    source.src = source.getAttribute("data-src");
+                    video.load();
+                });
+            </script>
               <div class="container-fluid">
                   <div class="cardd">
                     @php $text =  Helper::text(11) @endphp
