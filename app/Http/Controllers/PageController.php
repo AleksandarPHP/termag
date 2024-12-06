@@ -171,6 +171,10 @@ class PageController extends Controller
         $image = $item->image;
         if($request->hasFile('image')) $image = Helper::saveImage($request->image, 'Pages', $item->title, $image);
         else if($item->title != $item->title && !is_null($image)) $image = Helper::renameImage($image, 'Pages', $item->title);
+        
+        $image2 = $item->image2;
+        if($request->hasFile('image2')) $image2 = Helper::saveImage($request->image2, 'Pages', $item->title, $image2);
+        else if($item->title != $item->title && !is_null($image2)) $image2 = Helper::renameImage($image2, 'Pages', $item->title);
 
         $item->setTranslation('title', $lang, $request->input('title'));
         $item->setTranslation('subtitle', $lang, $request->input('subtitle'));
@@ -183,6 +187,7 @@ class PageController extends Controller
 
         if($lang=='sr') {      
             $item->image = $image;
+            $item->image2 = $image2;
             $item->url = $request->url;
             $item->url2 = $request->url2;
         }

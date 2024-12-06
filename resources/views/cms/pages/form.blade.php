@@ -83,7 +83,7 @@
                 @endif
                 <div class="col-md-12"><hr></div>
                 @if($lang=='sr')
-                @if($item->id!=1 && $item->id!=4 && $item->id!=5 && $item->id!=8 && $item->id!=10 && $item->id!=11 && $item->id!=12 && $item->id!=14 && $item->id!=15 && $item->id!=16 && $item->id!=17 && $item->id!=18 && $item->id!=19 && $item->id!=20 && $item->id!=21 && $item->id!=22 && $item->id!=23 && $item->id!=27 && $item->id!=33 && $item->id!=34 && $item->id!=39 && $item->id!=40 && $item->id!=44 && $item->id!=48 && $item->id!=49 && $item->id!=50 && $item->id!=51 && $item->id!=52 && $item->id!=53 && $item->id!=54 && $item->id!=56 && $item->id!=59 && $item->id!=64 && $item->id!=68 && $item->id!=69 && $item->id!=72 && $item->id!=75 && $item->id!=79 && $item->id!=80 && $item->id!=84 && $item->id!=85 && $item->id!=86 && $item->id!=87 && $item->id!=88 && $item->id!=89 && $item->id!=91 && $item->id!=92 && $item->id!=95 && $item->id!=98 && $item->id!=103 && $item->id!=105 && $item->id!=106 && $item->id!=112 && $item->id!=113 && $item->id!=114 && $item->id!=120 && $item->id!=121 && $item->id!=124 && $item->id!=125 && $item->id!=127 && $item->id!=128 && $item->id!=129 && $item->id!=130 && $item->id!=131 && $item->id!=132 && $item->id!=133 && $item->id!=134 && $item->id!=138 && $item->id!=140 && $item->id!=141 && $item->id!=144 && $item->id!=148 && $item->id!=151 && $item->id!=152 && $item->id!=153 && $item->id!=154 && $item->id!=155 && $item->id!=156 && $item->id!=157 && $item->id!=158 && $item->id!=159 && $item->id!=160 && $item->id!=161 && $item->id!=162 && $item->id!=168 && $item->id!=169 && $item->id!=170 && $item->id!=171 && $item->id!=172 && $item->id!=173 && $item->id!=174 && $item->id!=175 && $item->id!=179 && $item->id!=180 && $item->id!=182 && $item->id!=189 && $item->id!=193 && $item->id!=194 && $item->id!=196 && $item->id!=197 && $item->id!=198)
+                @if($item->id!=1 && $item->id!=4 && $item->id!=5 && $item->id!=8 && $item->id!=10 && $item->id!=11 && $item->id!=12 && $item->id!=14 && $item->id!=15 && $item->id!=16 && $item->id!=21 && $item->id!=22 && $item->id!=23 && $item->id!=27 && $item->id!=33 && $item->id!=34 && $item->id!=39 && $item->id!=40 && $item->id!=44 && $item->id!=48 && $item->id!=49 && $item->id!=50 && $item->id!=51 && $item->id!=52 && $item->id!=53 && $item->id!=54 && $item->id!=56 && $item->id!=59 && $item->id!=64 && $item->id!=68 && $item->id!=69 && $item->id!=72 && $item->id!=75 && $item->id!=79 && $item->id!=80 && $item->id!=84 && $item->id!=85 && $item->id!=86 && $item->id!=87 && $item->id!=88 && $item->id!=89 && $item->id!=91 && $item->id!=92 && $item->id!=95 && $item->id!=98 && $item->id!=103 && $item->id!=105 && $item->id!=106 && $item->id!=112 && $item->id!=113 && $item->id!=114 && $item->id!=120 && $item->id!=121 && $item->id!=124 && $item->id!=125 && $item->id!=127 && $item->id!=128 && $item->id!=129 && $item->id!=130 && $item->id!=131 && $item->id!=132 && $item->id!=133 && $item->id!=134 && $item->id!=138 && $item->id!=140 && $item->id!=141 && $item->id!=144 && $item->id!=148 && $item->id!=151 && $item->id!=152 && $item->id!=153 && $item->id!=154 && $item->id!=155 && $item->id!=156 && $item->id!=157 && $item->id!=158 && $item->id!=159 && $item->id!=160 && $item->id!=161 && $item->id!=162 && $item->id!=168 && $item->id!=169 && $item->id!=170 && $item->id!=171 && $item->id!=172 && $item->id!=173 && $item->id!=174 && $item->id!=175 && $item->id!=179 && $item->id!=180 && $item->id!=182 && $item->id!=189 && $item->id!=193 && $item->id!=194 && $item->id!=196 && $item->id!=197 && $item->id!=198)
                 <div class="col-md-3">
                     <div class="form-group">
                         {{-- <label>Min: {{ $width }}x{{ $height }}px</label> --}}
@@ -109,6 +109,45 @@
                     <script>
                         var fileInput = document.querySelector(".input-file1"),
                             button = document.querySelector(".input-file-trigger1");
+
+                        button.addEventListener("keydown", function (event) {
+                            if (event.keyCode == 13 || event.keyCode == 32) {
+                                fileInput.focus();
+                            }
+                        });
+                        button.addEventListener("click", function () {
+                            fileInput.focus();
+                            return false;
+                        });
+                    </script>
+                </div>
+                @endif
+                @if ($item->id==17 || $item->id==18 || $item->id==19 || $item->id==20)
+                <div class="col-md-3">
+                    <div class="form-group">
+                        {{-- <label>Min: {{ $width }}x{{ $height }}px</label> --}}
+                    </div>
+                    <div class="input-file-container" {!! $errors->has('image2') ? 'style="border-color:red;"' : '' !!}>
+                        @if(!is_null($item->image2))
+                            <a href="{{ url('cms/pages/imagedelete/'.$item->id.'?image2=image2') }}"><span><i class="fa fa-close"></i></span></a>
+                        @endif
+                        <span class="img-placeholder">
+                              @if(is_null($item->image2))
+                              <a href="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
+                                <img src="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" alt="img">
+                              </a>
+                              @else
+                              <a href="{{ asset('storage/'.$item->image2) }}" data-fancybox="gallery">
+                                <img src="{{ asset('storage/'.$item->image2) }}" alt="img">
+                              </a>
+                              @endif
+                      </span>
+                    <input name="image2" class="input-file input-file2" id="my-file2" type="file">
+                    <label tabindex="0" for="my-file2" class="input-file-trigger input-file-trigger2">Odaberite sliku...</label>
+                    </div>
+                    <script>
+                        var fileInput = document.querySelector(".input-file2"),
+                            button = document.querySelector(".input-file-trigger2");
 
                         button.addEventListener("keydown", function (event) {
                             if (event.keyCode == 13 || event.keyCode == 32) {

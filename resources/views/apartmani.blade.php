@@ -59,10 +59,10 @@
             <div class="row">
                 @php $text =  Helper::text(17) @endphp
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400">
-                    <img src="{{asset('assets/images/apartmani-img-left-1.jpg')}}" alt="apartman" class="img-fluid">
+                    <img src="{{asset("storage/".$text->image2)}}" alt="apartman" class="img-fluid">
                 </div>
                 <div class="col-lg-7" data-aos="fade-left" data-aos-duration="600" data-aos-delay="400">
-                    <img src="{{asset('assets/images/apartmani-img-right-1.png')}}" alt="apartman" class="img-fluid">
+                    <img src="{{asset("storage/".$text->image)}}" alt="apartman" class="img-fluid">
                     <div class="content-wrapper"> 
                         @isset($text->subtitle)
                         <h4>{{$text->subtitle}}</h4>                            
@@ -84,12 +84,12 @@
     </section>
 
     <section class="apartman apartman-2">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        @php $text =  Helper::text(18) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image2)}}');"></div>
         <div class="container">
-            @php $text =  Helper::text(18) @endphp
             <div class="row">
                 <div class="col-lg-7" data-aos="fade-right" data-aos-duration="600">
-                    <img src="{{asset('assets/images/apartmani-img-left-2.png')}}" alt="apartman" class="img-fluid">
+                    <img src="{{asset("storage/".$text->image)}}" alt="apartman" class="img-fluid">
                     <div class="content-wrapper"> 
                         @isset($text->title)
                         <h2>{!!$text->title!!}</h2>
@@ -116,10 +116,10 @@
             @php $text =  Helper::text(19) @endphp
             <div class="row">
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600">
-                    <img src="{{asset('assets/images/basic-1.png')}}" alt="apartman" class="img-fluid">
+                    <img src="{{asset("storage/".$text->image)}}" alt="apartman" class="img-fluid">
                 </div>
                 <div class="col-lg-7" data-aos="fade-left" data-aos-duration="600">
-                    <img src="{{asset('assets/images/basic-2.png')}}" alt="apartman" class="img-fluid">
+                    <img src="{{asset("storage/".$text->image2)}}" alt="apartman" class="img-fluid">
                     <div class="content-wrapper"> 
                         @isset($text->subtitle)<h4>{{$text->subtitle}}</h4>@endisset
                         @isset($text->title)<h2>{!!$text->title !!}</h2>@endisset
@@ -139,11 +139,11 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <div class="container">
             <div class="row">
+                @php $text =  Helper::text(20) @endphp
                 <div class="col-lg-12" data-aos="fade-down" data-aos-duration="600">
-                    <img src="{{asset('assets/images/eco-1.png')}}" alt="apartman" class="img-fluid">
+                    <img src="{{asset("storage/".$text->image)}}" alt="apartman" class="img-fluid">
                 </div>
             </div>
-            @php $text =  Helper::text(19) @endphp
             <div class="row">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="600">
                     <div class="content-wrapper"> 
@@ -157,7 +157,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-duration="600">
-                    <img src="{{asset('assets/images/eco-2.png')}}" alt="apartman" class="img-fluid">
+                    <img src="{{asset("storage/".$text->image2)}}" alt="apartman" class="img-fluid">
                 </div>
             </div>
         </div>

@@ -44,7 +44,10 @@ class Helper {
             $manager = new ImageManager(new Driver());
 
             $resizedImage = $manager->read($image)
-            ->resize(null, null)
+            ->resize(800, null, function ($image) {
+                $image->aspectRatio(); // Održava proporcije
+                $image->preventUpscale(); // Sprečava povećanje manje slike
+            })
             ->encode();
 
         Storage::disk('public')->put($folder . '/' . $date . '/' . $filename, $resizedImage->toString());
