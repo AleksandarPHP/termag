@@ -45,8 +45,8 @@ class Helper {
 
             $resizedImage = $manager->read($image)
             ->resize(800, null, function ($image) {
-                $image->aspectRatio(); // Održava proporcije
-                $image->preventUpscale(); // Sprečava povećanje manje slike
+                $image->aspectRatio();
+                $image->preventUpscale();
             })
             ->encode();
 

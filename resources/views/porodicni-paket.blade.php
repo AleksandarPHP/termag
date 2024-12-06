@@ -2,13 +2,13 @@
 
 <main>
     <section class="career">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/fam-hero.jpg")}}');"></div>
+        @php $text =  Helper::text(107) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Porodični Paket</h1>
-                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
-                    Gastronomska raznolikost i tradicija u restoranu hotela Termag
-                </p>
+                @isset($text->title)
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">{{$text->title}}</h1>
+                @endisset
             </div>
         </div>
     </section>
@@ -333,70 +333,100 @@
     </section>
 
     <section class="wellness-spa">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/bazen-bg.jpg")}}');"></div>
+        @php $text =  Helper::text(108) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
-                <h2>Relax i zabava za cijelu porodicu</h2>
+                @isset($text->title)
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->text)
                 <p class="txt">
-                    Wellnes&Spa uživanje - U našem Wellnes&Spa centru doživite čari bezbrižnog odmora i uživanja u mirnom okruženju u kome će podjednako uživati i roditelji i djeca.
+                    {!!$text->text!!}
                 </p>
-                <a href="#" class="btnn btn_primary">Book now</a>
+                @endisset
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
 
     <section class="villa-termag">
-        <div class="bg" style="background-image: url('{{asset("assets/images/free.jpg")}}');"></div>
+        @php $text =  Helper::text(109) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Besplatan <br/> boravak za <br/> djecu</h2>
+                    @isset($text->title)
+                    <h2>{{$text->title}}</h2>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Za porodice koje odluče da odmor provedu u hotelu Termag, spremili smo posebne pogodnosti. Djeca do 12 godina starosti u našem hotelu mogu uživati besplatno.
+                        {!!$text->text!!}
                     </p>
-                    <a href="#" class="btnn btn_primary">Book now</a>
+                    @endisset
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
     </section>
 
     <section class="wellness-spa py-20">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/ture.png")}}');"></div>
+        @php $text =  Helper::text(110) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
-                <h2>Biciklističke Ture</h2>
+                @isset($text->title)
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->text)
                 <p class="txt">
-                    Biciklističke avanture - Naše biciklističke ture su posebni avanturistički događaji koji su puni smijeha i uzbuđenja.
+                    {!!$text->text!!}
                 </p>
-                <a href="#" class="btnn btn_primary">Book now</a>
+                @endisset
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
 
     <section class="villa-termag">
-        <div class="bg" style="background-image: url('{{asset("assets/images/food.png")}}');"></div>
+        @php $text =  Helper::text(111) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Gastronomska ponuda</h2>
+                    @isset($text->title)
+                    <h2>{{$text->title}}</h2>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Porodični objedi su nešto što sa sobom nosi jednu posebnu crtu bliskosti i tradicije. Naša gastronomska ponuda će biti pravi užitak za sva čula te će porodicama obezbjediti divne momente degustacije ukusnih jela.
+                        {!!$text->text!!}
                     </p>
-                    <a href="#" class="btnn btn_primary">Book now</a>
+                    @endisset
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
     </section>
 
     <section class="experience">
+        @php $text =  Helper::text(112) @endphp
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
         <div class="container">
             <div class="text-center">
-                <h2 data-aos="fade-down" data-aos-duration="600">Nezaboravno Iskustvo</h2>
-                <p class="txt" data-aos="fade-down" data-aos-duration="600">
-                    Vaše zadovoljstvo boravka kod nas nam je najbitnije, zato smo sa posebnom pažnjom pristupili svakom detalju planiranja prostora i uređenja. Na taj način smo vam obezbijedili savršene uslove boravka u našim smještajnim jedinicima, te ćemo vam omogućiti odmor za pamćenje. Poklonite nam vaše povjerenje a mi ćemo ispuniti sva vaša očekivanja. 
+                @isset($text->title)
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->subtitle)
+                <p class="txt">
+                    {{ $text->subtitle }}
                 </p>
+                @endisset
 
                 <div class="row">
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
