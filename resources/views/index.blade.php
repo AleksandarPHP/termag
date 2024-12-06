@@ -123,7 +123,8 @@ y          </section>
 
           
           <section class="wellness-spa skijanje">
-              <div class="bg" style="background-image: url('{{asset("assets/images/skijasko-carstvo-bg.jpg")}}');"></div>
+            @php $text =  Helper::text(10) @endphp
+              <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
               <div>
                   <img class="img-fluid" src="{{asset('assets/images/ski-1.png')}}" alt="skijanje">
                   <img class="img-fluid" src="{{asset('assets/images/ski-2.png')}}" alt="skijanje">
@@ -131,7 +132,6 @@ y          </section>
               </div>
              
               <div class="container">
-                @php $text =  Helper::text(10) @endphp
                   <div class="cardd " data-aos="fade-left" data-aos-duration="600">
                     @isset($text->title)<h2>{{$text->title}}</h2>@endisset
                       @isset($text->text)
