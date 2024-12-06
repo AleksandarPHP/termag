@@ -52,7 +52,7 @@
           </section>
 
           <section class="villa-termag vt-1">
-              <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.webp")}}');"></div>
+              <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
               <div class="container">
                 @php $text =  Helper::text(6) @endphp
                   <div>
