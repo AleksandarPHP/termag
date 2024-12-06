@@ -1,5 +1,7 @@
-@include('partials/header')
-
+@extends('layouts.app')
+    @section('title', Helper::title(106))
+    @section('description', Helper::description(106))
+    @section('content')
 <main>
     <section class="career">
         @php $text =  Helper::text(107) @endphp
@@ -454,4 +456,4 @@
 
 </main>
 
-@include('partials/footer')
+@endsection
