@@ -5,7 +5,7 @@
     <main>
         @php $text =  Helper::text(4) @endphp
           <section class="hero">
-            <video autoplay muted loop id="hero-video">
+            <video autoplay muted loop preload="none" id="hero-video" poster="{{asset('assets/images/hero-img.jpg')}}">
               <source
                   data-src="https://termag.soft4tech.com/assets/videos/hero.webm"
                   type="video/webm"
@@ -52,7 +52,7 @@
           </section>
 
           <section class="villa-termag vt-1">
-              <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
+              <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.webp")}}');"></div>
               <div class="container">
                 @php $text =  Helper::text(6) @endphp
                   <div>
@@ -85,20 +85,12 @@
           </section>
 
           <section class="villa-termag ukus-jahorine">
-              <video autoplay muted loop id="ukus-jahorine-video" loop>
+              <video autoplay muted loop>
                   <source
                       src="{{ asset('assets/videos/ukus-jahorine.webm') }}"
                       type="video/mp4"
                   />
               </video>
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const video = document.getElementById("ukus-jahorine-video");
-                    const source = video.querySelector("source");
-                    source.src = source.getAttribute("data-src");
-                    video.load();
-                });
-            </script>
               <div class="container">
                 @php $text =  Helper::text(8) @endphp
                   <div>
@@ -151,20 +143,12 @@ y          </section>
           </section>
 
           <section class="wellness-spa konf-sala aktivni-izazov">
-              <video autoplay muted loop id="aktivni-izazov-video"> 
+              <video autoplay muted loop>
                   <source
                       src="{{ asset('assets/videos/termag-izazovi.webm') }}"
                       type="video/mp4"
                   />
               </video>
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const video = document.getElementById("aktivni-izazov-video");
-                    const source = video.querySelector("source");
-                    source.src = source.getAttribute("data-src");
-                    video.load();
-                });
-            </script>
               <div class="container-fluid">
                   <div class="cardd">
                     @php $text =  Helper::text(11) @endphp
