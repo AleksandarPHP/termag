@@ -22,7 +22,7 @@
         </div>
     </section>
     <section class="villa-termag">
-        @php $text =  Helper::text(198) @endphp
+        @php $text =  Helper::text(199) @endphp
         <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
@@ -42,7 +42,7 @@
         </div>
     </section>
     <section class="wellness-spa ">
-        @php $text =  Helper::text(199) @endphp
+        @php $text =  Helper::text(200) @endphp
         <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
