@@ -27,7 +27,7 @@
                         @isset($current)
                         <div>
                             <img src="{{ $current['condition']['icon'] }}" alt="suncano">
-                            <h4>{{$current['temp_c'] / 2}}</h4>
+                            <h4>{{$current['temp_c'] - 3}}</h4>
                             <h5>{{ $current['condition']['text'] }}</h5>
                         </div>
                         @endisset
