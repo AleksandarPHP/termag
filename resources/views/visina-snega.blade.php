@@ -22,7 +22,7 @@
         </div>
     </section>
     <section class="villa-termag">
-        @php $text =  Helper::text(199) @endphp
+        @php $text =  Helper::text(198) @endphp
         <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
