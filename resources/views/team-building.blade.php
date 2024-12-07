@@ -56,9 +56,9 @@
             <h2>{{$text->title}}</h2>
             @endisset
             
-            @isset($text->text)
+            @isset($text->subtitle)
             <p class="txt">
-                {!!$text->text!!}
+                {{$text->subtitle}}
             </p>
             @endisset
 
@@ -71,9 +71,9 @@
                             @isset($text->title)
                             <h5>{{$text->title}}</h5>
                             @endisset
-                            @isset($text->text)
+                            @isset($text->subtitle)
                             <p class="txt">
-                                {!!$text->text!!}
+                                {{$text->subtitle}}
                             </p>
                             @endisset
                         </div>
@@ -87,9 +87,9 @@
                             @isset($text->title)
                             <h5>{{$text->title}}</h5>
                             @endisset
-                            @isset($text->text)
+                            @isset($text->subtitle)
                             <p class="txt">
-                                {!!$text->text!!}
+                                {{$text->subtitle}}
                             </p>
                             @endisset
                         </div>
@@ -106,9 +106,9 @@
                             @isset($text->title)
                             <h5>{{$text->title}}</h5>
                             @endisset
-                            @isset($text->text)
+                            @isset($text->subtitle)
                             <p class="txt">
-                                {!!$text->text!!}
+                                {{$text->subtitle}}
                             </p>
                             @endisset
                         </div>
@@ -122,9 +122,9 @@
                             @isset($text->title)
                             <h5>{{$text->title}}</h5>
                             @endisset
-                            @isset($text->text)
+                            @isset($text->subtitle)
                             <p class="txt">
-                                {!!$text->text!!}
+                                {{$text->subtitle}}
                             </p>
                             @endisset
                         </div>
@@ -138,9 +138,9 @@
                             @isset($text->title)
                             <h5>{{$text->title}}</h5>
                             @endisset
-                            @isset($text->text)
+                            @isset($text->subtitle)
                             <p class="txt">
-                                {!!$text->text!!}
+                                {{$text->subtitle}}
                             </p>
                             @endisset
                         </div>
