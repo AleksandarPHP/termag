@@ -1,14 +1,17 @@
-@include('partials/header')
+@extends('layouts.app')
+    @section('title', Helper::title(201))
+    @section('description', Helper::description(201))
+    @section('content')
 
 <main>
 <section class="career hotel-rooms">
-        <div class="bg" style="background-image: url('{{asset("assets/images/termag-sobe-bg.jpg")}}');"></div>
+    @php $text =  Helper::text(202) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Termag Hotelske Sobe</h1>
-                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
-                    Porodični izazov na Jahorini
-                </p>
+                @isset($text->title)
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->title}}</h1>
+                @endisset
             </div>
         </div>
     </section>
@@ -16,12 +19,20 @@
     @include('partials/socials')
 
     <section class="economic">
+    @php $text =  Helper::text(203) @endphp
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <div class="container">
             <div class="text-center">
                 <h4 class="subtitle-smaller">Kreirajte zajedničke uspomene na Jahorini</h4>
-                <h2 class="title">Economic Soba</h2>
-                <p class="txt">Economic sobe hotela Termag su standardne dvokrevetne sobe namjenjene za dvije osobe, a uz površinu od 22 m2 pružaju dovoljno prostora za savršen smještaj. Bez obzira na vaš stil i potrebe, naše sobe nude idealno mjesto za relaksaciju i odmor. Ova vrsta soba prvenstveno je namjenjena gostima koji cijene jednostavnost ali bez gubitka na kvalitetu.</p>
+                @isset($text->title)
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->text)
+                <p class="txt">
+                    {!!$text->text!!}
+                </p>
+                @endisset
             </div>
         </div>
         <div class="container-fluid">
@@ -34,54 +45,78 @@
             </div>
         </div>
         <div class="container">
+        @php $text =  Helper::text(204) @endphp
             <div class="arrow-section">
                 <div>
+                    @isset($text->title)
                     <h3>
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Toplina i ušuškan ambijent
+                        {{$text->title}}
                     </h3>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Ove smještajne jedinice u sebi sadrže kombinaciju klasičnog i modernog, te je samim tim pogodna za goste za različitim preferencijama. Naše sobe posjeduju rustičan šarm ali uz moderne komponente i udobnosti koje će stvoriti jedan topao i privlačan ambijent koji će vas razoružati.
+                        {!!$text->text!!}
                     </p>
+                    @endisset
                 </div>
                 <div>
+            @php $text =  Helper::text(205) @endphp
+                    @isset($text->title)
                     <h3>
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Unikatnost U Svakom Detalju
+                        {{$text->title}}
                     </h3>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Naše sobe su dizajnirane i opremane sa posebnom pažnjom, kako bi svaki detalj i kutak pričao priču o pravoj vrijednosti koju sa sobom nosi jednostavnost. Opremljene izuzetno kvalitetnim namještajem od punog drveta, sobe dobijaju jednu posebnu originalnost i stil koji je u savršenom skladu sa komforom koji nudi.
+                        {!!$text->text!!}
                     </p>
+                    @endisset
                 </div>
                 <div>
+            @php $text =  Helper::text(206) @endphp
+                    @isset($text->title)
                     <h3>
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Tehnološka opremljenost
+                        {{$text->title}}
                     </h3>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Naše sobe ne zaostaju što se tiče tehnološke opremljenosti, te su u skladu sa tim, obezbeđeni brza internet konekcija, telefonska linija i kablovska televizija. Ove savremene tehnologije će učiniti da se osjećate još prijatnije i sigurnije dok boravite u našem hotelu.
+                        {!!$text->text!!}
                     </p>
+                    @endisset
                 </div>
                 <div>
+                @php $text =  Helper::text(207) @endphp
+                    @isset($text->title)
                     <h3>
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Idealan smještaj za dvoje
+                        {{$text->title}}
                     </h3>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Economic sobe hotela Termag su standardne dvokrevetne sobe namjenjene za dvije osobe, a uz površinu od 22 m2 pružaju dovoljno prostora za savršen smještaj. Bez obzira na vaš stil i potrebe, naše sobe nude idealno mjesto za relaksaciju i odmor. Ova vrsta soba prvenstveno je namjenjena gostima koji cijene jednostavnost ali bez gubitka na kvalitetu.
+                        {!!$text->text!!}
                     </p>
+                    @endisset
                 </div>
             </div>
         </div>
@@ -89,12 +124,18 @@
     <section class="economic lux">
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <div class="container">
+            @php $text =  Helper::text(208) @endphp
             <div class="text-center">
                 <h4 class="subtitle-smaller">Luksuzni doživljaj u prostranosti</h4>
-                <h2 class="title">LUX Sobe</h2>
+                @isset($text->title)
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->text)
                 <p class="txt">
-                   Sa ukupnom površinom od 38m2, lux sobe hotela Termag vam pružaju i više nego dovoljno prostora za vaš luksuzni odmor. Sobe posjeduju klasičan bračni krevet ili dva odvojena u opciji “twin”, gdje imate opciju dodavanja trećeg pomoćnog ležaja. Zadovoljstvo gostiju nam je izuzetno važno, pa smo se potrudili da vam ponudimo različite opcije, kako biste mogli da izaberete upravo ono što vam najviše odgovara.
+                    {!!$text->text!!}
                 </p>
+                @endisset
             </div>
         </div>
         <div class="container-fluid">
@@ -107,67 +148,99 @@
         </div>
         <div class="container">
             <div class="arrow-section">
+            @php $text =  Helper::text(209) @endphp
                 <div>
+                    @isset($text->title)
                     <h3>
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Luksuzni doživljaj u prostranosti
+                        {{$text->title}}
                     </h3>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Sa ukupnom površinom od 38m2, lux sobe hotela Termag vam pružaju i više nego dovoljno prostora za vaš luksuzni odmor. Sobe posjeduju klasičan bračni krevet ili dva odvojena u opciji “twin”, gdje imate opciju dodavanja trećeg pomoćnog ležaja. Zadovoljstvo gostiju nam je izuzetno važno, pa smo se potrudili da vam ponudimo različite opcije, kako biste mogli da izaberete upravo ono što vam najviše odgovara.
+                        {!!$text->text!!}
                     </p>
+                    @endisset
                 </div>
                 <div>
+            @php $text =  Helper::text(210) @endphp
+                    @isset($text->title)
                     <h3>
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Originalnost uz nestvaran pogled
+                        {{$text->title}}
                     </h3>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Opremljene na jedinstven i unikatan način, sa posebno osmišljenim estetskih detaljima, naše Lux sobe će zadovoljiti vizuelne standarde i gostiju sa najistančanijim ukusom. Kvalitetan namještaj od punog drveta daje prostoru bogatstvo, a ono na šta smo posebno ponosni je “mountain view” koji će vas ostaviti bez daha.
+                        {!!$text->text!!}
                     </p>
+                    @endisset
                 </div>
                 <div>
+            @php $text =  Helper::text(211) @endphp
+                    @isset($text->title)
                     <h3>
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Tajna je u udobnosti
+                        {{$text->title}}
                     </h3>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Abmijent naših soba je prilagođen idealnoj harmoniji između klasičnih i modernih detalja, koji stvaraju osjećaj toplog doma. Udobna i ušuškana atmosfera koju ističemo, čini da momenti provedeni u ovom prostoru ostanu duboko urezani u vašem sjećanju kao nezaboravni.
+                        {!!$text->text!!}
                     </p>
+                    @endisset
                 </div>
                 <div>
+            @php $text =  Helper::text(212) @endphp
+                    @isset($text->title)
                     <h3>
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Toplina koju zaslužujete                    </h3>
+                        {{$text->title}}
+                    </h3>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Lux sobe hotela Termag su vaša topla i luksuzna oaza u kojoj ćete doživjeti nezaboravne momente. To nije samo prostor za spavanje, to je jedno zaista posebno iskustvo. Originalno dizajniran namještaj i rustični stil koji dominira su upotpunili cijelu priču i učinili da ove smještajne jedinice odišu smirenom i toplom energijom koja će vas oduševiti.
+                        {!!$text->text!!}
                     </p>
+                    @endisset
                 </div>
                 <div>
+            @php $text =  Helper::text(213) @endphp
+                    @isset($text->title)
                     <h3>
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        U skladu sa tehnologijom                  </h3>
+                        {{$text->title}}
+                    </h3>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        Naše lux sobe su opremljene savremenom tehnologijom koja će vam olakšati i upotpuniti boravak. Svaka smještajna jedinica nudi brz internet, kablovsku televiziju i telefonsku liniju.
+                        {!!$text->text!!}
                     </p>
+                    @endisset
                 </div>
             </div>
         </div>
     </section>
 </main>
 
-@include('partials/footer')
+@endsection
