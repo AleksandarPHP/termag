@@ -17,7 +17,7 @@
                     />
                     <h4>Check in</h4>
                 </div>
-                <input type="text" id="checkIn" name="date" value="2024-12-19"/>
+                <input type="text" id="checkIn" name="date"/>
             </div>
             <div>
                 <div>
@@ -27,7 +27,7 @@
                     />
                     <h4>Check out</h4>
                 </div>
-                <input type="text" id="checkOut" name="odlazak" value="2024-12-22"/>
+                <input type="text" id="checkOut" name="odlazak"/>
             </div>
             <div>
                 <div>
@@ -115,4 +115,37 @@
             </div>
         </form>
     </div>
+
+    <script>
+    function formatDate(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0'); // Dodaje 0 ispred jednocifrenih meseci
+        const day = String(date.getDate()).padStart(2, '0');       // Dodaje 0 ispred jednocifrenih dana
+        return `${year}-${month}-${day}`;
+    }
+
+    function addDays(date, days) {
+        const result = new Date(date);
+        result.setDate(result.getDate() + days);
+        return result;
+    }
+
+    const checkInInput = document.getElementById('checkIn');
+    const checkOutInput = document.getElementById('checkOut');
+
+    const today = new Date();
+    checkInInput.value = formatDate(today);
+    checkOutInput.value = formatDate(addDays(today, 1));
+
+    function syncCheckOut() {
+        const checkInDate = new Date(checkInInput.value);
+        if (!isNaN(checkInDate.getTime())) { 
+            console.log('ispravno');
+            
+            checkOutInput.value = formatDate(addDays(checkInDate, 1));
+        }
+    }
+
+    checkInInput.addEventListener('input', syncCheckOut);
+    </script>
 </section>
