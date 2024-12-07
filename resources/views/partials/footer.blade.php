@@ -42,7 +42,9 @@
                     />
                     <p>
                         POZOVITE
-                        <a href="tel:+387 57 270-422">+387 57 270-422</a>
+                        @isset($settings->phone)
+                            <a href="tel:{{$settings->phone}}">{{$settings->phone}}</a>
+                        @endisset
                     </p>
                 </div>
                 <div class="cta-wrapper">
