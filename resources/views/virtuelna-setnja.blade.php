@@ -12,7 +12,9 @@
                 <h1 class="title-larger">{{$text->title}}</h1>
                 @endisset
                 @isset($text->text)
+                <p class="txt">
                     {!!$text->text!!}
+                </p>
                 @endisset
             </div>
         </div>
