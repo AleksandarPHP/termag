@@ -25,7 +25,7 @@
             <div class="text-center">
                 <h4 class="subtitle-smaller">Kreirajte zajedničke uspomene na Jahorini</h4>
                 @isset($text->title)
-                <h2>{{$text->title}}</h2>
+                <h2 class="title">{{$text->title}}</h2>
                 @endisset
                 
                 @isset($text->text)
@@ -128,7 +128,7 @@
             <div class="text-center">
                 <h4 class="subtitle-smaller">Luksuzni doživljaj u prostranosti</h4>
                 @isset($text->title)
-                <h2>{{$text->title}}</h2>
+                <h2 class="title">{{$text->title}}</h2>
                 @endisset
                 
                 @isset($text->text)
