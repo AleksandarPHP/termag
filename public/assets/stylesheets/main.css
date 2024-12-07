@@ -537,7 +537,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
 }
 
 .cardd {
-    padding: 6rem;
+    padding: 4rem;
     max-width: 84rem;
     position: relative;
     background: linear-gradient(
@@ -565,7 +565,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
 
 .cardd h2,
 .cardd h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     color: var(--title-color);
     font-family: "Playfair Display", serif;
     font-weight: 600;
@@ -1822,7 +1822,7 @@ header
     }
     .cardd h2,
     .cardd h1 {
-        font-size: 5.5rem;
+        font-size: 5rem;
     }
     header .offcanvas-body img {
         position: absolute;
@@ -2113,7 +2113,7 @@ header
     }
     .cardd h2,
     .cardd h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     .btnn {
         font-size: 1.6rem;
@@ -2233,7 +2233,7 @@ header
     }
     .cardd h2,
     .cardd h1 {
-        font-size: 3.2rem;
+        font-size: 3rem;
     }
     .abonos {
         min-height: 28rem;

@@ -6,20 +6,8 @@
         @php $text =  Helper::text(4) @endphp
           <section class="hero">
             <video autoplay muted loop preload="none" id="hero-video" poster="{{asset('assets/images/hero-img.jpg')}}">
-              <source
-                  data-src="https://termag.soft4tech.com/assets/videos/hero.webm"
-                  type="video/webm"
-              />
+              <source data-src="https://termag.soft4tech.com/assets/videos/hero.webm" type="video/webm" />
           </video>
-          
-          <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                  const video = document.getElementById("hero-video");
-                  const source = video.querySelector("source");
-                  source.src = source.getAttribute("data-src");
-                  video.load();
-              });
-          </script>
               <div class="overlay"></div>
 
               <div class="container">
@@ -64,7 +52,7 @@
                           @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                       </div>
                       @isset($text->image)
-                        <img  class="img-fluid" src="{{asset('storage/'.$text->image)}}" alt="{{$text->title}}">
+                        <img  class="img-fluid" src="{{asset('storage/'.$text->image)}}" alt="{{$text->title}}" loading="lazy">
                       @endisset
                   </div>
               </div>
@@ -85,20 +73,9 @@
           </section>
 
           <section class="villa-termag ukus-jahorine">
-              <video autoplay muted loop preload="none" id="ukus-jahorine" poster="{{asset('assets/images/ukus-jahorine.png')}}">
-                  <source
-                      src="https://termag.soft4tech.com/assets/videos/ukus-jahorine.webm"
-                      type="video/mp4"
-                  />
-              </video>            
-            <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const video = document.getElementById("ukus-jahorine");
-                    const source = video.querySelector("source");
-                    source.src = source.getAttribute("data-src");
-                    video.load();
-                });
-            </script>
+            <video autoplay muted loop preload="none" id="ukus-jahorine" poster="{{asset('assets/images/ukus-jahorine.png')}}">
+              <source data-src="https://termag.soft4tech.com/assets/videos/ukus-jahorine.webm" type="video/webm" />
+          </video>           
               <div class="container">
                 @php $text =  Helper::text(8) @endphp
                   <div>
@@ -134,9 +111,9 @@ y          </section>
             @php $text =  Helper::text(10) @endphp
               <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
               <div>
-                  <img class="img-fluid" src="{{asset('assets/images/ski-1.png')}}" alt="skijanje">
-                  <img class="img-fluid" src="{{asset('assets/images/ski-2.png')}}" alt="skijanje">
-                  <img class="img-fluid" src="{{asset('assets/images/ski-3.png')}}" alt="skijanje">
+                  <img class="img-fluid" src="{{asset('assets/images/ski-1.png')}}" alt="skijanje" loading="lazy" >
+                  <img class="img-fluid" src="{{asset('assets/images/ski-2.png')}}" alt="skijanje" loading="lazy" >
+                  <img class="img-fluid" src="{{asset('assets/images/ski-3.png')}}" alt="skijanje" loading="lazy">
               </div>
              
               <div class="container">
@@ -151,20 +128,9 @@ y          </section>
           </section>
 
           <section class="wellness-spa konf-sala aktivni-izazov">
-              <video autoplay muted loop preload="none" id="planinarenje" poster="{{asset('assets/images/planinarenje.png')}}">
-                  <source
-                      src="https://termag.soft4tech.com/assets/videos/termag-izazovi.webm"
-                      type="video/mp4"
-                  />
-              </video>
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                    const video = document.getElementById("planinarenje");
-                    const source = video.querySelector("source");
-                    source.src = source.getAttribute("data-src");
-                    video.load();
-                });
-            </script>
+            <video autoplay muted loop preload="none" id="planinarenje" poster="{{asset('assets/images/planinarenje.png')}}">
+              <source data-src="https://termag.soft4tech.com/assets/videos/termag-izazovi.webm" type="video/webm" />
+          </video>
               <div class="container-fluid">
                   <div class="cardd">
                     @php $text =  Helper::text(11) @endphp
@@ -191,7 +157,7 @@ y          </section>
                   <div class="row">
                       <div class="col-lg-6">
                           <div class="card" data-aos="fade-right" data-aos-duration="800">
-                              <img src="{{asset('assets/images/special-1.jpg')}}" class="card-img-top" alt="porodicni paket">
+                              <img src="{{asset('assets/images/special-1.jpg')}}" class="card-img-top" alt="porodicni paket" loading="lazy">
                               <div class="card-body">
                                 <h5>Porodični Paket</h5>
                                 <p class="txt">dizajniran i osmišljen tako da zaljubljenim parovima omogući bijeg iz svakodnevnice i izmještanje iz realnosti. Uživaćete u dugim romantičnim šetnjama, masažama, romantičnim večerama, opuštajućim kupkama uz slobodno korišćenje SPA centra. Priredite svom partneru i sebi nezaboravno iskustvo koje kombinuje opuštanje i uživanje u romantičnim momentima. Doživite romansu u hotelu Termag.</p>
@@ -203,7 +169,7 @@ y          </section>
                       </div>
                       <div class="col-lg-6">
                           <div class="card" data-aos="fade-left" data-aos-duration="800">
-                              <img src="{{asset('assets/images/special-2.jpg')}}" class="card-img-top" alt="Romantični Paket">
+                              <img src="{{asset('assets/images/special-2.jpg')}}" class="card-img-top" alt="Romantični Paket" loading="lazy">
                               <div class="card-body">
                                 <h5>Porodični Paket</h5>
                                 <p class="txt">dizajniran i osmišljen tako da zaljubljenim parovima omogući bijeg iz svakodnevnice i izmještanje iz realnosti. Uživaćete u dugim romantičnim šetnjama, masažama, romantičnim večerama, opuštajućim kupkama uz slobodno korišćenje SPA centra. Priredite svom partneru i sebi nezaboravno iskustvo koje kombinuje opuštanje i uživanje u romantičnim momentima. Doživite romansu u hotelu Termag.</p>
@@ -218,7 +184,7 @@ y          </section>
                   <div class="row">
                       <div class="col-lg-4">
                           <div class="card" data-aos="fade-right" data-aos-duration="800">
-                              <img src="{{asset('assets/images/special-3.jpg')}}" class="card-img-top" alt="Relax Paket">
+                              <img src="{{asset('assets/images/special-3.jpg')}}" class="card-img-top" alt="Relax Paket" loading="lazy">
                               <div class="card-body">
                                 <h5>Relax Paket</h5>
                                 <p class="txt">dizajniran i osmišljen tako da zaljubljenim parovima omogući bijeg iz svakodnevnice i izmještanje iz realnosti. Uživaćete u dugim romantičnim šetnjama, masažama, romantičnim večerama, opuštajućim kupkama uz slobodno korišćenje SPA centra. Priredite svom partneru i sebi nezaboravno iskustvo koje kombinuje opuštanje i uživanje u romantičnim momentima. Doživite romansu u hotelu Termag. </p>
@@ -230,7 +196,7 @@ y          </section>
                       </div>
                       <div class="col-lg-4">
                           <div class="card" data-aos="fade-up" data-aos-duration="800">
-                              <img src="{{asset('assets/images/special-4.jpg')}}" class="card-img-top" alt="Detox Paket">
+                              <img src="{{asset('assets/images/special-4.jpg')}}" class="card-img-top" alt="Detox Paket" loading="lazy">
                               <div class="card-body">
                                 <h5>Detox Paket</h5>
                                 <p class="txt">dizajniran i osmišljen tako da zaljubljenim parovima omogući bijeg iz svakodnevnice i izmještanje iz realnosti. Uživaćete u dugim romantičnim šetnjama, masažama, romantičnim večerama, opuštajućim kupkama uz slobodno korišćenje SPA centra. Priredite svom partneru i sebi nezaboravno iskustvo koje kombinuje opuštanje i uživanje u romantičnim momentima. Doživite romansu u hotelu Termag. </p>
@@ -242,7 +208,7 @@ y          </section>
                       </div>
                       <div class="col-lg-4">
                           <div class="card" data-aos="fade-left" data-aos-duration="800">
-                              <img src="{{asset('assets/images/special-5.jpg')}}" class="card-img-top" alt="Back to Nature">
+                              <img src="{{asset('assets/images/special-5.jpg')}}" class="card-img-top" alt="Back to Nature" loading="lazy">
                               <div class="card-body">
                                 <h5>Back to Nature</h5>
                                 <p class="txt">dizajniran i osmišljen tako da zaljubljenim parovima omogući bijeg iz svakodnevnice i izmještanje iz realnosti. Uživaćete u dugim romantičnim šetnjama, masažama, romantičnim večerama, opuštajućim kupkama uz slobodno korišćenje SPA centra. Priredite svom partneru i sebi nezaboravno iskustvo koje kombinuje opuštanje i uživanje u romantičnim momentima. Doživite romansu u hotelu Termag. </p>
@@ -280,5 +246,22 @@ y          </section>
               </div>
           </section>
       </main>
-      @include('partials/socials')            
+      @include('partials/socials') 
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Select all video elements
+            const videos = document.querySelectorAll("video");
+            
+            videos.forEach((video) => {
+                const source = video.querySelector("source");
+                const dataSrc = source.getAttribute("data-src");
+                
+                // Apply lazy loading if data-src exists
+                if (dataSrc) {
+                    source.src = dataSrc;
+                    video.load();
+                }
+            });
+        });
+    </script>           
     @endsection

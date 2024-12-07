@@ -84,7 +84,6 @@
         <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
-                @php $text =  Helper::text(33) @endphp
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
                     @isset($text->title)
                     <h2>{{$text->title}}</h2>
@@ -101,6 +100,7 @@
         </div>
     </section>
     <section class="wellness-spa aktivni-izazov">
+        @php $text =  Helper::text(33) @endphp
         <video autoplay muted loop>
             <source
                 src="{{ asset('assets/videos/ukus-jahorine.webm') }}"
