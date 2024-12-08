@@ -12,9 +12,11 @@
                 <img class="img-fluid" src="{{asset('assets/images/Facebook.svg')}}" alt="Facebook" />
             </a>
             @endif
-            <a href="#" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700" target="_blanck">
+            @if ($settings->google)
+            <a href="{{$settings->google}}" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700" target="_blanck">
                 <img class="img-fluid" src="{{asset('assets/images/Gmail.svg')}}" alt="Gmail" />
             </a>
+            @endif
         </div>
     </div>
 </section>

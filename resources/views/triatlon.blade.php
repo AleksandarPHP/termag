@@ -1,53 +1,53 @@
-@include('partials/header')
-
+@extends('layouts.app')
+    @section('title', Helper::title(189))
+    @section('description', Helper::description(189))
+    @section('content')
 <main>
     <section class="career">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/triatlon-bg.png")}}');"></div>
+        @php $text =  Helper::text(190) @endphp
+
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Termag Triatlon</h1>
-                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
-                    Termag triatlon je pravi izazov u planinskom raju Jahorine.
-                    To je jedinstvena trka koja se održava na Jahorini i Ravnoj
-                    planini. Ovaj izazov je namjenjen pravim avanturistima koji
-                    uživaju u sportskom nadmetanju. Sastoji se od različitih
-                    dinamičkih izazova koji će ispitati granice vaše kondicije i
-                    sportske spremnosti.
-                </p>
+                @isset($text->title)
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->title}}</h1>
+                @endisset
             </div>
         </div>
     </section>
     <section class="booking empty"></section>
     <section class="wellness-spa">
-        <div class="bg" style="background-image: url('{{asset("assets/images/pripreme-bg.png")}}');"></div>
+        @php $text =  Helper::text(191) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
-                <h2>Pripreme za Trku</h2>
+                <h2>{{$text->title}}</h2>
+                @endisset
+                
+                @isset($text->text)
                 <p class="txt">
-                    Pripreme za trku su ključne za postizanje dobrih rezultata na ovom sportskom nadmetanju. Bitno je postaviti ciljeve i odrediti da li želite da oborite svoj lični rekord, da završite trku ili jednostavno samo želite učestvovati i doživjeti novo iskustvo. U skladu sa tim planirate svoj trening i određujete njegovu težinu. Tako ćete raditi na svojoj kondiciji i fizičkoj spremnosti kako biste mogli uspješno da odgovorite svim izazovima koje triatlon trka sa sobom nosi. Prilagodite ishranu svom treningu, unosite dovoljno hranljivih materija i na kraju odmarajte dovoljno. Odmor koji priredite vašem tijelu i mišićima će vam donijeti izuzetnu korist. Ako koristite posebnu opremu, testirajte je i uvjerite se da će vas poslužiti na pravi način tokom trke.
+                    {!!$text->text!!}
                 </p>
-                <a href="#" class="btnn btn_primary">Book now</a>
+                @endisset
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
     <section class="villa-termag">
-        <div class="bg" style="background-image: url('{{asset("assets/images/kategorije-bg.png")}}');"></div>
+        @php $text =  Helper::text(192) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Kategorije</h2>
-                    <p class="txt mb-4">
-                        Termag triatlon je dinamična trka koja se održava u nekoliko kategorija. Takmičenje se odvija u individualnoj i ekipnoj konkurenciji. Individualna konkurencija omogućava pojedincima da testiraju svoje granice. Što se tiče ekipne konkurencije broj članova ekipa je ograničen na tri člana. Ova kategorija je dodatno podjeljena prema polu na: mušku, žensku i mješovitu konkurenciju.
-                    </p>
+                    <h2>{{$text->title}}</h2>
+                    @endisset
+                    
+                    @isset($text->text)
                     <p class="txt">
-                        U Termag triatlonu moći ćete da se dokažete kroz tri discipline:
+                        {!!$text->text!!}
                     </p>
-                    <ul>
-                        <li>vožnja bicikala MTB</li>
-                        <li>plivanje preko jezera</li>
-                        <li>trčanje sa preprekama</li>
-                    </ul>
-                    <a href="#" class="btnn btn_primary">Book now</a>
+                    @endisset
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
@@ -207,4 +207,4 @@
         </div>
     </section>
 </main>
-@include('partials/footer')
+@endsection
