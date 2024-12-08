@@ -21,6 +21,7 @@
         <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
+                @isset($text->title)
                 <h2>{{$text->title}}</h2>
                 @endisset
                 
@@ -39,6 +40,7 @@
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
+                    @isset($text->title)
                     <h2>{{$text->title}}</h2>
                     @endisset
                     
