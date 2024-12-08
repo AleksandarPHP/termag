@@ -44,7 +44,7 @@ class Helper {
             $manager = new ImageManager(new Driver());
 
             $resizedImage = $manager->read($image)
-            ->resize(800, null)
+            ->resize(null, null)
             // function ($image) {
             //     $image->aspectRatio();
             //     $image->preventUpscale();
