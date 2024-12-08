@@ -45,32 +45,32 @@
                     @if ($errors->any())
                         <h1>error</h1>
                     @endif
-                    <h2 class="title-smaller">Aplicirajte lako!</h2>
+                    <h2 class="title-smaller">{{__('Apply easily')}}!</h2>
                     <form action="{{ url('kontakt') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
-                                <label for="title">Ime i prezime</label>
+                                <label for="title">{{__('Name and surname')}}</label>
                                 <input type="text" name="name" placeholder="Field text goes here">
                             </div>
                             <div class="col-md-6">
-                                <label for="tel">Mobile number</label>
+                                <label for="tel">{{__('Mobile number')}}</label>
                                     <input type="text" name="tel" placeholder="Number goes here">
                             </div>
                             <div class="col-md-6">
-                                <label for="title">Datum Rodjenja</label>
+                                <label for="title">{{__('Date of Birth')}}</label>
                                 <input type="date" id="birthdate" name="date" onload="getDate()"  value="" />
                             </div>
                             <div class="col-md-6">
-                                <label for="title">Email Adresa</label>
+                                <label for="title">{{__('')}}</label>
                                 <input type="email" name="email" placeholder="hello@gmail.com">
                             </div>
                             <div class="col-md-12">
-                                <label for="title">Kratka biografija</label>
+                                <label for="title">{{__('Short biography')}}</label>
                                 <textarea name="description" id="" placeholder="Message text goes here" rows="5" cols="10"></textarea>
                             </div>
                             <div class="col-md-12">
-                                <label for="file">Priloži Fajl</label>
+                                <label for="file">{{__('Attach File')}}</label>
                                 {{-- <ul class="uploaded-files">  
                                     <li>
                                         <div>
@@ -91,7 +91,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <button type="submit" class="btnn btn_primary w-100">Pošalji</button>
+                                <button type="submit" class="btnn btn_primary w-100">{{__('Send')}}</button>
                             </div>
                         </div>
                     </form>
