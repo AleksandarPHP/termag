@@ -11,9 +11,9 @@
                 @isset($text->title)
                 <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->title}}</h1>
                 @endisset
-                @isset($text->subtitle)
+                @isset($text->text)
                 <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
-                    {{$text->subtitle}}
+                    {!!$text->text!!}
                 </p>
                 @endisset
                 @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
