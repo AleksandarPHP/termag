@@ -44,10 +44,11 @@ class Helper {
             $manager = new ImageManager(new Driver());
 
             $resizedImage = $manager->read($image)
-            ->resize(800, null, function ($image) {
-                $image->aspectRatio();
-                $image->preventUpscale();
-            })
+            ->resize(800, null)
+            // function ($image) {
+            //     $image->aspectRatio();
+            //     $image->preventUpscale();
+            // }
             ->encode();
 
         Storage::disk('public')->put($folder . '/' . $date . '/' . $filename, $resizedImage->toString());
