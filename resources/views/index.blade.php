@@ -155,7 +155,7 @@ y          </section>
                 @endisset
 
                 @php
-                    $packages = App\Models\Package::where('is_active', 1)->oredrBy('id', 'DESC')->take(2)->get();
+                    $packages = App\Models\Package::where('is_active', 1)->orderBy('id', 'DESC')->take(2)->get();
                 @endphp
                   <div class="row">
                     @if ($packages)
