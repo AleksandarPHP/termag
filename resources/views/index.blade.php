@@ -154,19 +154,28 @@ y          </section>
                     {!!$text->text!!}
                 @endisset
 
+                @php
+                    $packages = Package::where('is_active', 1)->orederBy('id', 'DESC')->take(2)->get();
+                @endphp
                   <div class="row">
+                    @if ($packages)
+                    @foreach ($packages as $package)
                       <div class="col-lg-6">
-                          <div class="card" data-aos="fade-right" data-aos-duration="800">
-                              <img src="{{asset('assets/images/special-1.jpg')}}" class="card-img-top" alt="porodicni paket" loading="lazy">
-                              <div class="card-body">
-                                <h5>Porodični Paket</h5>
-                                <p class="txt">dizajniran i osmišljen tako da zaljubljenim parovima omogući bijeg iz svakodnevnice i izmještanje iz realnosti. Uživaćete u dugim romantičnim šetnjama, masažama, romantičnim večerama, opuštajućim kupkama uz slobodno korišćenje SPA centra. Priredite svom partneru i sebi nezaboravno iskustvo koje kombinuje opuštanje i uživanje u romantičnim momentima. Doživite romansu u hotelu Termag.</p>
-                                <div>
-                                  <a href="#" class="btnn btn_gold">Saznaj Više</a>
-                                </div>
+                        <div class="card" data-aos="fade-right" data-aos-duration="800">
+                            <img src="{{asset("storage/".$package->image)}}" class="card-img-top" alt="porodicni paket" loading="lazy">
+                            <div class="card-body">
+                              <h5>{{$package->title}}</h5>
+                              <p class="txt">
+                                {{$package->text}}
+                              </p>
+                              <div>
+                                @if($package->urlTitle!='' && $package->url)<a href="{{Helper::url($package->url)}}" class="btnn btn_gold">{{$package->urlTitle}}</a>@endif
                               </div>
                             </div>
+                          </div>
                       </div>
+                    @endforeach
+                    @endif
                       <div class="col-lg-6">
                           <div class="card" data-aos="fade-left" data-aos-duration="800">
                               <img src="{{asset('assets/images/special-2.jpg')}}" class="card-img-top" alt="Romantični Paket" loading="lazy">
