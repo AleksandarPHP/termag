@@ -176,12 +176,12 @@
         <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <div class="container">
             @isset($text->title)
-            <h2>{{$text->title}}</h2>
+            <h2 class="title-smaller">{{$text->title}}</h2>
             @endisset
             
-            @isset($text->text)
+            @isset($text->subtitle)
             <p class="txt">
-                {!!$text->text!!}
+                {!!$text->subtitle!!}
             </p>
             @endisset
 
