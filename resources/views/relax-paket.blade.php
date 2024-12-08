@@ -20,7 +20,7 @@
             <div class="container">
                 <div class="porodicni-paket text-center">
                     @php
-                        $package = App\Models\Package::findOrFail(1);
+                        $package = App\Models\Package::findOrFail(5);
                     @endphp
                     <h2 class="title-smaller">{{$package->title}}</h2>
                         {!!$package->text!!}
