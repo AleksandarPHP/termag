@@ -164,7 +164,7 @@
 
                     </ul>
                     <div>
-                        <a href="/kontakt" type="button">Rezervacija</a>
+                        <a href="/kontakt" type="button">{{__('Book now')}}</a>
                     </div>
                 </div>
             </div>

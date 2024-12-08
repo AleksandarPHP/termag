@@ -37,7 +37,7 @@
 
     <div class="tab-content" id="nav-tabContent">
         @foreach ($package->options as $item)
-        <div class="tab-pane fade show active" id="nav-home{{$item->id}}" role="tabpanel" aria-labelledby="nav-home-tab{{$item->id}}" tabindex="0">
+        <div class="tab-pane fade show @if ($loop->first) active @endif" id="nav-home{{$item->id}}" role="tabpanel" aria-labelledby="nav-home-tab{{$item->id}}" tabindex="0">
             <h3>{{$item->title}}</h3>
             <div class="row row-2">
                 @for($i = 0; $i < count($item->options[0]); $i++)
@@ -55,10 +55,10 @@
             </div>
             <div class="text-center mt-5">
                 <p class="txt">
-                    CIJENA PAKETA JE {{$item->price}} KM (348,00 EUR) + bto
+                    {{__('THE PRICE OF THE PACKAGE IS')}} {{$item->price}} KM (348,00 EUR) + bto
                 </p>
                 <p class="txt">
-                    *Paket važi od 01.04. do 01.12.
+                    *{{__('The package is valid from')}} 01.04. {{__('to')}} 01.12.
                 </p>
                 <a href="#" class="btnn btn_primary mt-4">Book now</a>
             </div>
