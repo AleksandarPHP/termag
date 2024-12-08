@@ -61,6 +61,11 @@ html {
     color: var(--text-color-primary);
     line-height: 1.25;
 }
+p:not([class]) {
+    font-size: 1.7rem;
+    color: var(--text-color-primary);
+    line-height: 1.25;
+}
 
 .btnn {
     padding: 1rem 5rem;
