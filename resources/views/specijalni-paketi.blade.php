@@ -1,15 +1,16 @@
-@include('partials/header')
-
+@extends('layouts.app')
+    @section('title', Helper::title(173))
+    @section('description', Helper::description(173))
+    @section('content')
 <main>
     <section class="career">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/sp-hero.jpg")}}');"></div>
+        @php $text =  Helper::text(174) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Specijalni Paketi</h1>
-                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">
-                    Posebne ponude hotela Termag su kreirane na način da udovolje vašim interesovanjima bilo da ste hedonista, ljubitelj prirode ili avanturista, sportista, ili ljubitelj masaža. Dolazite u paru i potrebna vam je intimnija atmosfera ili je u pitanju porodični odmor, nudimo sadržaje koji će vašem boravku u hotelu Termag dati posebnu čar.
-                    Romatnični, Porodični, Relax, Back to nature ili Termag ljeto, izaberite paket po vašoj mjeri. 
-                </p>
+                @isset($text->title)
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->title}}</h1>
+                @endisset
             </div>
         </div>
     </section>
@@ -510,4 +511,4 @@
     </section>
 </main>
 
-@include('partials/footer')
+@endsection
