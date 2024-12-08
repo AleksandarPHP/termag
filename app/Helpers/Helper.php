@@ -110,7 +110,7 @@ class Helper {
     
         if ($parent_id) {
             $code .= '<li>
-                        <a class="dropdown-item" href="'.$link.'">'.$title.'</a>
+                        <a class="dropdown-item" href="'.Helper::url($link).'">'.$title.'</a>
                       </li>';
         } else {
             $code .= '<li class="nav-item dropdown">
