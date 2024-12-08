@@ -31,7 +31,7 @@
                               <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">3 noći/ 4 dana</button>
                               <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">4 noći/ 5 dana</button>
                             </div>
-                          </nav>
+                        </nav>
                 </div>
 
                 <div class="tab-content" id="nav-tabContent">
