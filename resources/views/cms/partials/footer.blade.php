@@ -13,7 +13,7 @@
 });
   </script>
   @yield('variables')
-  <script src="{{ asset('cmsfiles/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="{{ asset('cmsfiles/vendor/popper/popper.min.js') }}"></script>
   <script src="{{ asset('cmsfiles/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
   <!-- Core plugin JavaScript-->

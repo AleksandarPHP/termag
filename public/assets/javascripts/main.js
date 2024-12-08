@@ -172,7 +172,7 @@ Dropzone.autoDiscover = false;
 const dropzone = new Dropzone("#form-upload", {
     url: "http://127.0.0.1:8000/cms/gallery/upload",
     maxFilesize: 5,
-    acceptedFiles: ".jpeg,.jpg,.png,.gif", // Dozvoljeni fajlovi
+    acceptedFiles: ".jpeg,.jpg,.png,.gif,.webp", // Dozvoljeni fajlovi
     addRemoveLinks: true,
     dictDefaultMessage: "",
     init: function () {

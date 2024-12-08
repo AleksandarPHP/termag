@@ -18,9 +18,8 @@ class GalleryController extends Controller
 
     public function upload(Request $request)
     {
-
         $request->validate([
-            'files' => ['required', 'mimes:jpeg,png', 'image', 'max:5000'],
+            'files' => ['required', 'mimes:jpeg,png,webp', 'image', 'max:5000'],
         ], [
             'files.required' => 'Slika je obavezna.',
             'files.mimes' => 'Slika mora biti jpg ili png.',

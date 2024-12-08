@@ -29,7 +29,7 @@
                                 url: '{{ url('cms/gallery/upload') }}',
                                 maxFilesize: 2,
                                 parallelUploads: 1,
-                                acceptedFiles: "image/png, image/jpeg",
+                                acceptedFiles: "image/png, image/jpeg, image/webp",
                                 sending: function (file, xhr, formData) {
                                     formData.append('_token', "{{ csrf_token() }}");
                                 },

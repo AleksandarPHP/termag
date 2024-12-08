@@ -46,7 +46,7 @@
 })(jQuery); // End of use strict
 
 function readURL(input, id) {
-  const validImageTypes = ['image/jpeg', 'image/png', 'image/svg+xml'];
+  const validImageTypes = ['image/jpeg', 'image/png', 'image/svg+xml', 'image/webp',];
   if (input.files && input.files[0] && validImageTypes.includes(input.files[0]['type'])) {
     var reader = new FileReader();
     
