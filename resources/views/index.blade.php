@@ -180,7 +180,7 @@ y          </section>
 
                   <div class="row">
                     @php
-                      $packages = App\Models\Package::where('is_active', 1)->orderBy('id', 'DESC')->skip(2)->get();
+                      $packages = App\Models\Package::where('is_active', 1)->orderBy('id', 'DESC')->get()->skip(2);
                     @endphp
                         @if ($packages)
                         @foreach ($packages as $package)
