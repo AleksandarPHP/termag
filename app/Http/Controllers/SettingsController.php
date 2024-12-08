@@ -40,6 +40,7 @@ class SettingsController extends Controller
             'worktime' => ['nullable', 'string', 'max:191'],
             'address' => ['nullable', 'string', 'max:191'],
             'facebook' => ['nullable', 'string', 'max:191'],
+            'google' => ['nullable', 'string', 'max:191'],
             'instagram' => ['nullable', 'string', 'max:191'],
 
             'logoH' => ['nullable', 'mimes:svg', 'image', 'max:5000'],
@@ -66,6 +67,7 @@ class SettingsController extends Controller
             $item->worktime = $request->worktime;
             $item->address = $request->address;
             $item->facebook = $request->facebook;
+            $item->google = $request->google;
             $item->instagram = $request->instagram;
 
             $item->logoH = $logoH;

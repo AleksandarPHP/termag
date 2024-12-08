@@ -18,6 +18,7 @@ class Settings extends Model
         'worktime',
         'address',
         'facebook',
+        'google',
         'instagram',
         'logoH',
         'logoF',

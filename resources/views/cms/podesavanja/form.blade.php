@@ -66,7 +66,14 @@
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="google">Google</label>
+                        <input name="google" type="text" class="form-control" id="google" placeholder="google" value="{{ old('google', $item->google) }}" {!! $errors->has('google') ? 'style="border-color:red;"' : '' !!}>
+                    </div>
+                </div>
                 @endif
+                <div class="col-md-12"><hr></div>
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="keywords">Ključne riječi</label>
