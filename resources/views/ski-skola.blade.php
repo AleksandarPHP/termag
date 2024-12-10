@@ -30,8 +30,8 @@
         </div>
     </section>
     
-    <div class="marquee">
-        <div class="marquee__group">
+    <!-- <div class="marquee"> -->
+        <!-- <div class="marquee__group">
          <img src="{{asset('assets/images/m1-1.png')}}" alt="ski skola">
          <img src="{{asset('assets/images/m1-2.png')}}" alt="ski skola">
          <img src="{{asset('assets/images/m1-3.png')}}" alt="ski skola">
@@ -67,9 +67,9 @@
          <img src="{{asset('assets/images/m1-3.png')}}" alt="ski skola">
          <img src="{{asset('assets/images/m1-4.png')}}" alt="ski skola">
         </div>
-      </div>
+      </div> -->
 
-      <div class="marquee">
+      <!-- <div class="marquee">
         <div class="marquee__group marquee__group2">
          <img src="{{asset('assets/images/m2-1.png')}}" alt="ski skola">
          <img src="{{asset('assets/images/m2-2.png')}}" alt="ski skola">
@@ -106,7 +106,39 @@
          <img src="{{asset('assets/images/m2-3.png')}}" alt="ski skola">
          <img src="{{asset('assets/images/m2-4.png')}}" alt="ski skola">
         </div>
-    </div>
+    </div> -->
+
+    <!-- <section class="race">
+        <div class="container-fluid">
+            <div class="row">
+                <div style="max-height: 260px" class="col-md-3 col-6"><img src="{{asset('assets/images/m1-1.png')}}" alt="" class="img-fluid"></div>
+                <div style="max-height: 260px" class="col-md-3 col-6"><img src="{{asset('assets/images/m1-2.png')}}" alt="" class="img-fluid"></div>
+                <div style="max-height: 260px" class="col-md-3 col-6"><img src="{{asset('assets/images/m1-3.png')}}" alt="" class="img-fluid"></div>
+                <div style="max-height: 260px" class="col-md-3 col-6"><img src="{{asset('assets/images/m1-4.png')}}" alt="" class="img-fluid"></div>
+            </div>
+        </div>
+    </section>
+    <section class="race">
+        <div class="container-fluid">
+            <div class="row">
+                <div style="max-height: 260px" class="col-md-3 col-6"><img src="{{asset('assets/images/m2-1.png')}}" alt="" class="img-fluid"></div>
+                <div style="max-height: 260px" class="col-md-3 col-6"><img src="{{asset('assets/images/m2-2.png')}}" alt="" class="img-fluid"></div>
+                <div style="max-height: 260px" class="col-md-3 col-6"><img src="{{asset('assets/images/m2-4.png')}}" alt="" class="img-fluid"></div>
+                <div style="max-height: 260px" class="col-md-3 col-6"><img src="{{asset('assets/images/m1-1.png')}}" alt="" class="img-fluid"></div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="race">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-1.jpg')}}" alt="" class="img-fluid"></div>
+                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-2.jpg')}}" alt="" class="img-fluid"></div>
+                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-3.jpg')}}" alt="" class="img-fluid"></div>
+                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-4.jpg')}}" alt="" class="img-fluid"></div>
+            </div>
+        </div>
+    </section>
 </main>
 
 @include('partials/footer')

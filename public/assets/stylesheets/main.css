@@ -213,11 +213,16 @@ header .navbar .offcanvas-body .dropdown-item.active,
     overflow: hidden;
 }
 
-.hero video {
+.hero video,
+.hero iframe {
     position: absolute;
     inset: 0;
     width: 100%;
     z-index: -12;
+}
+
+.hero iframe {
+    height: 100%;
 }
 
 .hero > img {
@@ -1162,7 +1167,7 @@ footer .cta-links a {
 }
 
 .empty {
-    padding: 15rem 0;
+    padding: 8rem 0;
 }
 
 .economic {
@@ -1496,6 +1501,10 @@ footer .cta-links a {
     min-height: 55rem;
 }
 
+.ski-offers .col-md-6 .card img {
+    max-height: 36rem;
+}
+
 .centered {
     position: relative;
     padding: 10rem 0;
@@ -1813,6 +1822,102 @@ header
 .job-full .uploaded-files li button {
     background-color: transparent;
     border: none;
+}
+
+.testimonials {
+    position: relative;
+    padding: 10rem 0;
+}
+
+.testimonials .testimonials-slider {
+    max-width: 56rem;
+    margin: 0 auto;
+}
+
+.testimonials .testimonials-wrapper {
+    text-align: center;
+}
+
+.testimonials .testimonials-wrapper p {
+    position: relative;
+    color: #b2916a;
+    font-size: 1.6rem;
+}
+
+.testimonials .testimonials-wrapper p::before {
+    content: url("../images/quote.svg");
+    position: absolute;
+    left: -4rem;
+    top: 0;
+}
+
+.testimonials .testimonials-wrapper p::after {
+    content: url("../images/quote.svg");
+    position: absolute;
+    right: -4rem;
+    bottom: -2rem;
+    transform: rotate(180deg);
+}
+
+.testimonials .testimonials-wrapper .testimonials-top {
+    box-shadow: 0 10px 21px #e6394626;
+    padding: 8rem;
+    border-radius: 12px;
+    background-color: #fff;
+    position: relative;
+}
+
+.testimonials .testimonials-wrapper .testimonials-top img {
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #b56576;
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonials .testimonials-wrapper .testimonials-bottom {
+    background-color: #fff;
+    padding: 7.5rem 0;
+    position: relative;
+    top: -1rem;
+    z-index: -1;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.testimonials .testimonials-wrapper .testimonials-bottom i {
+    font-size: 16px;
+    color: #ffdc84;
+}
+
+.testimonials .testimonials-wrapper .testimonials-bottom h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.testimonials .testimonials-wrapper .testimonials-bottom h5 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.testimonials .testimonials-slider .slick-dots {
+    bottom: 30px;
+}
+.testimonials .testimonials-slider .slick-dots li button:before {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: linear-gradient(to right, #b56576, #6d597a);
+}
+.testimonials .testimonials-slider .slick-dots li {
+    width: 70px;
+    height: 4px;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -2545,6 +2650,14 @@ header
     .special .row .col-lg-12 .card .col-lg-5 div,
     .special .row .col-lg-12 .card .col-lg-5 .txt {
         text-align: center;
+    }
+
+    .testimonials .testimonials-wrapper .testimonials-top {
+        padding: 5rem;
+    }
+
+    section.testimonials .bg {
+        max-height: unset;
     }
 }
 

@@ -53,6 +53,7 @@
         <title>{{ $settings->title }}</title>
         @endif
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" href="{{asset('favicon.png')}}">
         <link rel="stylesheet" href="{{asset('assets/stylesheets/jquery.toast.css')}}">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

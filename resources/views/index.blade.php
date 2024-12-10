@@ -8,6 +8,13 @@
             <video autoplay muted loop preload="none" id="hero-video" poster="{{asset('assets/images/hero-img.jpg')}}">
               <source data-src="https://termag.soft4tech.com/assets/videos/hero.webm" type="video/webm" />
           </video>
+
+          <!-- <iframe
+            src="https://www.youtube.com/embed/icaIBw800wY?autoplay=1&mute=1&controls=0&loop=1&playlist=icaIBw800wY"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe> -->
               <div class="overlay"></div>
 
               <div class="container">

@@ -15,7 +15,52 @@
         </div>
     </section>
     @include('partials/booking')
-    <!-- testimonials nema smisla da se nalazi ovde, vise konsultacija -->
+    <section class="testimonials">
+        <div class="bg center" style="background-image: url('{{asset("assets/images/testimonials-bg.jpg")}}');"></div>
+        <div class="container">
+            <div class="testimonials-slider">
+                <div class="testimonials-wrapper">
+                    <div class="testimonials-top">
+                        <p>
+                            "Naš boravak u Hotelu Termag bio je fantastičan! Smještaj je bio prostran i besprijekorno čist, savršen za našu porodicu. Djeca su uživala u raznovrsnim aktivnostima koje je hotel organizovao, dok smo mi roditelji uživali u opuštajućem termalnom spa iskustvu. Osoblje je bilo izuzetno ljubazno, hrana odlična, a atmosfera opuštajuća i prijateljska. Toplo preporučujemo Hotel Termag svim porodicama koje žele kvalitetan odmor u predivnom okruženju."
+                        </p>
+                        <img src="{{asset('assets/images/test-1.png')}}" alt="testimonial" class="img-fluid">
+                    </div>
+                    <div class="testimonials-bottom">
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <h4>Ema Kovačević</h4>
+                        <h5>Zadovoljna Mušterija i Mama</h5>
+                    </div>
+                </div>
+                <div class="testimonials-wrapper">
+                    <div class="testimonials-top">
+                        <p>
+                            "Naš boravak u Hotelu Termag bio je fantastičan! Smještaj je bio prostran i besprijekorno čist, savršen za našu porodicu. Djeca su uživala u raznovrsnim aktivnostima koje je hotel organizovao, dok smo mi roditelji uživali u opuštajućem termalnom spa iskustvu. Osoblje je bilo izuzetno ljubazno, hrana odlična, a atmosfera opuštajuća i prijateljska. Toplo preporučujemo Hotel Termag svim porodicama koje žele kvalitetan odmor u predivnom okruženju."
+                        </p>
+                        <img src="{{asset('assets/images/test-1.png')}}" alt="testimonial" class="img-fluid">
+                    </div>
+                    <div class="testimonials-bottom">
+                        <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button>
+                        <div class="rating">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                        </div>
+                        <h4>Ema Kovačević</h4>
+                        <h5>Zadovoljna Mušterija i Mama</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="special registration packages packages-2">
         <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">

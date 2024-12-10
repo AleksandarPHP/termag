@@ -164,25 +164,32 @@ if (window.innerWidth < 991) {
 }
 
 // form upload
-document.querySelector(".upload-btn").addEventListener("click", () => {
-    document.querySelector(".dropzone .dz-button").click();
-});
-Dropzone.autoDiscover = false;
+// document.querySelector(".upload-btn")?.addEventListener("click", () => {
+//     document.querySelector(".dropzone .dz-button").click();
+// });
+// Dropzone.autoDiscover = false;
 
-const dropzone = new Dropzone("#form-upload", {
-    url: "http://127.0.0.1:8000/cms/gallery/upload",
-    maxFilesize: 5,
-    acceptedFiles: ".jpeg,.jpg,.png,.gif,.webp", // Dozvoljeni fajlovi
-    addRemoveLinks: true,
-    dictDefaultMessage: "",
-    init: function () {
-        this.on("success", function (file, response) {
-            console.log("File uploaded successfully", response);
-        });
-        this.on("error", function (file, errorMessage) {
-            console.error("Upload error", errorMessage);
-        });
-    },
-});
+// const dropzone = new Dropzone("#form-upload", {
+//     url: "http://127.0.0.1:8000/cms/gallery/upload",
+//     maxFilesize: 5,
+//     acceptedFiles: ".jpeg,.jpg,.png,.gif,.webp", // Dozvoljeni fajlovi
+//     addRemoveLinks: true,
+//     dictDefaultMessage: "",
+//     init: function () {
+//         this.on("success", function (file, response) {
+//             console.log("File uploaded successfully", response);
+//         });
+//         this.on("error", function (file, errorMessage) {
+//             console.error("Upload error", errorMessage);
+//         });
+//     },
+// });
 
-console.log(dropzone);
+$(".testimonials-slider").slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 7000,
+});
