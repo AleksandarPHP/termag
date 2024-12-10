@@ -66,6 +66,7 @@
             <div>
                 <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                     @isset($text->title)<h2 class="title">{{$text->title}}</h2>@endisset
+                    @isset($text->subtitle)<p><strong>{{$text->subtitle}}</strong></p>@endisset
                     @isset($text->text)
                     {!!$text->text!!}
                     @endisset

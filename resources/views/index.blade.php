@@ -88,6 +88,7 @@
                   <div>
                       <div class="cardd " data-aos="fade-right" data-aos-duration="600">
                         @isset($text->title)<h2>{{$text->title}}</h2>@endisset
+                        @isset($text->subtitle)<p><strong>{{$text->subtitle}}</strong></p>@endisset
                         @isset($text->text)
                             {!! $text->text !!}
                         @endisset
@@ -107,6 +108,7 @@
               <div class="container-fluid">
                   <div class="cardd ">
                     @isset($text->title)<h2>{{$text->title}}</h2> @endisset
+                    @isset($text->subtitle)<p><strong>{{$text->subtitle}}</strong></p>@endisset
                     @isset($text->text)
                         {!! $text->text !!}                        
                     @endisset
@@ -125,6 +127,7 @@ y          </section>
              
               <div class="container">
                   <div class="cardd " data-aos="fade-left" data-aos-duration="600">
+                    @isset($text->subtitle)<p><strong>{{$text->subtitle}}</strong></p>@endisset
                     @isset($text->title)<h2>{{$text->title}}</h2>@endisset
                       @isset($text->text)
                           {!!$text->text!!}
@@ -142,6 +145,7 @@ y          </section>
                   <div class="cardd">
                     @php $text =  Helper::text(11) @endphp
                         @isset($text->title)<h2>{{$text->title}}</h2>@endisset
+                        @isset($text->subtitle)<p><strong>{{$text->subtitle}}</strong></p>@endisset
                         @isset($text->text)
                             {!!$text->text!!}
                         @endisset
@@ -157,6 +161,7 @@ y          </section>
                 @isset($text->title)
                 <h2 class="title-smaller" data-aos="fade-right" data-aos-duration="800">{{$text->title}}</h2>                    
                 @endisset
+                @isset($text->subtitle)<p><strong>{{$text->subtitle}}</strong></p>@endisset
                 @isset($text->text)
                     {!!$text->text!!}
                 @endisset
@@ -218,6 +223,7 @@ y          </section>
                                        @isset($text->title)
                                        <h5>{{$text->title}}</h5>                                           
                                        @endisset
+                                       @isset($text->subtitle)<p><strong>{{$text->subtitle}}</strong></p>@endisset
                                       @isset($text->text)
                                           {!! $text->text !!}
                                       @endisset

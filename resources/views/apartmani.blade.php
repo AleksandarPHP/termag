@@ -54,6 +54,9 @@
                 <div class="col-lg-7" data-aos="fade-right" data-aos-duration="600">
                     <img src="{{asset("storage/".$text->image)}}" alt="apartman" class="img-fluid">
                     <div class="content-wrapper"> 
+                        @isset($text->subtitle)
+                        <h4>{{$text->subtitle}}</h4>                            
+                        @endisset
                         @isset($text->title)
                         <h2>{!!$text->title!!}</h2>
                         @endisset
