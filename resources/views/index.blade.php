@@ -144,8 +144,8 @@ y          </section>
               </div>
           </section>
 
-          <!-- <section class="wellness-spa konf-sala aktivni-izazov">
-            <video autoplay muted loop preload="none" id="planinarenje" poster="{{asset('assets/images/planinarenje.png')}}">
+          <section class="wellness-spa konf-sala aktivni-izazov">
+            <!-- <video autoplay muted loop preload="none" id="planinarenje" poster="{{asset('assets/images/planinarenje.png')}}">
               <source data-src="https://termag.soft4tech.com/assets/videos/termag-izazovi.webm" type="video/webm" />
           </video> -->
           <iframe
