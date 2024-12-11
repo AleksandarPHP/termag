@@ -193,3 +193,22 @@ $(".testimonials-slider").slick({
     autoplay: true,
     autoplaySpeed: 7000,
 });
+
+$(".npk-slider-1").slick({
+    fade: true,
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 3000,
+});
+
+$(".nnpk-slider-1").slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 3000,
+});

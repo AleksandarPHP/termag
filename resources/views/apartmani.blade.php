@@ -22,7 +22,10 @@
             <div class="row">
                 @php $text =  Helper::text(17) @endphp
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400">
-                    <img src="{{asset("storage/".$text->image2)}}" alt="apartman" class="img-fluid">
+                    <div class="nnpk-slider-1">
+                        <img src="{{asset("storage/".$text->image2)}}" alt="apartman" class="img-fluid">
+                        <img src="{{asset("storage/".$text->image2)}}" alt="apartman" class="img-fluid">
+                    </div>
                 </div>
                 <div class="col-lg-7" data-aos="fade-left" data-aos-duration="600" data-aos-delay="400">
                     <img src="{{asset("storage/".$text->image)}}" alt="apartman" class="img-fluid">

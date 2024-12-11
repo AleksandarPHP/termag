@@ -214,15 +214,24 @@ header .navbar .offcanvas-body .dropdown-item.active,
 }
 
 .hero video,
-.hero iframe {
+.hero iframe,
+.ukus-jahorine iframe {
     position: absolute;
     inset: 0;
     width: 100%;
     z-index: -12;
 }
 
-.hero iframe {
-    height: 100%;
+.hero iframe,
+.ukus-jahorine iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
 .hero > img {
@@ -1920,6 +1929,18 @@ header
     height: 4px;
 }
 
+.hsnpk h4:last-of-type {
+    margin-top: 10rem;
+}
+
+.hsnpk .row {
+    row-gap: 3rem;
+}
+
+.hsnpk .row .col-lg-6 .card {
+    min-height: 64rem;
+}
+
 @media only screen and (max-width: 1600px) {
     .hero .content-wrapper p,
     .career .content-wrapper p,
@@ -2223,6 +2244,9 @@ header
     }
     header .navbar .navbar-nav {
         margin-top: 10rem;
+    }
+    .hero .overlay {
+        display: none;
     }
 }
 
@@ -2664,5 +2688,16 @@ header
 @media only screen and (min-width: 1399px) {
     .navbar .offcanvas-body img {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero iframe {
+        width: 1920px;
+        height: 931px;
     }
 }

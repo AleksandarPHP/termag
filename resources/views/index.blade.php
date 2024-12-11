@@ -5,16 +5,16 @@
     <main>
         @php $text =  Helper::text(4) @endphp
           <section class="hero">
-            <video autoplay muted loop preload="none" id="hero-video" poster="{{asset('assets/images/hero-img.jpg')}}">
+            <!-- <video autoplay muted loop preload="none" id="hero-video" poster="{{asset('assets/images/hero-img.jpg')}}">
               <source data-src="https://termag.soft4tech.com/assets/videos/hero.webm" type="video/webm" />
-          </video>
+          </video> -->
 
-          <!-- <iframe
-            src="https://www.youtube.com/embed/icaIBw800wY?autoplay=1&mute=1&controls=0&loop=1&playlist=icaIBw800wY"
+          <iframe
+            src="https://www.youtube.com/embed/vojf_H2lLK4?autoplay=1&mute=1&controls=0&loop=1&playlist=vojf_H2lLK4"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
-          </iframe> -->
+          </iframe>
               <div class="overlay"></div>
 
               <div class="container">
@@ -80,9 +80,16 @@
           </section>
 
           <section class="villa-termag ukus-jahorine">
-            <video autoplay muted loop preload="none" id="ukus-jahorine" poster="{{asset('assets/images/ukus-jahorine.png')}}">
+            <!-- <video autoplay muted loop preload="none" id="ukus-jahorine" poster="{{asset('assets/images/ukus-jahorine.png')}}">
               <source data-src="https://termag.soft4tech.com/assets/videos/ukus-jahorine.webm" type="video/webm" />
-          </video>           
+          </video>-->
+          <iframe
+            src="https://www.youtube.com/embed/y2NBVIgTY5g?autoplay=1&mute=1&controls=0&loop=1&playlist=y2NBVIgTY5g"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
+ 
               <div class="container">
                 @php $text =  Helper::text(8) @endphp
                   <div>
@@ -134,10 +141,16 @@ y          </section>
               </div>
           </section>
 
-          <section class="wellness-spa konf-sala aktivni-izazov">
+          <!-- <section class="wellness-spa konf-sala aktivni-izazov">
             <video autoplay muted loop preload="none" id="planinarenje" poster="{{asset('assets/images/planinarenje.png')}}">
               <source data-src="https://termag.soft4tech.com/assets/videos/termag-izazovi.webm" type="video/webm" />
-          </video>
+          </video> -->
+          <iframe
+            src="https://www.youtube.com/embed/sfGiP9BPm_M?autoplay=1&mute=1&controls=0&loop=1&playlist=sfGiP9BPm_M"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
               <div class="container-fluid">
                   <div class="cardd">
                     @php $text =  Helper::text(11) @endphp

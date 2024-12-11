@@ -18,229 +18,141 @@
     @include('partials/booking')
     @include('partials/socials')
 
-    <section class="economic">
-    @php $text =  Helper::text(203) @endphp
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
-        <div class="container">
-            <div class="text-center">
-                <h4 class="subtitle-smaller">Kreirajte zajedničke uspomene na Jahorini</h4>
-                @isset($text->title)
-                <h2 class="title">{{$text->title}}</h2>
-                @endisset
-                
-                @isset($text->text)
+    <section class="special hsnpk">
+                <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+                <div class="container">
+                <h4 class="subtitle">
+                    Luksuzni doživljaj u prostranosti
+                </h4>
+                <h2 class="title-smaller">Economic Soba</h2>
                 <p class="txt">
-                    {!!$text->text!!}
+                    Sa ukupnom površinom od 38m2, lux sobe hotela Termag vam pružaju i više nego dovoljno prostora za vaš luksuzni odmor. Sobe posjeduju klasičan bračni krevet ili dva odvojena u opciji “twin”, gdje imate opciju dodavanja trećeg pomoćnog ležaja. Zadovoljstvo gostiju nam je izuzetno važno, pa smo se potrudili da vam ponudimo različite opcije, kako biste mogli da izaberete upravo ono što vam najviše odgovara.
                 </p>
-                @endisset
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="economic-slider">
-                <img src="{{asset('assets/images/economic-1.jpg')}}" alt="soba">
-                <img src="{{asset('assets/images/economic-2.jpg')}}" alt="soba">
-                <img src="{{asset('assets/images/economic-3.jpg')}}" alt="soba">
-                <img src="{{asset('assets/images/economic-4.jpg')}}" alt="soba">
-                <img src="{{asset('assets/images/economic-5.jpg')}}" alt="soba">
-            </div>
-        </div>
-        <div class="container">
-        @php $text =  Helper::text(204) @endphp
-            <div class="arrow-section">
-                <div>
-                    @isset($text->title)
-                    <h3>
-                        <img
-                            src="{{ asset('assets/images/arrow-gold.svg') }}"
-                            alt="strelica"
-                        />
-                        {{$text->title}}
-                    </h3>
-                    @endisset
-                    
-                    @isset($text->text)
+                <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card" >
+                                <div class="npk-slider-1"> 
+                                    <img src="{{asset('assets/images/hs-1.jpg')}}" class="card-img-top" alt="porodicni paket">
+                                    <img src="{{asset('assets/images/hs-1.jpg')}}" class="card-img-top" alt="porodicni paket">
+                                </div>
+                                <div class="card-body">
+                                  <h5>Luksuzni doživljaj u prostranosti</h5>
+                                  <p class="txt">Sa ukupnom površinom od 38m2, lux sobe hotela Termag vam pružaju i više nego dovoljno prostora za vaš luksuzni odmor. Sobe posjeduju klasičan bračni krevet ili dva odvojena u opciji “twin”, gdje imate opciju dodavanja trećeg pomoćnog ležaja. Zadovoljstvo gostiju nam je izuzetno važno, pa smo se potrudili da vam ponudimo različite opcije, kako biste mogli da izaberete upravo ono što vam najviše odgovara.</p>
+                                  <div>
+                                    <a href="#" class="btnn btn_gold">Saznaj Više</a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card" >
+                                <img src="{{asset('assets/images/hs-2.jpg')}}" class="card-img-top" alt="Romantični Paket">
+                                <div class="card-body">
+                                  <h5>Unikatnost U Svakom Detalju</h5>
+                                  <p class="txt">Opremljene na jedinstven i unikatan način, sa posebno osmišljenim estetskih detaljima, naše Lux sobe će zadovoljiti vizuelne standarde i gostiju sa najistančanijim ukusom. Kvalitetan namještaj od punog drveta daje prostoru bogatstvo, a ono na šta smo posebno ponosni je “mountain view” koji će vas ostaviti bez daha.</p>
+                                  <div>
+                                    <a href="#" class="btnn btn_gold">Saznaj Više</a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card" >
+                                <img src="{{asset('assets/images/hs-3.jpg')}}" class="card-img-top" alt="Romantični Paket">
+                                <div class="card-body">
+                                  <h5>Tehnološka opremljenost</h5>
+                                  <p class="txt">Abmijent naših soba je prilagođen idealnoj harmoniji između klasičnih i modernih detalja, koji stvaraju osjećaj toplog doma. Udobna i ušuškana atmosfera koju ističemo, čini da momenti provedeni u ovom prostoru ostanu duboko urezani u vašem sjećanju kao nezaboravni.</p>
+                                  <div>
+                                    <a href="#" class="btnn btn_gold">Saznaj Više</a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card" >
+                                <img src="{{asset('assets/images/hs-4.jpg')}}" class="card-img-top" alt="Romantični Paket">
+                                <div class="card-body">
+                                  <h5>Idealan smještaj za dvoje</h5>
+                                  <p class="txt">Lux sobe hotela Termag su vaša topla i luksuzna oaza u kojoj ćete doživjeti nezaboravne momente. To nije samo prostor za spavanje, to je jedno zaista posebno iskustvo. Originalno dizajniran namještaj i rustični stil koji dominira su upotpunili cijelu priču i učinili da ove smještajne jedinice odišu smirenom i toplom energijom koja će vas oduševiti.</p>
+                                  <div>
+                                    <a href="#" class="btnn btn_gold">Saznaj Više</a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+
+                    <h4 class="subtitle">Luksuzni doživljaj u prostranosti</h4>
+                    <h2 class="title-smaller">Lux Sobe</h2>
                     <p class="txt">
-                        {!!$text->text!!}
+                        Sa ukupnom površinom od 38m2, lux sobe hotela Termag vam pružaju i više nego dovoljno prostora za vaš luksuzni odmor. Sobe posjeduju klasičan bračni krevet ili dva odvojena u opciji “twin”, gdje imate opciju dodavanja trećeg pomoćnog ležaja. Zadovoljstvo gostiju nam je izuzetno važno, pa smo se potrudili da vam ponudimo različite opcije, kako biste mogli da izaberete upravo ono što vam najviše odgovara.
                     </p>
-                    @endisset
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card" >
+                                <img src="{{asset('assets/images/hsnpk-1.jpg')}}" class="card-img-top" alt="porodicni paket">
+                                <div class="card-body">
+                                  <h5>Porodični Paket</h5>
+                                  <p class="txt">dizajniran i osmišljen tako da zaljubljenim parovima omogući bijeg iz svakodnevnice i izmještanje iz realnosti. Uživaćete u dugim romantičnim šetnjama, masažama, romantičnim večerama, opuštajućim kupkama uz slobodno korišćenje SPA centra. Priredite svom partneru i sebi nezaboravno iskustvo koje kombinuje opuštanje i uživanje u romantičnim momentima. Doživite romansu u hotelu Termag.</p>
+                                  <div>
+                                    <a href="#" class="btnn btn_gold">Saznaj Više</a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card" >
+                                <img src="{{asset('assets/images/hsnpk-2.jpg')}}" class="card-img-top" alt="Romantični Paket">
+                                <div class="card-body">
+                                  <h5>Porodični Paket</h5>
+                                  <p class="txt">dizajniran i osmišljen tako da zaljubljenim parovima omogući bijeg iz svakodnevnice i izmještanje iz realnosti. Uživaćete u dugim romantičnim šetnjama, masažama, romantičnim večerama, opuštajućim kupkama uz slobodno korišćenje SPA centra. Priredite svom partneru i sebi nezaboravno iskustvo koje kombinuje opuštanje i uživanje u romantičnim momentima. Doživite romansu u hotelu Termag.</p>
+                                  <div>
+                                    <a href="#" class="btnn btn_gold">Saznaj Više</a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card" >
+                                <img src="{{asset('assets/images/special-3.jpg')}}" class="card-img-top" alt="Relax Paket">
+                                <div class="card-body">
+                                  <h5>Relax Paket</h5>
+                                  <p class="txt">dizajniran i osmišljen tako da zaljubljenim parovima omogući bijeg iz svakodnevnice i izmještanje iz realnosti. Uživaćete u dugim romantičnim šetnjama, masažama, romantičnim večerama, opuštajućim kupkama uz slobodno korišćenje SPA centra. Priredite svom partneru i sebi nezaboravno iskustvo koje kombinuje opuštanje i uživanje u romantičnim momentima. Doživite romansu u hotelu Termag. </p>
+                                  <div>
+                                    <a href="#" class="btnn btn_gold">Saznaj Više</a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" >
+                                <img src="{{asset('assets/images/special-4.jpg')}}" class="card-img-top" alt="Detox Paket">
+                                <div class="card-body">
+                                  <h5>Detox Paket</h5>
+                                  <p class="txt">dizajniran i osmišljen tako da zaljubljenim parovima omogući bijeg iz svakodnevnice i izmještanje iz realnosti. Uživaćete u dugim romantičnim šetnjama, masažama, romantičnim večerama, opuštajućim kupkama uz slobodno korišćenje SPA centra. Priredite svom partneru i sebi nezaboravno iskustvo koje kombinuje opuštanje i uživanje u romantičnim momentima. Doživite romansu u hotelu Termag. </p>
+                                  <div>
+                                    <a href="#" class="btnn btn_gold">Saznaj Više</a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" >
+                                <img src="{{asset('assets/images/special-5.jpg')}}" class="card-img-top" alt="Back to Nature">
+                                <div class="card-body">
+                                  <h5>Back to Nature</h5>
+                                  <p class="txt">dizajniran i osmišljen tako da zaljubljenim parovima omogući bijeg iz svakodnevnice i izmještanje iz realnosti. Uživaćete u dugim romantičnim šetnjama, masažama, romantičnim večerama, opuštajućim kupkama uz slobodno korišćenje SPA centra. Priredite svom partneru i sebi nezaboravno iskustvo koje kombinuje opuštanje i uživanje u romantičnim momentima. Doživite romansu u hotelu Termag. </p>
+                                  <div>
+                                    <a href="#" class="btnn btn_gold">Saznaj Više</a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-            @php $text =  Helper::text(205) @endphp
-                    @isset($text->title)
-                    <h3>
-                        <img
-                            src="{{ asset('assets/images/arrow-gold.svg') }}"
-                            alt="strelica"
-                        />
-                        {{$text->title}}
-                    </h3>
-                    @endisset
-                    
-                    @isset($text->text)
-                    <p class="txt">
-                        {!!$text->text!!}
-                    </p>
-                    @endisset
-                </div>
-                <div>
-            @php $text =  Helper::text(206) @endphp
-                    @isset($text->title)
-                    <h3>
-                        <img
-                            src="{{ asset('assets/images/arrow-gold.svg') }}"
-                            alt="strelica"
-                        />
-                        {{$text->title}}
-                    </h3>
-                    @endisset
-                    
-                    @isset($text->text)
-                    <p class="txt">
-                        {!!$text->text!!}
-                    </p>
-                    @endisset
-                </div>
-                <div>
-                @php $text =  Helper::text(207) @endphp
-                    @isset($text->title)
-                    <h3>
-                        <img
-                            src="{{ asset('assets/images/arrow-gold.svg') }}"
-                            alt="strelica"
-                        />
-                        {{$text->title}}
-                    </h3>
-                    @endisset
-                    
-                    @isset($text->text)
-                    <p class="txt">
-                        {!!$text->text!!}
-                    </p>
-                    @endisset
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="economic lux">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
-        <div class="container">
-            @php $text =  Helper::text(208) @endphp
-            <div class="text-center">
-                <h4 class="subtitle-smaller">Luksuzni doživljaj u prostranosti</h4>
-                @isset($text->title)
-                <h2 class="title">{{$text->title}}</h2>
-                @endisset
-                
-                @isset($text->text)
-                <p class="txt">
-                    {!!$text->text!!}
-                </p>
-                @endisset
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="economic-slider">
-                <img src="{{asset('assets/images/lux-1.jpg')}}" alt="soba">
-                <img src="{{asset('assets/images/lux-2.jpg')}}" alt="soba">
-                <img src="{{asset('assets/images/lux-3.jpg')}}" alt="soba">
-                <img src="{{asset('assets/images/lux-1.jpg')}}" alt="soba">
-            </div>
-        </div>
-        <div class="container">
-            <div class="arrow-section">
-            @php $text =  Helper::text(209) @endphp
-                <div>
-                    @isset($text->title)
-                    <h3>
-                        <img
-                            src="{{ asset('assets/images/arrow-gold.svg') }}"
-                            alt="strelica"
-                        />
-                        {{$text->title}}
-                    </h3>
-                    @endisset
-                    
-                    @isset($text->text)
-                    <p class="txt">
-                        {!!$text->text!!}
-                    </p>
-                    @endisset
-                </div>
-                <div>
-            @php $text =  Helper::text(210) @endphp
-                    @isset($text->title)
-                    <h3>
-                        <img
-                            src="{{ asset('assets/images/arrow-gold.svg') }}"
-                            alt="strelica"
-                        />
-                        {{$text->title}}
-                    </h3>
-                    @endisset
-                    
-                    @isset($text->text)
-                    <p class="txt">
-                        {!!$text->text!!}
-                    </p>
-                    @endisset
-                </div>
-                <div>
-            @php $text =  Helper::text(211) @endphp
-                    @isset($text->title)
-                    <h3>
-                        <img
-                            src="{{ asset('assets/images/arrow-gold.svg') }}"
-                            alt="strelica"
-                        />
-                        {{$text->title}}
-                    </h3>
-                    @endisset
-                    
-                    @isset($text->text)
-                    <p class="txt">
-                        {!!$text->text!!}
-                    </p>
-                    @endisset
-                </div>
-                <div>
-            @php $text =  Helper::text(212) @endphp
-                    @isset($text->title)
-                    <h3>
-                        <img
-                            src="{{ asset('assets/images/arrow-gold.svg') }}"
-                            alt="strelica"
-                        />
-                        {{$text->title}}
-                    </h3>
-                    @endisset
-                    
-                    @isset($text->text)
-                    <p class="txt">
-                        {!!$text->text!!}
-                    </p>
-                    @endisset
-                </div>
-                <div>
-            @php $text =  Helper::text(213) @endphp
-                    @isset($text->title)
-                    <h3>
-                        <img
-                            src="{{ asset('assets/images/arrow-gold.svg') }}"
-                            alt="strelica"
-                        />
-                        {{$text->title}}
-                    </h3>
-                    @endisset
-                    
-                    @isset($text->text)
-                    <p class="txt">
-                        {!!$text->text!!}
-                    </p>
-                    @endisset
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 </main>
 
 @endsection
