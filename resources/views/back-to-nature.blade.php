@@ -17,8 +17,22 @@
     </section>
 
     <section class="special registration packages" style="padding-top: 0">
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
+            <div class="porodicni-paket text-center">
+                @php
+                    $package = App\Models\Package::findOrFail(1);
+                @endphp
+                <h2 class="title-smaller">{{$package->title}}</h2>
+                    {!!$package->text!!}
+                <nav class="pills-wrapper">
+                    <div class="nav nav-tabs" id="nav-tab2" role="tablist">
+                    @foreach ($package->options as $item)
+                    <button class="nav-link @if ($loop->first)active @endif " id="nav-home-tab{{$item->id}}" data-bs-toggle="tab" data-bs-target="#nav-home{{$item->id}}" type="button" role="tab" aria-controls="nav-home{{$item->id}}" aria-selected="true">{{$item->nights}} noći</button>
+                    @endforeach
+                    </div>
+                </nav>
+            </div>
             <div class="tab-content" id="nav-tabContent">
                 @foreach ($package->options as $item)
                 <div class="tab-pane fade show @if ($loop->first) active @endif" id="nav-home{{$item->id}}" role="tabpanel" aria-labelledby="nav-home-tab{{$item->id}}" tabindex="0">

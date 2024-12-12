@@ -124,7 +124,7 @@
                             @endisset
                             @isset($text->text)
                             <p class="txt">
-                                {{$text->text}}
+                                {!!$text->text!!}
                             </p>
                             @endisset
                         </div>

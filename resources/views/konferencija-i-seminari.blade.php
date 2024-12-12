@@ -4,8 +4,8 @@
     @section('content')
 <main>
     <section class="career">
-        @php $text =  Helper::text(73) @endphp
-        <div class="bg" style="background-image: url('assets/images/konf-sala-bg.jpg');"></div>
+        @php $text =  Helper::text(214) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 @isset($text->subtitle)
