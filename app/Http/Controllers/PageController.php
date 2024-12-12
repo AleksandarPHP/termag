@@ -176,6 +176,14 @@ class PageController extends Controller
         if($request->hasFile('image2')) $image2 = Helper::saveImage($request->image2, 'Pages', $item->title, $image2);
         else if($item->title != $item->title && !is_null($image2)) $image2 = Helper::renameImage($image2, 'Pages', $item->title);
 
+        $image3 = $item->image3;
+        if($request->hasFile('image3')) $image3 = Helper::saveImage($request->image3, 'Pages', $item->title, $image3);
+        else if($item->title != $item->title && !is_null($image3)) $image3 = Helper::renameImage($image3, 'Pages', $item->title);
+
+        $image4 = $item->image4;
+        if($request->hasFile('image4')) $image4 = Helper::saveImage($request->image4, 'Pages', $item->title, $image4);
+        else if($item->title != $item->title && !is_null($image4)) $image4 = Helper::renameImage($image4, 'Pages', $item->title);
+
         $item->setTranslation('title', $lang, $request->input('title'));
         $item->setTranslation('subtitle', $lang, $request->input('subtitle'));
         $item->setTranslation('text', $lang, $request->input('text'));
@@ -188,6 +196,8 @@ class PageController extends Controller
         if($lang=='sr') {      
             $item->image = $image;
             $item->image2 = $image2;
+            $item->image3 = $image3;
+            $item->image4 = $image4;
             $item->url = $request->url;
             $item->url2 = $request->url2;
         }
@@ -208,7 +218,7 @@ class PageController extends Controller
         $checkArray = implode(",", $checkArray);
 
         $request->validate([
-            'image' => ['required', 'in:'.$checkArray],
+            'image2' => ['required', 'in:'.$checkArray],
         ]);
 
         $item = Page::findOrFail($id);

@@ -208,7 +208,21 @@ $(".nnpk-slider-1").slick({
     dots: false,
     arrows: false,
     infinite: true,
-    speed: 300,
+    speed: 2000,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 1000,
+    fade: true,              
+    cssEase: 'linear'        
+});
+
+
+$(".nnpk-slider-2").slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 2000,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    fade: true,
+    cssEase: 'linear' 
 });

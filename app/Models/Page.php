@@ -17,6 +17,8 @@ class Page extends Model
         'text',
         'image',
         'image2',
+        'image3',
+        'image4',
         'url',
         'urlTitle',
         'url2',
