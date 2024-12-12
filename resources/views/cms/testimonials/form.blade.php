@@ -27,14 +27,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="name">Naziv</label>
+                        <label for="name">Ime i prezime</label>
                         <input name="name" type="text" class="form-control" id="name" placeholder="Naziv" value="{{ old('name', $item->name) }}" {!! $errors->has('name') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="short_description">Podnaslov</label>
+                        <label for="short_description">Tekst</label>
                         <input name="short_description" type="text" class="form-control" id="short_description" placeholder="Podnaslov" value="{{ old('short_description', $item->getTranslation('short_description', $lang, false)) }}" {!! $errors->has('short_description') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-12">
                     <div class="mb-3">
-                        <label for="stars">Meni </label>
+                        <label for="stars">Zvijezde </label>
                         <select name="stars" class="form-control" id="stars" {!! $errors->has('stars') ? 'style="border-color:red;"' : '' !!}>
                             <option value="">Izaberi</option>
                             @for ($i = 1; $i <= 5; $i++ )

@@ -89,7 +89,7 @@ class TestimonialController extends Controller
         $request->validate([
             'name' => ['nullable', 'string', 'max:191'],
             'short_description' => ['nullable', 'string'],
-            'description' => ['nullable', 'string', 'max:191'],
+            'description' => ['nullable', 'string'],
             'stars' => ['nullable', 'numeric', 'max:191'],
             'is_active' => ['nullable', 'string', 'in:1'],
             'image' => ['nullable', 'mimes:jpeg,png,svg,webp', 'image', 'max:5000'],
@@ -132,7 +132,7 @@ class TestimonialController extends Controller
         $request->validate([
             'name' => ['nullable', 'string', 'max:191'],
             'short_description' => ['nullable', 'string'],
-            'description' => ['nullable', 'string', 'max:191'],
+            'description' => ['nullable', 'string'],
             'stars' => ['nullable', 'numeric', 'max:191'],
             'is_active' => ['nullable', 'string', 'in:1'],
             'image' => ['nullable', 'mimes:jpeg,png,svg,webp', 'image', 'max:5000'],
