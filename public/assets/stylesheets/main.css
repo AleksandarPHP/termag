@@ -215,7 +215,8 @@ header .navbar .offcanvas-body .dropdown-item.active,
 
 .hero video,
 .hero iframe,
-.ukus-jahorine iframe {
+.ukus-jahorine iframe,
+.aktivni-izazov iframe {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -223,7 +224,8 @@ header .navbar .offcanvas-body .dropdown-item.active,
 }
 
 .hero iframe,
-.ukus-jahorine iframe {
+.ukus-jahorine iframe,
+.aktivni-izazov iframe {
     aspect-ratio: 16 / 9;
     width: 100%;
     height: auto;
@@ -2103,7 +2105,7 @@ header
 
 @media only screen and (max-width: 991px) {
     .hero {
-        min-height: 50dvh;
+        min-height: 35dvh;
     }
     .booking {
         padding: 1.5rem 0 4rem 0;
@@ -2250,9 +2252,9 @@ header
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
     .hero {
-        min-height: 60dvh;
+        min-height: 90dvh;
     }
     .hero .content-wrapper h4 {
         font-size: 1.4rem;
@@ -2361,6 +2363,11 @@ header
     .career .content-wrapper p,
     .apartman .txt {
         max-width: 100%;
+    }
+
+    .hero iframe {
+        width: 1920px;
+        height: 931px;
     }
 }
 
@@ -2665,7 +2672,9 @@ header
     .villa-termag video,
     .wellness-spa video,
     .villa-termag .bg,
-    .wellness-spa .bg {
+    .wellness-spa .bg,
+    .villa-termag iframe,
+    .wellness-spa iframe {
         width: 96.35%;
         margin: 0 auto;
     }
@@ -2683,21 +2692,19 @@ header
     section.testimonials .bg {
         max-height: unset;
     }
+
+    .ukus-jahorine iframe,
+    .aktivni-izazov iframe {
+        position: absolute;
+        transform: translate(0);
+        left: 0;
+        top: 0;
+        min-height: 300px;
+    }
 }
 
 @media only screen and (min-width: 1399px) {
     .navbar .offcanvas-body img {
         display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        min-height: 100vh;
-    }
-
-    .hero iframe {
-        width: 1920px;
-        height: 931px;
     }
 }
