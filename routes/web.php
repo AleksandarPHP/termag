@@ -58,6 +58,148 @@ $routes = [
     'porodicni-paket' => 'porodicni-paket',
 ];
 
+$redirects = [
+'rs/naslovna/konferencije-seminari' => 'konferencija-i-seminari',
+'spa-and-wellness'=>'spa',
+'kamera'=>'visina-snega',
+'termagchallengerace'=>'challenge-race',
+'termag-mtb-bike-maraton'=>'mountainbike-marathon',
+'rs/naslovna/termag-challenge-triatlon.html'=>'challenge-race',
+'rezervacije'=>'',
+'sobe'=>'termag-hotelske-sobe',
+'galerija/hotel'=>'galerija',
+'galerija/jahorina'=>'galerija',
+'galerija/koliba'=>'galerija',
+'galerija/konferencijska-sala'=>'galerija',
+'galerija/restoran'=>'galerija',
+'galerija/sobe'=>'galerija',
+'galerija/spa'=>'galerija',
+'galerija/usluge'=>'galerija',
+'galerija/smjestaj-apartmani'=>'galerija',
+'galerija/zabava'=>'galerija',
+'galerija/villa-termag'=>'galerija',
+'galerija/vjencanja'=>'galerija',
+'galerija/team-building'=>'galerija',
+'ljetne-aktivnosti'=>'ljetnje-avanture',
+'usluge'=>'',
+'o-hotelu'=>'o-nama',
+'jahorina'=>'',
+'prijatelji-hotela'=>'',
+'download'=>'',
+'kontakt'=>'',
+'promo-paketi'=>'',
+'organizacija-vjencanja'=>'svadbe',
+'izleti'=>'',
+'zabava'=>'',
+'zdravstveni-turizam'=>'',
+'transfer'=>'',
+'ketering-i-organizacija'=>'',
+'termag-jahorina-tour-prijava'=>'',
+'rs/naslovna/specijalne-ponude/ski-opening'=>'specijalni-paketi',
+'relax-paketi'=>'relax-paket',
+'romanticni-paketi'=>'romanticni-paket',
+'rs/povratak-prirodi-paket-2-nocenja'=>'back-to-nature',
+'rs/naslovna/specijalne-ponude/promo-paketi/porodicni-paket'=>'specijalni-paketi',
+'rs/naslovna/specijalne-ponude/promo-paketi/termag-aplikacija.html-0464545979'=>'ljeto-paket',
+'rs/naslovna/business/team-building/termag-partners-day/termag-partner-day-download.html'=>'team-building',
+'rs/naslovna/konferencije-seminari/preuzmi-formular'=>'',
+'rs/naslovna/termag-mtb-bike-maraton/termag-mtb-bike-maraton.html'=>'mountainbike-marathon',
+'en/hotel-termag-jahorina/conferences-seminars'=>'',
+'en/spa-and-wellness'=>'',
+'en/kamera'=>'',
+'en/termagchallengerace'=>'',
+'en/hotel-termag-jahorina/en/naslovna/termag-mtb-bike-maraton.html'=>'',
+'en/rezervacije'=>'',
+'en/sobe'=>'',
+'en/galerija/hotel'=>'',
+'en/galerija/jahorina'=>'galerija',
+'en/galerija/koliba'=>'galerija',
+'en/galerija/konferencijska-sala'=>'galerija',
+'en/galerija/restoran'=>'galerija',
+'en/galerija/sobe'=>'galerija',
+'en/galerija/spa'=>'galerija',
+'en/galerija/usluge'=>'galerija',
+'en/galerija/smjestaj-apartmani'=>'galerija',
+'en/galerija/zabava'=>'galerija',
+'en/galerija/villa-termag'=>'galerija',
+'en/galerija/vjencanja'=>'galerija',
+'en/galerija/team-building'=>'galerija',
+'en/ljetne-aktivnosti'=>'',
+'en/usluge'=>'',
+'en/o-hotelu'=>'',
+'en/jahorina'=>'',
+'en/prijatelji-hotela'=>'',
+'en/download'=>'',
+'en/kontakt'=>'',
+'en/promo-paketi'=>'',
+'en/organizacija-vjencanja'=>'',
+'en/izleti'=>'',
+'en/zabava'=>'',
+'en/zdravstveni-turizam'=>'',
+'en/transfer'=>'',
+'en/ketering-i-organizacija'=>'',
+'termag-jahorina-tour-form'=>'',
+'en/naslovna/specijalne-ponude/ski-opening'=>'',
+'en/relax-package'=>'',
+'en/romantic-package'=>'',
+'en/back-to-nature-package-2-nights'=>'',
+'en/hotel-termag-jahorina/special-offers/promo-packages/family-package'=>'',
+'en/hotel-termag-jahorina/conferences-seminars/forms'=>'',
+'challenge-race-form-ru'=>'',
+'ru/'=>'',
+'ru/spa-and-wellness'=>'',
+'ru/kamera'=>'',
+'ru/challenge-race'=>'',
+'ru/rezervacije'=>'',
+'ru/sobe'=>'',
+'ru/apartmani'=>'',
+'ru/villa-termag'=>'',
+'ru/galerija/hotel'=>'',
+'ru/galerija/jahorina'=>'galerija',
+'ru/galerija/koliba'=>'galerija',
+'ru/galerija/konferencijska-sala'=>'galerija',
+'ru/galerija/restoran'=>'galerija',
+'ru/galerija/sobe'=>'galerija',
+'ru/galerija/spa'=>'galerija',
+'ru/galerija/usluge'=>'galerija',
+'ru/galerija/smjestaj-apartmani'=>'galerija',
+'ru/galerija/zabava'=>'galerija',
+'ru/galerija/villa-termag'=>'galerija',
+'ru/galerija/vjencanja'=>'galerija',
+'ru/galerija/team-building'=>'galerija',
+'ru/ljetne-aktivnosti'=>'',
+'ru/usluge'=>'',
+'ru/o-hotelu'=>'',
+'ru/jahorina'=>'',
+'ru/prijatelji-hotela'=>'',
+'ru/download'=>'',
+'ru/galerija'=>'',
+'ru/kontakt'=>'',
+'ru/kamin-sala'=>'',
+'ru/hotelski-restoran'=>'',
+'ru/koliba'=>'',
+'ru/promo-paketi'=>'',
+'ru/organizacija-vjencanja'=>'',
+'ru/izleti'=>'',
+'ru/zabava'=>'',
+'ru/zdravstveni-turizam'=>'',
+'ru/transfer'=>'',
+'ru/konferencijska-sala'=>'',
+'ru/ketering-i-organizacija'=>'',
+'ru/team-building'=>'',
+'ru/hotel-termag-jahorina/Специальные-предложения/ПРОМО-ПАКЕТЫ/special-offer-8th-march.html'=>'',
+'ru/Релакс-пакет'=>'',
+'ru/Романтичный-пакет'=>'',
+'ru/adrenalin-paket-2-nocenja'=>'',
+'ru/hotel-termag-jahorina/Специальные-предложения/ПРОМО-ПАКЕТЫ/promo-easter-offer-30-.html'=>'',
+];
+
+foreach ($redirects as $old => $new) {
+    Route::get($old, function() use ($new) { 
+        return Redirect::to($new, 301); 
+    });
+}
+
 foreach ($routes as $uri => $view) {
     Route::get($uri, fn() => view($view));
 }
@@ -67,6 +209,9 @@ Route::group(['prefix' => 'en'], function () use ($routes) {
         Route::get($uri, fn() => view($view));
     }
 });
+
+Route::get('sitemap.xml', 'App\Http\Controllers\SitemapController@index');
+
 Route::post('kontakt', 'App\Http\Controllers\MessageController@kontakt'); 
 Auth::routes(['verify' => false, 'register' => false]);
 
@@ -104,6 +249,9 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
 
     Route::resource('menu', 'App\Http\Controllers\MenuController')->except('show');
     Route::post('menu/ajax', 'App\Http\Controllers\MenuController@ajax');  
+
+    Route::resource('testimonials', 'App\Http\Controllers\TestimonialController')->except('show');
+    Route::post('testimonials/ajax', 'App\Http\Controllers\TestimonialController@ajax');  
 
     Route::resource('messages', 'App\Http\Controllers\MessageController')->except('show');
     Route::post('messages/ajax', 'App\Http\Controllers\MessageController@ajax');  

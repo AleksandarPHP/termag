@@ -1,4 +1,30 @@
 <section class="booking" data-aos="fade-up">
+    <style>
+        /* .guest-counter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} */
+
+.gests-wrapper button, .children-wrapper button{
+    background-color: transparent;
+    color: var(--text-color-primary);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.gests-wrapper button:disabled, .children-wrapper button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+#guest-count, #child-count {
+    text-align: center;
+}
+    </style>
     <div class="container">
         <form action="https://secure.phobs.net/booking.php" method="GET" target="_blank">
             <input type="hidden" name="company_id" value="ef330cb3f8f74caf95689177209df3e4">
@@ -37,35 +63,19 @@
                     />
                     <h4>Guests</h4>
                 </div>
-                <div class="wrapper-dropdown" id="dropdown">
-                    <span class="selected-display" id="destination"
-                        >Pick an option!</span
-                    >
-                    <svg
-                        class="arrow"
-                        id="drp-arrow"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="transition-all ml-auto rotate-180"
-                    >
-                        <path
-                            d="M7 14.5l5-5 5 5"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                    </svg>
-                    <ul class="dropdown">
-                        <li class="item">1 Adult</li>
-                        <li class="item">2 Adult</li>
-                        <li class="item">3 Adult</li>
-                        <li class="item">4 Adult</li>
-
-                    </ul>
+                <div class="gests-wrapper">
+                    <div>
+                        <button type="button" class="btn-decrease" onclick="updateGuestCount(-1)">-</button>
+                        <input
+                            type="number"
+                            id="guest-count"
+                            value="1"
+                            min="1"
+                            max="4"
+                            readonly
+                        />
+                        <button type="button" class="btn-increase" onclick="updateGuestCount(1)">+</button>
+                    </div>
                 </div>
             </div>
             <div>
@@ -78,33 +88,19 @@
                         <h4>Children</h4>
                     </div>
                 </div>
-                <div class="wrapper-dropdown" id="dropdown">
-                    <span class="selected-display" id="destination"
-                        >Pick an option!</span
-                    >
-                    <svg
-                        class="arrow"
-                        id="drp-arrow"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="transition-all ml-auto rotate-180"
-                    >
-                        <path
-                            d="M7 14.5l5-5 5 5"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        ></path>
-                    </svg>
-                    <ul class="dropdown">
-                        <li class="item">Child 1</li>
-                        <li class="item">Children 2</li>
-                        <li class="item">Children 3</li>
-                    </ul>
+                <div>
+                    <div class="children-wrapper"> 
+                        <button type="button" class="btn-decrease" onclick="updateChildCount(-1)">-</button>
+                        <input
+                            type="number"
+                            id="child-count"
+                            value="1"
+                            min="1"
+                            max="3"
+                            readonly
+                        />
+                        <button type="button" class="btn-increase" onclick="updateChildCount(1)">+</button>
+                    </div>
                 </div>
             </div>
             <input type="hidden" value="1" name="nights" id="ReserveNights">
@@ -147,5 +143,25 @@
     }
 
     checkInInput.addEventListener('input', syncCheckOut);
+
+    function updateGuestCount(change) {
+        const input = document.getElementById("guest-count");
+        let currentValue = parseInt(input.value);
+
+        const newValue = currentValue + change;
+        if (newValue >= 1 && newValue <= 4) {
+            input.value = newValue;
+        }
+    }
+
+    function updateChildCount(change) {
+        const inputCh = document.getElementById("child-count");
+        let currentChValue = parseInt(inputCh.value);
+
+        const newChValue = currentChValue + change;
+        if (newChValue >= 1 && newChValue <= 3) {
+            inputCh.value = newChValue;
+        }
+    }
     </script>
 </section>

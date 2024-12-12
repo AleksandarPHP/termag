@@ -19,45 +19,34 @@
         <div class="bg center" style="background-image: url('{{asset("assets/images/testimonials-bg.jpg")}}');"></div>
         <div class="container">
             <div class="testimonials-slider">
-                <div class="testimonials-wrapper">
-                    <div class="testimonials-top">
-                        <p>
-                            "Naš boravak u Hotelu Termag bio je fantastičan! Smještaj je bio prostran i besprijekorno čist, savršen za našu porodicu. Djeca su uživala u raznovrsnim aktivnostima koje je hotel organizovao, dok smo mi roditelji uživali u opuštajućem termalnom spa iskustvu. Osoblje je bilo izuzetno ljubazno, hrana odlična, a atmosfera opuštajuća i prijateljska. Toplo preporučujemo Hotel Termag svim porodicama koje žele kvalitetan odmor u predivnom okruženju."
-                        </p>
-                        <img src="{{asset('assets/images/test-1.png')}}" alt="testimonial" class="img-fluid">
-                    </div>
-                    <div class="testimonials-bottom">
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
+                @php
+                    $testimonials = App\Models\Testimonial::where('is_active', 1)->get();
+                @endphp
+                @if ($testimonials)
+                @foreach ($testimonials as $testimonial)
+                    <div class="testimonials-wrapper">
+                        <div class="testimonials-top">
+                            <p>
+                                {{$testimonial->description}}
+                            </p>
+                            @if ($testimonial->image)
+                                <img src="{{asset('storage/'.$testimonial->image)}}" alt="{{$testimonial->name}}" class="img-fluid">
+                            @else
+                                <img src="{{asset('assets/images/test-1.png')}}" alt="testimonial" class="img-fluid">
+                            @endif
                         </div>
-                        <h4>Ema Kovačević</h4>
-                        <h5>Zadovoljna Mušterija i Mama</h5>
-                    </div>
-                </div>
-                <div class="testimonials-wrapper">
-                    <div class="testimonials-top">
-                        <p>
-                            "Naš boravak u Hotelu Termag bio je fantastičan! Smještaj je bio prostran i besprijekorno čist, savršen za našu porodicu. Djeca su uživala u raznovrsnim aktivnostima koje je hotel organizovao, dok smo mi roditelji uživali u opuštajućem termalnom spa iskustvu. Osoblje je bilo izuzetno ljubazno, hrana odlična, a atmosfera opuštajuća i prijateljska. Toplo preporučujemo Hotel Termag svim porodicama koje žele kvalitetan odmor u predivnom okruženju."
-                        </p>
-                        <img src="{{asset('assets/images/test-1.png')}}" alt="testimonial" class="img-fluid">
-                    </div>
-                    <div class="testimonials-bottom">
-                        <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button>
-                        <div class="rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
+                        <div class="testimonials-bottom">
+                            <div class="rating">
+                                @for ($i = 1; $i <= $testimonial->stars; $i++)
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                @endfor
+                            </div>
+                            <h4>{{$testimonial->name}}</h4>
+                            <h5>{{$testimonial->short_description}}</h5>
                         </div>
-                        <h4>Ema Kovačević</h4>
-                        <h5>Zadovoljna Mušterija i Mama</h5>
                     </div>
-                </div>
+                @endforeach
+                @endif
             </div>
         </div>
     </section>

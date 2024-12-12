@@ -26,6 +26,7 @@
           array('cms/settings/1/edit', 'Podesavaja', 'cog'),
           array('cms/menu', 'Meni', 'bars'),
           array('cms/packages', 'Paketi', 'th-list'),
+          array('cms/testimonials', 'Recenzije', 'star'),
           array('cms/gallery', 'Galerija', 'camera-retro'),
           array('cms/messages', 'Inbox', 'envelope'),
         );

@@ -99,7 +99,7 @@ class PackageController extends Controller
             'url' => ['nullable', 'string', 'max:191'],
             'urlTitle' => ['nullable', 'string', 'max:191'],
             'is_active' => ['nullable', 'string', 'in:1'],
-            'image' => ['nullable', 'mimes:jpeg,png,svg', 'image', 'max:5000'],
+            'image' => ['nullable', 'mimes:jpeg,png,svg,webp', 'image', 'max:5000'],
         ]);  
         
         $image = null;
