@@ -2,7 +2,7 @@
 
 <main>
     <section class="weather">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="wrapper">
                 <h1 class="title-larger">Vrijeme</h1>
@@ -33,7 +33,7 @@
                         @endisset
                     </div>
                     <div class="weather-card">
-                    <div class="bg center" style="opacity:0.2;background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+                    <div class="bg center" style="opacity:0.2;background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
                         <div>
                             <div>
                                 <h5>PRECIPITATION</h5>

@@ -60,7 +60,7 @@
     </section>
 
     <section class="wellness-spa reversed">
-        <div class="bg" style="opacity: 0.2;z-index:1;background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="opacity: 0.2;z-index:1;background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             @php $text =  Helper::text(25) @endphp
             <div>

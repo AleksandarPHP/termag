@@ -36,7 +36,7 @@
     </section>
     <section class="experience">
     @php $text =  Helper::text(95) @endphp
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
         <div class="container">
             <div class="text-center">
@@ -113,7 +113,7 @@
     </section>
     @include('partials/socials')
     <section class="special registration registration-2">
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
             <div class="container">
                 <div class="text-center">

@@ -19,7 +19,7 @@
     @include('partials/socials')
 
     <section class="special hsnpk">
-                <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+                <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
                 <div class="container">
                    @php $text =  Helper::text(203) @endphp
                   @isset($text->subtitle)

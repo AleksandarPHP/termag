@@ -51,7 +51,7 @@
         </div>
     </section>
     <section class="special registration packages packages-2">
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
             <div class="container">
                 <div class="porodicni-paket text-center">
@@ -184,7 +184,7 @@
 
     <section class="experience">
         @php $text =  Helper::text(112) @endphp
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
         <div class="container">
             <div class="text-center">
@@ -202,19 +202,19 @@
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-1.jpg')}}" alt="kuglana">
-                            <figcaption>Kuglana</figcaption>
+                            <figcaption>{{__('Bowling alley')}}</figcaption>
                         </figure>
                     </div>
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-2.jpg')}}" alt="kuglana">
-                            <figcaption>Igraonica za decu</figcaption>
+                            <figcaption>{{__('Playroom for children')}}</figcaption>
                         </figure>
                     </div>
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
                         <figure>
                             <img class="img-fluid" src="{{asset('assets/images/exp-3.jpg')}}" alt="kuglana">
-                            <figcaption>Foaje</figcaption>
+                            <figcaption>{{__('Foyer')}}</figcaption>
                         </figure>
                     </div>
                 </div>

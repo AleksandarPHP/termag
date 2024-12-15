@@ -16,7 +16,7 @@
     </section>
 
     <section class="special registration packages" style="padding-top: 0">
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
             <div class="container">
                 <div class="porodicni-paket text-center">
                     @php
@@ -57,7 +57,7 @@
                             <p class="txt">
                                 *{{__('The package is valid from')}} {{ \Carbon\Carbon::parse($item->from_date)->format('d.m.Y') }} {{__('to')}} {{\Carbon\Carbon::parse($item->to_date)->format('d.m.Y')}}
                             </p>
-                            <a href="#" class="btnn btn_primary mt-4">Book now</a>
+                            <a href="#" class="btnn btn_primary mt-4">{{__('Book now')}}</a>
                         </div>
                     </div>  
                     @endforeach

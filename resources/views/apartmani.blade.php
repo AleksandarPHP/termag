@@ -17,7 +17,7 @@
     @include('partials/socials')
 
     <section class="apartman">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="row">
                 @php $text =  Helper::text(17) @endphp
@@ -86,7 +86,7 @@
     </section>
 
     <section class="apartman">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/section-decor.png')}}" alt="dekoracija">
         <div class="container">
             @php $text =  Helper::text(19) @endphp
@@ -116,7 +116,7 @@
     </section>
 
     <section class="apartman apartman-2">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="row">
                 @php $text =  Helper::text(20) @endphp
@@ -146,7 +146,7 @@
     </section>
     <section class="experience">
         @php $text =  Helper::text(16) @endphp
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag" class="img-fluid">
         <div class="container">
             <div class="text-center">

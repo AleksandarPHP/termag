@@ -4,7 +4,7 @@
     @section('content')
 <main>
     <section class="weather snow-height">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="wrapper">
             @php $text =  Helper::text(198) @endphp

@@ -11,28 +11,30 @@
                 </a>
 
                 <div>
-                    <h4>HOTEL TERMAG</h4>
+                    <h4>{{$settings->title}}</h4>
                     <p>
-                        Olimpijska 4 <br />
+                        @isset($settings->address)
+                        {{$settings->address}}
+                        @endisset <br />
                         Bosna i Hercegovina
                     </p>
                     <div>
-                        <a href="#">Book now</a>
+                        <a href="https://secure.phobs.net/book.php?page=availability&companyid=822&hotelid=4791&checkin=2024-12-12&checkout=2024-12-13&crcid=a18a7f494542089c9fdb88aa5348bf6f">{{__('Book now')}}</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <a href="https://maps.app.goo.gl/VxJB2sWoA1AwoTRM7" target="_blank">
                     <img
-                    src="{{ asset('assets/images/mapa.png') }}"
+                    src="{{ asset('assets/images/mapa.webp') }}"
                     alt="mapa"
                     class="img-fluid"
                     />
                 </a>
             </div>
             <div class="col-lg-3">
-                <h5>Budimo u</h5>
-                <h2>Kontaktu</h2>
+                <h5>{{__("Let's be in")}}</h5>
+                <h2>{{__('Contact')}}</h2>
 
                 <div class="cta-wrapper">
                     <img
@@ -41,7 +43,7 @@
                         class="img-fluid"
                     />
                     <p>
-                        POZOVITE
+                        {{__('CALL')}}
                         @isset($settings->phone)
                             <a href="tel:{{$settings->phone}}">{{$settings->phone}}</a>
                         @endisset
@@ -54,7 +56,7 @@
                         class="img-fluid"
                     />
                     <p>
-                        Pošaljite MEJL
+                        {{__('Send an EMAIL')}}
                         <a href="mailto:info@termaghotel.com"
                             >info@termaghotel.com</a
                         >
@@ -62,33 +64,33 @@
                 </div>
 
                 <div class="cta-links">
-                    <a href="#">
+                    <a href="https://secure.phobs.net/book.php?page=availability&companyid=822&hotelid=4791&checkin=2024-12-12&checkout=2024-12-13&crcid=a18a7f494542089c9fdb88aa5348bf6f">
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Bukiraj
+                        {{__('Book now')}}
                     </a>
                     <a href="#">
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Sobe i Cijene
+                        {{__('Rooms and Prices')}}
                     </a>
                     <a href="#">
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Paketi
+                        {{__('Packages')}}
                     </a>
                     <a href="#">
                         <img
                             src="{{ asset('assets/images/arrow-gold.svg') }}"
                             alt="strelica"
                         />
-                        Usluge
+                        {{__('Services')}}
                     </a>
                 </div>
             </div>

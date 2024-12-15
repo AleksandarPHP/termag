@@ -2,7 +2,7 @@
 
 <main>
     <section class="weather gallery-intro">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="wrapper">
                 <h1 class="title-larger">Galerija</h1>

@@ -29,7 +29,7 @@
     @include('partials/booking')
 
     <section class="special registration packages packages-2">
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
             <div class="container">
                 <div class="text-center">

@@ -42,7 +42,7 @@
     </section>
     <section class="wellness-spa reversed ski-info">
         @php $text =  Helper::text(143) @endphp
-        <div class="bg" style="opacity: 0.2;z-index:1;background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="opacity: 0.2;z-index:1;background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-left" data-aos-duration="600">

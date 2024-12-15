@@ -5,7 +5,7 @@
 <main>
     <section class="weather gallery-intro">
         @php $text =  Helper::text(194) @endphp
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="wrapper">
                 @isset($text->title)

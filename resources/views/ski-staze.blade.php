@@ -173,7 +173,7 @@
 
     <section class="special ski-offers">
       @php $text =  Helper::text(162) @endphp
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             @isset($text->title)
             <h2 class="title-smaller">{{$text->title}}</h2>

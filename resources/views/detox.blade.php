@@ -25,7 +25,7 @@
     </section>
 
     <section class="experience detox-services">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="text-center">
                 <div class="row">

@@ -30,10 +30,8 @@
             <input type="hidden" name="company_id" value="ef330cb3f8f74caf95689177209df3e4">
             <input type="hidden" name="hotel" value="d720302542a2930329ff91e521d142aa">
             <input type="hidden" name="lang" value="rs">
-            <input type="hidden" name=" " value="1">
+            <input type="hidden" name="unit_select" value="1">
             <input type="hidden" name="units" value="1">
-            <input value="2" type="hidden" name="adults[1]" id="inputAdults" readonly="true" >
-            <input value="0" type="hidden" name="chd[1]" id="inputChildren" readonly="true" >
 
             <div>
                 <div>
@@ -67,12 +65,7 @@
                     <div>
                         <button type="button" class="btn-decrease" onclick="updateGuestCount(-1)">-</button>
                         <input
-                            type="number"
-                            id="guest-count"
-                            value="1"
-                            min="1"
-                            max="4"
-                            readonly
+                            name="adults[1]" type="text" id="guest-count" value="2" min="1" max="4" readonly
                         />
                         <button type="button" class="btn-increase" onclick="updateGuestCount(1)">+</button>
                     </div>
@@ -91,13 +84,7 @@
                 <div>
                     <div class="children-wrapper"> 
                         <button type="button" class="btn-decrease" onclick="updateChildCount(-1)">-</button>
-                        <input
-                            type="number"
-                            id="child-count"
-                            value="1"
-                            min="1"
-                            max="3"
-                            readonly
+                        <input name="chd[1]" type="text" id="child-count" value="0" min="0" max="3" readonly
                         />
                         <button type="button" class="btn-increase" onclick="updateChildCount(1)">+</button>
                     </div>
