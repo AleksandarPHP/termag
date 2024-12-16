@@ -55,11 +55,11 @@
                             @isset($weathers)
                                 @foreach($weathers as $date => $data)
                                     @continue($loop->first)
-                                    <div class="col-md-3 col-6">
+                                    <div class="col-md-6 col-6">
                                         <div>
                                             <img src="{{ $data['icon'] }}" alt="vremenska ikonica">
                                             <h6>{{ $date }}</h6>
-                                            <p><strong>{{ $data['avgtemp'] }}°C</strong></p>
+                                            <p class="avg"><strong>{{ $data['avgtemp'] }}°C</strong></p>
                                         </div>
                                     </div>
                                 @endforeach
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="location">
-                            <p>
+                            <p class="avg">
                                 <img src="{{asset('assets/images/lokacija.svg')}}" alt="lokacija">
                                 Jahorina
                             </p>

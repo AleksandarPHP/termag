@@ -20,7 +20,7 @@ class WatherForecast
         $response = Http::get($this->baseUri, [
             'key' => '5a5d279242ff4766aa7111744241711',
             'q' => 'Jahorina',
-            'days' => '4',
+            'days' => '3',
             'aqi' => 'no',
             'alerts' => 'no',
         ]);
