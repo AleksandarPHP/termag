@@ -146,7 +146,7 @@
         let currentChValue = parseInt(inputCh.value);
 
         const newChValue = currentChValue + change;
-        if (newChValue >= 1 && newChValue <= 3) {
+        if (newChValue >= 0 && newChValue <= 3) {
             inputCh.value = newChValue;
         }
     }

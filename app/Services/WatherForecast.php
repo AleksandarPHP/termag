@@ -18,13 +18,13 @@ class WatherForecast
     public function getResults()  
     {
         $response = Http::get($this->baseUri, [
-            'key' => $this->apiKey,
+            'key' => '5a5d279242ff4766aa7111744241711',
             'q' => 'Jahorina',
-            'days' => '5',
+            'days' => '4',
             'aqi' => 'no',
             'alerts' => 'no',
         ]);
-        
+        dd($response->json());
         if ($response->successful()) {
             return $response->json();
         } else {
