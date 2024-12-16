@@ -24,7 +24,7 @@ class WatherForecast
             'aqi' => 'no',
             'alerts' => 'no',
         ]);
-        dd($response->json());
+
         if ($response->successful()) {
             return $response->json();
         } else {
