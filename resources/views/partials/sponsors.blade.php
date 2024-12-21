@@ -1,6 +1,6 @@
 <section class="booking sponsors">
     <div class="container-fluid">
-        <div class="wrapper">
+        <div class="wrapper" style="filter: grayscale(100%) brightness(50%);">
             <a href="#">
                 <img
                     src="{{ asset('assets/images/sponsor-1.svg') }}"
