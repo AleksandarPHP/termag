@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Message;
 use Illuminate\Support\Facades\Validator;
+use App\Helpers\Helper;
 
 class MessageController extends Controller
 {
@@ -52,8 +53,8 @@ class MessageController extends Controller
         foreach($rows as $row) {
             $data[] = [
                 '0' => $row->is_send ? '<i class="fa fa-check-square" aria-hidden="true"></i>' : '<i class="fa fa-spinner" aria-hidden="true"></i>',
-                '1' => '<a href="'.url('cms/menu/'.$row->id.'/edit').'" class="action-edit">'.$row->name.'</a>',
-                '2' => '<a href="'.url('cms/menu/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-envelope" aria-hidden="true"></i></a>',
+                '1' => '<a href="'.url('cms/messages/'.$row->id.'/edit').'" class="action-edit">'.$row->name.'</a>',
+                '2' => '<a href="'.url('cms/messages/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-envelope" aria-hidden="true"></i></a>',
             ];
         }
         
@@ -69,27 +70,22 @@ class MessageController extends Controller
 
     public function kontakt(Request $request)
     {
-
-        $validator = Validator::make($request->all(), [
+        $request->validate([
             'name' => ['required', 'string', 'max:191'],
-            'email' => ['required', 'email', 'max:191'],
-            'tel' => ['required', 'string', 'max:191'],
-            'description' => ['required', 'string', 'max:191'],
+            'tel' => ['required', 'string'],
+            'email' => ['required', 'string', 'max:191'],
+            'description' => ['required', 'string'],
             'date' => ['required', 'string', 'max:191'],
-            'files' => ['nullable', 'array', 'max:3'],
-            'files.*' => ['nullable', 'mimes:jpeg,jpg,svg,docs', 'max:5000'],
-        ]);           
-        
-        $request->language = "en";
-        if($request->language == "en") {
-            app()->setLocale('en');
-            setlocale(LC_ALL, 'en_US.UTF-8');
-        } else { 
-            app()->setLocale('sr');
-            setlocale(LC_ALL, 'sr_RS.utf8@latin');
-        } 
+            'file' => ['nullable', 'array', 'max:4'],
+            'file.*' => ['nullable', 'mimes:docx,pdf,jpeg,png,svg', 'file', 'max:7000']
+        ]);   
 
-        if ($validator->fails()) return redirect(url()->previous() .'#kontakt')->withErrors($validator)->withInput();
+        $files = [];
+        if($request->hasFile('file')){
+            foreach($request->file as $file){
+                $files[] = Helper::saveFile($file, 'MessageFile', 'Joviac');
+            }
+        }
 
         Message::create([
             'name' => $request->name,
@@ -97,7 +93,7 @@ class MessageController extends Controller
             'tel' => $request->tel,
             'description' => $request->description,
             'date' => $request->date,
-            'file' => $request->file,
+            'file' => $files,
         ]);
 
         return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);

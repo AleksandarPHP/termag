@@ -618,7 +618,17 @@ hr {
 .worker_checkbox input:checked + div h6 {
   color: #194d84;
 }
-
+.list-group-item a {
+  width: 100%;
+  border: 1px solid #60a5fa;
+  border-radius: 5px;
+  background-color: #eff6ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 5px;
+}
 .btn-status {
   color: #fff;
   background-color: #84a8c8;

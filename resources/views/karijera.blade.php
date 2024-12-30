@@ -1,4 +1,5 @@
 @include('partials/header')
+{{-- <link rel="stylesheet" type="text/css" href="{{ asset('cmsfiles/css/dropzone.css') }}" /> --}}
 
 <main>
     <section class="career">
@@ -46,48 +47,36 @@
                         <h1>error</h1>
                     @endif
                     <h2 class="title-smaller">{{__('Apply easily')}}!</h2>
-                    <form action="{{ url('kontakt') }}" method="POST" enctype="multipart/form-data">
+                    <form action="upload-file" id="snedfile" class="sned_file" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
-                                <label for="title">{{__('Name and surname')}}</label>
-                                <input type="text" name="name" placeholder="Field text goes here">
+                                <label for="name">{{__('Name and surname')}}</label>
+                                <input id="name" type="text" name="name" value="{{old('name')}}" placeholder="Field text goes here" {!! $errors->has('name') ? 'style="border:1px solid red;"' : '' !!}>
                             </div>
                             <div class="col-md-6">
                                 <label for="tel">{{__('Mobile number')}}</label>
-                                    <input type="text" name="tel" placeholder="Number goes here">
+                                    <input type="text" name="tel" id="tel" value="{{old('tel')}}" placeholder="Number goes here" {!! $errors->has('tel') ? 'style="border:1px solid red;"' : '' !!}>
                             </div>
                             <div class="col-md-6">
-                                <label for="title">{{__('Date of Birth')}}</label>
-                                <input type="date" id="birthdate" name="date" onload="getDate()"  value="" />
+                                <label for="date">{{__('Date of Birth')}}</label>
+                                <input type="date" id="birthdate" id="date" value="{{old('date')}}" name="date" onload="getDate()"  {!! $errors->has('date') ? 'style="border:1px solid red;"' : '' !!}/>
                             </div>
                             <div class="col-md-6">
-                                <label for="title">{{__('')}}</label>
-                                <input type="email" name="email" placeholder="hello@gmail.com">
+                                <label for="email">{{__('')}}</label>
+                                <input type="email" name="email" id="email" value="{{old('email')}}" placeholder="hello@gmail.com" {!! $errors->has('email') ? 'style="border:1px solid red;"' : '' !!}>
                             </div>
                             <div class="col-md-12">
-                                <label for="title">{{__('Short biography')}}</label>
-                                <textarea name="description" id="" placeholder="Message text goes here" rows="5" cols="10"></textarea>
+                                <label for="description">{{__('Short biography')}}</label>
+                                <textarea name="description" id="description" placeholder="Message text goes here" rows="5" cols="10" {!! $errors->has('description') ? 'style="border:1px solid red;"' : '' !!}>{{old('description')}}</textarea>
                             </div>
                             <div class="col-md-12">
                                 <label for="file">{{__('Attach File')}}</label>
-                                {{-- <ul class="uploaded-files">  
-                                    <li>
-                                        <div>
-                                            <img src="{{asset('assets/images/link.svg')}}" alt="">
-                                            <p>imagename</p>
-                                        </div>
-                                        <button>
-                                            <img src="{{asset('assets/images/delete.svg')}}" alt="">
-                                        </button>
-                                    </li>
-                                </ul> --}}
-                                <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-                                <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
-                                <div class="dropzone" id="form-upload">
-                                    <img src="{{asset('assets/images/upload.svg')}}" alt="upload" class="img-fluid">
-                                    <h3>Drop here to attach or <span class="upload-btn">upload</span></h3>
-                                    <p>Max size: 5MB</p>
+                                <ul class="uploaded-files" id="uploaded-files"></ul>
+                                <div class="file-upload-area" id="file-upload-area">
+                                    <input type="file" id="file-input" name="file[]" multiple hidden>
+                                    <p>Drop here to attach or <span>upload</span></p>
+                                    <p class="file-max-size">Max size: 5MB</p>
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -103,6 +92,7 @@
     @include('partials/socials')
 
 </main>
+{{-- <script type="text/javascript" src="{{ asset('cmsfiles/js/dropzone.js') }}"></script> --}}
 <script>
     $(document).ready(function(e) {
       @if(session('status'))

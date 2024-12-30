@@ -226,3 +226,50 @@ $(".nnpk-slider-2").slick({
     fade: true,
     cssEase: 'linear' 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fileUploadArea = document.getElementById("file-upload-area");
+    const fileInput = document.getElementById("file-input");
+    const uploadedFilesList = document.getElementById("uploaded-files");
+
+    // Click handlers
+    fileUploadArea.addEventListener("click", () => fileInput.click());
+
+    // Drag and drop handlers
+
+    fileUploadArea.addEventListener("drop", (event) => {
+        event.preventDefault();
+        fileUploadArea.style.borderColor = "#ccc";
+
+        const files = event.dataTransfer.files;
+        displaySelectedFiles(files);
+    });
+
+    fileInput.addEventListener("change", () => {
+        const files = fileInput.files;
+        displaySelectedFiles(files);
+    });
+
+    function displaySelectedFiles(files) {
+        uploadedFilesList.innerHTML = "";
+        Array.from(files).forEach((file) => {
+            const listItem = document.createElement("li");
+
+            listItem.innerHTML = `
+                <div>
+                    <img src="/assets/images/link.svg" alt="">
+                    <p>${file.name}</p>
+                </div>
+                <button class="remove-file">
+                    <img src="/assets/images/delete.svg" alt="">
+                </button>
+            `;
+
+            listItem.querySelector(".remove-file").addEventListener("click", () => {
+                listItem.remove();
+            });
+
+            uploadedFilesList.appendChild(listItem);
+        });
+    }
+});

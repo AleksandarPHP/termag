@@ -205,7 +205,7 @@ Route::group(['prefix' => 'en'], function () use ($routes) {
 
 Route::get('sitemap.xml', 'App\Http\Controllers\SitemapController@index');
 
-Route::post('kontakt', 'App\Http\Controllers\MessageController@kontakt'); 
+Route::post('upload-file', 'App\Http\Controllers\MessageController@kontakt'); 
 Auth::routes(['verify' => false, 'register' => false]);
 
 Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function() {

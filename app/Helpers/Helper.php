@@ -61,6 +61,34 @@ class Helper {
         }
     }
 
+    
+    public static function saveFile($file, $folder, $title, $oldFile = null, $withoutDate = false)
+    {
+        try {
+            if (!is_null($oldFile) && Storage::exists('public/' . $oldFile))
+                Storage::delete('public/' . $oldFile);
+
+            if ($title === "" || !is_string($title))
+                $title = Str::random(40);
+
+            $time = time();
+            $date = $withoutDate ? '' : '/' . date('d-m-Y');
+            $filename = $time . '_' . Str::limit(Str::slug($title), 100, '') . '.' . $file->getClientOriginalExtension();
+
+            $br = 2;
+            while (Storage::exists('public/' . $folder . $date . '/' . $filename)) {
+                $filename = $time . '_' . Str::limit(Str::slug($title), 100, '') . '-' . $br . '.' . $file->getClientOriginalExtension();
+                $br++;
+            }
+
+            $file->storeAs('public/' . $folder . $date, $filename);
+
+            return $folder . $date . '/' . $filename;
+        } catch (Exception $e) {
+            return null;
+        }
+    }
+
     public static function deleteImage($oldImage)
     {
         try {

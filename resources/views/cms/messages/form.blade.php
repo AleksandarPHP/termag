@@ -16,8 +16,12 @@
         <li class="list-group-item">Email: <strong>{{$item->email}}</strong></li>
         <li class="list-group-item">Datum rodjenja: <strong>{{$item->date}}</strong></li>
         <li class="list-group-item">Tel: <strong>{{$item->tel}}</strong></li>
-        <li class="list-group-item">Kratak opis <br><strong>{{$item->description}}</strong></li>
-        <li class="list-group-item">File <br></li>
+        <li class="list-group-item">Kratak opis: <br><strong>{{$item->description}}</strong></li>
+        <li class="list-group-item">Prilog: <br>
+            @foreach ($item->file as $file)
+                <a href="{{asset('storage/'.$file)}}" target="_blank" rel="noopener noreferrer"><strong>Prilozeni dokument</strong></a><br>
+            @endforeach
+        </li>
       </ul>
 </div>
 @endsection

@@ -18,7 +18,7 @@
       <li @if(request()->is('cms/gallery'))class="active"@endif>
         <a href="{{ url('cms/gallery') }}"><i class="fas fa-camera-retro"></i>Galerija</a>
       </li>
-      <li @if(request()->is('cms/messages'))class="active"@endif>
+      <li @if(request()->is('cms/messages*'))class="active"@endif>
         <a href="{{ url('cms/messages') }}"><i class="fas fa-envelope"></i>Inbox</a>
       </li>
       <li @if(request()->is('cms/packages*'))class="active"@endif>

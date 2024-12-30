@@ -34,7 +34,7 @@
     
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:site" content="{{ $settings->title }}" />
-        <meta name="twitter:creator" content="@itsystem.io" />
+        <meta name="twitter:creator" content="@soft4tech.com" />
         <meta name="twitter:url" content="{{ url()->full() }}" />
     
         <!-- CSRF Token -->
@@ -52,7 +52,7 @@
         
         <title>{{ $settings->title }}</title>
         @endif
-
+        <link rel="canonical" href="{{ url()->full() }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="shortcut icon" href="{{asset('favicon.png')}}">
         <link rel="stylesheet" href="{{asset('assets/stylesheets/jquery.toast.css')}}">
@@ -83,6 +83,15 @@
         <script src="{{asset('assets/javascripts/jquery.toast.js')}}"></script>
 
         <title>Termag</title>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RD3R690D0M"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-RD3R690D0M');
+        </script>
     </head>
     <body>
     <header>
