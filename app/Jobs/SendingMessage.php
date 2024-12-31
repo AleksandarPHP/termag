@@ -46,7 +46,7 @@ class SendingMessage implements ShouldQueue
                     Log::error($e);
                 }
 
-                // $message->update(['is_send' => 1]);
+                $message->update(['is_send' => 1]);
             }
         }
     }

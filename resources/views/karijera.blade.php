@@ -1,4 +1,5 @@
 @include('partials/header')
+<script src="https://www.google.com/recaptcha/api.js?render=6LeIfqoqAAAAADO-AYxXMaO6Og7S7MkvmAHTIrsb"></script>
 {{-- <link rel="stylesheet" type="text/css" href="{{ asset('cmsfiles/css/dropzone.css') }}" /> --}}
 
 <main>
@@ -82,6 +83,11 @@
                             <div class="col-md-12">
                                 <button type="submit" class="btnn btn_primary w-100">{{__('Send')}}</button>
                             </div>
+                            <script>
+                                function onSubmit(token) {
+                                  document.getElementById("demo-form").submit();
+                                }
+                            </script>
                         </div>
                     </form>
                 </div>
