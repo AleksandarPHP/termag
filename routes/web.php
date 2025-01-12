@@ -29,6 +29,9 @@ use Illuminate\Support\Facades\Route;
         'villa-termag' => 'villa-termag',
         'detox' => 'detox',
         'spa' => 'spa',
+        'masaze-i-tretmani' => 'masaze-i-tretmani',
+        'masaze' => 'masaze',
+        'posebni-tretmani' => 'posebni-tretmani',
         'organic-facts' => 'organic-facts',
         'o-nama' => 'o-nama',
         'eco' => 'eco',
@@ -222,6 +225,15 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
         Route::post('pages/ajax-detail/{id}', 'ajaxDetail');  
         Route::get('pages/meta/{id}/edit', 'meta');  
         Route::get('pages/imagedelete/{id}', 'removeImage');
+    });
+
+    Route::resource('massage', 'App\Http\Controllers\MasageController')->except('show');
+    Route::controller(App\Http\Controllers\MasageController::class)->group(function () {
+        Route::post('massage/ajax',  'ajax');  
+        Route::get('massage/detail/{id}', 'detail'); 
+        Route::post('massage/ajax-detail/{id}', 'ajaxDetail');  
+        Route::get('massage/meta/{id}/edit', 'meta');  
+        Route::get('massage/imagedelete/{id}', 'removeImage');
     });
 
     Route::resource('packages', 'App\Http\Controllers\PackageController')->except('show');

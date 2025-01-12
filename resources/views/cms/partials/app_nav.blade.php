@@ -24,6 +24,9 @@
       <li @if(request()->is('cms/packages*'))class="active"@endif>
         <a href="{{ url('cms/packages') }}"><i class="fas fa-th-list"></i>Paketi</a>
       </li>
+      <li @if(request()->is('cms/massage*'))class="active"@endif>
+        <a href="{{ url('cms/massage') }}"><i class="fas fa-spa"></i>Masze</a>
+      </li>
       <li @if(request()->is('cms/testimonials'))class="active"@endif>
         <a href="{{ url('cms/testimonials') }}"><i class="fas fa-star"></i>Recenzije</a>
       </li>

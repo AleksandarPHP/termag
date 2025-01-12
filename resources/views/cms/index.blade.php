@@ -28,6 +28,7 @@
           array('cms/packages', 'Paketi', 'th-list'),
           array('cms/testimonials', 'Recenzije', 'star'),
           array('cms/gallery', 'Galerija', 'camera-retro'),
+          array('cms/massage', 'Masaze', 'spa'),
           array('cms/messages', 'Inbox', 'envelope'),
         );
         @endphp

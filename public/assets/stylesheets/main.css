@@ -1116,7 +1116,14 @@ footer .cta-links a {
     height: 250px; /* Željena visina slike */
     object-fit: cover; /* Da bi se uklopila u kvadrat */
 }
-
+.massage-smaller {
+    text-align: center;
+    margin: 4rem 0 4rem 0;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 6rem;
+    font-weight: 600;
+    color: var(--title-color);
+}
 .pills-wrapper .nav button {
     border-style: solid;
     border-color: var(--text-color-primary);

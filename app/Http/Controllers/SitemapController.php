@@ -194,6 +194,7 @@ class SitemapController extends Controller
             ['loc' => url('/ski-staze')],
             ['loc' => url('/sobe')],
             ['loc' => url('/spa')],
+            ['loc' => url('/masaze')],
             ['loc' => url('/spa-and-wellness')],
             ['loc' => url('/specijalni-paketi')],
             ['loc' => url('/svadbe')],
