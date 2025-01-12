@@ -73,6 +73,13 @@
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="time">Vrieme trajanja </label>
+                        <input name="time" type="number" class="form-control" id="time" placeholder="Vrieme trajanja" value="{{ old('time', $item->time) }}" {!! $errors->has('time') ? 'style="border-color:red;"' : '' !!}>
+                    </div>
+                </div>
+                <div class="col-md-12"><hr></div>
                 <div class="col-md-3">
                     <div class="form-group">
                         {{-- <label>Min: {{ $width }}x{{ $height }}px</label> --}}

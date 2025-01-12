@@ -84,6 +84,7 @@ class MasageController extends Controller
             'title' => ['required', 'string', 'max:191'],
             'category' => ['required', 'string', 'max:191'],
             'price' => ['required', 'string', 'max:191'],
+            'time' => ['required', 'string', 'max:191'],
             'text' => ['nullable', 'string'],
             'url' => ['nullable', 'string', 'max:191'],
             'urlTitle' => ['nullable', 'string', 'max:191'],
@@ -104,6 +105,7 @@ class MasageController extends Controller
         $massage->url = $request->url;
         $massage->category = $request->category;
         $massage->price = intval($request->price);
+        $massage->time = intval($request->time);
         $massage->image = $image;
         $massage->is_active = $request->is_active ? 1 : 0;
         $massage->save();
@@ -132,6 +134,7 @@ class MasageController extends Controller
             'text' => ['nullable', 'string'],
             'category' => ['required', 'string', 'max:191'],
             'price' => ['required', 'string', 'max:191'],
+            'time' => ['required', 'string', 'max:191'],
             'url' => ['nullable', 'string', 'max:191'],
             'urlTitle' => ['nullable', 'string', 'max:191'],
             'is_active' => ['nullable', 'string', 'in:1'],
@@ -149,6 +152,7 @@ class MasageController extends Controller
         $massage->url = $request->url;
         $massage->category = $request->category;
         $massage->price = intval($request->price);
+        $massage->time = intval($request->time);
         $massage->image = $image;
         $massage->is_active = $request->is_active ? 1 : 0;
         $massage->save();

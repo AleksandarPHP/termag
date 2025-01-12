@@ -56,6 +56,10 @@
                     <p class="txt">
                         {!!$text->text!!}
                     </p>
+                    <strong>
+                        <p>Cijena: {{$massage->price}} KM</p><br>
+                        <p>Trajanje masaže : {{$massage->time}}minuta</p>
+                      </strong>
                     @endisset
                     @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
@@ -91,9 +95,13 @@
                           <p class="txt">
                             {{$massage->text}}
                           </p>
+                          <strong>
+                            <p>Cijena: {{$massage->price}} KM</p><br>
+                            <p>Trajanje masaže : {{$massage->time}}minuta</p>
+                          </strong>
                           <div>
-                            <a href="asdf" class="btnn btn_gold">afdsadsfasddfs</a>
-                          </div>
+                            @if($massage->urlTitle!='' && $massage->url)<a href="{{Helper::url($massage->url)}}" class="btnn btn_gold">{{$massage->urlTitle}}</a>@endif
+                        </div>
                         </div>
                       </div>
                 </div>
@@ -127,7 +135,7 @@
                             {{$massage->text}}
                           </p>
                           <div>
-                            <a href="asdf" class="btnn btn_gold">afdsadsfasddfs</a>
+                            @if($massage->urlTitle!='' && $massage->url)<a href="{{Helper::url($massage->url)}}" class="btnn btn_gold">{{$massage->urlTitle}}</a>@endif
                           </div>
                         </div>
                       </div>

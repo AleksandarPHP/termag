@@ -1,10 +1,10 @@
 @extends('layouts.app')
-    @section('title', Helper::title(221))
-    @section('description', Helper::description(221))
+    @section('title', Helper::title(103))
+    @section('description', Helper::description(103))
     @section('content')
 <main>
     <section class="villa-termag organic-facts">
-        @php $text =  Helper::text(222) @endphp
+        @php $text =  Helper::text(104) @endphp
         <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
@@ -26,7 +26,7 @@
     <section class="special" style="padding:0 0 5rem 0;">
         <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
-            @php $text =  Helper::text(223) @endphp
+            @php $text =  Helper::text(208) @endphp
             @isset($text->title)
             <h2 class="massage-smaller">{{$text->title}}</h2>
             @endisset
@@ -52,8 +52,12 @@
                           <p class="txt">
                             {{$massage->text}}
                           </p>
+                          <strong>
+                            <p>Cijena: {{$massage->price}} KM</p><br>
+                            <p>Trajanje masaže : {{$massage->time}}minuta</p>
+                          </strong>
                           <div>
-                            <a href="asdf" class="btnn btn_gold">afdsadsfasddfs</a>
+                            @if($massage->urlTitle!='' && $massage->url)<a href="{{Helper::url($massage->url)}}" class="btnn btn_gold">{{$massage->urlTitle}}</a>@endif
                           </div>
                         </div>
                       </div>

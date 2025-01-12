@@ -52,8 +52,12 @@
                           <p class="txt">
                             {{$massage->text}}
                           </p>
+                          <strong>
+                            <p>Cijena: {{$massage->price}} KM</p><br>
+                            <p>Trajanje masaže : {{$massage->time}}minuta</p>
+                          </strong>
                           <div>
-                            <a href="asdf" class="btnn btn_gold">afdsadsfasddfs</a>
+                            @if($massage->urlTitle!='' && $massage->url)<a href="{{Helper::url($massage->url)}}" class="btnn btn_gold">{{$massage->urlTitle}}</a>@endif
                           </div>
                         </div>
                       </div>
