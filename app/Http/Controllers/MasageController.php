@@ -53,7 +53,7 @@ class MasageController extends Controller
             $data[] = [
                 '0' => $row->id,
                 '1' => $row->title,
-                '2' => $row->category,
+                '2' => ($row->category == 1 ? 'Masaze' : 'Posebni tretmani'),
                 '3' => '<a href="'.url('cms/massage/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a>',
                 '4' => '<a href="'.url('cms/massage').'" class="action-delete confirmation" data-id="'.$row->id.'"><i class="fa fa-trash"></i><form id="delete-form'.$row->id.'" action="'.url('cms/massage/'.$row->id).'" method="POST" style="display: none;">'.csrf_field().'<input type="hidden" name="_method" value="delete" /></form></a>',
             ];
