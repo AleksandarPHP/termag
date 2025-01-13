@@ -81,12 +81,12 @@
             <br>
             <div class="row">
                 @foreach ($massages as $massage)
-                <div class="col-lg-4">
+                <div class="col-lg-4 mt-4">
                     <div class="card" >
                       <div class="npk-slider-1"> 
                         <img src="{{asset("storage/".$massage->image)}}" class="card-img-top" alt="porodicni paket">
                     </div>
-                        <div class="card-body">
+                        <div class="card-body-masage">
                           <h5>{{$massage->title}}</h5>
                           <p class="txt">
                             {{$massage->text}}
@@ -120,12 +120,12 @@
             @endphp
             <div class="row mb-3">
                 @foreach ($massages as $massage)
-                <div class="col-lg-4">
+                <div class="col-lg-4 mt-4">
                     <div class="card" >
                       <div class="npk-slider-1"> 
                         <img src="{{asset("storage/".$massage->image)}}" class="card-img-top" alt="porodicni paket">
                     </div>
-                        <div class="card-body">
+                        <div class="card-body-masage">
                           <h5>{{$massage->title}}</h5>
                           <p class="txt">
                             {{$massage->text}}

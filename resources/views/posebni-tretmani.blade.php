@@ -1,10 +1,10 @@
 @extends('layouts.app')
-    @section('title', Helper::title(103))
-    @section('description', Helper::description(103))
+    @section('title', Helper::title(221))
+    @section('description', Helper::description(221))
     @section('content')
 <main>
     <section class="villa-termag organic-facts">
-        @php $text =  Helper::text(104) @endphp
+        @php $text =  Helper::text(222) @endphp
         <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
@@ -26,7 +26,7 @@
     <section class="special" style="padding:0 0 5rem 0;">
         <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
-            @php $text =  Helper::text(208) @endphp
+            @php $text =  Helper::text(223) @endphp
             @isset($text->title)
             <h2 class="massage-smaller">{{$text->title}}</h2>
             @endisset
@@ -42,12 +42,12 @@
             @endphp
             <div class="row mb-3">
                 @foreach ($massages as $massage)
-                <div class="col-lg-4">
+                <div class="col-lg-4 mt-4">
                     <div class="card" >
                       <div class="npk-slider-1"> 
                         <img src="{{asset("storage/".$massage->image)}}" class="card-img-top" alt="porodicni paket">
                     </div>
-                        <div class="card-body">
+                        <div class="card-body-masage">
                           <h5>{{$massage->title}}</h5>
                           <p class="txt">
                             {{$massage->text}}
