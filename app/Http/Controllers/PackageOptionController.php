@@ -109,11 +109,12 @@ class PackageOptionController extends Controller
 
         $option = new PackageOption;
         $option->setTranslation('title', $lang, $request->title);
-        $option->setTranslation('price', $lang, $request->price);
         $option->setTranslation('options', $lang, $options);
 
         $option->package_id = $request->package_id;
         $option->nights = $request->nights;
+        $option->price = $request->price;
+        $option->priceEur = $request->priceEur;
         $option->from_date = $request->from_date;
         $option->to_date = $request->to_date;
         $option->is_active = $request->is_active ? 1 : 0;
@@ -146,8 +147,9 @@ class PackageOptionController extends Controller
             'package_id' => ['nullable', 'string'],
             'nights' => ['nullable', 'numeric', 'max:9999'],
             'price' => ['nullable', 'numeric', 'max:9999'],
-            'from_date' => ['required', 'date'],
-            'to_date' => ['required', 'date'],
+            'priceEur' => ['nullable', 'numeric', 'max:9999'],
+            'from_date' => ['nullable', 'date'],
+            'to_date' => ['nullable', 'date'],
             'is_active' => ['nullable', 'string', 'in:1'],
         ]);
 
@@ -167,16 +169,20 @@ class PackageOptionController extends Controller
         }
 
         $option->setTranslation('title', $lang, $request->title);
-        $option->setTranslation('price', $lang, $request->price);
         $option->setTranslation('options', $lang, $options);
 
         if($lang=='sr') {     
             $option->package_id = $request->package_id;
             $option->nights = $request->nights;
+            $option->price = $request->price;
             $option->from_date = $request->from_date;
             $option->to_date = $request->to_date;
             $option->is_active = $request->is_active ? 1 : 0;
+        } else {
+            $option->priceEur = $request->priceEur;
         }
+
+        
         $option->save();
 
         Cache::forget( 'option');

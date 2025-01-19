@@ -66,7 +66,7 @@
                         </div>
                         <div class="text-center mt-5">
                             <p class="txt">
-                                {{__('THE PRICE OF THE PACKAGE IS')}} {{$item->price}} KM (348,00 EUR) + bto
+                                {{__('THE PRICE OF THE PACKAGE IS')}} {{$item->price}} KM ({{$item->priceEur}} EUR) + bto
                             </p>
                             <p class="txt">
                                 *{{__('The package is valid from')}} {{ \Carbon\Carbon::parse($item->from_date)->format('d.m.Y') }} {{__('to')}} {{\Carbon\Carbon::parse($item->to_date)->format('d.m.Y')}}

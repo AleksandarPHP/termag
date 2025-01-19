@@ -17,6 +17,7 @@ class PackageOption extends Model
         'package_id',
         'nights',
         'price',
+        'priceEur',
         'from_date',
         'to_date',
         'options',
@@ -25,7 +26,6 @@ class PackageOption extends Model
 
     public $translatable = [
         'title',
-        'price',
         'subtitle',
         'options'
     ];

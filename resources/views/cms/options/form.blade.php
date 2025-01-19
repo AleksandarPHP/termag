@@ -60,12 +60,21 @@
                         <input name="subtitle" type="text" class="form-control" id="subtitle" placeholder="Naziv" value="{{ old('subtitle', $item->getTranslation('subtitle', $lang, false)) }}" {!! $errors->has('subtitle') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
+                @if($lang=='sr')
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="price">Cijena</label>
-                        <input name="price" type="number" class="form-control" id="price" placeholder="Cijena" value="{{ old('price', $item->getTranslation('price', $lang, false)) }}" {!! $errors->has('price') ? 'style="border-color:red;"' : '' !!}>
+                        <input name="price" type="number" class="form-control" id="price" placeholder="Cijena" value="{{ old('price', $item->price) }}" {!! $errors->has('price') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
+                @else
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="priceEur">Cijena</label>
+                        <input name="priceEur" type="number" class="form-control" id="priceEur" placeholder="Cijena" value="{{ old('priceEur', $item->priceEur) }}" {!! $errors->has('priceEur') ? 'style="border-color:red;"' : '' !!}>
+                    </div>
+                </div>
+                @endif
                 <div class="col-md-12"><hr></div>
 
                 @if($lang=='sr')
