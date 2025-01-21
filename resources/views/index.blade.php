@@ -10,7 +10,7 @@
           </video> -->
 
           <iframe
-            src="https://www.youtube.com/embed/vojf_H2lLK4?autoplay=1&mute=1&controls=0&loop=1&playlist=vojf_H2lLK4"
+            src="https://www.youtube.com/embed/vojf_H2lLK4?autoplay=1&mute=1&controls=0&loop=1&playlist=vojf_H2lLK4&modestbranding=1&rel=0&v={{ time() }}"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
@@ -84,7 +84,7 @@
               <source data-src="https://termag.soft4tech.com/assets/videos/ukus-jahorine.webm" type="video/webm" />
           </video>-->
           <iframe
-            src="https://www.youtube.com/embed/y2NBVIgTY5g?autoplay=1&mute=1&controls=0&loop=1&playlist=y2NBVIgTY5g"
+            src="https://www.youtube.com/embed/y2NBVIgTY5g?autoplay=1&mute=1&controls=0&loop=1&playlist=y2NBVIgTY5g&modestbranding=1&rel=0&v={{ time() }}"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
@@ -149,7 +149,7 @@ y          </section>
               <source data-src="https://termag.soft4tech.com/assets/videos/termag-izazovi.webm" type="video/webm" />
           </video> -->
           <iframe
-            src="https://www.youtube.com/embed/sfGiP9BPm_M?autoplay=1&mute=1&controls=0&loop=1&playlist=sfGiP9BPm_M"
+            src="https://www.youtube.com/embed/sfGiP9BPm_M?autoplay=1&mute=1&controls=0&loop=1&playlist=sfGiP9BPm_M&modestbranding=1&rel=0&v={{ time() }}"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
