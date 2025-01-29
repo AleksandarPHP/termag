@@ -209,7 +209,7 @@ y          </section>
                     @endphp
                         @if ($packages)
                         @foreach ($packages as $package)
-                      <div class="col-lg-4">
+                      <div class="col-lg-4 mb-5">
                           <div class="card" data-aos="fade-right" data-aos-duration="800">
                               <img src="{{Helper::image($package->image, 425,250, false)}}" class="card-img-top" alt="Relax Paket" loading="lazy">
                               <div class="card-body">
