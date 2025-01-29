@@ -17,6 +17,9 @@
                 <img class="img-fluid" src="{{asset('assets/images/Gmail.svg')}}" alt="Gmail" />
             </a>
             @endif
+            <a href="{{Helper::url('visina-snega')}}" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="700" target="_blanck">
+                <img class="img-fluid" src="{{asset('assets/images/camera.svg')}}" alt="Gmail" />
+            </a>
         </div>
     </div>
 </section>
