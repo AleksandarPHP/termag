@@ -719,7 +719,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
 .special .card .card-body {
     text-align: center;
     padding: 3rem;
-    min-height: 380px;
+    min-height: 4rem;
 }
 
 .special .card .card-body .btnn {
