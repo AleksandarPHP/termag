@@ -45,7 +45,7 @@
                 <div class="col-lg-4 mt-4">
                     <div class="card" >
                       <div class="npk-slider-1"> 
-                        <img src="{{asset("storage/".$massage->image)}}" class="card-img-top" alt="porodicni paket">
+                        <img src="{{Helper::image($massage->image, 425,283, false)}}" class="card-img-top" alt="porodicni paket">
                     </div>
                         <div class="card-body-masage">
                           <h5>{{$massage->title}}</h5>
