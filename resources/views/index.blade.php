@@ -187,7 +187,7 @@ y          </section>
                     @foreach ($packages as $package)
                       <div class="col-lg-6">
                         <div class="card" data-aos="fade-right" data-aos-duration="800">
-                            <img src="{{asset("storage/".$package->image)}}" class="card-img-top" alt="porodicni paket" loading="lazy">
+                            <img src="{{Helper::image($package->image, 645,430, false)}}" class="card-img-top" alt="porodicni paket" loading="lazy">
                             <div class="card-body">
                               <h5>{{$package->title}}</h5>
                               <p class="txt">
@@ -211,7 +211,7 @@ y          </section>
                         @foreach ($packages as $package)
                       <div class="col-lg-4">
                           <div class="card" data-aos="fade-right" data-aos-duration="800">
-                              <img src="{{asset("storage/".$package->image)}}" class="card-img-top" alt="Relax Paket" loading="lazy">
+                              <img src="{{Helper::image($package->image, 425,250, false)}}" class="card-img-top" alt="Relax Paket" loading="lazy">
                               <div class="card-body">
                                 <h5>{{$package->title}}</h5>
                                 <p class="txt">
