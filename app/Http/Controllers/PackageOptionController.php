@@ -77,7 +77,7 @@ class PackageOptionController extends Controller
 
     public function create()
     {
-        $packages = Package::where('is_active', 1)->get();
+        $packages = Package::all();
         $lang = $request->lang ?? 'sr';
         $count = 12;
 
@@ -129,7 +129,7 @@ class PackageOptionController extends Controller
 
     public function edit(Request $request, $id)
     {
-        $packages = Package::where('is_active', 1)->get();
+        $packages = Package::all();
         $lang = $request->lang ?? 'sr';
         $count = 12;
 
