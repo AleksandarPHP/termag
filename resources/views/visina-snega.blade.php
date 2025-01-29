@@ -21,8 +21,8 @@
         </div>
     </section>
     <section class="full-width-iframe">
-        <a href="http://www.webcam.jahorina.org">
-            <iframe src="https://www.webcam.jahorina.org/" style="border:0px #ffffff none;" name="myiFrame" frameborder="1" marginheight="0px" marginwidth="0px" height="50%" width="100%" allowfullscreen></iframe>
+        <a href="http://webcam.jahorina.org">
+            <iframe src="https://webcam.jahorina.org/" style="border:0px #ffffff none;" name="myiFrame" frameborder="1" marginheight="0px" marginwidth="0px" height="50%" width="100%" allowfullscreen></iframe>
         </a>
     </section>
     <section class="villa-termag">
