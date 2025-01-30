@@ -40,7 +40,7 @@
             @php
                 $massages = App\Models\Masage::where('category', 1)->where('is_active', 1)->get();
             @endphp
-            <div class="row mb-3">
+            <div class="row mb-3 justify-content-center">
                 @foreach ($massages as $massage)
                 <div class="col-lg-4 mt-4">
                     <div class="card" >
