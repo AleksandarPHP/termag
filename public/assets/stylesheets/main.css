@@ -721,9 +721,21 @@ header .navbar .offcanvas-body .dropdown-item.active,
     padding: 3rem;
     min-height: 400px;
 }
+.special .card .card-download {
+    text-align: center;
+    padding: 3rem;
+    min-height: 200px;
+}
 
-.special .card .card-body .btnn {
+.special .card .card-body .btnn,
+.special .card .card-download .btnn {
     margin-top: 1.5rem;
+}
+
+.special .card .card-download-masage{
+    text-align: center;
+    padding: 3rem;
+    min-height: 275px;
 }
 
 .special .card .card-body-masage {
@@ -1105,6 +1117,10 @@ footer .cta-links a {
     margin-top: 2rem;
     color: #f2eaea;
     max-width: 75%;
+}
+.downloads {
+    padding: 5rem 5rem 10rem 5rem;
+
 }
 
 .gallery-intro {

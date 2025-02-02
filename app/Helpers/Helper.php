@@ -141,6 +141,21 @@ class Helper {
         }
     }
 
+    public static function deleteFile($oldFile)
+    {
+        try {
+            if (is_null($oldFile))
+                return false;
+
+            if (Storage::exists('public/' . $oldFile))
+                Storage::delete('public/' . $oldFile);
+
+            return true;
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
     public static function renameImage($oldImage, $folder, $title)
     {
         try {

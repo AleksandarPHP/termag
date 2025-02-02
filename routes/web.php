@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
         'konferencija-i-seminari' => 'konferencija-i-seminari',
         'prevoz-jahorina' => 'prevoz-jahorina',
         'svadbe' => 'svadbe',
+        'dokumenti' => 'dokumenti',
         'termag-hotelske-sobe' => 'termag-hotelske-sobe',
         'apartmani' => 'apartmani',
         'villa-termag' => 'villa-termag',
@@ -251,6 +252,9 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
 
     Route::resource('gallery', 'App\Http\Controllers\GalleryController')->only('index', 'destroy');
     Route::post('gallery/upload', 'App\Http\Controllers\GalleryController@upload');
+
+    Route::resource('documents', 'App\Http\Controllers\DocumentsController')->only('index', 'destroy');
+    Route::post('documents/upload', 'App\Http\Controllers\DocumentsController@upload');
 
     Route::resource('menu', 'App\Http\Controllers\MenuController')->except('show');
     Route::post('menu/ajax', 'App\Http\Controllers\MenuController@ajax');  

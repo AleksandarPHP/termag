@@ -29,6 +29,8 @@
           array('cms/testimonials', 'Recenzije', 'star'),
           array('cms/gallery', 'Galerija', 'camera-retro'),
           array('cms/massage', 'Masaze', 'spa'),
+          array('cms/documents', 'Dokumenti', 'download'),
+          array('cms/info', 'Informacije', 'info-circle'),
           array('cms/messages', 'Inbox', 'envelope'),
         );
         @endphp
