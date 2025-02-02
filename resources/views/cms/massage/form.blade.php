@@ -68,11 +68,21 @@
                 @if($lang=='sr')
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="price">Cijena </label>
-                        <input name="price" type="number" class="form-control" id="price" placeholder="Cijena" value="{{ old('price', $item->price) }}" {!! $errors->has('price') ? 'style="border-color:red;"' : '' !!}>
+                        <label for="price">Cijena</label>
+                        <input name="price" type="number" min="0" step="0.01" class="form-control" id="price" placeholder="Cijena" value="{{ old('price', $item->price) }}" {!! $errors->has('price') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>
+                @else
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="priceEur">Cijena</label>
+                        <input name="priceEur" type="number" class="form-control" id="priceEur" placeholder="Cijena" value="{{ old('priceEur', $item->priceEur) }}" {!! $errors->has('priceEur') ? 'style="border-color:red;"' : '' !!}>
+                    </div>
+                </div>
+                <div class="col-md-12"><hr></div>
+                @endif
+                @if($lang=='sr')
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="time">Vrieme trajanja </label>

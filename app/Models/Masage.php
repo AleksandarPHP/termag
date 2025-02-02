@@ -19,6 +19,7 @@ class Masage extends Model
         'urlTitle',
         'time',
         'price',
+        'priceEur',
         'is_active'
     ];
 

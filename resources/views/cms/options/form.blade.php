@@ -64,7 +64,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="price">Cijena</label>
-                        <input name="price" type="number" class="form-control" id="price" placeholder="Cijena" value="{{ old('price', $item->price) }}" {!! $errors->has('price') ? 'style="border-color:red;"' : '' !!}>
+                        <input name="price" type="number" min="0" step="0.01" class="form-control" id="price" placeholder="Cijena" value="{{ old('price', $item->price) }}" {!! $errors->has('price') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
                 @else

@@ -104,7 +104,7 @@ class MasageController extends Controller
 
         $massage->url = $request->url;
         $massage->category = $request->category;
-        $massage->price = intval($request->price);
+        $massage->price = $request->price;
         $massage->time = intval($request->time);
         $massage->image = $image;
         $massage->is_active = $request->is_active ? 1 : 0;
@@ -132,9 +132,9 @@ class MasageController extends Controller
         $request->validate([
             'title' => ['nullable', 'string', 'max:191'],
             'text' => ['nullable', 'string'],
-            'category' => ['required', 'string', 'max:191'],
-            'price' => ['required', 'string', 'max:191'],
-            'time' => ['required', 'string', 'max:191'],
+            'category' => ['nullable', 'string', 'max:191'],
+            'price' => ['nullable', 'string', 'max:191'],
+            'time' => ['nullable', 'string', 'max:191'],
             'url' => ['nullable', 'string', 'max:191'],
             'urlTitle' => ['nullable', 'string', 'max:191'],
             'is_active' => ['nullable', 'string', 'in:1'],
@@ -149,12 +149,16 @@ class MasageController extends Controller
         $massage->setTranslation('text', $lang, $request->text);
         $massage->setTranslation('urlTitle', $lang, $request->urlTitle);
 
-        $massage->url = $request->url;
-        $massage->category = $request->category;
-        $massage->price = intval($request->price);
-        $massage->time = intval($request->time);
-        $massage->image = $image;
-        $massage->is_active = $request->is_active ? 1 : 0;
+        if($lang == 'sr') {     
+            $massage->url = $request->url;
+            $massage->category = $request->category;
+            $massage->price = $request->price;
+            $massage->time = intval($request->time);
+            $massage->image = $image;
+            $massage->is_active = $request->is_active ? 1 : 0;
+        } else {
+            $massage->priceEur = intval($request->priceEur);
+        }
         $massage->save();
 
         Cache::forget('massage');

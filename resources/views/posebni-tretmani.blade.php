@@ -53,7 +53,7 @@
                             {{$massage->text}}
                           </p>
                           <strong>
-                            <p>Cijena: {{$massage->price}} KM</p><br>
+                            <p>Cijena: {{$massage->price}} KM ({{$message->priceEur}} EUR)</p><br>
                             <p>Trajanje masaže : {{$massage->time}}minuta</p>
                           </strong>
                           <div>
