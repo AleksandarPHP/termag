@@ -27,7 +27,7 @@
                                 Dropzone.options.dropzoneUploader = {
                                 paramName: "files",
                                 url: '{{ url('cms/documents/upload') }}',
-                                maxFilesize: 2,
+                                maxFilesize: 5,
                                 parallelUploads: 1,
                                 acceptedFiles: "application/pdf",
                                 sending: function (file, xhr, formData) {
