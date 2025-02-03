@@ -32,30 +32,6 @@
                         </div>
                     </div>
                 @endforeach
-                <div class="col-lg-4 mt-4">
-                    <div class="card" >
-                      <div class="npk-slider-1"> 
-                        </div>
-                        <div class="card-download-masage">
-                          <h5>Info</h5>
-                          <div class="mt-5">
-                            <a href="asfdas" class="btnn btn_gold">Peuzmi  <i class="fa fa-cloud-download" aria-hidden="true"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card" >
-                      <div class="npk-slider-1"> 
-                        </div>
-                        <div class="card-download-masage">
-                          <h5>Info</h5>
-                          <div class="mt-5">
-                            <a href="asfdas" class="btnn btn_gold">Peuzmi  <i class="fa fa-cloud-download" aria-hidden="true"></i></a>
-                          </div>
-                        </div>
-                      </div>
-                </div>
             </div>
         </div>
     </section>

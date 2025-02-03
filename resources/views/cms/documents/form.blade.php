@@ -37,7 +37,7 @@
                                     done();
                                 },
                                       
-                                dictDefaultMessage: '<?= preg_replace("/\r?\n/", "\\n", addslashes("Kliknite ovde ili prevucite slike")) ?>',
+                                dictDefaultMessage: '<?= preg_replace("/\r?\n/", "\\n", addslashes("Kliknite ovde ili prevucite slike (max 5MB)")) ?>',
                                 // dictFileTooBig: '<?= preg_replace("/\r?\n/", "\\n", addslashes("Dodavanje slike nije uspelo")) ?>',
                                 // dictInvalidFileType: '<?= preg_replace("/\r?\n/", "\\n", addslashes("Dodavanje slike nije uspelo")) ?>',
                                 // dictResponseError: '<?= preg_replace("/\r?\n/", "\\n", addslashes("Dodavanje slike nije uspelo")) ?>',
