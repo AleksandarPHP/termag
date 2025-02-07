@@ -256,6 +256,14 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
     Route::resource('documents', 'App\Http\Controllers\DocumentsController')->only('index', 'destroy');
     Route::post('documents/upload', 'App\Http\Controllers\DocumentsController@upload');
 
+    Route::resource('albums', 'App\Http\Controllers\AlbumController')->except('show');
+
+    Route::resource('info', 'App\Http\Controllers\InfoGallryController')->except('show');
+    Route::controller(App\Http\Controllers\InfoGallryController::class)->prefix('info')->group(function () {
+        Route::post('/ajax', 'ajax');    
+        Route::post('/{id}/upload', 'upload');
+        Route::delete('/{id}/delete', 'delete');
+    });
     Route::resource('menu', 'App\Http\Controllers\MenuController')->except('show');
     Route::post('menu/ajax', 'App\Http\Controllers\MenuController@ajax');  
 

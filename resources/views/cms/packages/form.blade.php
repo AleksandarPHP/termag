@@ -92,7 +92,14 @@
                         });
                     </script>
                 </div>
-                @endif
+                @endif 
+                <div class="col-md-12">
+                    <label class="form-check-label" for="flexSwitchCheckspecial">Specijalna ponuda?</label>
+                    <div class="form-check form-switch">
+                        <input name="special" value="1" class="form-check-input" style="padding-left: 35px; padding-top:20px;" type="checkbox" role="switch" id="flexSwitchCheckspecial" @checked(old('special', $item->special))>
+                    </div>
+                </div>
+                <div class="col-md-12"><hr></div>
                 <div class="col-md-12">
                     <label class="form-check-label" for="flexSwitchCheckChecked">Aktivan?</label>
                     <div class="form-check form-switch">

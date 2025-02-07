@@ -99,6 +99,7 @@ class PackageController extends Controller
             'url' => ['nullable', 'string', 'max:191'],
             'urlTitle' => ['nullable', 'string', 'max:191'],
             'is_active' => ['nullable', 'string', 'in:1'],
+            'special' => ['nullable', 'string', 'in:1'],
             'image' => ['nullable', 'mimes:jpeg,png,svg,webp', 'image', 'max:5000'],
         ]);  
         
@@ -115,6 +116,7 @@ class PackageController extends Controller
         $package->url = $request->url;
         $package->image = $image;
         $package->is_active = $request->is_active ? 1 : 0;
+        $package->special = $request->special ? 1 : 0;
         $package->save();
 
         Cache::forget('package');
@@ -142,6 +144,7 @@ class PackageController extends Controller
             'url' => ['nullable', 'string', 'max:191'],
             'urlTitle' => ['nullable', 'string', 'max:191'],
             'is_active' => ['nullable', 'string', 'in:1'],
+            'special' => ['nullable', 'string', 'in:1'],
             'image' => ['nullable', 'mimes:jpeg,png,svg', 'image', 'max:5000'],
         ]);  
         
@@ -153,9 +156,12 @@ class PackageController extends Controller
         $package->setTranslation('text', $lang, $request->text);
         $package->setTranslation('urlTitle', $lang, $request->urlTitle);
 
-        $package->url = $request->url;
-        $package->image = $image;
-        $package->is_active = $request->is_active ? 1 : 0;
+        if($lang=='sr') {     
+            $package->url = $request->url;
+            $package->image = $image;
+            $package->is_active = $request->is_active ? 1 : 0;
+            $package->special = $request->special ? 1 : 0;
+        }
         $package->save();
 
         Cache::forget('package');

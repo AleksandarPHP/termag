@@ -6,30 +6,22 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\InfoGallry;
 
-
-class Package extends Model
+class Album extends Model
 {
     use HasFactory, HasTranslations;
 
     protected $fillable = [
-        'title',
-        'text',
-        'image',
-        'url',
-        'urlTitle',
-        'is_active',
-        'special'
+        'title', 'is_active'
     ];
 
     public $translatable = [
-        'title',
-        'text',
-        'urlTitle'
+        'title'
     ];
 
-    public function options(): HasMany
+    public function infogallery(): HasMany
     {
-        return $this->hasMany(PackageOption::class);
+        return $this->hasMany(InfoGallry::class);
     }
 }

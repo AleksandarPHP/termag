@@ -19,7 +19,7 @@
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
             <div class="container">
                 @php
-                    $packages = App\Models\Package::all();
+                    $packages = App\Models\Package::where('special', 1)->where('special', 1)->get();
                 @endphp
                 @foreach ($packages as $package)
                 <div class="text-center">
