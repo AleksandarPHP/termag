@@ -6,9 +6,9 @@
     <li class="breadcrumb-item">
         <a href="{{ url('cms') }}">POČETNA</a>
     </li>
-    <li class="breadcrumb-item active">Stranice</li>
+    <li class="breadcrumb-item active">Informacije</li>
 </ol>
-<h1>Stranice</h1>
+<h1>Informacije</h1>
 <hr>
 @if($editing) 
 <div class="row change-language">
