@@ -28,17 +28,19 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="title">Naziv </label>
-                        <input name="title" type="text" class="form-control" id="title" placeholder="Naziv " value="{{ old('title', $item->getTranslation('title', $lang, false)) }}" {!! $errors->has('title') ? 'style="border-color:red;"' : '' !!}>
+                        <input name="title" type="text" class="form-control" id="title" placeholder="Naziv" value="{{ old('title', $item->getTranslation('title', $lang, false)) }}" {!! $errors->has('title') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>
-                <div class="col-md-12">
-                    <label class="form-check-label" for="flexSwitchCheckChecked">Aktivan?</label>
-                    <div class="form-check form-switch">
-                        <input name="is_active" value="1" class="form-check-input" style="padding-left: 35px; padding-top:20px;" type="checkbox" role="switch" id="flexSwitchCheckChecked" @checked(old('is_active', $item->is_active))>
+                @if ($lang == 'sr')
+                    <div class="col-md-12">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Aktivan?</label>
+                        <div class="form-check form-switch">
+                            <input name="is_active" value="1" class="form-check-input" style="padding-left: 35px; padding-top:20px;" type="checkbox" role="switch" id="flexSwitchCheckChecked" @checked(old('is_active', $item->is_active))>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-12"><hr></div>
+                    <div class="col-md-12"><hr></div>
+                @endif
             </div>
             <button type="submit" class="btn btn-danger mb-3">Sačuvaj</button>
             <a href="{{ url()->previous() }}" class="btn btn-secondary mb-3 ml-auto" style="margin-left: 10px">Odustani</a>

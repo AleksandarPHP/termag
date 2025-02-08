@@ -119,7 +119,7 @@ class MenuController extends Controller
 
     public function update(Request $request, $id)
     {
-        $menu = Menu::findOrFail($id);0;
+        $menu = Menu::findOrFail($id);
         $lang = $request->language ?? 'sr';
 
         $request->validate([

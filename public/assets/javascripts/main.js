@@ -118,7 +118,7 @@ $(".economic-slider").slick({
         // instead of a settings object
     ],
 });
-$(".apartments-slider").slick({
+$(".infogallery-slider").slick({
     dots: false,
     arrows: false,
     autoplay: true,
