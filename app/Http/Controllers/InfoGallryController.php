@@ -55,6 +55,7 @@ class InfoGallryController extends Controller
                 '0' => $row->id,
                 '1' => '<a href="'.url('cms/info/'.$row->id.'/edit').'" class="action-edit">'.$row->title.'</a>',
                 '2' => '<a href="'.url('cms/albums/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a>',
+                '3' => '<a href="'.url('cms/info/'.$row->id.'/edit').'" class="action-edit"><i class="fa fa-edit"></i></a>',
             ];
         }
         

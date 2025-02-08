@@ -1,4 +1,7 @@
-@include('partials/header')
+@extends('layouts.app')
+    @section('title', Helper::title(225))
+    @section('description', Helper::description(225))
+@section('content')
 @php
     $documents = App\Models\Documents::all();
 @endphp
@@ -7,10 +10,15 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="wrapper">
-                <h1 class="title-larger">Dokumenti</h1>
+                @php $text =  Helper::text(226) @endphp
+                @isset($text->title)
+                <h1 class="title-larger">{{$text->title}}</h1>
+                @endisset
+                @isset($text->text)
                 <p class="txt">
-                    Pogledajte našu galeriju fotografija i zavirite u svaki kutak hotela. Doživite raskoš i eleganciju koju vam nudimo i uvjerite se u luksuz i udobnost Termaga.
+                    {!!$text->text!!}
                 </p>
+                @endisset
             </div>
         </div>
     </section>
@@ -26,7 +34,7 @@
                             <div class="card-download-masage">
                             <h5>{{$document->original_name}}</h5>
                             <div class="mt-5">
-                                <a href="{{asset('storage/'.$document->file)}}" class="btnn btn_gold" target="_blank">{{__('Download')}}  <i class="fa fa-cloud-download" aria-hidden="true"></i></a>
+                                <a href="{{asset('storage/'.$document->file)}}" class="btnn btn_gold" target="_blank">Download   <i class="fa fa-cloud-download" aria-hidden="true"></i></a>
                             </div>
                             </div>
                         </div>
@@ -48,4 +56,4 @@
     </section> --}}
 </main>
 
-@include('partials/footer')
+@endsection     

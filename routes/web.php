@@ -25,6 +25,7 @@ use Illuminate\Support\Facades\Route;
         'prevoz-jahorina' => 'prevoz-jahorina',
         'svadbe' => 'svadbe',
         'dokumenti' => 'dokumenti',
+        'informacije' => 'informacije',
         'termag-hotelske-sobe' => 'termag-hotelske-sobe',
         'apartmani' => 'apartmani',
         'villa-termag' => 'villa-termag',

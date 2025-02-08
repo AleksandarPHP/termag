@@ -118,6 +118,12 @@ $(".economic-slider").slick({
         // instead of a settings object
     ],
 });
+$('#test').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3
+  });
+
 $(".lux-slider").slick({
     dots: false,
     arrows: false,

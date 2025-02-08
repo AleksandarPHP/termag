@@ -22,7 +22,7 @@
                     <th>Id</th>
                     <th>Naziv</th>
                     <th class="nosort text-center">Akcija</th>
-                    <th class="nosort text-center">Akcija</th>
+                    <th class="nosort text-center">Galerija</th>
                 </tr>
                 </thead>
                 <tfoot>
@@ -30,7 +30,7 @@
                     <th>Id</th>
                     <th>Naziv</th>
                     <th class="nosort text-center">Akcija</th>
-                    <th class="nosort text-center">Akcija</th>
+                    <th class="nosort text-center">Galerija</th>
                 </tr>
                 </tfoot>
             </table>
