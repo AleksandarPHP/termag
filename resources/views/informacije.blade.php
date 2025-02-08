@@ -19,9 +19,19 @@
         <div class="container">
             <div class="row mb-3 justify-content-center">
                 <div id="test">
-                    @foreach ($album->infogallery as $item)
-                        <div class="col-lg-4 mt-4">
-                            <img src="{{Helper::image($item->image, 645,430, false)}}" alt="">
+                    <div class="gallery-wrapper">
+                        @foreach ($album->infogallery as $gallery)
+                            <a href="{{ asset('storage/' . $gallery->image) }}" data-fancybox="gallery">
+                                <img class="img-thumbnail" src="{{ asset('storage/' . $gallery->image) }}" />
+                            </a>
+                        @endforeach
+                    </div>
+                    {{-- @foreach ($album->infogallery as $item)
+                        <div class="col-lg-4 mr-4">
+                            <div class="card">
+                                <img src="{{Helper::image($item->image, 645,430, false)}}" alt="">
+
+                            </div>
                             {{-- <div class="card" >
                             <div class="npk-slider-1"> 
                                 </div>
@@ -31,9 +41,9 @@
                                     <a href="{{asset('storage/'.$document->file)}}" class="btnn btn_gold" target="_blank">{{__('Download')}}  <i class="fa fa-cloud-download" aria-hidden="true"></i></a>
                                 </div>
                                 </div>
-                            </div> --}}
+                            </div> --}
                         </div>
-                    @endforeach
+                    @endforeach --}}
                 </div>
             </div>
         </div>

@@ -187,8 +187,7 @@ class Helper {
     public static function menu($id, $parent_id, $title, $link)
     {
         $code = '';
-        $models = Menu::where('is_active', 1)->where('parent_id', $id)->get(); 
-    
+        $models = Menu::where('is_active', 1)->where('parent_id', $id)->orderBy('order', 'ASC')->get(); 
         if ($parent_id) {
             $code .= '<li>
                         <a class="dropdown-item" href="'.Helper::url($link).'">'.$title.'</a>

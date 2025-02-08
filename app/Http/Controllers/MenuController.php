@@ -134,8 +134,8 @@ class MenuController extends Controller
         $menu->setTranslation('link', $lang, $request->input('link'));
         if($lang == 'sr') {     
             $menu->parent_id = $request->parent_id;
-        $menu->order = $request->order;
-        $menu->is_active = $request->is_active ? 1 : 0;
+            $menu->order = $request->order;
+            $menu->is_active = $request->is_active ? 1 : 0;
         }
         $menu->save();
 
