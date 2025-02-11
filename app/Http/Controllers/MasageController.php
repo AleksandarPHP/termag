@@ -157,7 +157,7 @@ class MasageController extends Controller
             $massage->image = $image;
             $massage->is_active = $request->is_active ? 1 : 0;
         } else {
-            $massage->priceEur = intval($request->priceEur);
+            $massage->priceEur = $request->priceEur;
         }
         $massage->save();
 
