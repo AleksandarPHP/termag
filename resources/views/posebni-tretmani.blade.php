@@ -1,10 +1,10 @@
 @extends('layouts.app')
-    @section('title', Helper::title(221))
-    @section('description', Helper::description(221))
+    @section('title', Helper::title(22))
+    @section('description', Helper::description(22))
     @section('content')
 <main>
     <section class="villa-termag organic-facts">
-        @php $text =  Helper::text(222) @endphp
+        @php $text =  Helper::text(22) @endphp
         <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
@@ -53,7 +53,7 @@
                             {{$massage->text}}
                           </p>
                           <strong>
-                            <p>Cijena: {{$massage->price}} KM ({{$message->priceEur}} EUR)</p><br>
+                            <p>Cijena: {{$massage->price}} KM ({{$massage->priceEur}} EUR)</p><br>
                             <p>Trajanje masaže : {{$massage->time}}minuta</p>
                           </strong>
                           <div>
