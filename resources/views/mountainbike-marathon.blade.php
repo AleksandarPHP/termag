@@ -55,7 +55,7 @@
                         <figure>
                             @php $text =  Helper::text(227) @endphp
                             @isset($text->image)
-                            <img class="img-fluid" src="{{Helper::image($text->image, 365,250, false)}}" alt="porodicna 8km">
+                            <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="porodicna 8km">
                             @endisset
                             @isset($text->title)
                             <figcaption>{{$text->title}}</figcaption>
@@ -66,7 +66,7 @@
                         <figure>
                             @php $text =  Helper::text(228) @endphp
                             @isset($text->image)
-                            <img class="img-fluid" src="{{Helper::image($text->image, 365,250, false)}}" alt="plava 24km">
+                            <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="plava 24km">
                             @endisset
                             @isset($text->title)
                             <figcaption>{{$text->title}}</figcaption>
@@ -77,7 +77,7 @@
                         <figure>
                             @php $text =  Helper::text(229) @endphp
                             @isset($text->image)
-                            <img class="img-fluid" src="{{Helper::image($text->image, 365,250, false)}}" alt="crvena 34km">
+                            <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="crvena 34km">
                             @endisset
                             @isset($text->title)
                             <figcaption>{{$text->title}}</figcaption>
