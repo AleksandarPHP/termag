@@ -53,20 +53,35 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
-                            <img class="img-fluid" src="{{asset('assets/images/kat-1.png')}}" alt="porodicna 8km">
-                            <figcaption>Porodična (8km)</figcaption>
+                            @php $text =  Helper::text(227) @endphp
+                            @isset($text->image)
+                            <img class="img-fluid" src="{{Helper::image($package->image, 365,250, false)}}" alt="porodicna 8km">
+                            @endisset
+                            @isset($text->title)
+                            <figcaption>{{$text->title}}</figcaption>
+                            @endisset
                         </figure>
                     </div>
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
                         <figure>
-                            <img class="img-fluid" src="{{asset('assets/images/kat-2.jpg')}}" alt="plava 24km">
-                            <figcaption>Plava (24km)</figcaption>
+                            @php $text =  Helper::text(228) @endphp
+                            @isset($text->image)
+                            <img class="img-fluid" src="{{Helper::image($package->image, 365,250, false)}}" alt="plava 24km">
+                            @endisset
+                            @isset($text->title)
+                            <figcaption>{{$text->title}}</figcaption>
+                            @endisset
                         </figure>
                     </div>
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
                         <figure>
-                            <img class="img-fluid" src="{{asset('assets/images/kat-3.jpg')}}" alt="crvena 34km">
-                            <figcaption>Crvena (34km)</figcaption>
+                            @php $text =  Helper::text(229) @endphp
+                            @isset($text->image)
+                            <img class="img-fluid" src="{{Helper::image($package->image, 365,250, false)}}" alt="crvena 34km">
+                            @endisset
+                            @isset($text->title)
+                            <figcaption>{{$text->title}}</figcaption>
+                            @endisset
                         </figure>
                     </div>
                 </div>
