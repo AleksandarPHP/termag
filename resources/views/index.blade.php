@@ -89,9 +89,9 @@
             allow="autoplay; encrypted-media"
             allowfullscreen>
           </iframe> --}}
-          <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
+          @php $text =  Helper::text(8) @endphp
+          <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
               <div class="container">
-                @php $text =  Helper::text(8) @endphp
                   <div>
                       <div class="cardd " data-aos="fade-right" data-aos-duration="600">
                         @isset($text->title)<h2>{{$text->title}}</h2>@endisset
@@ -154,12 +154,11 @@ y          </section>
             allow="autoplay; encrypted-media"
             allowfullscreen>
           </iframe> --}}
-
-          <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
+          @php $text =  Helper::text(11) @endphp
+          <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
 
               <div class="container-fluid">
                   <div class="cardd">
-                    @php $text =  Helper::text(11) @endphp
                         @isset($text->title)<h2>{{$text->title}}</h2>@endisset
                         @isset($text->subtitle)<p><strong>{{$text->subtitle}}</strong></p>@endisset
                         @isset($text->text)
