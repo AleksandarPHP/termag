@@ -5,16 +5,16 @@
     <main>
         @php $text =  Helper::text(4) @endphp
           <section class="hero">
-            <!-- <video autoplay muted loop preload="none" id="hero-video" poster="{{asset('assets/images/hero-img.jpg')}}">
-              <source data-src="https://termag.soft4tech.com/assets/videos/hero.webm" type="video/webm" />
-          </video> -->
+            <video autoplay muted loop preload="none" id="hero-video" poster="{{asset('assets/images/hero-img.jpg')}}">
+              <source data-src="assets/videos/hero.mp4" type="video/webm" />
+          </video> 
 
-          <iframe
+          {{-- <iframe
             src="https://www.youtube.com/embed/vojf_H2lLK4?autoplay=1&mute=1&controls=0&loop=1&playlist=vojf_H2lLK4&modestbranding=1&rel=0&v={{ time() }}"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
-          </iframe>
+          </iframe> --}}
               <div class="overlay"></div>
 
               <div class="container">
@@ -83,13 +83,13 @@
             <!-- <video autoplay muted loop preload="none" id="ukus-jahorine" poster="{{asset('assets/images/ukus-jahorine.png')}}">
               <source data-src="https://termag.soft4tech.com/assets/videos/ukus-jahorine.webm" type="video/webm" />
           </video>-->
-          <iframe
+          {{-- <iframe
             src="https://www.youtube.com/embed/y2NBVIgTY5g?autoplay=1&mute=1&controls=0&loop=1&playlist=y2NBVIgTY5g&modestbranding=1&rel=0&v={{ time() }}"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
-          </iframe>
- 
+          </iframe> --}}
+          <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
               <div class="container">
                 @php $text =  Helper::text(8) @endphp
                   <div>
@@ -148,12 +148,15 @@ y          </section>
             <!-- <video autoplay muted loop preload="none" id="planinarenje" poster="{{asset('assets/images/planinarenje.png')}}">
               <source data-src="https://termag.soft4tech.com/assets/videos/termag-izazovi.webm" type="video/webm" />
           </video> -->
-          <iframe
+          {{-- <iframe
             src="https://www.youtube.com/embed/sfGiP9BPm_M?autoplay=1&mute=1&controls=0&loop=1&playlist=sfGiP9BPm_M&modestbranding=1&rel=0&v={{ time() }}"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
-          </iframe>
+          </iframe> --}}
+
+          <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
+
               <div class="container-fluid">
                   <div class="cardd">
                     @php $text =  Helper::text(11) @endphp

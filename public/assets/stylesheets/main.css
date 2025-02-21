@@ -2139,7 +2139,10 @@ header
     .hero video,
     .career video {
         min-height: 100%;
-        width: unset;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center center;
     }
     .hero .content-wrapper {
         top: 60%;
