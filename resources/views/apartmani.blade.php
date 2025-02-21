@@ -23,14 +23,14 @@
                 @php $text =  Helper::text(17) @endphp
                 <div class="col-lg-5" data-aos="fade-right" data-aos-duration="600" data-aos-delay="400">
                     <div class="nnpk-slider-1">
-                        <img src="{{asset("storage/".$text->image2)}}" alt="apartman" class="img-fluid">
-                        <img src="{{asset("storage/".$text->image3)}}" alt="apartman" class="img-fluid">
+                        <img src="{{Helper::image($text->image2, 639,1244, false)}}" alt="apartman" class="img-fluid">
+                        <img src="{{Helper::image($text->image3, 639,1244, false)}}" alt="apartman" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-lg-7" data-aos="fade-left" data-aos-duration="600" data-aos-delay="400">
                     <div class="nnpk-slider-2">
-                        <img src="{{asset("storage/".$text->image)}}" alt="apartman" class="img-fluid">
-                        <img src="{{asset("storage/".$text->image4)}}" alt="apartman" class="img-fluid">
+                        <img src="{{Helper::image($text->image, 799,453, false)}}" alt="apartman" class="img-fluid">
+                        <img src="{{Helper::image($text->image, 799,453, false)}}" alt="apartman" class="img-fluid">
                     </div>
                     <div class="content-wrapper"> 
                         @isset($text->subtitle)
@@ -59,8 +59,8 @@
             <div class="row">
                 <div class="col-lg-7" data-aos="fade-right" data-aos-duration="600">
                     <div class="nnpk-slider-2">
-                        <img src="{{asset("storage/".$text->image)}}" alt="apartman" class="img-fluid">
-                        <img src="{{asset("storage/".$text->image3)}}" alt="apartman" class="img-fluid">
+                        <img src="{{Helper::image($text->image, 799,453, false)}}" alt="apartman" class="img-fluid">
+                        <img src="{{Helper::image($text->image3, 799,453, false)}}" alt="apartman" class="img-fluid">
                     </div>
                     <div class="content-wrapper"> 
                         @isset($text->subtitle)
@@ -78,8 +78,8 @@
                     </div>
                 </div>
                 <div class="col-lg-5 nnpk-slider-1" data-aos="fade-left" data-aos-duration="600">
-                    <img src="{{asset("storage/".$text->image2)}}" alt="apartman" class="img-fluid">
-                    <img src="{{asset("storage/".$text->image4)}}" alt="apartman" class="img-fluid">
+                    <img src="{{Helper::image($text->image2, 639,1244, false)}}" alt="apartman" class="img-fluid">
+                    <img src="{{Helper::image($text->image4, 639,1244, false)}}" alt="apartman" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -92,13 +92,13 @@
             @php $text =  Helper::text(19) @endphp
             <div class="row">
                 <div class="col-lg-5 nnpk-slider-1" data-aos="fade-right" data-aos-duration="600">
-                    <img src="{{asset("storage/".$text->image)}}" alt="apartman" class="img-fluid">
-                    <img src="{{asset("storage/".$text->image3)}}" alt="apartman" class="img-fluid">
+                    <img src="{{Helper::image($text->image, 639,1244, false)}}" alt="apartman" class="img-fluid">
+                    <img src="{{Helper::image($text->image3, 639,1244, false)}}" alt="apartman" class="img-fluid">
                 </div>
                 <div class="col-lg-7" data-aos="fade-left" data-aos-duration="600">
                     <div class="nnpk-slider-2">
-                        <img src="{{asset("storage/".$text->image2)}}" alt="apartman" class="img-fluid">
-                        <img src="{{asset("storage/".$text->image4)}}" alt="apartman" class="img-fluid">
+                        <img src="{{Helper::image($text->image2, 799,453, false)}}" alt="apartman" class="img-fluid">
+                        <img src="{{Helper::image($text->image4, 799,453, false)}}" alt="apartman" class="img-fluid">
                     </div>
                     <div class="content-wrapper"> 
                         @isset($text->subtitle)<h4>{{$text->subtitle}}</h4>@endisset
@@ -121,8 +121,8 @@
             <div class="row">
                 @php $text =  Helper::text(20) @endphp
                 <div class="col-lg-12 nnpk-slider-2" data-aos="fade-down" data-aos-duration="600">
-                    <img src="{{asset("storage/".$text->image)}}" alt="apartman" class="img-fluid">
-                    <img src="{{asset("storage/".$text->image3)}}" alt="apartman" class="img-fluid">
+                    <img src="{{Helper::image($text->image, 1480,453, false)}}" alt="apartman" class="img-fluid">
+                    <img src="{{Helper::image($text->image3, 1480,453, false)}}" alt="apartman" class="img-fluid">
                 </div>
             </div>
             <div class="row">
@@ -138,8 +138,8 @@
                     </div>
                 </div>
                 <div class="col-lg-6 nnpk-slider-2" data-aos="fade-left" data-aos-duration="600">
-                    <img src="{{asset("storage/".$text->image2)}}" alt="apartman" class="img-fluid">
-                    <img src="{{asset("storage/".$text->image4)}}" alt="apartman" class="img-fluid">
+                    <img src="{{Helper::image($text->image2, 745,545, false)}}" alt="apartman" class="img-fluid">
+                    <img src="{{Helper::image($text->image4, 745,545, false)}}" alt="apartman" class="img-fluid">
                 </div>
             </div>
         </div>
