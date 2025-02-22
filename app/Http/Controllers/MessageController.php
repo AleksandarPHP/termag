@@ -103,4 +103,23 @@ class MessageController extends Controller
     {
         return view('cms.messages.form', ['item' => Message::findOrFail($id)]);
     }
+
+    public function formular(Request $request)
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'max:191'],
+            'last_name' => ['required', 'string', 'max:191'],
+            'tel' => ['required', 'string'],
+            'email' => ['required', 'string', 'max:191'],
+            'transfer_date' => ['required', 'string', 'max:191'],
+            'transfer_time' => ['required', 'string', 'max:191'],
+            'flight_number' => ['required', 'string', 'max:191'],
+            'adults' => ['required', 'string', 'max:191'],
+            'children' => ['required', 'string', 'max:191'],
+            'chair' => ['required', 'string', 'max:191'],
+            'description' => ['required', 'string'],
+        ]);   
+
+        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+    }
 }

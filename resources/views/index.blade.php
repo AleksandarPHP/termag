@@ -26,7 +26,6 @@
           </section>
 
           @include('partials/booking')
-
           <section class="accommodation">
             @php $text =  Helper::text(5) @endphp
               <div class="container">
@@ -45,11 +44,11 @@
                   </div>
               </div>
           </section>
-
+          @php $text =  Helper::text(6) @endphp
           <section class="villa-termag vt-1">
-              <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
+              {{-- <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div> --}}
+              <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
               <div class="container">
-                @php $text =  Helper::text(6) @endphp
                   <div>
                       <div class="cardd " data-aos="fade-right" data-aos-duration="600">
                           @isset($text->title)<h2>{{$text->title}}</h2>@endisset

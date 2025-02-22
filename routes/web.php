@@ -27,6 +27,7 @@ use Illuminate\Support\Facades\Route;
         'dokumenti' => 'dokumenti',
         'informacije' => 'informacije',
         'formular' => 'formular',
+        'formular-restoran' => 'formular-restoran',
         'termag-hotelske-sobe' => 'termag-hotelske-sobe',
         'apartmani' => 'apartmani',
         'villa-termag' => 'villa-termag',

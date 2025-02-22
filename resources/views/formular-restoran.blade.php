@@ -4,10 +4,10 @@
 
 <main>
     <section class="career">
-        <div class="bg" style="background-image: url('{{asset("assets/images/prevoz-jahorina-bg.jpg")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("assets/images/restoran.png")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{__('Transportation')}}</h1>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{__('Restaurant reservation')}}</h1>
                 <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
                     {{__('Dear Sir/Madam, please fill out the form as thoroughly as possible to help us improve our service.')}}
                 </p>
@@ -42,19 +42,14 @@
                                 <input type="text" name="tel" id="tel" value="{{old('tel')}}" placeholder="Number goes here" {!! $errors->has('tel') ? 'style="border:1px solid red;"' : '' !!} required>
                             </div>
                             <div class="col-md-6">
-                                <label for="transfer_date">{{__('Transfer date')}}</label>
-                                <input type="date" id="transfer_date" id="transfer_date" value="{{old('transfer_date')}}" name="transfer_date" onload="getDate()"  {!! $errors->has('transfer_date') ? 'style="border:1px solid red;"' : '' !!} required/>
+                                <label for="reservation_date">{{__('Reservation date')}}</label>
+                                <input type="date" id="reservation_date" id="reservation_date" value="{{old('reservation_date')}}" name="reservation_date" onload="getDate()"  {!! $errors->has('reservation_date') ? 'style="border:1px solid red;"' : '' !!} required/>
                             </div>
                             <div class="col-md-6">
-                                <label for="transfer_time">{{__('Transfer time')}}</label>
-                                <input type="time" id="transfer_time" value="{{old('transfer_time')}}" name="transfer_time" onload="getDate()"  {!! $errors->has('transfer_time') ? 'style="border:1px solid red;"' : '' !!} required/>
+                                <label for="reservation_time">{{__('Reservation time')}}</label>
+                                <input type="time" id="reservation_time" value="{{old('reservation_time')}}" name="reservation_time" onload="getDate()"  {!! $errors->has('reservation_time') ? 'style="border:1px solid red;"' : '' !!} required/>
                             </div>
-             
-                            <div class="col-md-6">
-                                <label for="flight_number">{{__('Flight number')}}</label>
-                                <input type="text" id="flight_number" id="flight_number" value="{{old('flight_number')}}" placeholder="Flight number goes here" name="flight_number" onload="getDate()"  {!! $errors->has('flight_number') ? 'style="border:1px solid red;"' : '' !!}/>
-                            </div>
-                            <h3 class="mt-5">{{__('Passengers')}}</h3>
+                            <h3 class="mt-5">{{__('Guests')}}</h3>
                             <div class="col-md-3">
                                 <label for="adults">{{__('Adults')}}</label>
                                 <input type="number" id="adults" id="adults" value="{{old('adults')}}" name="adults" placeholder="2" {!! $errors->has('adults') ? 'style="border:1px solid red;"' : '' !!} required/>
@@ -69,12 +64,12 @@
                                 <label class="mb-5">{{__('Kids chair')}}	</label>
                                 <div class="row">
                                     <div class="col-md-3 col-2">
-                                        <input type="radio" id="chair1" id="chair" value="{{old('chair')}}" name="chair" required/>
-                                        <label style="text-align: center;justify-content: center;display: flex;" for="chair1">{{__('Yes')}}</label>
+                                        <input type="radio" id="birthdate" id="date" value="{{old('date')}}" name="date" onload="getDate()"  {!! $errors->has('date') ? 'style="border:1px solid red;"' : '' !!} required/>
+                                        <label style="text-align: center;justify-content: center;display: flex;" for="date">{{__('Yes')}}</label>
                                     </div>
                                     <div class="col-md-3 col-2">
-                                        <input type="radio" id="chair2" id="chair" value="{{old('chair')}}" name="chair" required/>
-                                        <label style="text-align: center;justify-content: center;display: flex;" for="chair2">{{__('No')}}</label>
+                                        <input type="radio" id="birthdate" id="date" value="{{old('date')}}" name="date" onload="getDate()"  {!! $errors->has('date') ? 'style="border:1px solid red;"' : '' !!} required/>
+                                        <label style="text-align: center;justify-content: center;display: flex;" for="date">{{__('No')}}</label>
                                     </div>
                                 </div>
                             </div>
