@@ -43,7 +43,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="nights">Broj nocena</label>
-                        <input name="nights" type="number" class="form-control" id="nights" placeholder="Broj nocena" value="{{ old('nights', $item->nights) }}" {!! $errors->has('nights') ? 'style="border-color:red;"' : '' !!}>
+                        <input name="nights" type="number" class="form-control" id="nights" min="0" placeholder="Broj nocena" value="{{ old('nights', $item->nights) }}" {!! $errors->has('nights') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
                 @endif
