@@ -19,7 +19,8 @@ class Package extends Model
         'url',
         'urlTitle',
         'is_active',
-        'special'
+        'special',
+        'special_view'
     ];
 
     public $translatable = [

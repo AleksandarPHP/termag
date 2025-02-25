@@ -21,13 +21,15 @@ class PackageOption extends Model
         'from_date',
         'to_date',
         'options',
-        'is_active'
+        'is_active',
+        'description'
     ];
 
     public $translatable = [
         'title',
         'subtitle',
-        'options'
+        'options',
+        'description'
     ];
 
     protected $casts = [

@@ -110,6 +110,7 @@ class PackageOptionController extends Controller
         $option = new PackageOption;
         $option->setTranslation('title', $lang, $request->title);
         $option->setTranslation('options', $lang, $options);
+        $option->setTranslation('description', $lang, $request->description);
 
         $option->package_id = $request->package_id;
         $option->nights = $request->nights;
@@ -170,6 +171,7 @@ class PackageOptionController extends Controller
 
         $option->setTranslation('title', $lang, $request->title);
         $option->setTranslation('options', $lang, $options);
+        $option->setTranslation('description', $lang, $request->description);
 
         if($lang=='sr') {     
             $option->package_id = $request->package_id;

@@ -91,6 +91,15 @@
                     </div>
                 </div>
                 @endif
+                @if ($item->package_id == 8)
+                <div class="col-md-12"><hr></div>
+                <div class="col-md-12">
+                    <div class="form-group" {!! $errors->has('description') ? 'style="border:1px solid red;"' : '' !!}>
+                        <label for="description">Tekst</label>
+                        <textarea name="description" id="description" class="form-control">{{ old('description', $item->getTranslation('description', $lang, false)) }}</textarea>
+                    </div>
+                </div> 
+                @endif
                 <div class="col-md-12"><hr></div>
                 @for ($i = 0; $i <= 11; $i++)
                 <div class="col-md-3 mb-3">
