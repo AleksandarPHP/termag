@@ -19,7 +19,7 @@
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
             <div class="container">
                 @php
-                    $packages = App\Models\Package::where('special', 1)->where('special', 1)->get();
+                    $packages = App\Models\Package::where('special', 1)->where('special', 1)->whereNull('special_view')->get();
                 @endphp
                 @foreach ($packages as $package)
                 <div class="text-center">
@@ -43,7 +43,7 @@
                             <div class="col-md-6">
                                 @isset($item->options[0][$i])
                                 <div>
-                                    <img src="{{Helper::image($item->getTranslation('options', 'sr', false)[1][$i], 75, 75, false)}}" alt="ikonica">
+                                    <img src="{{asset('storage/'.$item->getTranslation('options', 'sr', false)[1][$i])}}" alt="ikonica">
                                     <p>
                                         {{$item->options[0][$i]}}
                                     </p>
