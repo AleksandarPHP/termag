@@ -55,12 +55,12 @@
                         <figure>
                             @php $text =  Helper::text(227) @endphp
                             @isset($text->image)
-                            <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="porodicna 8km">
+                            <a href="{{$text->url}}">
+                            <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="crvena 34km">
+                            </a>
                             @endisset
                             @isset($text->title)
-                            <a href="{{$text->url}}">
                                 <figcaption>{{$text->title}}</figcaption>
-                            </a>
                             @endisset
                         </figure>
                     </div>
@@ -68,12 +68,12 @@
                         <figure>
                             @php $text =  Helper::text(228) @endphp
                             @isset($text->image)
-                            <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="plava 24km">
+                            <a href="{{$text->url}}">
+                            <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="crvena 34km">
+                            </a>
                             @endisset
                             @isset($text->title)
-                            <a href="{{$text->url}}">
                                 <figcaption>{{$text->title}}</figcaption>
-                            </a>
                             @endisset
                         </figure>
                     </div>
@@ -81,12 +81,12 @@
                         <figure>
                             @php $text =  Helper::text(229) @endphp
                             @isset($text->image)
+                            <a href="{{$text->url}}">
                             <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="crvena 34km">
+                            </a>
                             @endisset
                             @isset($text->title)
-                            <a href="{{$text->url}}">
                                 <figcaption>{{$text->title}}</figcaption>
-                            </a>
                             @endisset
                         </figure>
                     </div>
