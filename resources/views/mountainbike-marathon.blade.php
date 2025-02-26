@@ -58,7 +58,9 @@
                             <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="porodicna 8km">
                             @endisset
                             @isset($text->title)
-                            <figcaption>{{$text->title}}</figcaption>
+                            <a href="{{$text->url}}">
+                                <figcaption>{{$text->title}}</figcaption>
+                            </a>
                             @endisset
                         </figure>
                     </div>
@@ -69,7 +71,9 @@
                             <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="plava 24km">
                             @endisset
                             @isset($text->title)
-                            <figcaption>{{$text->title}}</figcaption>
+                            <a href="{{$text->url}}">
+                                <figcaption>{{$text->title}}</figcaption>
+                            </a>
                             @endisset
                         </figure>
                     </div>
@@ -80,7 +84,9 @@
                             <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="crvena 34km">
                             @endisset
                             @isset($text->title)
-                            <figcaption>{{$text->title}}</figcaption>
+                            <a href="{{$text->url}}">
+                                <figcaption>{{$text->title}}</figcaption>
+                            </a>
                             @endisset
                         </figure>
                     </div>
