@@ -43,7 +43,7 @@
                             <div class="col-md-6">
                                 @isset($item->options[0][$i])
                                 <div>
-                                    <img src="{{asset('storage/'.$item->getTranslation('options', 'sr', false)[1][$i])}}" alt="ikonica">
+                                    <img src="{{Helper::image($item->getTranslation('options', 'sr', false)[1][$i], 75, 75, false)}}" alt="ikonica">
                                     <p>
                                         {{$item->options[0][$i]}}
                                     </p>

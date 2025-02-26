@@ -120,7 +120,7 @@
                 
                 <div class="col-md-3">
                     <div class="form-group">
-                        {{-- <label>Min: {{ $width }}x{{ $height }}px</label> --}}
+                        <label>Max: 74x74px</label>
                     </div>
                     <div class="input-file-options" {!! $errors->has('image') ? 'style="border-color:red;"' : '' !!}>
                         @if(isset($item->options[1][$i]) && !is_null($item->options[1][$i]))
