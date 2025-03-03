@@ -174,7 +174,8 @@
 
                     </ul>
                     <div>
-                        <a href="https://secure.phobs.net/book.php?page=availability&companyid=822&hotelid=4791&checkin=2024-12-12&checkout=2024-12-13&crcid=a18a7f494542089c9fdb88aa5348bf6f" type="button">{{__('Book now')}}</a>
+                        {{-- <a href="https://secure.phobs.net/book.php?page=availability&companyid=822&hotelid=4791&checkin=2024-12-12&checkout=2024-12-13&crcid=a18a7f494542089c9fdb88aa5348bf6f" type="button">{{__('Book now')}}</a> --}}
+                        <a href="{{url('rezervacija')}}" type="button">{{__('Book now')}}</a>
                     </div>
                 </div>
             </div>
