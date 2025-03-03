@@ -9,7 +9,7 @@
         <div class="bg" style="background-image: url('{{asset("assets/images/prevoz-jahorina-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{__('Transportation')}}</h1>
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{__('Rezervacija')}}</h1>
                 <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
                     {{__('Dear Sir/Madam, please fill out the form as thoroughly as possible to help us improve our service.')}}
                 </p>
