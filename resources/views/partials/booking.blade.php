@@ -26,7 +26,7 @@
 }
     </style>
     <div class="container">
-        <form action="https://secure.phobs.net/booking.php" method="GET" target="_blank">
+        <form action="{{Helper::url('rezervacija')}}" method="GET" target="_blank">
             <input type="hidden" name="company_id" value="ef330cb3f8f74caf95689177209df3e4">
             <input type="hidden" name="hotel" value="d720302542a2930329ff91e521d142aa">
             <input type="hidden" name="lang" value="rs">
