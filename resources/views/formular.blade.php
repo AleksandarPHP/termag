@@ -1,5 +1,7 @@
 @include('partials/header')
-<script src="https://www.google.com/recaptcha/api.js?render=6LeIfqoqAAAAADO-AYxXMaO6Og7S7MkvmAHTIrsb"></script>
+<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.nocaptcha.sitekey') }}"></script>
+
+{{-- <script src="https://www.google.com/recaptcha/api.js?render=6LeIfqoqAAAAADO-AYxXMaO6Og7S7MkvmAHTIrsb"></script> --}}
 {{-- <link rel="stylesheet" type="text/css" href="{{ asset('cmsfiles/css/dropzone.css') }}" /> --}}
 
 <main>
@@ -22,8 +24,17 @@
             <div class="col-lg-12">
                 <div class="cardd">
                     <h2 class="title-smaller">{{__('Application form')}}</h2>
-                    <form action="upload-file" id="snedfile" class="sned_file" method="POST" enctype="multipart/form-data">
+                    <form action="{{url('formular')}}" id="snedfile" class="sned_file" method="POST" enctype="multipart/form-data">
                         @csrf
+                        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
+                        <script>
+                            grecaptcha.ready(function() {
+                                grecaptcha.execute('{{ config('services.nocaptcha.sitekey') }}', {action: 'submit'}).then(function(token) {
+                                    document.getElementById('g-recaptcha-response').value = token;
+                                });
+                            });
+                        </script>
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="name">{{__('Name')}}</label>
@@ -86,11 +97,6 @@
                             <div class="col-md-12">
                                 <button type="submit" class="btnn btn_primary w-100">{{__('Send')}}</button>
                             </div>
-                            <script>
-                                function onSubmit(token) {
-                                  document.getElementById("demo-form").submit();
-                                }
-                            </script>
                         </div>
                     </form>
                 </div>
