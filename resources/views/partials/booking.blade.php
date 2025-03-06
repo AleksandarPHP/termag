@@ -41,7 +41,7 @@
                     />
                     <h4>Check in</h4>
                 </div>
-                <input type="text" id="checkIn" name="date"/>
+                <input type="text" id="checkIn" name="checkin_date"/>
             </div>
             <div>
                 <div>
@@ -51,7 +51,7 @@
                     />
                     <h4>Check out</h4>
                 </div>
-                <input type="text" id="checkOut" name="odlazak"/>
+                <input type="text" id="checkOut" name="checkout_date"/>
             </div>
             <div>
                 <div>
@@ -65,7 +65,7 @@
                     <div>
                         <button type="button" class="btn-decrease" onclick="updateGuestCount(-1)">-</button>
                         <input
-                            name="adults[1]" type="text" id="guest-count" value="2" min="1" max="4" readonly
+                            name="adults" type="text" id="guest-count" value="2" min="1" max="4" readonly
                         />
                         <button type="button" class="btn-increase" onclick="updateGuestCount(1)">+</button>
                     </div>
@@ -84,7 +84,7 @@
                 <div>
                     <div class="children-wrapper"> 
                         <button type="button" class="btn-decrease" onclick="updateChildCount(-1)">-</button>
-                        <input name="chd[1]" type="text" id="child-count" value="0" min="0" max="3" readonly
+                        <input name="children" type="text" id="child-count" value="0" min="0" max="3" readonly
                         />
                         <button type="button" class="btn-increase" onclick="updateChildCount(1)">+</button>
                     </div>
