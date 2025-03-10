@@ -1,9 +1,8 @@
 @include('partials/header')
 @php
-    $albums = App\Models\Album::findOrFail(1);
+    $album = App\Models\Album::findOrFail(1);
 @endphp
 <main>
-    @foreach ($albums as $album)
     <section class="weather gallery-intro">
         <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
@@ -26,6 +25,5 @@
             </div>
         </div>
     </section>
-    @endforeach
 </main>
 @include('partials/footer')
