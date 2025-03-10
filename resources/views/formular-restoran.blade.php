@@ -1,7 +1,5 @@
 @include('partials/header')
-<script src="https://www.google.com/recaptcha/api.js?render=6LeIfqoqAAAAADO-AYxXMaO6Og7S7MkvmAHTIrsb"></script>
-{{-- <link rel="stylesheet" type="text/css" href="{{ asset('cmsfiles/css/dropzone.css') }}" /> --}}
-
+<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.nocaptcha.sitekey') }}"></script>
 <main>
     <section class="career">
         <div class="bg" style="background-image: url('{{asset("assets/images/restoran.png")}}');"></div>
@@ -22,8 +20,17 @@
             <div class="col-lg-12">
                 <div class="cardd">
                     <h2 class="title-smaller">{{__('Application form')}}</h2>
-                    <form action="upload-file" id="snedfile" class="sned_file" method="POST" enctype="multipart/form-data">
+                    <form action="{{url('formular-restoran')}}" id="snedfile" class="sned_file" method="POST" enctype="multipart/form-data">
                         @csrf
+                        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
+                        <script>
+                            grecaptcha.ready(function() {
+                                grecaptcha.execute('{{ config('services.nocaptcha.sitekey') }}', {action: 'submit'}).then(function(token) {
+                                    document.getElementById('g-recaptcha-response').value = token;
+                                });
+                            });
+                        </script>
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="name">{{__('Name')}}</label>
@@ -64,12 +71,12 @@
                                 <label class="mb-5">{{__('Kids chair')}}	</label>
                                 <div class="row">
                                     <div class="col-md-3 col-2">
-                                        <input type="radio" id="birthdate" id="date" value="{{old('date')}}" name="date" onload="getDate()"  {!! $errors->has('date') ? 'style="border:1px solid red;"' : '' !!} required/>
-                                        <label style="text-align: center;justify-content: center;display: flex;" for="date">{{__('Yes')}}</label>
+                                        <input type="radio" id="chair1" id="chair" value="Da" name="chair" required/>
+                                        <label style="text-align: center;justify-content: center;display: flex;" for="chair1">{{__('Yes')}}</label>
                                     </div>
                                     <div class="col-md-3 col-2">
-                                        <input type="radio" id="birthdate" id="date" value="{{old('date')}}" name="date" onload="getDate()"  {!! $errors->has('date') ? 'style="border:1px solid red;"' : '' !!} required/>
-                                        <label style="text-align: center;justify-content: center;display: flex;" for="date">{{__('No')}}</label>
+                                        <input type="radio" id="chair2" id="chair" value="Ne" name="chair" required/>
+                                        <label style="text-align: center;justify-content: center;display: flex;" for="chair2">{{__('No')}}</label>
                                     </div>
                                 </div>
                             </div>

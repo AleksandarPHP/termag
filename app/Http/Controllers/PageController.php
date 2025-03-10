@@ -184,6 +184,22 @@ class PageController extends Controller
         if($request->hasFile('image4')) $image4 = Helper::saveImage($request->image4, 'Pages', $item->title, $image4);
         else if($item->title != $item->title && !is_null($image4)) $image4 = Helper::renameImage($image4, 'Pages', $item->title);
 
+        $image5 = $item->image5;
+        if($request->hasFile('image5')) $image5 = Helper::saveImage($request->image5, 'Pages', $item->title, $image5);
+        else if($item->title != $item->title && !is_null($image5)) $image5 = Helper::renameImage($image5, 'Pages', $item->title);
+
+        $image6 = $item->image6;
+        if($request->hasFile('image6')) $image6 = Helper::saveImage($request->image6, 'Pages', $item->title, $image6);
+        else if($item->title != $item->title && !is_null($image6)) $image6 = Helper::renameImage($image6, 'Pages', $item->title);
+
+        $image7 = $item->image7;
+        if($request->hasFile('image7')) $image7 = Helper::saveImage($request->image7, 'Pages', $item->title, $image7);
+        else if($item->title != $item->title && !is_null($image7)) $image7 = Helper::renameImage($image7, 'Pages', $item->title);
+
+        $image8 = $item->image8;
+        if($request->hasFile('image8')) $image8 = Helper::saveImage($request->image8, 'Pages', $item->title, $image8);
+        else if($item->title != $item->title && !is_null($image8)) $image8 = Helper::renameImage($image8, 'Pages', $item->title);
+
         $item->setTranslation('title', $lang, $request->input('title'));
         $item->setTranslation('subtitle', $lang, $request->input('subtitle'));
         $item->setTranslation('text', $lang, $request->input('text'));
@@ -198,6 +214,10 @@ class PageController extends Controller
             $item->image2 = $image2;
             $item->image3 = $image3;
             $item->image4 = $image4;
+            $item->image5 = $image5;
+            $item->image6 = $image6;
+            $item->image7 = $image7;
+            $item->image8 = $image8;
             $item->url = $request->url;
             $item->url2 = $request->url2;
         }

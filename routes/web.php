@@ -216,6 +216,7 @@ Route::get('sitemap.xml', 'App\Http\Controllers\SitemapController@index');
 
 Route::post('upload-file', 'App\Http\Controllers\MessageController@kontakt'); 
 Route::post('formular', 'App\Http\Controllers\MessageController@formular'); 
+Route::post('formular-restoran', 'App\Http\Controllers\MessageController@formularRestaurant'); 
 Auth::routes(['verify' => false, 'register' => false]);
 
 Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function() {

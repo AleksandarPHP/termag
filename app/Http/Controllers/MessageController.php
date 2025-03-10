@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\Models\Message;
 use Illuminate\Support\Facades\Validator;
 use App\Helpers\Helper;
+use App\Notifications\TransportFormular;
+use App\Notifications\RestaurantFormular;
+use Notification;
+use Exception;
 
 class MessageController extends Controller
 {
@@ -107,9 +111,13 @@ class MessageController extends Controller
     public function formular(Request $request)
     {
 
-        dd($request->all());
         $request->validate([
             'name' => ['required', 'string', 'max:191'],
+            'g-recaptcha-response' => ['required', function ($attribute, $value, $fail) {
+                if (!app('captcha')->verifyResponse($value)) {
+                    $fail('Invalid reCAPTCHA response.');
+                }
+            }],
             'last_name' => ['required', 'string', 'max:191'],
             'tel' => ['required', 'string'],
             'email' => ['required', 'string', 'max:191'],
@@ -117,9 +125,9 @@ class MessageController extends Controller
             'transfer_time' => ['required', 'string', 'max:191'],
             'flight_number' => ['required', 'string', 'max:191'],
             'adults' => ['required', 'string', 'max:191'],
-            'children' => ['required', 'string', 'max:191'],
-            'chair' => ['required', 'string', 'max:191'],
-            'description' => ['required', 'string'],
+            'children' => ['nullable', 'string', 'max:191'],
+            'chair' => ['nullable', 'string', 'max:191'],
+            'description' => ['nullable', 'string'],
         ]);   
 
 
@@ -127,52 +135,68 @@ class MessageController extends Controller
         if ($request->check_first) {
             return redirect(url()->previous())->with(['spam' => 'SPAM!']);
         }
-        $html = '<b>EINTAUSCH- ODER ANKAUFSANFRAGE:</b> '.htmlspecialchars($request->input('request')).'<br>';
-        $html .= '<b>ERFASSEN SIE IHR FAHRZEUG:</b> '.htmlspecialchars($request->input('vehicle_option')).'<br>';
-        if($request->input('marke')!='') $html .= '<b>Marke:</b> '.htmlspecialchars($request->input('marke')).'<br>';
-        if($request->input('modell')!='') $html .= '<b>Modell:</b> '.htmlspecialchars($request->input('modell')).'<br>';
-        if($request->input('transmission')!='') $html .= '<b>Getriebe:</b> '.htmlspecialchars($request->input('transmission')).'<br>';
-        if($request->input('exterior_color')!='') $html .= '<b>Aussenfarbe:</b> '.htmlspecialchars($request->input('exterior_color')).'<br>';
-        if($request->input('km_stand')!='') $html .= '<b>KM-Stand:</b> '.htmlspecialchars($request->input('km_stand')).'<br>';
-        if($request->input('type_certificate')!='') $html .= '<b>Typenschein-Nr.:</b> '.htmlspecialchars($request->input('type_certificate')).'<br>';
-        if($request->input('chassis')!='') $html .= '<b>Chassis-Nr.:</b> '.htmlspecialchars($request->input('chassis')).'<br>';
-        if($request->input('first_registration')!='') $html .= '<b>Erstzulassung:</b> '.htmlspecialchars($request->input('first_registration')).'<br>';
-        if($request->input('asking_price')!='') $html .= '<b>Preisvorstellung:</b> '.htmlspecialchars($request->input('asking_price')).'<br>';
-        if($request->input('transmission2')!='') $html .= '<b>Getriebe:</b> '.htmlspecialchars($request->input('transmission2')).'<br>';
-        if($request->input('km_stand2')!='') $html .= '<b>KM-Stand:</b> '.htmlspecialchars($request->input('km_stand2')).'<br>';
-        if($request->input('equipment')) {
-            $html .= '<b>Ausstattung:</b> ';
-            foreach($request->input('equipment') as $equipment) {
-                $html .= htmlspecialchars($equipment).',';
-            }
-            $html .= '<br><br>';
-        }
-        if($request->input('condition')) {
-            $html .= '<b>Zustand:</b> ';
-            foreach($request->input('condition') as $condition) {
-                $html .= htmlspecialchars($condition).',';
-            }
-            $html .= '<br><br>';
-        }
-        $html .= '<b>Befindet sich das Fahrzeug in einem Leasing:</b> '.htmlspecialchars($request->input('leasing')).'<br>';
-        if($request->input('remark')!='') $html .= '<b>Bemerkung:</b> '.htmlspecialchars($request->input('remark')).'<br>';
-        if($request->input('message')!='') $html .= '<b>Nachricht:</b> '.htmlspecialchars($request->input('nachricht')).'<br>';
-        $html .= '<b>Voranme:</b> '.htmlspecialchars($request->input('name')).'<br>';
-        $html .= '<b>Telefon :</b> '.htmlspecialchars($request->input('tel')).'<br>';
-        $html .= '<b>E-mail:</b> '.htmlspecialchars($request->input('email')).'<br>';
-        if($request->input('firma')!='') $html .= '<b>Firma:</b> '.htmlspecialchars($request->input('firma')).'<br>';
-
+        $html = '<b>Ime:</b> '.htmlspecialchars($request->input('name')).'<br>';
+        $html .= '<b>Prezime:</b> '.htmlspecialchars($request->input('last_name')).'<br>';
+        $html .= '<b>Email:</b> '.htmlspecialchars($request->input('email')).'<br>';
+        if($request->input('tel')!='') $html .= '<b>Telefon:</b> '.htmlspecialchars($request->input('tel')).'<br>';
+        if($request->input('transfer_date')!='') $html .= '<b>Datum prevoza:</b> '.htmlspecialchars($request->input('transfer_date')).'<br>';
+        if($request->input('transfer_time')!='') $html .= '<b>Vrijeme prevoza:</b> '.htmlspecialchars($request->input('transfer_time')).'<br>';
+        if($request->input('flight_number')!='') $html .= '<b>Broj leta:</b> '.htmlspecialchars($request->input('flight_number')).'<br>';
+        if($request->input('adults')!='') $html .= '<b>Odrasli:</b> '.htmlspecialchars($request->input('adults')).'<br>';
+        if($request->input('children')!='') $html .= '<b>Djeca:</b> '.htmlspecialchars($request->input('children')).'<br>';
+        if($request->input('chair')!='') $html .= '<b>Sjedalica:</b> '.htmlspecialchars($request->input('chair')).'<br>';
+        if($request->input('description')!='') $html .= '<b>Napomena:</b> '.htmlspecialchars($request->input('description')).'<br>';
 
         try {
-             Notification::route('mail', $this->email)->notify(new Ankauf($html, $request->input('email'), $request->input('name'), $request->document, $request->image));
+             Notification::route('mail', 'info@termaghotel.com')->notify(new TransportFormular($html, $request->input('email'), $request->input('name')));
         } catch (Exception $e) {}
-
-        if($request->copy) {
-            try {
-                Notification::route('mail', $request->input('email'))->notify(new UserAnkauf($html, $request->input('email'), $request->input('name'), $request->document, $request->image));
-           } catch (Exception $e) {}
-        }
         
         return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
     }
+
+    public function formularRestaurant(Request $request)
+    {
+
+        // dd($request->all());
+        $request->validate([
+            'name' => ['required', 'string', 'max:191'],
+            'g-recaptcha-response' => ['required', function ($attribute, $value, $fail) {
+                if (!app('captcha')->verifyResponse($value)) {
+                    $fail('Invalid reCAPTCHA response.');
+                }
+            }],
+            'last_name' => ['required', 'string', 'max:191'],
+            'tel' => ['required', 'string'],
+            'email' => ['required', 'string', 'max:191'],
+            'reservation_date' => ['required', 'string', 'max:191'],
+            'reservation_time' => ['required', 'string', 'max:191'],
+            'adults' => ['required', 'string', 'max:191'],
+            'children' => ['nullable', 'string', 'max:191'],
+            'chair' => ['nullable', 'string', 'max:191'],
+            'description' => ['nullable', 'string'],
+        ]);   
+
+
+        
+        if ($request->check_first) {
+            return redirect(url()->previous())->with(['spam' => 'SPAM!']);
+        }
+        $html = '<b>Ime:</b> '.htmlspecialchars($request->input('name')).'<br>';
+        $html .= '<b>Prezime:</b> '.htmlspecialchars($request->input('last_name')).'<br>';
+        $html .= '<b>Email:</b> '.htmlspecialchars($request->input('email')).'<br>';
+        if($request->input('tel')!='') $html .= '<b>Telefon:</b> '.htmlspecialchars($request->input('tel')).'<br>';
+        if($request->input('reservation_date')!='') $html .= '<b>Datum rezervacije:</b> '.htmlspecialchars($request->input('transfer_date')).'<br>';
+        if($request->input('reservation_time')!='') $html .= '<b>Vrijeme rezervacije:</b> '.htmlspecialchars($request->input('transfer_time')).'<br>';
+        if($request->input('adults')!='') $html .= '<b>Odrasli:</b> '.htmlspecialchars($request->input('adults')).'<br>';
+        if($request->input('children')!='') $html .= '<b>Djeca:</b> '.htmlspecialchars($request->input('children')).'<br>';
+        if($request->input('chair')!='') $html .= '<b>Sjedalica:</b> '.htmlspecialchars($request->input('chair')).'<br>';
+        if($request->input('description')!='') $html .= '<b>Napomena:</b> '.htmlspecialchars($request->input('description')).'<br>';
+
+        try {
+             Notification::route('mail', 'restoran@termaghotel.com')->notify(new RestaurantFormular($html, $request->input('email'), $request->input('name')));
+        } catch (Exception $e) {}
+        
+        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+    }
+    
 }

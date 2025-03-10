@@ -82,7 +82,7 @@ p:not([class]) {
 .btnn.btn_primary {
     background-color: var(--text-color-primary);
     color: #fff;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .btnn.btn_secondary {

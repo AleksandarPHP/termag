@@ -123,117 +123,48 @@
                 </div>
                 @endif
                 @if ($item->id==17 || $item->id==18 || $item->id==19 || $item->id==20 || $item->id==204 || $item->id==205 || $item->id==206 || $item->id==207  || $item->id==209 || $item->id==210 || $item->id==211 || $item->id==212 || $item->id==213)
-                <div class="col-md-3">
-                    <div class="form-group">
-                        {{-- <label>Min: {{ $width }}x{{ $height }}px</label> --}}
-                    </div>
-                    <div class="input-file-container" {!! $errors->has('image2') ? 'style="border-color:red;"' : '' !!}>
-                        @if(!is_null($item->image2))
-                            <a href="{{ url('cms/pages/imagedelete/'.$item->id.'?image2=image2') }}"><span><i class="fa fa-close"></i></span></a>
-                        @endif
-                        <span class="img-placeholder">
-                              @if(is_null($item->image2))
-                              <a href="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
-                                <img src="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" alt="img">
-                              </a>
-                              @else
-                              <a href="{{ asset('storage/'.$item->image2) }}" data-fancybox="gallery">
-                                <img src="{{ asset('storage/'.$item->image2) }}" alt="img">
-                              </a>
-                              @endif
-                      </span>
-                    <input name="image2" class="input-file input-file2" id="my-file2" type="file">
-                    <label tabindex="0" for="my-file2" class="input-file-trigger input-file-trigger2">Odaberite sliku...</label>
-                    </div>
-                    <script>
-                        var fileInput = document.querySelector(".input-file2"),
-                            button = document.querySelector(".input-file-trigger2");
+                @for ($i = 2; $i <= 8; $i++)
+                @php
+                 $img = 'image'.$i;   
+                @endphp
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            {{-- <label>Min: {{ $width }}x{{ $height }}px</label> --}}
+                        </div>
+                        <div class="input-file-container" {!! $errors->has('image{{$i}}') ? 'style="border-color:red;"' : '' !!}>
+                            @if(!is_null($item->$img))
+                                <a href="{{ url('cms/texts/imagedelete/'.$item->id.'?image=image'.$i) }}"><span><i class="fa fa-close"></i></span></a>
+                            @endif
+                            <span class="img-placeholder">
+                                @if(is_null($item->$img))
+                                <a href="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
+                                    <img src="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" alt="img">
+                                </a>
+                                @else
+                                <a href="{{ asset('storage/'.$item->$img) }}" data-fancybox="gallery">
+                                    <img src="{{ asset('storage/'.$item->$img) }}" alt="img">
+                                </a>
+                                @endif
+                        </span>
+                        <input name="image{{$i}}" class="input-file input-file1" id="my-file1" type="file">
+                        <label tabindex="0" for="my-file1" class="input-file-trigger input-file-trigger1">Odaberite sliku...</label>
+                        </div>
+                        <script>
+                            var fileInput = document.querySelector(".input-file1"),
+                                button = document.querySelector(".input-file-trigger1");
 
-                        button.addEventListener("keydown", function (event) {
-                            if (event.keyCode == 13 || event.keyCode == 32) {
+                            button.addEventListener("keydown", function (event) {
+                                if (event.keyCode == 13 || event.keyCode == 32) {
+                                    fileInput.focus();
+                                }
+                            });
+                            button.addEventListener("click", function () {
                                 fileInput.focus();
-                            }
-                        });
-                        button.addEventListener("click", function () {
-                            fileInput.focus();
-                            return false;
-                        });
-                    </script>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        {{-- <label>Min: {{ $width }}x{{ $height }}px</label> --}}
+                                return false;
+                            });
+                        </script>
                     </div>
-                    <div class="input-file-container" {!! $errors->has('image3') ? 'style="border-color:red;"' : '' !!}>
-                        @if(!is_null($item->image3))
-                            <a href="{{ url('cms/pages/imagedelete/'.$item->id.'?image3=image3') }}"><span><i class="fa fa-close"></i></span></a>
-                        @endif
-                        <span class="img-placeholder">
-                              @if(is_null($item->image3))
-                              <a href="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
-                                <img src="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" alt="img">
-                              </a>
-                              @else
-                              <a href="{{ asset('storage/'.$item->image3) }}" data-fancybox="gallery">
-                                <img src="{{ asset('storage/'.$item->image3) }}" alt="img">
-                              </a>
-                              @endif
-                      </span>
-                    <input name="image3" class="input-file input-file3" id="my-file3" type="file">
-                    <label tabindex="0" for="my-file3" class="input-file-trigger input-file-trigger3">Odaberite sliku...</label>
-                    </div>
-                    <script>
-                        var fileInput = document.querySelector(".input-file3"),
-                            button = document.querySelector(".input-file-trigger3");
-
-                        button.addEventListener("keydown", function (event) {
-                            if (event.keyCode == 13 || event.keyCode == 32) {
-                                fileInput.focus();
-                            }
-                        });
-                        button.addEventListener("click", function () {
-                            fileInput.focus();
-                            return false;
-                        });
-                    </script>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        {{-- <label>Min: {{ $width }}x{{ $height }}px</label> --}}
-                    </div>
-                    <div class="input-file-container" {!! $errors->has('image4') ? 'style="border-color:red;"' : '' !!}>
-                        @if(!is_null($item->image4))
-                            <a href="{{ url('cms/pages/imagedelete/'.$item->id.'?image4=image4') }}"><span><i class="fa fa-close"></i></span></a>
-                        @endif
-                        <span class="img-placeholder">
-                              @if(is_null($item->image4))
-                              <a href="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" data-fancybox="gallery">
-                                <img src="{{ asset('cmsfiles/images/placeholder-images.jpg') }}" alt="img">
-                              </a>
-                              @else
-                              <a href="{{ asset('storage/'.$item->image4) }}" data-fancybox="gallery">
-                                <img src="{{ asset('storage/'.$item->image4) }}" alt="img">
-                              </a>
-                              @endif
-                      </span>
-                    <input name="image4" class="input-file input-file4" id="my-file4" type="file">
-                    <label tabindex="0" for="my-file4" class="input-file-trigger input-file-trigger4">Odaberite sliku...</label>
-                    </div>
-                    <script>
-                        var fileInput = document.querySelector(".input-file4"),
-                            button = document.querySelector(".input-file-trigger4");
-
-                        button.addEventListener("keydown", function (event) {
-                            if (event.keyCode == 13 || event.keyCode == 32) {
-                                fileInput.focus();
-                            }
-                        });
-                        button.addEventListener("click", function () {
-                            fileInput.focus();
-                            return false;
-                        });
-                    </script>
-                </div>
+                @endfor
                 @endif
                 @endif
             </div>

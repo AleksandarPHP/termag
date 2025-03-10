@@ -1,9 +1,6 @@
 @include('partials/header')
 <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.nocaptcha.sitekey') }}"></script>
 
-{{-- <script src="https://www.google.com/recaptcha/api.js?render=6LeIfqoqAAAAADO-AYxXMaO6Og7S7MkvmAHTIrsb"></script> --}}
-{{-- <link rel="stylesheet" type="text/css" href="{{ asset('cmsfiles/css/dropzone.css') }}" /> --}}
-
 <main>
     <section class="career">
         <div class="bg" style="background-image: url('{{asset("assets/images/prevoz-jahorina-bg.jpg")}}');"></div>
@@ -80,11 +77,11 @@
                                 <label class="mb-5">{{__('Kids chair')}}	</label>
                                 <div class="row">
                                     <div class="col-md-3 col-2">
-                                        <input type="radio" id="chair1" id="chair" value="{{old('chair')}}" name="chair" required/>
+                                        <input type="radio" id="chair1" id="chair" value="Da" name="chair" required/>
                                         <label style="text-align: center;justify-content: center;display: flex;" for="chair1">{{__('Yes')}}</label>
                                     </div>
                                     <div class="col-md-3 col-2">
-                                        <input type="radio" id="chair2" id="chair" value="{{old('chair')}}" name="chair" required/>
+                                        <input type="radio" id="chair2" id="chair" value="Ne" name="chair" required/>
                                         <label style="text-align: center;justify-content: center;display: flex;" for="chair2">{{__('No')}}</label>
                                     </div>
                                 </div>
