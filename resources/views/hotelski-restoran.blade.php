@@ -115,7 +115,7 @@
                 @isset($text->text)
                     {!!$text->text!!}
                 @endisset
-                <a href="#" class="btnn btn_primary">Book Now</a>
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
