@@ -1,6 +1,6 @@
 @include('partials/header')
 @php
-    $albums = App\Models\Album::findOrFail(1);
+    $albums = App\Models\Album::where('is_active', 1)->whereNot('id', 1)->get();
 @endphp
 <main>
     @foreach ($albums as $album)
