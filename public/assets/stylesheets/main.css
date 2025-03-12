@@ -1494,7 +1494,7 @@ footer .cta-links a {
 .get-to-know .cardd {
     padding: 3rem;
     text-align: center;
-    min-height: 560px;
+    min-height: 400px;
 }
 .get-to-know .cardd h3 {
     color: var(--gold);
