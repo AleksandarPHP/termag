@@ -4,14 +4,8 @@
     @section('content')
 <main>
     <section class="career vt">
-        <video autoplay muted loop>
-            <source
-                src="{{ asset('assets/videos/villa-termag.mov') }}"
-                type="video/mp4"
-            />
-        </video>
-        <div class="overlay"></div>
         @php $text =  Helper::text(22) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 @isset($text->title)
