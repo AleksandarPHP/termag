@@ -133,7 +133,7 @@
                     </div>
                       @php $text =  Helper::text(208) @endphp
                     @isset($text->title)
-                    <h4 class="subtitle">{{$text->title}}</h4>
+                    <h2 class="title-smaller">{{$text->title}}</h2>
                     @endisset
                     @isset($text->text)
                     <p class="txt">

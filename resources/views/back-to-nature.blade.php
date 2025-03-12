@@ -28,7 +28,7 @@
                 <nav class="pills-wrapper">
                     <div class="nav nav-tabs" id="nav-tab2" role="tablist">
                     @foreach ($package->options as $item)
-                    <button class="nav-link @if ($loop->first)active @endif " id="nav-home-tab{{$item->id}}" data-bs-toggle="tab" data-bs-target="#nav-home{{$item->id}}" type="button" role="tab" aria-controls="nav-home{{$item->id}}" aria-selected="true">{{$item->nights}} noći</button>
+                    <button class="nav-link @if ($loop->first)active @endif " id="nav-home-tab{{$item->id}}" data-bs-toggle="tab" data-bs-target="#nav-home{{$item->id}}" type="button" role="tab" aria-controls="nav-home{{$item->id}}" aria-selected="true">{{$item->nights}} {{__('nights')}}i</button>
                     @endforeach
                     </div>
                 </nav>
