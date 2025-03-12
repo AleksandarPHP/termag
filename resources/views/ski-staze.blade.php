@@ -189,7 +189,7 @@
                 <div class="col-md-6">
                   @php $text =  Helper::text(163) @endphp
                     <div class="card" data-aos="fade-right" data-aos-duration="600">
-                        <img src="{{asset("storage/".$text->image)}}" class="card-img-top" alt="porodicni paket">
+                        <img src="{{Helper::image($text->image, 550,365, false)}}" class="card-img-top" alt="porodicni paket">
                         <div class="card-body">
                           @isset($text->title)
                           <h5>{{$text->title}}</h5>
@@ -205,7 +205,7 @@
                 <div class="col-md-6">
                   @php $text =  Helper::text(164) @endphp
                     <div class="card" data-aos="fade-left" data-aos-duration="600">
-                        <img src="{{asset("storage/".$text->image)}}" class="card-img-top" alt="Romantični Paket">
+                        <img src="{{Helper::image($text->image, 550,365, false)}}" class="card-img-top" alt="Romantični Paket">
                         <div class="card-body">
                           @isset($text->title)
                           <h5>{{$text->title}}</h5>
@@ -224,7 +224,7 @@
                 <div class="col-lg-4 col-md-6">
                   @php $text =  Helper::text(165) @endphp
                     <div class="card" data-aos="fade-right" data-aos-duration="600">
-                        <img src="{{asset("storage/".$text->image)}}" class="card-img-top" alt="Relax Paket">
+                        <img src="{{Helper::image($text->image, 370,245, false)}}" class="card-img-top" alt="Relax Paket">
                         <div class="card-body">
                           @isset($text->title)
                           <h5>{{$text->title}}</h5>
@@ -240,7 +240,7 @@
                 <div class="col-lg-4 col-md-6">
                   @php $text =  Helper::text(166) @endphp
                     <div class="card" data-aos="fade-up" data-aos-duration="600">
-                        <img src="{{asset("storage/".$text->image)}}" class="card-img-top" alt="Detox Paket">
+                        <img src="{{Helper::image($text->image, 370,245, false)}}" class="card-img-top" alt="Detox Paket">
                         <div class="card-body">
                           @isset($text->title)
                           <h5>{{$text->title}}</h5>
@@ -256,7 +256,7 @@
                 <div class="col-lg-4 col-md-6">
                   @php $text =  Helper::text(167) @endphp
                     <div class="card" data-aos="fade-left" data-aos-duration="600">
-                        <img src="{{asset("storage/".$text->image)}}" class="card-img-top" alt="Back to Nature">
+                        <img src="{{Helper::image($text->image, 370,245, false)}}" class="card-img-top" alt="Back to Nature">
                         <div class="card-body">
                           @isset($text->title)
                           <h5>{{$text->title}}</h5>
