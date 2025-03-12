@@ -1,31 +1,43 @@
-@include('partials/header')
+@extends('layouts.app')
+    @section('title', Helper::title(148))
+    @section('description', Helper::description(148))
+    @section('content')
 
 <main>
     <section class="villa-termag ski-skola">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/ski-skola-bg.png")}}');"></div>
+        @php $text =  Helper::text(149) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Ski Škola</h2>
-                    <p class="txt">
-                        Termag hotel tokom zimske sezone nudi uslugu ski škole i obuke skijanja za sve svoje goste. U našoj ski školi „PST“ tim Jahorina većinom rade diplomirani profesori fizičkog vaspitanja i sporta koji su pritom i licencirani instrukori skijanja, obučeni za rad i organizaciju team building aktivnosti, radničkih sportskih igara, licencirani planinski vodiči, obučeni za penjanje na vještačku stijenu, organizaciju i izvođenje svih outdoor aktivnosti.
+                    @isset($text->title)
+                    <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->title}}</h1>
+                    @endisset
+                    @isset($text->subtitle)
+                    <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
+                        {{$text->subtitle}}
                     </p>
-                    <a href="#" class="btnn btn_primary">Book now</a>
+                    @endisset
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
     </section>
 
     <section class="wellness-spa">
-        <div class="bg" style="background-image: url('{{asset("assets/images/ski-bg.jpg")}}');"></div>
+        @php $text =  Helper::text(149) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
-                <h2>PST Tim</h2>
-                <p class="txt">
-                    „PST“ tim ski škola sa velikim uspjehom funkcioniše na Jahorini dugi niz godina, a dokaz za to je broj djece i odraslih koji je prošao našu obuku (5 000 u poslednje tri godine).
-                    Ukoliko želite časove skijanja sa naboljim instruktorima na planini, posjetite naš sajt kako bi dobili dodatne informacije ili zakazali željeni termin 
+                @isset($text->title)
+                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->title}}</h1>
+                @endisset
+                @isset($text->subtitle)
+                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
+                    {{$text->subtitle}}
                 </p>
-                <a href="#" class="btnn btn_primary">Book now</a>
+                @endisset
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
@@ -141,4 +153,4 @@
     </section>
 </main>
 
-@include('partials/footer')
+@endsection
