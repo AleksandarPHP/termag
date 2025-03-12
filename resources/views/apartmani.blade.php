@@ -5,7 +5,7 @@
 <main>
     <section class="career apartmants">
         @php $text =  Helper::text(15) @endphp
-        <div class="bg" style="background-image: url('{{asset("assets/images/apartmani-bg.webp")}}');"></div>
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 @isset($text->subtitle)<h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->subtitle}}</h4>@endisset
