@@ -19,7 +19,7 @@
         <div class="container-fluid">
             <div class="gallery-wrapper">
                 @foreach ($gallerise as $gallery)
-                    <a href="{{ {{Helper::image($gallery->image, 640,640, false)}} }}" data-fancybox="gallery">
+                    <a href="{{Helper::image($gallery->image, 640,640, false)}}" data-fancybox="gallery">
                         <img class="img-thumbnail" src="{{ asset('storage/' . $gallery->image) }}" />
                     </a>
                 @endforeach
