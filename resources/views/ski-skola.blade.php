@@ -145,13 +145,13 @@
         <div class="container-fluid">
             @php $text =  Helper::text(230) @endphp
             <div class="row">
-                <div class="col-md-3 col-6"><img src="{{Helper::image($text->image, 630, 400, false)}}" alt="ski skola" class="img-fluid"></div>
+                <div class="col-md-3 col-6"><img src="{{Helper::image($text->image, 640, 400, false)}}" alt="ski skola" class="img-fluid"></div>
                 @for ($i = 2; $i <= 8; $i++)
                 @php
                     $img = 'image'.$i;   
                 @endphp
                 @if ($text->$img)
-                    <div class="col-md-3 col-6"><img src="{{Helper::image($text->$img, 630, 400, false)}}" alt="ski skola {{$i}}" class="img-fluid"></div>
+                    <div class="col-md-3 col-6"><img src="{{Helper::image($text->$img, 640, 400, false)}}" alt="ski skola {{$i}}" class="img-fluid"></div>
                 @endif
                 @endfor
             </div>

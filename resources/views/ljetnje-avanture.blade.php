@@ -13,7 +13,7 @@
         <div class="overlay"></div>
 
         <div class="container">
-        @php $text =  Helper::text(76) @endphp
+        @php $text =  Helper::text(85) @endphp
             <div class="content-wrapper">
                 @isset($text->subtitle)
                 <h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->subtitle}}</h4>
