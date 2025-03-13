@@ -1,9 +1,5 @@
 @include('partials/header')
 <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.nocaptcha.sitekey') }}"></script>
-
-{{-- <script src="https://www.google.com/recaptcha/api.js?render=6LeIfqoqAAAAADO-AYxXMaO6Og7S7MkvmAHTIrsb"></script> --}}
-{{-- <link rel="stylesheet" type="text/css" href="{{ asset('cmsfiles/css/dropzone.css') }}" /> --}}
-
 <main>
     <section class="career">
         <div class="bg" style="background-image: url('{{asset("assets/images/prevoz-jahorina-bg.jpg")}}');"></div>
@@ -18,8 +14,8 @@
     </section>
 
     @include('partials/booking')
+    @if (app()->getLocale() == 'sr')
     <section class="wellness-spa job-full">
-        {{-- <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div> --}}
         <div class="container">
             <script type="text/javascript">
                 window.wbpSettings = window.wbpSettings || {};
@@ -56,8 +52,42 @@
                 <div id="wbproot" ></div>
         </div>
     </section>
+    @else
+    <script type="text/javascript">
+        window.wbpSettings = window.wbpSettings || {};
+        window.wbpSettings = {
+          'hotelId': '33635',
+          'language': 'en',
+          'currency':  'EUR',
+          'showLogo': '0',
+          'showFooter': '0',
+          'darktheme': '0',
+           'showProperty': 0
+        }
+    </script>
+      
+    <script>
+      fetch('https://booking.webbookingpro.com/asset-manifest.json')
+          .then((response) => response.json())
+          .then(({entrypoints}) => {
+              entrypoints.forEach(file => {
+                  if (file.endsWith('.css')) {
+                      var css = document.createElement('link');
+                      css.rel = 'stylesheet';
+                      css.href = 'https://booking.webbookingpro.com/' + file;
+                      document.head.appendChild(css);
+                  }
+                  else if (file.endsWith('js')) {
+                      var script = document.createElement('script');
+                      script.src = 'https://booking.webbookingpro.com/' + file;
+                      document.head.appendChild(script);
+                  }
+              });
+          });
+      </script>
+        <div id="wbproot" ></div>
+    @endif
 </main>
-{{-- <script type="text/javascript" src="{{ asset('cmsfiles/js/dropzone.js') }}"></script> --}}
 <script>
     $(document).ready(function(e) {
       @if(session('status'))
