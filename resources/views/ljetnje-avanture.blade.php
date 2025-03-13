@@ -43,20 +43,23 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
-                            <img class="img-fluid" src="{{asset('assets/images/la-1.png')}}" alt="porodicna 8km">
-                            <figcaption>{{__('Mountaineering')}}</figcaption>
+                            @php $text =  Helper::text(231) @endphp
+                            <img class="img-fluid" src="{{asset("storage/".$text->image)}}" alt="{{$text->title}}">
+                            <figcaption>{{$text->title}}</figcaption>
                         </figure>
                     </div>
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
                         <figure>
-                            <img class="img-fluid" src="{{asset('assets/images/la-2.png')}}" alt="plava 24km">
-                            <figcaption>{{__('Alpinism')}}</figcaption>
+                            @php $text =  Helper::text(232) @endphp
+                            <img class="img-fluid" src="{{asset("storage/".$text->image)}}" alt="{{$text->title}}">
+                            <figcaption>{{$text->title}}</figcaption>
                         </figure>
                     </div>
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
                         <figure>
-                            <img class="img-fluid" src="{{asset('assets/images/la-3.png')}}" alt="crvena 34km">
-                            <figcaption>Karting</figcaption>
+                            @php $text =  Helper::text(233) @endphp
+                            <img class="img-fluid" src="{{asset("storage/".$text->image)}}" alt="{{$text->title}}">
+                            <figcaption>{{$text->title}}</figcaption>
                         </figure>
                     </div>
                 </div>
