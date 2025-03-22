@@ -156,8 +156,6 @@ class MessageController extends Controller
 
     public function formularRestaurant(Request $request)
     {
-
-        // dd($request->all());
         $request->validate([
             'name' => ['required', 'string', 'max:191'],
             'g-recaptcha-response' => ['required', function ($attribute, $value, $fail) {
@@ -185,8 +183,8 @@ class MessageController extends Controller
         $html .= '<b>Prezime:</b> '.htmlspecialchars($request->input('last_name')).'<br>';
         $html .= '<b>Email:</b> '.htmlspecialchars($request->input('email')).'<br>';
         if($request->input('tel')!='') $html .= '<b>Telefon:</b> '.htmlspecialchars($request->input('tel')).'<br>';
-        if($request->input('reservation_date')!='') $html .= '<b>Datum rezervacije:</b> '.htmlspecialchars($request->input('transfer_date')).'<br>';
-        if($request->input('reservation_time')!='') $html .= '<b>Vrijeme rezervacije:</b> '.htmlspecialchars($request->input('transfer_time')).'<br>';
+        if($request->input('reservation_date')!='') $html .= '<b>Datum rezervacije:</b> '.htmlspecialchars($request->input('reservation_date')).'<br>';
+        if($request->input('reservation_time')!='') $html .= '<b>Vrijeme rezervacije:</b> '.htmlspecialchars($request->input('reservation_time')).'<br>';
         if($request->input('adults')!='') $html .= '<b>Odrasli:</b> '.htmlspecialchars($request->input('adults')).'<br>';
         if($request->input('children')!='') $html .= '<b>Djeca:</b> '.htmlspecialchars($request->input('children')).'<br>';
         if($request->input('chair')!='') $html .= '<b>Sjedalica:</b> '.htmlspecialchars($request->input('chair')).'<br>';
@@ -194,6 +192,48 @@ class MessageController extends Controller
 
         try {
              Notification::route('mail', 'restoran@termaghotel.com')->notify(new RestaurantFormular($html, $request->input('email'), $request->input('name')));
+        } catch (Exception $e) {}
+        
+        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+    }
+
+    public function formularSeminars(Request $request)
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'max:191'],
+            'g-recaptcha-response' => ['required', function ($attribute, $value, $fail) {
+                if (!app('captcha')->verifyResponse($value)) {
+                    $fail('Invalid reCAPTCHA response.');
+                }
+            }],
+            'last_name' => ['required', 'string', 'max:191'],
+            'email' => ['required', 'string', 'max:191'],
+            'company' => ['required', 'string', 'max:191'],
+            'check_in' => ['required', 'string', 'max:191'],
+            'check_out' => ['required', 'string', 'max:191'],
+            'guest' => ['required', 'string', 'max:191'],
+            'rooms' => ['nullable', 'string', 'max:191'],
+            'hall' => ['nullable', 'string', 'max:191'],
+            'description' => ['nullable', 'string'],
+        ]);   
+
+
+        if ($request->check_first) {
+            return redirect(url()->previous())->with(['spam' => 'SPAM!']);
+        }
+        $html = '<b>Ime:</b> '.htmlspecialchars($request->input('name')).'<br>';
+        $html .= '<b>Prezime:</b> '.htmlspecialchars($request->input('last_name')).'<br>';
+        $html .= '<b>Email:</b> '.htmlspecialchars($request->input('email')).'<br>';
+        if($request->input('company')!='') $html .= '<b>Kompanija:</b> '.htmlspecialchars($request->input('company')).'<br>';
+        if($request->input('check_in')!='') $html .= '<b>Check in:</b> '.htmlspecialchars($request->input('check_in')).'<br>';
+        if($request->input('check_out')!='') $html .= '<b>Check out:</b> '.htmlspecialchars($request->input('check_out')).'<br>';
+        if($request->input('guest')!='') $html .= '<b>Broj gostiju:</b> '.htmlspecialchars($request->input('guest')).'<br>';
+        if($request->input('rooms')!='') $html .= '<b>Potrebno soba:</b> '.htmlspecialchars($request->input('rooms')).'<br>';
+        if($request->input('hall')!='') $html .= '<b>Potrebne sale za rad:</b> '.htmlspecialchars($request->input('hall')).'<br>';
+        if($request->input('description')!='') $html .= '<b>Dodatni zahtjevi:</b> '.htmlspecialchars($request->input('description')).'<br>';
+
+        try {
+             Notification::route('mail', 'info@termaghotel.com')->notify(new RestaurantFormular($html, $request->input('email'), $request->input('name')));
         } catch (Exception $e) {}
         
         return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);

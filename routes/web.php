@@ -30,6 +30,7 @@ use Illuminate\Support\Facades\Route;
         'meni' => 'meni',
         'formular' => 'formular',
         'formular-restoran' => 'formular-restoran',
+        'formular-seminari' => 'formular-seminari',
         'termag-hotelske-sobe' => 'termag-hotelske-sobe',
         'apartmani' => 'apartmani',
         'villa-termag' => 'villa-termag',
@@ -216,7 +217,8 @@ Route::get('sitemap.xml', 'App\Http\Controllers\SitemapController@index');
 
 Route::post('upload-file', 'App\Http\Controllers\MessageController@kontakt'); 
 Route::post('formular', 'App\Http\Controllers\MessageController@formular'); 
-Route::post('formular-restoran', 'App\Http\Controllers\MessageController@formularRestaurant'); 
+Route::post('formular-restoran', 'App\Http\Controllers\MessageController@formularRestaurant');
+Route::post('formular-seminari', 'App\Http\Controllers\MessageController@formularSeminars'); 
 Auth::routes(['verify' => false, 'register' => false]);
 
 Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function() {
