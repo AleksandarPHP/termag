@@ -91,10 +91,10 @@ class PackageOptionController extends Controller
         $request->validate([
             'title' => ['nullable', 'string', 'max:191'],
             'package_id' => ['required', 'string'],
-            'nights' => ['nullable', 'numeric', 'max:9999'],
+            'nights' => ['required', 'numeric', 'max:9999'],
             'price' => ['nullable', 'numeric', 'max:9999'],
-            'from_date' => ['required', 'date'],
-            'to_date' => ['required', 'date'],
+            'from_date' => ['nullable', 'date'],
+            'to_date' => ['nullable', 'date'],
             'is_active' => ['nullable', 'string', 'in:1'],
         ]);
         
