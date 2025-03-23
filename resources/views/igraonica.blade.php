@@ -42,6 +42,22 @@
             </div>
         </div>
     </section>
+    <section class="race">
+        <div class="container-fluid">
+            @php $text =  Helper::text(236) @endphp
+            <div class="row quad-safari-slider">
+                @if ($text->image)<div class="col-md-3 col-6"><img src="{{Helper::image($text->image, 570,380, false)}}" alt="" class="img-fluid"></div>@endif
+                @for ($i = 2; $i <= 8; $i++)
+                @php
+                 $img = 'image'.$i;   
+                @endphp
+                    @if ($text->$img)
+                        <div class="col-md-3 col-6"><img src="{{Helper::image($text->$img, 570,380, false)}}" alt="slider" class="img-fluid"></div>
+                    @endif
+                @endfor
+            </div>
+        </div>
+    </section>
 </main>
 
 @endsection
