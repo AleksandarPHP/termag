@@ -79,6 +79,15 @@ function handleDropdown(dropdown, arrow, open) {
 }
 
 Fancybox.bind('[data-fancybox="gallery"]', {});
+$('.quad-safari-slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false
+  });
+//   $('.quad-safari-slider').slick();
 
 $(".economic-slider").slick({
     dots: false,
