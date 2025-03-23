@@ -51,11 +51,17 @@
     </section>
     <section class="race">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-1.jpg')}}" alt="" class="img-fluid"></div>
-                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-2.jpg')}}" alt="" class="img-fluid"></div>
-                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-3.jpg')}}" alt="" class="img-fluid"></div>
-                <div class="col-md-3 col-6"><img src="{{asset('assets/images/b-4.jpg')}}" alt="" class="img-fluid"></div>
+            @php $text =  Helper::text(235) @endphp
+            <div class="row quad-safari-slider">
+                @if ($text->image)<div class="col-md-3 col-6"><img src="{{Helper::image($text->image, 570,380, false)}}" alt="" class="img-fluid"></div>@endif
+                @for ($i = 2; $i <= 8; $i++)
+                @php
+                 $img = 'image'.$i;   
+                @endphp
+                    @if ($text->$img)
+                        <div class="col-md-3 col-6"><img src="{{Helper::image($text->$img, 570,380, false)}}" alt="slider" class="img-fluid"></div>
+                    @endif
+                @endfor
             </div>
         </div>
     </section>

@@ -122,7 +122,7 @@
                     </script>
                 </div>
                 @endif
-                @if ($item->id==17 || $item->id==18 || $item->id==19 || $item->id==20 || $item->id==204 || $item->id==205 || $item->id==206 || $item->id==207  || $item->id==209 || $item->id==210 || $item->id==211 || $item->id==212 || $item->id==213 || $item->id==230 || $item->id==234)
+                @if ($item->id==17 || $item->id==18 || $item->id==19 || $item->id==20 || $item->id==204 || $item->id==205 || $item->id==206 || $item->id==207  || $item->id==209 || $item->id==210 || $item->id==211 || $item->id==212 || $item->id==213 || $item->id==230 || $item->id==234  || $item->id==235)
                 @for ($i = 2; $i <= 8; $i++)
                 @php
                  $img = 'image'.$i;   
