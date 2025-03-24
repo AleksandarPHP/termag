@@ -32,6 +32,7 @@
           array('cms/documents', 'Dokumenti', 'download'),
           array('cms/info', 'Informacije', 'info-circle'),
           array('cms/messages', 'Inbox', 'envelope'),
+          array('cms/blogs', 'Blog', 'pencil-square'),
         );
         @endphp
         @foreach ($moduli as $modul)

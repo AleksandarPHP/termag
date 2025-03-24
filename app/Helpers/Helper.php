@@ -237,4 +237,13 @@ class Helper {
             return Page::where('id', $id)->value('meta_title');
         });
     }
+
+    public static function slug($title)
+    {
+        if ($title) {
+            $slug = Str::slug($title);
+        }
+
+        return $slug;
+    }
 }

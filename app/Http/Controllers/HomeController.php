@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Blog;
 
 class HomeController extends Controller
 {
@@ -24,5 +25,19 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function blog()
+    {
+        $blogs = Blog::where('is_active', 1)->orderBy('id', 'DESC')->get();
+
+        return view('blog', ['blogs' => $blogs]);
+    }
+
+    public function blogDetail($id)
+    {
+        $blog = Blog::findOrFail($id);
+
+        return view('blog-detalji', ['blog' => $blog]);
     }
 }

@@ -211,7 +211,12 @@ Route::group(['prefix' => 'en'], function () use ($routes) {
     foreach ($routes as $uri => $view) {
         Route::get($uri, fn() => view($view));
     }
+    Route::get('blog', 'App\Http\Controllers\HomeController@blog');
+    Route::get('blog/{id}/{slug}', 'App\Http\Controllers\HomeController@blogDetail');
 });
+
+Route::get('blog', 'App\Http\Controllers\HomeController@blog');
+Route::get('blog/{id}/{slug}', 'App\Http\Controllers\HomeController@blogDetail');
 
 Route::get('sitemap.xml', 'App\Http\Controllers\SitemapController@index');
 
@@ -264,6 +269,9 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
 
     Route::resource('documents', 'App\Http\Controllers\DocumentsController')->only('index', 'destroy');
     Route::post('documents/upload', 'App\Http\Controllers\DocumentsController@upload');
+
+    Route::resource('blogs', 'App\Http\Controllers\BlogController')->except('show');
+    Route::post('blogs/ajax', 'App\Http\Controllers\BlogController@ajax');  
 
     Route::resource('albums', 'App\Http\Controllers\AlbumController')->except('show');
 

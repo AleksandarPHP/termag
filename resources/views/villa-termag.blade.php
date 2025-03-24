@@ -83,7 +83,12 @@
                     @endisset
                     @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
-                <img class="img-fluid" src="{{asset('storage/'.$text->image)}}" alt="villa termag">
+                <div class="apartmenst-type">
+                    <img class="img-fluid" src="{{asset('storage/'.$text->image)}}" alt="villa termag">
+                    <img class="img-fluid" src="{{asset('storage/'.$text->image)}}" alt="villa termag">
+                    <img class="img-fluid" src="{{asset('storage/'.$text->image)}}" alt="villa termag">
+                    <img class="img-fluid" src="{{asset('storage/'.$text->image)}}" alt="villa termag">
+                </div>
             </div>
         </div>
     </section>
