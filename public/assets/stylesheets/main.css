@@ -501,7 +501,7 @@ header .navbar .offcanvas-body .dropdown-item.active,
     background-repeat: no-repeat;
     width: 50%;
     height: 100%;
-    z-index: 1;
+    z-index: 0;
     opacity: 0.1;
     background-position: center;
 }
