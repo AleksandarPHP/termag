@@ -28,6 +28,7 @@ use Illuminate\Support\Facades\Route;
         'dokumenti' => 'dokumenti',
         'informacije' => 'informacije',
         'meni' => 'meni',
+        'vile-borghetto' => 'vile-borghetto',
         'formular' => 'formular',
         'formular-restoran' => 'formular-restoran',
         'formular-seminari' => 'formular-seminari',
