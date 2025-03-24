@@ -4,7 +4,7 @@
     @section('content')
 <main>
     <section class="villa-termag organic-facts">
-        @php $text =  Helper::text(220) @endphp
+        @php $text =  Helper::text(238) @endphp
         <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
@@ -26,7 +26,7 @@
     <section class="special" style="padding:0 0 5rem 0;">
         <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
-            @php $text =  Helper::text(224) @endphp
+            @php $text =  Helper::text(239) @endphp
             @isset($text->title)
             <h2 class="massage-smaller">{{$text->title}}</h2>
             @endisset
