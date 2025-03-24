@@ -14,7 +14,7 @@
         </div>
     </section>
 
-    @include('partials/booking')
+    {{-- @include('partials/booking') --}}
     <section class="wellness-spa job-full">
         <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
         <div class="container">
