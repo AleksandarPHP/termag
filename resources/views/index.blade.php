@@ -206,7 +206,7 @@ y          </section>
 
                   <div class="row">
                     @php
-                      $packages = App\Models\Package::where('is_active', 1)->where('special', 0)->where('special_view', 0)->orderBy('id', 'DESC')->get()->skip(2);
+                      $packages = App\Models\Package::where('is_active', 1)->where('special', 0)->whereNull('special_view')->orderBy('id', 'DESC')->get()->skip(2);
                     @endphp
                         @if ($packages)
                         @foreach ($packages as $package)
