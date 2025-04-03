@@ -23,9 +23,9 @@
             </div>
         </div>
     </section>
-    <section class="special" style="padding:0 0 5rem 0;">
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
-        <div class="container">
+    <section class="special mb-5" style="padding:0 0 5rem 0;">
+        <div class="bg mb-5" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="container mb-5">
             @php $text =  Helper::text(242) @endphp
             @isset($text->title)
             <h2 class="massage-smaller">{{$text->title}}</h2>
