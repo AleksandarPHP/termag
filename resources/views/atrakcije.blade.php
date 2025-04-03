@@ -27,7 +27,7 @@
                 <p class="txt">
                     {!!$text->text!!}
                 </p>
-                @isset($text->text)
+                @endisset
                 @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
@@ -43,7 +43,7 @@
                     <p class="txt">
                         {!!$text->text!!}
                     </p>
-                    @isset($text->text)
+                    @endisset
                     @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
@@ -59,7 +59,7 @@
                 <p class="txt">
                     {!!$text->text!!}
                 </p>
-                @isset($text->text)
+                @endisset
                 @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
@@ -75,14 +75,14 @@
                     <p class="txt">
                         {!!$text->text!!}
                     </p>
-                    @isset($text->text)
+                    @endisset
                     @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
     </section>
     <section class="wellness-spa">
-        @php $text =  Helper::text(258) @endphp
+        @php $text =  Helper::text(259) @endphp
         <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
@@ -91,7 +91,7 @@
                 <p class="txt">
                     {!!$text->text!!}
                 </p>
-                @isset($text->text)
+                @endisset
                 @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
