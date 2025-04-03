@@ -206,7 +206,7 @@ y          </section>
 
                   <div class="row">
                     @php
-                      $packages = App\Models\Package::where('is_active', 1)->where('special', 0)->orderBy('id', 'DESC')->get()->skip(2);
+                      $packages = App\Models\Package::where('is_active', 1)->where('special', 0)->where('special_view', 0)->orderBy('id', 'DESC')->get()->skip(2);
                     @endphp
                         @if ($packages)
                         @foreach ($packages as $package)
@@ -258,14 +258,12 @@ y          </section>
       @include('partials/socials') 
       <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Select all video elements
             const videos = document.querySelectorAll("video");
             
             videos.forEach((video) => {
                 const source = video.querySelector("source");
                 const dataSrc = source.getAttribute("data-src");
                 
-                // Apply lazy loading if data-src exists
                 if (dataSrc) {
                     source.src = dataSrc;
                     video.load();
