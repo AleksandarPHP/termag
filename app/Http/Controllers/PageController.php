@@ -233,12 +233,9 @@ class PageController extends Controller
 
     public function removeImage(Request $request, $id)
     {
-        $checkArray = ['image'];
-
-        $checkArray = implode(",", $checkArray);
 
         $request->validate([
-            'image2' => ['required', 'in:'.$checkArray],
+            'image' => ['required'],
         ]);
 
         $item = Page::findOrFail($id);
@@ -251,7 +248,7 @@ class PageController extends Controller
             return back()->with('error', 'Failed to find that resource');
         }
 
-        Cache::forget('texts-'.$item->id);
+        Cache::forget('page-'.$item->id);
 
         session()->flash('success', 'Izmjenjeno.');
         return back();

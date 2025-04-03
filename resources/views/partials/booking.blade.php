@@ -1,30 +1,28 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <section class="booking" data-aos="fade-up">
-    <style>
-        /* .guest-counter {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-} */
+<style>
+    #ui-datepicker-div{
+        display: none !important;
+    }
+    .gests-wrapper button, .children-wrapper button{
+        background-color: transparent;
+        color: var(--text-color-primary);
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 5px;
+    }
 
-.gests-wrapper button, .children-wrapper button{
-    background-color: transparent;
-    color: var(--text-color-primary);
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 5px;
-}
+    .gests-wrapper button:disabled, .children-wrapper button:disabled {
+        background-color: #d3d3d3;
+        cursor: not-allowed;
+    }
 
-.gests-wrapper button:disabled, .children-wrapper button:disabled {
-    background-color: #d3d3d3;
-    cursor: not-allowed;
-}
-
-#guest-count, #child-count {
-    text-align: center;
-}
-    </style>
+    #guest-count, #child-count {
+        text-align: center;
+    }
+</style>
     <div class="container">
         <form action="{{Helper::url('rezervacija')}}" method="GET" target="_blank">
             <input type="hidden" name="company_id" value="ef330cb3f8f74caf95689177209df3e4">
@@ -35,23 +33,17 @@
 
             <div>
                 <div>
-                    <img
-                        src="{{ asset('assets/images/calendar-icon.svg') }}"
-                        alt="kalendar"
-                    />
+                    <img src="{{ asset('assets/images/calendar-icon.svg') }}" alt="kalendar"/>
                     <h4>Check in</h4>
                 </div>
-                <input type="text" id="checkIn" name="checkin_date"/>
+                <input type="text" id="checkIn" name="checkin_date" placeholder="Select date" readonly tabindex="-1"/>
             </div>
             <div>
                 <div>
-                    <img
-                        src="{{ asset('assets/images/calendar-icon.svg') }}"
-                        alt="kalendar"
-                    />
+                    <img src="{{ asset('assets/images/calendar-icon.svg') }}" alt="kalendar"/>
                     <h4>Check out</h4>
                 </div>
-                <input type="text" id="checkOut" name="checkout_date"/>
+                <input type="text" id="checkOut" name="checkout_date" placeholder="Select date" readonly tabindex="-1"/>
             </div>
             <div>
                 <div>
@@ -98,39 +90,44 @@
             </div>
         </form>
     </div>
-
     <script>
-    function formatDate(date) {
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0'); // Dodaje 0 ispred jednocifrenih meseci
-        const day = String(date.getDate()).padStart(2, '0');       // Dodaje 0 ispred jednocifrenih dana
-        return `${year}-${month}-${day}`;
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+        let checkInInput = document.getElementById("checkIn");
+        let checkOutInput = document.getElementById("checkOut");
 
-    function addDays(date, days) {
-        const result = new Date(date);
-        result.setDate(result.getDate() + days);
-        return result;
-    }
+        checkInInput.setAttribute("type", "text");
+        checkOutInput.setAttribute("type", "text");
 
-    const checkInInput = document.getElementById('checkIn');
-    const checkOutInput = document.getElementById('checkOut');
+        let checkInCalendar = flatpickr(checkInInput, {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+            onChange: function(selectedDates) {
+                let minCheckoutDate = new Date(selectedDates[0]);
+                minCheckoutDate.setDate(minCheckoutDate.getDate() + 1);
+                checkOutCalendar.set("minDate", minCheckoutDate);
+                checkOutInput.value = flatpickr.formatDate(minCheckoutDate, "Y-m-d");
+            },
+            onClose: function() {
+                checkInInput.blur();
+            }
+        });
 
-    const today = new Date();
-    checkInInput.value = formatDate(today);
-    checkOutInput.value = formatDate(addDays(today, 1));
+        let checkOutCalendar = flatpickr(checkOutInput, {
+            dateFormat: "Y-m-d",
+            minDate: "tomorrow",
+            onClose: function() {
+                checkOutInput.blur();
+            }
+        });
 
-    function syncCheckOut() {
-        const checkInDate = new Date(checkInInput.value);
-        if (!isNaN(checkInDate.getTime())) { 
-            console.log('ispravno');
-            
-            checkOutInput.value = formatDate(addDays(checkInDate, 1));
-        }
-    }
+        checkInInput.addEventListener("focus", function() {
+            checkOutInput.blur();
+        });
 
-    checkInInput.addEventListener('input', syncCheckOut);
-
+        checkOutInput.addEventListener("focus", function() {
+            checkInInput.blur();
+        });
+    });
     function updateGuestCount(change) {
         const input = document.getElementById("guest-count");
         let currentValue = parseInt(input.value);

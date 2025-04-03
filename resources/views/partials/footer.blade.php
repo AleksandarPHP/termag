@@ -102,6 +102,7 @@
         <a href="https://soft4tech.com/">SoftTech</a>
     </p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script
     type="text/javascript"

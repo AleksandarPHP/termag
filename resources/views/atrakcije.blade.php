@@ -1,81 +1,101 @@
-@include('partials/header')
-
+@extends('layouts.app')
+    @section('title', Helper::title(253))
+    @section('description', Helper::description(253))
+    @section('content')
 <main>
     <section class="career">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/atrakcije-bg.png")}}');"></div>
+        @php $text =  Helper::text(254) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Atrakcije oko Nas</h1>
+                @isset($text->title)<h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="750">{{$text->title}}</h1>@endisset
+                @isset($text->text)
                 <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
-                    Olimpijska planina Jahorina zauzima centralnu poziciju u Bosni i Hercegovini I udaljena je od Sarajeva i međunarodnog aerodroma na samo pola sata vožnje. Centralna pozicija omogućava odličnu povezanost sa drugim destinacijama i atrakcijama u okruženju, tako da Jahorina predstavlja odličnu bazu i za odmor tokom kojeg želite da upoznate region.
+                    {!!$text->text!!}
                 </p>
+                @endisset
             </div>
         </div>
     </section>
     <section class="wellness-spa">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/sarajevo-bg.png")}}');"></div>
+        @php $text =  Helper::text(255) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
-            <div class="cardd" data-aos="fade-left" data-aos-duration="600">
-                <h2>Sarajevo</h2>
+            <div class="cardd" data-aos="fade-left" data-aos-duration="600"> 
+                @isset($text->title)<h2>{{$text->title}}</h2>@endisset
+                @isset($text->text)
                 <p class="txt">
-                    Sarajevo je najveći grad u Bosni i Hercegovini i istaknuto kulturno središte u Jugoistočnoj Evropi. Grad je poznat po svojoj tradicionalnoj kulturnoj i vjerskoj raznolikosti. Zbog svoje duge i bogate istorije i pripadnosti, vjerskih i kulturnih raznolikosti, Sarajevo se ponekad naziva "Jerusalem Evrope"
+                    {!!$text->text!!}
                 </p>
-                <a href="#" class="btnn btn_primary">Saznaj Više</a>
+                @isset($text->text)
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
     <section class="villa-termag">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/visegrad-bg.png")}}');"></div>
+        @php $text =  Helper::text(256) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Stari most u Višegradu</h2>
+                    @isset($text->title)<h2>{{$text->title}}</h2>@endisset
+                    @isset($text->text)
                     <p class="txt">
-                        Most Mehmed-paše Sokolovića (Stari most u Višegradu) nalazi se u gradu Višegradu blizu granice između Bosne i Hercegovine i Srbije i predstavlja jedno od najmonumentalnijih dijelova arhitekture koja je nastala u razdoblju od 15. do 19. vijeka u Bosni i Hercegovini. Most je nacionalni spomenik Bosne i Hercegovine i izgrađen je u periodu od 1571. do 1577. godine, na mjestu gdje je put povezivao Bosnu sa Carigradom iznad rijeke Drine (tzv. „Carigradska džada”).
+                        {!!$text->text!!}
                     </p>
-                    <a href="#" class="btnn btn_primary">Book now</a>
+                    @isset($text->text)
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
     </section>
     <section class="wellness-spa">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/drvengrad-bg.png")}}');"></div>
+        @php $text =  Helper::text(257) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
-                <h2>Drvengrad</h2>
+                @isset($text->title)<h2>{{$text->title}}</h2>@endisset
+                @isset($text->text)
                 <p class="txt">
-                    Drvengrad (nem. Küstendorf; Kustendorf) je etno selo u Srbiji kod Mokre Gore u opštini Užice. Drvengrad je smješten na razmeđi Zlatibora i Tare. Osnovano je i izgrađeno na brdu Mećavnik po zamisli filmskog reditelja Emira Kusturice za potrebe snimanja filma „Život je čudo“. Mećavnik nadvisuje selo Mokra Gora i visinski je na istom nivou sa željezničkom stanicom Jatare, kroz koju prolazi pruga uskog kolosjeka „Šarganska osmica“.
+                    {!!$text->text!!}
                 </p>
-                <a href="#" class="btnn btn_primary">Saznaj Više</a>
+                @isset($text->text)
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
     <section class="villa-termag" >
-        <div class="bg" style="background-image: url('{{asset("assets/images/andricgrad-bg.png")}}');"></div>
+        @php $text =  Helper::text(258) @endphp
+        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
-                    <h2>Andrićgrad</h2>
+                    @isset($text->title)<h2>{{$text->title}}</h2>@endisset
+                    @isset($text->text)
                     <p class="txt">
-                        Most Mehmed-paše Sokolovića (Stari most u Višegradu) nalazi se u gradu Višegradu blizu granice između Bosne i Hercegovine i Srbije i predstavlja jedno od najmonumentalnijih dijelova arhitekture koja je nastala u razdoblju od 15. do 19. vijeka u Bosni i Hercegovini. Most je nacionalni spomenik Bosne i Hercegovine i izgrađen je u periodu od 1571. do 1577. godine, na mjestu gdje je put povezivao Bosnu sa Carigradom iznad rijeke Drine (tzv. „Carigradska džada”).
+                        {!!$text->text!!}
                     </p>
-                    <a href="#" class="btnn btn_primary">Book now</a>
+                    @isset($text->text)
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
     </section>
     <section class="wellness-spa">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/sarganska-bg.png")}}');"></div>
+        @php $text =  Helper::text(258) @endphp
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
-                <h2>Šarganska osmica</h2>
+                @isset($text->title)<h2>{{$text->title}}</h2>@endisset
+                @isset($text->text)
                 <p class="txt">
-                    Šarganska osmica je dio pruge uzanog kolosijeka između Užica i Višegrada, odnosno Mokre Gore i Kremana, preko brda Šargana. Ova pruga ima veliki broj mostova i 19 tunela od kojih je najduži Šarganski: 1660,80 m.  Po broju mostova i tunela, i usponu od 18 promila, jedinstvena je u Evropi i jedna je od turističkih atrakcija Zlatibora. Pošto lokomotiva parnog voza ne može da savlada uspon, pruga na izvjestan način ide preko brda u zavijenim krugovima, i tako pravi figuru broja osam.
+                    {!!$text->text!!}
                 </p>
-                <a href="#" class="btnn btn_primary">Saznaj Više</a>
+                @isset($text->text)
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
 
 </main>
-@include('partials/footer')
+@endsection

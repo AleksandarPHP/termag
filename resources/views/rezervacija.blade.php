@@ -13,7 +13,7 @@
         </div>
     </section>
 
-    @include('partials/booking')
+    {{-- @include('partials/booking') --}}
     @if (app()->getLocale() == 'sr')
     <section class="wellness-spa job-full">
         <div class="container">

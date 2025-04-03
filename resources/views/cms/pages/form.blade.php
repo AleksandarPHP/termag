@@ -133,7 +133,7 @@
                         </div>
                         <div class="input-file-container" {!! $errors->has('image{{$i}}') ? 'style="border-color:red;"' : '' !!}>
                             @if(!is_null($item->$img))
-                                <a href="{{ url('cms/texts/imagedelete/'.$item->id.'?image=image'.$i) }}"><span><i class="fa fa-close"></i></span></a>
+                                <a href="{{ url('cms/pages/imagedelete/'.$item->id.'?image=image'.$i) }}"><span><i class="fa fa-close"></i></span></a>
                             @endif
                             <span class="img-placeholder">
                                 @if(is_null($item->$img))
