@@ -188,7 +188,9 @@ y          </section>
                     @foreach ($packages as $package)
                       <div class="col-lg-6">
                         <div class="card" data-aos="fade-right" data-aos-duration="800">
+                          @if ($package->image)
                             <img src="{{Helper::image($package->image, 645,430, false)}}" class="card-img-top" alt="porodicni paket" loading="lazy">
+                          @endif
                             <div class="card-body">
                               <h5>{{$package->title}}</h5>
                               <p class="txt">
