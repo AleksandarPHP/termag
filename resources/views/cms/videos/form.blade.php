@@ -6,9 +6,9 @@
     <li class="breadcrumb-item">
         <a href="{{ url('cms') }}">POČETNA</a>
     </li>
-    <li class="breadcrumb-item active">Recenzije</li>
+    <li class="breadcrumb-item active">Video</li>
 </ol>
-<h1>Recenzije</h1>
+<h1>Video</h1>
 <hr>
 @if($editing) 
 <div class="row change-language">
@@ -20,41 +20,22 @@
 @endif
 <div class="row">
     <div class="col-md-12">
-        <form method="post" action="@if(!$editing) {{ url('cms/testimonials') }} @else {{ url('cms/testimonials/'.$item->id) }} @endif" enctype="multipart/form-data">
+        <form method="post" action="@if(!$editing) {{ url('cms/videos') }} @else {{ url('cms/videos/'.$item->id) }} @endif" enctype="multipart/form-data">
             @csrf
             @if($editing) @method('PUT') @endif
             <input type="hidden" value="{{ $lang }}" name="language">
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="name">Ime i prezime</label>
-                        <input name="name" type="text" class="form-control" id="name" placeholder="Naziv" value="{{ old('name', $item->name) }}" {!! $errors->has('name') ? 'style="border-color:red;"' : '' !!}>
-                    </div>
-                </div>
-                <div class="col-md-12"><hr></div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="short_description">Tekst</label>
-                        <input name="short_description" type="text" class="form-control" id="short_description" placeholder="Podnaslov" value="{{ old('short_description', $item->getTranslation('short_description', $lang, false)) }}" {!! $errors->has('short_description') ? 'style="border-color:red;"' : '' !!}>
+                        <label for="title">Naslov</label>
+                        <input name="title" type="text" class="form-control" id="title" placeholder="Naziv" value="{{ old('title', $item->getTranslation('title', $lang, false)) }}" {!! $errors->has('title') ? 'style="border-color:red;"' : '' !!}>
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>   
                 <div class="col-md-12">
                     <div class="form-group" {!! $errors->has('text') ? 'style="border:1px solid red;"' : '' !!}>
-                        <label for="description">Tekst</label>
-                        <textarea name="description" id="description" class="form-control">{{ old('description', $item->getTranslation('description', $lang, false)) }}</textarea>
-                    </div>
-                </div>
-                <div class="col-md-12"><hr></div>
-                <div class="col-md-12">
-                    <div class="mb-3">
-                        <label for="stars">Zvijezde </label>
-                        <select name="stars" class="form-control" id="stars" {!! $errors->has('stars') ? 'style="border-color:red;"' : '' !!}>
-                            <option value="">Izaberi</option>
-                            @for ($i = 1; $i <= 5; $i++ )
-                                <option value="{{$i}}" @selected(old('stars', $i) == $item->stars )>{{$i}}</option>
-                            @endfor
-                        </select>
+                        <label for="embed">Embed code</label>
+                        <textarea name="embed" id="embed" class="form-control">{{ old('description', $item->embed) }}</textarea>
                     </div>
                 </div>
                 <div class="col-md-12"><hr></div>

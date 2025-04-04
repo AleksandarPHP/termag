@@ -738,6 +738,11 @@ header .navbar .offcanvas-body .dropdown-item.active,
     min-height: 275px;
 }
 
+.special .card .card-video{
+    text-align: center;
+    padding: 1rem;
+}
+
 .special .card .card-body-masage {
     text-align: center;
     padding: 3rem;
@@ -794,6 +799,12 @@ header .navbar .offcanvas-body .dropdown-item.active,
 }
 .socials img {
     max-width: 75%;
+}
+.title-modal{
+    font-size: 3.2rem;
+    font-family: "Playfair Display", serif;
+    color: var(--gold);
+    text-align: center;
 }
 
 footer {

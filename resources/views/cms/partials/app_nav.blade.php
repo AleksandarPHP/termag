@@ -30,6 +30,9 @@
       <li @if(request()->is('cms/testimonials'))class="active"@endif>
         <a href="{{ url('cms/testimonials') }}"><i class="fas fa-star"></i>Recenzije</a>
       </li>
+      <li @if(request()->is('cms/videos'))class="active"@endif>
+        <a href="{{ url('cms/videos') }}"><i class="fas fa-step-forward"></i>Video</a>
+      </li>
       <li @if(request()->is('cms/documents'))class="active"@endif>
         <a href="{{ url('cms/documents') }}"><i class="fas fa-download"></i>Dokumenti</a>
       </li>

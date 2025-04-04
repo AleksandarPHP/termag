@@ -42,7 +42,7 @@
                 <div class="col-lg-4 mt-4">
                     <div class="card" >
                       <div class="npk-slider-1"> 
-                        <img src="{{Helper::image($blog->image, 425,283, false)}}" class="card-img-top" alt="porodicni paket">
+                        <img src="{{Helper::image($blog->image, 425,283, false)}}" class="card-img-top" alt="{{$blog->title}}">
                     </div>
                         <div class="card-body-masage">
                           <h5>{{$blog->title}}</h5>

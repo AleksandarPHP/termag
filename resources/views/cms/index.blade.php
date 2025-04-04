@@ -31,6 +31,7 @@
           array('cms/massage', 'Masaze', 'spa'),
           array('cms/documents', 'Dokumenti', 'download'),
           array('cms/info', 'Informacije', 'info-circle'),
+          array('cms/videos', 'Video', 'step-forward'),
           array('cms/messages', 'Inbox', 'envelope'),
           array('cms/blogs', 'Blog', 'pencil-square'),
         );

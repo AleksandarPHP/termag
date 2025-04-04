@@ -29,6 +29,7 @@ use Illuminate\Support\Facades\Route;
         'informacije' => 'informacije',
         'meni' => 'meni',
         'vile-borghetto' => 'vile-borghetto',
+        'video' => 'video',
         'formular' => 'formular',
         'formular-restoran' => 'formular-restoran',
         'formular-svadbe' => 'formular-svadbe',
@@ -272,6 +273,9 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
 
     Route::resource('documents', 'App\Http\Controllers\DocumentsController')->only('index', 'destroy');
     Route::post('documents/upload', 'App\Http\Controllers\DocumentsController@upload');
+
+    Route::resource('videos', 'App\Http\Controllers\VideoController')->except('show');
+    Route::post('videos/ajax', 'App\Http\Controllers\VideoController@ajax');  
 
     Route::resource('blogs', 'App\Http\Controllers\BlogController')->except('show');
     Route::post('blogs/ajax', 'App\Http\Controllers\BlogController@ajax');  
