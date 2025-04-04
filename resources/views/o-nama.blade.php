@@ -5,7 +5,7 @@
 <main>
     <section class="career">
         @php $text =  Helper::text(99) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 @isset($text->title)

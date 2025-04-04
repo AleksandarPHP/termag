@@ -28,7 +28,7 @@
     @include('partials/socials')
     <section class="experience unforgetable-experience">
         @php $text =  Helper::text(86) @endphp
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
         <div class="container">
             <div class="text-center">

@@ -24,7 +24,7 @@
     </section>
     <section class="wellness-spa">
         @php $text =  Helper::text(136) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 @isset($text->title)
@@ -42,7 +42,7 @@
     </section>
     <section class="centered">
         @php $text =  Helper::text(137) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd">
                 @isset($text->title)
@@ -60,7 +60,7 @@
     </section>
     <section class="wellness-spa">
         @php $text =  Helper::text(138) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 @isset($text->title)
@@ -78,7 +78,7 @@
     </section>
     <section class="wellness-spa">
         @php $text =  Helper::text(139) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 @isset($text->title)

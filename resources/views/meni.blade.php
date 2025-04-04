@@ -5,7 +5,7 @@
 <main>
     @foreach ($albums as $album)
     <section class="weather gallery-intro">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="wrapper">
                 <h1 class="title-larger">{{$album->title}}</h1>

@@ -46,8 +46,8 @@
           </section>
           @php $text =  Helper::text(6) @endphp
           <section class="villa-termag vt-1">
-              {{-- <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div> --}}
-              <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+              {{-- <div class="bg center" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div> --}}
+              <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
               <div class="container">
                   <div>
                       <div class="cardd " data-aos="fade-right" data-aos-duration="600">
@@ -66,7 +66,7 @@
 
           <section class="wellness-spa">
             @php $text =  Helper::text(7) @endphp
-              <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+              <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
               <div class="container">
                   <div class="cardd " data-aos="fade-left" data-aos-duration="800">
                     @isset($text->title)<h2>{{$text->title}}</h2>@endisset
@@ -89,7 +89,7 @@
             allowfullscreen>
           </iframe> --}}
           @php $text =  Helper::text(8) @endphp
-          <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+          <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
               <div class="container">
                   <div>
                       <div class="cardd " data-aos="fade-right" data-aos-duration="600">
@@ -110,7 +110,7 @@
 
           <section class="wellness-spa konf-sala">
             @php $text =  Helper::text(9) @endphp
-              <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+              <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
               <div class="container-fluid">
                   <div class="cardd ">
                     @isset($text->title)<h2>{{$text->title}}</h2> @endisset
@@ -124,7 +124,7 @@ y          </section>
           
           <section class="wellness-spa skijanje">
             @php $text =  Helper::text(10) @endphp
-              <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+              <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
               <div>
                   <img class="img-fluid" src="{{asset('assets/images/ski-1.png')}}" alt="skijanje" loading="lazy" >
                   <img class="img-fluid" src="{{asset('assets/images/ski-2.png')}}" alt="skijanje" loading="lazy" >
@@ -154,7 +154,7 @@ y          </section>
             allowfullscreen>
           </iframe> --}}
           @php $text =  Helper::text(11) @endphp
-          <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+          <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
 
               <div class="container-fluid">
                   <div class="cardd">
@@ -169,7 +169,7 @@ y          </section>
           </section>
 
           <section class="special">
-              <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+              <div class="bg center" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
               <div class="container">
                 @php $text =  Helper::text(12) @endphp
                 @isset($text->title)
@@ -250,7 +250,7 @@ y          </section>
                                       </div>
                                   </div>
                                   <div class="col-lg-7">
-                                      <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+                                      <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
                                   </div>
                               </div>
                           </div>

@@ -11,7 +11,7 @@
         </div>
     </section>
     <section class="special" style="padding:0 0 5rem 0;">
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <h2 class="massage-smaller">{{$blog->title}}</h2>
             <h4 class="subtitle">{{$blog->subtitle}}</h4>

@@ -6,7 +6,7 @@
 <main>
 <section class="career hotel-rooms">
     @php $text =  Helper::text(202) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 @isset($text->title)
@@ -19,7 +19,7 @@
     @include('partials/socials')
 
     <section class="special hsnpk">
-                <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+                <div class="bg center" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
                 <div class="container">
                    @php $text =  Helper::text(203) @endphp
                   @isset($text->subtitle)

@@ -36,7 +36,7 @@
     </section>
     <section class="wellness-spa">
         @php $text =  Helper::text(62) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 @isset($text->title)
@@ -71,7 +71,7 @@
         </div>
     </section>
     <section class="special registration packages  registration-2">
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
         <div class="container">
             @php

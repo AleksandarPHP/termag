@@ -31,7 +31,7 @@
 
     <section class="wellness-spa">
         @php $text =  Helper::text(181) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 @isset($text->title)
@@ -50,7 +50,7 @@
 
     <section class="special tb-activities">
         @php $text =  Helper::text(182) @endphp
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             @isset($text->title)
             <h2 class="title">{{$text->title}}</h2>
@@ -152,7 +152,7 @@
 
     <section class="villa-termag reference">
         @php $text =  Helper::text(188) @endphp
-        <div class="bg" style="background-image: url('{{asset("assets/images/reference-bg.jpg")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/reference-bg.jpg")}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">

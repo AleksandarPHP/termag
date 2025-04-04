@@ -17,7 +17,7 @@
     </section>
 
     <section class="special registration packages" style="padding-top: 0">
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="porodicni-paket text-center">
                 @php

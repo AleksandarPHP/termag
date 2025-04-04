@@ -31,6 +31,7 @@ use Illuminate\Support\Facades\Route;
         'vile-borghetto' => 'vile-borghetto',
         'formular' => 'formular',
         'formular-restoran' => 'formular-restoran',
+        'formular-svadbe' => 'formular-svadbe',
         'formular-seminari' => 'formular-seminari',
         'termag-hotelske-sobe' => 'termag-hotelske-sobe',
         'apartmani' => 'apartmani',

@@ -5,7 +5,7 @@
 <main>
     <section class="career vt">
         @php $text =  Helper::text(22) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 @isset($text->title)
@@ -41,7 +41,7 @@
 
     <section class="wellness-spa">
         @php $text =  Helper::text(24) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 @isset($text->title)<h2 class="title">{{$text->title}}</h2>@endisset
@@ -54,7 +54,7 @@
     </section>
 
     <section class="wellness-spa reversed">
-        <div class="bg" style="opacity: 0.2;z-index:1;background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="opacity: 0.2;z-index:1;background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             @php $text =  Helper::text(25) @endphp
             <div>
@@ -72,7 +72,7 @@
     </section>
     @include('partials/socials')
     <section class="villa-termag villa-termag-b">
-        <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
         <div class="container">
             @php $text =  Helper::text(26) @endphp
             <div>

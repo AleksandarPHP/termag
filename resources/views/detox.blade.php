@@ -5,7 +5,7 @@
 <main>
     <section class="career detox">
         @php $text =  Helper::text(65) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 @isset($text->title)
@@ -25,7 +25,7 @@
     </section>
 
     <section class="experience detox-services">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="text-center">
                 <div class="row">
@@ -54,7 +54,7 @@
 
     <section class="villa-termag">
         @php $text =  Helper::text(66) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd cardd-2" data-aos="fade-right" data-aos-duration="600">

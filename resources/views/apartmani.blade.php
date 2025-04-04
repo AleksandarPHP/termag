@@ -5,7 +5,7 @@
 <main>
     <section class="career apartmants">
         @php $text =  Helper::text(15) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 @isset($text->subtitle)<h4 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->subtitle}}</h4>@endisset
@@ -17,7 +17,7 @@
     @include('partials/socials')
 
     <section class="apartman">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="row">
                 @php $text =  Helper::text(17) @endphp
@@ -54,7 +54,7 @@
 
     <section class="apartman apartman-2">
         @php $text =  Helper::text(18) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image2)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image2)}}');"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-7" data-aos="fade-right" data-aos-duration="600">
@@ -86,7 +86,7 @@
     </section>
 
     <section class="apartman">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/section-decor.png')}}" alt="dekoracija">
         <div class="container">
             @php $text =  Helper::text(19) @endphp
@@ -116,7 +116,7 @@
     </section>
 
     <section class="apartman apartman-2">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="row">
                 @php $text =  Helper::text(20) @endphp
@@ -146,7 +146,7 @@
     </section>
     <section class="experience">
         @php $text =  Helper::text(16) @endphp
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag" class="img-fluid">
         <div class="container">
             <div class="text-center">

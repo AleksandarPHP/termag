@@ -7,7 +7,7 @@
 @endphp
 <main>
     <section class="weather gallery-intro">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="wrapper">
                 @php $text =  Helper::text(226) @endphp

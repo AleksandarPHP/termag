@@ -1,5 +1,5 @@
 <section class="socials">
-    <div class="bg" style="background-image: url('{{asset("assets/images/socials-bg.jpg")}}');"></div>
+    <div class="bg center" style="background-image: url('{{asset("assets/images/socials-bg.jpg")}}');"></div>
     <div class="container">
         <div class="wrapper">
             @if ($settings->instagram)

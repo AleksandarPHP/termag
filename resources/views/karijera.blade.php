@@ -4,7 +4,7 @@
 
 <main>
     <section class="career">
-        <div class="bg" style="background-image: url('{{asset("assets/images/karijera-bg.jpg")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/karijera-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Karijera</h1>
@@ -19,7 +19,7 @@
     @include('partials/booking')
 
     <section class="wellness-spa">
-        <div class="bg" style="background-image: url('{{asset("assets/images/belief-bg.jpg")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/belief-bg.jpg")}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 <h2>Termag hotel vjeruje u tebe!</h2>
@@ -40,7 +40,7 @@
     </section>
 
     <section class="wellness-spa job-full">
-        <div class="bg" style="background-image: url('{{asset("assets/images/job.jpg")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/job.jpg")}}');"></div>
         <div class="container">
             <div class="col-lg-12">
                 <div class="cardd">

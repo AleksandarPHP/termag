@@ -154,7 +154,7 @@
 
     <section class="wellness-spa ">
       @php $text =  Helper::text(161) @endphp
-        <div class="bg" style="background-image: url('{{asset("assets/images/saveti-bg.jpg")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/saveti-bg.jpg")}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
               @isset($text->title)
@@ -173,7 +173,7 @@
 
     <section class="special ski-offers">
       @php $text =  Helper::text(162) @endphp
-        <div class="bg" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             @isset($text->title)
             <h2 class="title-smaller">{{$text->title}}</h2>

@@ -2,7 +2,7 @@
 
 <main>
     <section class="weather gallery-intro">
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="wrapper">
                 <h1 class="title-larger">Galerija</h1>
@@ -28,7 +28,7 @@
     </section>
 
     <section class="villa-termag">
-        <div class="bg" style="background-image: url('{{asset("assets/images/ponude-bg.jpg")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/ponude-bg.jpg")}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">

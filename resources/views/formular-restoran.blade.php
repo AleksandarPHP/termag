@@ -2,7 +2,7 @@
 <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.nocaptcha.sitekey') }}"></script>
 <main>
     <section class="career">
-        <div class="bg" style="background-image: url('{{asset("assets/images/restoran.png")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/restoran.png")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{__('Restaurant reservation')}}</h1>
@@ -15,7 +15,7 @@
 
     @include('partials/booking')
     <section class="wellness-spa job-full">
-        <div class="bg" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
         <div class="container">
             <div class="col-lg-12">
                 <div class="cardd">

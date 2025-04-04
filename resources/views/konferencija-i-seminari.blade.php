@@ -5,7 +5,7 @@
 <main>
     <section class="career">
         @php $text =  Helper::text(214) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 @isset($text->subtitle)
@@ -21,7 +21,7 @@
 
     <section class="villa-termag">
         @php $text =  Helper::text(73) @endphp
-                <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+                <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
                 <div class="container">
                     <div>
                         <div class="cardd" data-aos="fade-right" data-aos-duration="600">
@@ -42,7 +42,7 @@
 
             <section class="wellness-spa">
                 @php $text =  Helper::text(74) @endphp
-                <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+                <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
                 <div class="container">
                     <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                         @isset($text->title)
@@ -60,7 +60,7 @@
 
             <section class="villa-termag">
                 @php $text =  Helper::text(91) @endphp
-                <div class="bg" style="background-image: url('{{asset("assets/images/flexibility-bg.jpg")}}');"></div>
+                <div class="bg center" style="background-image: url('{{asset("assets/images/flexibility-bg.jpg")}}');"></div>
                 <div class="container">
                     <div>
                         <div class="cardd" data-aos="fade-right" data-aos-duration="600">

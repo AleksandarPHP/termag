@@ -5,7 +5,7 @@
 <main>
     <section class="weather gallery-intro">
         @php $text =  Helper::text(194) @endphp
-        <div class="bg" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="wrapper">
                 @isset($text->title)
@@ -22,7 +22,7 @@
 
     <section class="wellness-spa">
         @php $text =  Helper::text(195) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 @isset($text->title)

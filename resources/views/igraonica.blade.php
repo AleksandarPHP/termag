@@ -29,7 +29,7 @@
     </section>
     <section class="wellness-spa">
         @php $text =  Helper::text(46) @endphp
-        <div class="bg" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div class="cardd" data-aos="fade-left" data-aos-duration="600">
                 @isset($text->title)<h2>{{$text->title}}</h2>@endisset

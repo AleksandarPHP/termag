@@ -2,7 +2,7 @@
 <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.nocaptcha.sitekey') }}"></script>
 <main>
     <section class="career">
-        <div class="bg" style="background-image: url('{{asset("assets/images/prevoz-jahorina-bg.jpg")}}');"></div>
+        <div class="bg center" style="background-image: url('{{asset("assets/images/prevoz-jahorina-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
                 <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{__('Rezervacija')}}</h1>
