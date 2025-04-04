@@ -46,7 +46,6 @@
           </section>
           @php $text =  Helper::text(6) @endphp
           <section class="villa-termag vt-1">
-              {{-- <div class="bg center" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div> --}}
               <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
               <div class="container">
                   <div>
@@ -57,9 +56,6 @@
                           @endisset
                           @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                       </div>
-                      @isset($text->image)
-                        <img  class="img-fluid" src="{{asset('storage/'.$text->image)}}" alt="{{$text->title}}" loading="lazy">
-                      @endisset
                   </div>
               </div>
           </section>
