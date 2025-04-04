@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use App\Services\WatherForecast;
+use Cache;
 
 class HomeController extends Controller
 {
@@ -12,10 +14,9 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    public function __construct(
+        protected WatherForecast $watherForecast
+    ){}
 
     /**
      * Show the application dashboard.
@@ -39,5 +40,14 @@ class HomeController extends Controller
         $blog = Blog::findOrFail($id);
 
         return view('blog-detalji', ['blog' => $blog]);
+    }
+
+    public function weatherForecast()
+    {
+        $current =  Cache::tags(['current'])->remember('current', 3600, function() {
+            return $this->watherForecast->getResults();
+        });
+        
+        return view('prognoza', ['current'=>$current]);
     }
 }

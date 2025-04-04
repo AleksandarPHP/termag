@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 
     $routes = [
         '/' => 'index',
-        'prognoza' => 'prognoza',
         'karijera' => 'karijera',
         'rezervacija ' => 'rezervacija ',
         'galerija' => 'galerija',
@@ -216,8 +215,10 @@ Route::group(['prefix' => 'en'], function () use ($routes) {
     }
     Route::get('blog', 'App\Http\Controllers\HomeController@blog');
     Route::get('blog/{id}/{slug}', 'App\Http\Controllers\HomeController@blogDetail');
+    Route::get('prognoza', 'App\Http\Controllers\HomeController@weatherForecast');
 });
 
+Route::get('prognoza', 'App\Http\Controllers\HomeController@weatherForecast');
 Route::get('blog', 'App\Http\Controllers\HomeController@blog');
 Route::get('blog/{id}/{slug}', 'App\Http\Controllers\HomeController@blogDetail');
 
