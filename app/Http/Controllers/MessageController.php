@@ -238,5 +238,40 @@ class MessageController extends Controller
         
         return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
     }
+
+    public function formularWeddings(Request $request)
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'max:191'],
+            'g-recaptcha-response' => ['required', function ($attribute, $value, $fail) {
+                if (!app('captcha')->verifyResponse($value)) {
+                    $fail('Invalid reCAPTCHA response.');
+                }
+            }],
+            'last_name' => ['required', 'string', 'max:191'],
+            'email' => ['required', 'string', 'max:191'],
+            'check_in' => ['required', 'string', 'max:191'],
+            'check_out' => ['required', 'string', 'max:191'],
+            'guest' => ['required', 'string', 'max:191'],
+            'description' => ['nullable', 'string'],
+        ]);   
+
+        if ($request->check_first) {
+            return redirect(url()->previous())->with(['spam' => 'SPAM!']);
+        }
+        $html = '<b>Ime:</b> '.htmlspecialchars($request->input('name')).'<br>';
+        $html .= '<b>Prezime:</b> '.htmlspecialchars($request->input('last_name')).'<br>';
+        $html .= '<b>Email:</b> '.htmlspecialchars($request->input('email')).'<br>';
+        if($request->input('check_in')!='') $html .= '<b>Check in:</b> '.htmlspecialchars($request->input('check_in')).'<br>';
+        if($request->input('check_out')!='') $html .= '<b>Check out:</b> '.htmlspecialchars($request->input('check_out')).'<br>';
+        if($request->input('guest')!='') $html .= '<b>Broj gostiju:</b> '.htmlspecialchars($request->input('guest')).'<br>';
+        if($request->input('description')!='') $html .= '<b>Dodatni zahtjevi:</b> '.htmlspecialchars($request->input('description')).'<br>';
+    
+        try {
+             Notification::route('mail', 'info@termaghotel.com')->notify(new RestaurantFormular($html, $request->input('email'), $request->input('name')));
+        } catch (Exception $e) {}
+        
+        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+    }
     
 }

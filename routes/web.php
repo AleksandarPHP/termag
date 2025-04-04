@@ -226,6 +226,7 @@ Route::post('upload-file', 'App\Http\Controllers\MessageController@kontakt');
 Route::post('formular', 'App\Http\Controllers\MessageController@formular'); 
 Route::post('formular-restoran', 'App\Http\Controllers\MessageController@formularRestaurant');
 Route::post('formular-seminari', 'App\Http\Controllers\MessageController@formularSeminars'); 
+Route::post('formular-svadbe', 'App\Http\Controllers\MessageController@formularWeddings'); 
 Auth::routes(['verify' => false, 'register' => false]);
 
 Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function() {
