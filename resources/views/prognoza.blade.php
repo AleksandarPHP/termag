@@ -90,7 +90,7 @@
 
     <section class="villa-termag">
         @php $text =  Helper::text(249) @endphp
-        {{-- <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div> --}}
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
             <div>
                 <div class="cardd" data-aos="fade-right" data-aos-duration="600">
@@ -102,7 +102,7 @@
                         {!!$text->text!!}
                     </p>
                     @endisset
-                    {{-- @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif --}}
+                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
@@ -111,7 +111,7 @@
     
     <section class="wellness-spa konf-sala">
         @php $text =  Helper::text(250) @endphp
-        {{-- <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div> --}}
+        <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container-fluid">
             <div class="cardd">
                 @isset($text->title)
@@ -122,7 +122,7 @@
                     {!!$text->text!!}
                 </p>
                 @endisset
-                {{-- @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif --}}
+                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
