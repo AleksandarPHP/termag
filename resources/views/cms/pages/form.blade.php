@@ -18,6 +18,7 @@
     </div>
 </div>
 @endif
+{{-- set video --}}
 <div class="row">
     <div class="col-md-12">
         <form method="post" action="@if(!$editing) {{ url('cms/pages') }} @else {{ url('cms/pages/'.$item->id) }} @endif" enctype="multipart/form-data">
