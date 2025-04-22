@@ -749,6 +749,12 @@ header .navbar .offcanvas-body .dropdown-item.active,
     min-height: 563px;
 }
 
+.special .card .card-body-ville {
+    text-align: center;
+    padding: 3rem;
+    min-height: 280px;
+}
+
 .special .card .card-body-mas .btnn {
     margin-top: 1.5rem;
 }
