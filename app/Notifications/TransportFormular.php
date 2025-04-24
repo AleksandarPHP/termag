@@ -40,7 +40,7 @@ class TransportFormular extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->subject('Formular za prijavu')
+                    ->subject('REZERVACIJA ZA PREVOZ')
                     ->replyTo($this->email, $this->name)
                     ->line(new HtmlString($this->html))
                     ->action('Home', url('/'))

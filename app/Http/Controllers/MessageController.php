@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Notifications\SeminarsFormular;
+use App\Notifications\WeddingsFormular;
 use Illuminate\Http\Request;
 use App\Models\Message;
 use Illuminate\Support\Facades\Validator;
@@ -233,7 +235,7 @@ class MessageController extends Controller
         if($request->input('description')!='') $html .= '<b>Dodatni zahtjevi:</b> '.htmlspecialchars($request->input('description')).'<br>';
 
         try {
-             Notification::route('mail', 'info@termaghotel.com')->notify(new RestaurantFormular($html, $request->input('email'), $request->input('name')));
+             Notification::route('mail', 'info@termaghotel.com')->notify(new SeminarsFormular($html, $request->input('email'), $request->input('name')));
         } catch (Exception $e) {}
         
         return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
@@ -268,7 +270,7 @@ class MessageController extends Controller
         if($request->input('description')!='') $html .= '<b>Dodatni zahtjevi:</b> '.htmlspecialchars($request->input('description')).'<br>';
     
         try {
-             Notification::route('mail', 'info@termaghotel.com')->notify(new RestaurantFormular($html, $request->input('email'), $request->input('name')));
+             Notification::route('mail', 'info@termaghotel.com')->notify(new WeddingsFormular($html, $request->input('email'), $request->input('name')));
         } catch (Exception $e) {}
         
         return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);

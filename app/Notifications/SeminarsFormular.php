@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\HtmlString;
 
-class RestaurantFormular extends Notification
+class SeminarsFormular extends Notification
 {
     use Queueable;
 
@@ -40,7 +40,7 @@ class RestaurantFormular extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->subject('REZERVACIJA RESTORANA')
+                    ->subject('UPIT ZA SEMINAR')
                     ->replyTo($this->email, $this->name)
                     ->line(new HtmlString($this->html))
                     ->action('Home', url('/'))
