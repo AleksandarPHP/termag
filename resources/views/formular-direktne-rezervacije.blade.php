@@ -1,19 +1,6 @@
 @include('partials/header')
 <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.nocaptcha.sitekey') }}"></script>
 <main>
-    <section class="career">
-        <div class="bg center" style="background-image: url('{{asset("assets/images/hero-img.jpg")}}');"></div>
-        <div class="container">
-            <div class="content-wrapper">
-                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">Direct booking</h1>
-                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
-                    Dear Sir/Madam, please fill out the form as thoroughly as possible to help us improve our service.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    @include('partials/booking')
     <section class="wellness-spa job-full">
         <div class="bg center" style="background-image: url('{{asset("assets/images/villa-termag-bg.jpg")}}');"></div>
         <div class="container">
