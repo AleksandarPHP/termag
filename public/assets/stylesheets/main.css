@@ -1812,11 +1812,22 @@ header
     margin-bottom: 0.5rem;
 }
 
-.job-full input,
+.job-full input:not([type="checkbox"]),
 .job-full select,
 .job-full textarea {
     width: 100%;
     min-height: 4rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    outline: none;
+    resize: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+input[type='checkbox'] {
+    width: 100%;
+    min-height: 3rem;
     border-radius: 0.5rem;
     padding-left: 1rem;
     outline: none;
@@ -1915,6 +1926,17 @@ header
 .file-max-size {
     font-size: 1.5rem;
     color: #999;
+}
+
+.formular-table tr th, .formular-table tr td {
+    background-color: transparent;
+
+}
+
+.formular-table {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 35px;
 }
 .testimonials {
     position: relative;
