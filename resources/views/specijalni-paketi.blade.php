@@ -11,6 +11,9 @@
                 @isset($text->title)
                 <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{$text->title}}</h1>
                 @endisset
+                @isset($text->text)
+                {!! $text->text !!}
+                @endisset
             </div>
         </div>
     </section>
