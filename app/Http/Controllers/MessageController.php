@@ -314,5 +314,42 @@ class MessageController extends Controller
         
         return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
     }
+
+    public function reservationForm(Request $request)
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'max:191'],
+            'g-recaptcha-response' => ['required', function ($attribute, $value, $fail) {
+                if (!app('captcha')->verifyResponse($value)) {
+                    $fail('Invalid reCAPTCHA response.');
+                }
+            }],
+            'last_name' => ['required', 'string', 'max:191'],
+            'email' => ['required', 'email', 'max:191'],
+            'tel' => ['required', 'string', 'max:191'],
+            'check_in' => ['required', 'date', 'before:check_out'],
+            'check_out' => ['required', 'date', 'after:check_in'],
+            'accomodation' => ['required', 'array'],
+        ]);   
+
+        if ($request->check_first) {
+            return redirect(url()->previous())->with(['spam' => 'SPAM!']);
+        }
+        $html = '<b>Ime:</b> '.htmlspecialchars($request->input('name')).'<br>';
+        $html .= '<b>Prezime:</b> '.htmlspecialchars($request->input('last_name')).'<br>';
+        $html .= '<b>Email:</b> '.htmlspecialchars($request->input('email')).'<br>';
+        $html .= '<b>Telefon:</b> '.htmlspecialchars($request->input('tel')).'<br>';
+        if($request->input('check_in')!='') $html .= '<b>Check in:</b> '.htmlspecialchars($request->input('check_in')).'<br>';
+        if($request->input('check_out')!='') $html .= '<b>Check out:</b> '.htmlspecialchars($request->input('check_out')).'<br>';
+        $html .= '<b>Smiještaj: </b>';
+        foreach($request->accomodation as $key => $value){
+            $html .= htmlspecialchars($value).', ';
+        }    
+        try {
+             Notification::route('mail', 'info@termaghotel.com')->notify(new AccomodationFormular($html, $request->input('email'), $request->input('name')));
+        } catch (Exception $e) {}
+        
+        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+    }
     
 }

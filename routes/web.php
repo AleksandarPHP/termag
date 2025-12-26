@@ -34,6 +34,7 @@ use Illuminate\Support\Facades\Route;
         'formular-svadbe' => 'formular-svadbe',
         'formular-seminari' => 'formular-seminari',
         'formular-direktne-rezervacije' => 'formular-direktne-rezervacije',
+        'formular-rezervacije' => 'formular-rezervacije',
         'termag-hotelske-sobe' => 'termag-hotelske-sobe',
         'apartmani' => 'apartmani',
         'villa-termag' => 'villa-termag',
@@ -231,6 +232,7 @@ Route::post('formular-restoran', 'App\Http\Controllers\MessageController@formula
 Route::post('formular-seminari', 'App\Http\Controllers\MessageController@formularSeminars'); 
 Route::post('formular-svadbe', 'App\Http\Controllers\MessageController@formularWeddings'); 
 Route::post('formular-direktne-rezervacije', 'App\Http\Controllers\MessageController@formularAccomodation');
+Route::post('formular-rezervacije', 'App\Http\Controllers\MessageController@reservationForm');
 Auth::routes(['verify' => false, 'register' => false]);
 
 Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function() {

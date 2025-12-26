@@ -16,15 +16,16 @@
                     {!!$text->text!!}
                 </p>
                 @endisset
+                <a href="{{ app()->getLocale() == 'sr' ? 'https://www.oc-jahorina.com/ski-info/' : 'https://www.oc-jahorina.com/en/ski-info/' }}" class="btnn btn_primary">Ski info</a>
 
             </div>
         </div>
     </section>
-    <section class="full-width-iframe">
-        <a href="http://webcam.jahorina.org">
-            <iframe src="https://webcam.jahorina.org/" style="border:0px #ffffff none;" name="myiFrame" frameborder="1" marginheight="0px" marginwidth="0px" height="50%" width="100%" allowfullscreen></iframe>
+    {{-- <section class="full-width-iframe">
+        <a href="https://www.oc-jahorina.com/en/ski-info/">
+            <iframe src="https://www.oc-jahorina.com/en/ski-info/" style="border:0px #ffffff none;" name="myiFrame" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
         </a>
-    </section>
+    </section> --}}
     <section class="villa-termag">
         @php $text =  Helper::text(199) @endphp
         <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
