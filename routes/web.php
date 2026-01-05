@@ -52,6 +52,7 @@ use Illuminate\Support\Facades\Route;
         'hotelski-restoran' => 'hotelski-restoran',
         'ski-skola' => 'ski-skola',
         'visina-snega' => 'visina-snega',
+        'kamera' => 'kamera',
         'ski-staze' => 'ski-staze',
         'ski-centar' => 'ski-centar',
         'ski-rental' => 'ski-rental',
