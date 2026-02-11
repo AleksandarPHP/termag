@@ -59,136 +59,53 @@
         <div class="bg center" style="opacity: 0.2; z-index: -1; background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <img src="{{asset('assets/images/castle.png')}}" alt="zamak termag">
             <div class="container">
+                @php
+                    $package = App\Models\Package::findOrFail(10);
+                @endphp
                 <div class="text-center">
-                    <h2 class="title-smaller">Registracija</h2>
-                    <p class="txt">
-                        Učestvujte u jedinstvenoj triatlon trci i doživite jedno posebno takmičarsko iskustvo.
-                        Registacije su otvorene te se možete prijaviti.
-                    </p>
+                    <h2 class="title-smaller">{{$package->title}}</h2>
+                    {!!$package->text!!}
                 </div>
-              
-
-                <div>
-                    <h3>Startni paket:</h3>
-                    <p class="txt">
-                        Cijena ovog paketa je 40KM, a u cijenu su uključene sledeće pogodnosti:
-                    </p>
+                <div class="tab-content" id="nav-tabContent">
+                    @foreach ($package->options as $item)
+                    <div class="tab-pane fade show @if ($loop->first) active @endif" id="nav-home{{$item->id}}" role="tabpanel" aria-labelledby="nav-home-tab{{$item->id}}" tabindex="0">
+                    <div>
+                        <h3>{{ $item->title }}</h3>
+                        <p class="txt">
+                            {{$item->subtitle}}
+                            </p>
+                        </div>
+                        <div class="row row-2">
+                            @for($i = 0; $i < count($item->options[0]); $i++)
+                            <div class="col-md-6">
+                                @isset($item->options[0][$i])
+                                <div>
+                                    <img src="{{asset('storage/'.$item->getTranslation('options', 'sr', false)[1][$i])}}" alt="ikonica">
+                                    <p>
+                                        {{$item->options[0][$i]}}
+                                    </p>
+                                </div>
+                                @endisset
+                            </div>
+                            @endfor
+                        </div>
+                        {!! $item->description !!}
+                        <div class="text-center mt-5">
+                            <p class="txt">
+                                {{__('THE PRICE OF THE PACKAGE IS')}} {{$item->price}} KM ({{$item->priceEur}} EUR) + bto
+                            </p>
+                            <p class="txt">
+                                *{{__('The package is valid from')}} {{ \Carbon\Carbon::parse($item->from_date)->format('d.m.Y') }} {{__('to')}} {{\Carbon\Carbon::parse($item->to_date)->format('d.m.Y')}}
+                            </p>
+                        </div>
+                    </div>  
+                    @endforeach
                 </div>
-
-                <div class="row row-2">
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-1.svg')}}" alt="ikonica">
-                            <p>
-                                50% popusta na smještaj u Termag Hotelu (važi za učesnika i jednu osobu u pratnji)
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-2.svg')}}" alt="ikonica">
-                            <p>
-                                Bočica za napitke
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-3.svg')}}" alt="ikonica">
-                            <p>
-                                Djeca do 12 godina sudjeluju GRATIS
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-4.svg')}}" alt="ikonica">
-                            <p>
-                                Okrepne stanice
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-5.svg')}}" alt="ikonica">
-                            <p>
-                                Oficijelni dres
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-6.svg')}}" alt="ikonica">
-                            <p>
-                                Bonovi za konzumaciju hrane i pića
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-7.svg')}}" alt="ikonica">
-                            <p>
-                                Finišerska diploma
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-8.svg')}}" alt="ikonica">
-                            <p>
-                                DJ after party
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-9.svg')}}" alt="ikonica">
-                            <p>
-                                Osiguranje za takmičare
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-10.svg')}}" alt="ikonica">
-                            <p>
-                                Elektronska zahvalnica za uspomenu
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-11.svg')}}" alt="ikonica">
-                            <p>
-                                Babysitting - Tete čuvalice za djecu učesnika trke
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <img src="{{asset('assets/images/ri-12.svg')}}" alt="ikonica">
-                            <p>
-                                Animacija za djecu
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="txt mb-4">
-                    Za smještaj zadužen je hotel Termag, te vi i vaša ekipa možete uživati u udobnosti i komforu koje ovaj hotel nudi.
-                </p>
-                <p class="txt">
-                    Uplata startnine:
-                </p>
-                <ul>
-                    <li>Uplate startnine moguće su do (navesti datum) godine.</li>
-                    <li>Instrukcije za uplatu možete preuzeti ovdje(link za upute).</li>
-                    <li>Ako plaćate karticom, molimo vas da ispunite online zahtjev (link za online plaćanje).</li>
-                </ul>
-
+                @if($package->urlTitle!='' && $package->url)
                 <div class="btn-wrapper">
-                    <a href="#" class="btnn btn_primary">Prijavite se odmah</a>
+                    <a href="{{Helper::url($package->url)}}" class="btnn btn_primary">{{ $package->urlTitle }}</a>
                 </div>
+                @endif
             </div>
         </div>
     </section>

@@ -30,7 +30,7 @@
                     {!!$text->text!!}
                 </p>
                 @endisset
-                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
+                @if($text->urlTitle!='' && $text->url)<a href="{{$text->url}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>
@@ -50,7 +50,7 @@
                 </p>
                 @endisset
 
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                         <figure>
                             @php $text =  Helper::text(227) @endphp
@@ -90,6 +90,32 @@
                             @endisset
                         </figure>
                     </div>
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
+                        <figure>
+                            @php $text =  Helper::text(265) @endphp
+                            @isset($text->image)
+                            <a href="{{$text->url}}">
+                            <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="crvena 34km">
+                            </a>
+                            @endisset
+                            @isset($text->title)
+                                <figcaption>{{$text->title}}</figcaption>
+                            @endisset
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 col-sm-6" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="550">
+                        <figure>
+                            @php $text =  Helper::text(266) @endphp
+                            @isset($text->image)
+                            <a href="{{$text->url}}">
+                            <img class="img-fluid" src="{{Helper::image($text->image, 440,255, false)}}" alt="crvena 34km">
+                            </a>
+                            @endisset
+                            @isset($text->title)
+                                <figcaption>{{$text->title}}</figcaption>
+                            @endisset
+                        </figure>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,7 +135,7 @@
                         {!!$text->text!!}
                     </p>
                     @endisset
-                    @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
+                    @if($text->urlTitle!='' && $text->url)<a href="{{$text->url}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
                 </div>
             </div>
         </div>
@@ -128,7 +154,7 @@
                     {!!$text->text!!}
                 </p>
                 @endisset
-                @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
+                @if($text->urlTitle!='' && $text->url)<a href="{{$text->url}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
             </div>
         </div>
     </section>

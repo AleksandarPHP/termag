@@ -16,7 +16,7 @@
                     {!!$text->text!!}
                 </p>
                 @endisset
-                <a href="{{ app()->getLocale() == 'sr' ? 'https://www.oc-jahorina.com/ski-info/' : 'https://www.oc-jahorina.com/en/ski-info/' }}" class="btnn btn_primary">Ski info</a>
+                <a href="{{ app()->getLocale() == 'sr' ? 'https://www.oc-jahorina.com/ski-info/' : 'https://www.oc-jahorina.com/en/ski-info/' }}" target="_blank" class="btnn btn_primary">Ski info</a>
 
             </div>
         </div>

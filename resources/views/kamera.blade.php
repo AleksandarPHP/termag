@@ -1,13 +1,13 @@
 @extends('layouts.app')
-    @section('title', Helper::title(197))
-    @section('description', Helper::description(197))
+    @section('title', Helper::title(263))
+    @section('description', Helper::description(263))
     @section('content')
 <main>
     <section class="weather snow-height">
         <div class="bg center" style="background-image: url('{{asset("assets/images/main-bg.webp")}}');"></div>
         <div class="container">
             <div class="wrapper">
-            @php $text =  Helper::text(198) @endphp
+            @php $text =  Helper::text(264) @endphp
                 @isset($text->title)
                 <h1 class="title-larger">{{$text->title}}</h1>
                 @endisset

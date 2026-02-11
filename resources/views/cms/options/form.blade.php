@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 @endif
-                @if ($item->package_id == 8)
+                @if ($item->package_id == 8 || $item->package_id == 10)
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-12">
                     <div class="form-group" {!! $errors->has('description') ? 'style="border:1px solid red;"' : '' !!}>

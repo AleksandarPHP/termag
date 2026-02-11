@@ -109,6 +109,7 @@ class PackageOptionController extends Controller
 
         $option = new PackageOption;
         $option->setTranslation('title', $lang, $request->title);
+        $option->setTranslation('subtitle', $lang, $request->subtitle);
         $option->setTranslation('options', $lang, $options);
         $option->setTranslation('description', $lang, $request->description);
 
@@ -170,6 +171,7 @@ class PackageOptionController extends Controller
         }
 
         $option->setTranslation('title', $lang, $request->title);
+        $option->setTranslation('subtitle', $lang, $request->subtitle);
         $option->setTranslation('options', $lang, $options);
         $option->setTranslation('description', $lang, $request->description);
 
