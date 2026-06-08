@@ -3,7 +3,7 @@
     @section('description', Helper::description(89))
     @section('content')
 <main>
-    <section class="career">
+    <section class="career package-hero-section">
         @php $text =  Helper::text(90) @endphp
         <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
@@ -58,7 +58,7 @@
                             <p class="txt">
                                 *{{__('The package is valid from')}} {{ \Carbon\Carbon::parse($item->from_date)->format('d.m.Y') }} {{__('to')}} {{\Carbon\Carbon::parse($item->to_date)->format('d.m.Y')}}
                             </p>
-                            <a href="#" class="btnn btn_primary mt-4">Book now</a>
+                            <a href="{{Helper::url($package->url)}}" class="btnn btn_primary mt-4">Book now</a>
                         </div>
                     </div>  
                     @endforeach

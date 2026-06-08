@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
         'dokumenti' => 'dokumenti',
         'informacije' => 'informacije',
         'meni' => 'meni',
-        'vile-borghetto' => 'vile-borghetto',
+        'vile-casadelsole' => 'vile-casadelsole',
         'video' => 'video',
         'formular' => 'formular',
         'formular-restoran' => 'formular-restoran',
@@ -285,6 +285,12 @@ Route::group(['prefix' => 'cms', 'middleware' => ['auth', 'active']], function()
 
     Route::resource('blogs', 'App\Http\Controllers\BlogController')->except('show');
     Route::post('blogs/ajax', 'App\Http\Controllers\BlogController@ajax');  
+
+    Route::resource('special-offers', 'App\Http\Controllers\SpecialOfferSliderController')->except('show');
+    Route::controller(App\Http\Controllers\SpecialOfferSliderController::class)->group(function () {
+        Route::post('special-offers/ajax', 'ajax');
+        Route::get('special-offers/imagedelete/{id}', 'removeImage');
+    });
 
     Route::resource('albums', 'App\Http\Controllers\AlbumController')->except('show');
 

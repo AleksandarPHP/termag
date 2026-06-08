@@ -39,6 +39,9 @@
       <li @if(request()->is('cms/blogs'))class="active"@endif>
         <a href="{{ url('cms/blogs') }}"><i class="fas fa-pencil-square"></i>Blog</a>
       </li>
+      <li @if(request()->is('cms/special-offers*'))class="active"@endif>
+        <a href="{{ url('cms/special-offers') }}"><i class="fas fa-images"></i>Specijalne ponude</a>
+      </li>
       <li @if(request()->is('cms/info'))class="active"@endif>
         <a href="{{ url('cms/info') }}"><i class="fas fa-info-circle"></i>Informacije</a>
       </li>

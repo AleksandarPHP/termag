@@ -24,8 +24,8 @@
         <meta property="og:image" content="@yield('shareimage')" />
         <meta name="twitter:image" content="@yield('shareimage')" />
         @else
-        <meta property="og:image" content="{{ asset('assets/images/share-image.jpg') }}"/>
-        <meta name="twitter:image" content="{{ asset('assets/images/share-image.jpg') }}" />
+        <meta property="og:image" content="{{ asset('assets/images/termag-shareimage.jpg') }}"/>
+        <meta name="twitter:image" content="{{ asset('assets/images/termag-shareimage.jpg') }}" />
         @endif
     
         <meta property="og:type" content="website" />

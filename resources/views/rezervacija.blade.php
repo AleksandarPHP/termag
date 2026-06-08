@@ -1,7 +1,7 @@
 @include('partials/header')
 <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.nocaptcha.sitekey') }}"></script>
 <main>
-    <section class="career">
+    <!-- <section class="career">
         <div class="bg center" style="background-image: url('{{asset("assets/images/prevoz-jahorina-bg.jpg")}}');"></div>
         <div class="container">
             <div class="content-wrapper">
@@ -11,7 +11,7 @@
                 </p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     {{-- @include('partials/booking') --}}
     @if (app()->getLocale() == 'sr')
@@ -53,6 +53,8 @@
         </div>
     </section>
     @else
+    <section class="wellness-spa job-full">
+        <div class="container">
     <script type="text/javascript">
         window.wbpSettings = window.wbpSettings || {};
         window.wbpSettings = {
@@ -86,40 +88,51 @@
           });
       </script>
         <div id="wbproot" ></div>
+        </div>
+    </section>
     @endif
 </main>
 <script>
-    $(document).ready(function(e) {
-      @if(session('status'))
-      $.toast({
-        heading: 'Uspijeh.',
-        text: {!! json_encode(session('status')) !!},
-        hideAfter: 6000,
-        position: 'top-right',
-        icon: 'success',
-        loader: true,
-        loaderBg: '#2492D1'
-      });
-      @endif
-      @if($errors->any())
-      $.toast({
-        heading: 'Error.',
-        text: [
-          @foreach($errors->all() as $error)
-          {!! json_encode($error) !!},
-          @endforeach
-        ],
-        hideAfter: 7000,
-        position: 'top-right',
-        icon: 'error',
-        loader: true,
-        loaderBg: '#2492D1'
-      });
-      @endif
-    })
-    function getDate(){
-        var today = new Date();
-        document.getElementById("date").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
-    }
+    // window.addEventListener('DOMContentLoaded', (event) => {
+    //     const element = document.getElementById('wbproot');
+    //     if (element) {
+    //         element.scrollIntoView({ 
+    //             behavior: 'smooth', 
+    //             block: 'start' 
+    //         });
+    //     }
+    // });
+    // $(document).ready(function(e) {
+    //   @if(session('status'))
+    //   $.toast({
+    //     heading: 'Uspijeh.',
+    //     text: {!! json_encode(session('status')) !!},
+    //     hideAfter: 6000,
+    //     position: 'top-right',
+    //     icon: 'success',
+    //     loader: true,
+    //     loaderBg: '#2492D1'
+    //   });
+    //   @endif
+    //   @if($errors->any())
+    //   $.toast({
+    //     heading: 'Error.',
+    //     text: [
+    //       @foreach($errors->all() as $error)
+    //       {!! json_encode($error) !!},
+    //       @endforeach
+    //     ],
+    //     hideAfter: 7000,
+    //     position: 'top-right',
+    //     icon: 'error',
+    //     loader: true,
+    //     loaderBg: '#2492D1'
+    //   });
+    //   @endif
+    // })
+    // function getDate(){
+    //     var today = new Date();
+    //     document.getElementById("date").value = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+    // }
 </script>
 @include('partials/footer')

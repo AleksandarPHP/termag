@@ -230,6 +230,52 @@ $(".testimonials-slider").slick({
     autoplaySpeed: 7000,
 });
 
+if ($(".special-offers-slider .special-offers-slide").length) {
+    $(".special-offers-slider").slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 400,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                },
+            },
+        ],
+    });
+}
+
+if ($(".packages-slider .packages-slide").length) {
+    $(".packages-slider").slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 400,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                },
+            },
+        ],
+    });
+}
+
 $(".npk-slider-1").slick({
     fade: true,
     dots: false,

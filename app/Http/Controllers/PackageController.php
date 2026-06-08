@@ -97,6 +97,7 @@ class PackageController extends Controller
             'title' => ['nullable', 'string', 'max:191'],
             'text' => ['nullable', 'string'],
             'url' => ['nullable', 'string', 'max:191'],
+            'link' => ['nullable', 'string', 'max:500'],
             'urlTitle' => ['nullable', 'string', 'max:191'],
             'is_active' => ['nullable', 'string', 'in:1'],
             'special' => ['nullable', 'string', 'in:1'],
@@ -114,6 +115,7 @@ class PackageController extends Controller
         $package->setTranslation('urlTitle', $lang, $request->urlTitle);
 
         $package->url = $request->url;
+        $package->link = $request->link;
         $package->image = $image;
         $package->is_active = $request->is_active ? 1 : 0;
         $package->special = $request->special ? 1 : 0;
@@ -142,6 +144,7 @@ class PackageController extends Controller
             'title' => ['nullable', 'string', 'max:191'],
             'text' => ['nullable', 'string'],
             'url' => ['nullable', 'string', 'max:191'],
+            'link' => ['nullable', 'string', 'max:500'],
             'urlTitle' => ['nullable', 'string', 'max:191'],
             'is_active' => ['nullable', 'string', 'in:1'],
             'special' => ['nullable', 'string', 'in:1'],
@@ -158,6 +161,7 @@ class PackageController extends Controller
 
         if($lang=='sr') {     
             $package->url = $request->url;
+            $package->link = $request->link;
             $package->image = $image;
             $package->is_active = $request->is_active ? 1 : 0;
             $package->special = $request->special ? 1 : 0;

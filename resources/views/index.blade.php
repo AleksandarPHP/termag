@@ -26,6 +26,35 @@
           </section>
 
           @include('partials/booking')
+
+          @php
+              $sliderPackages = App\Models\Package::where('is_active', 1)
+                  ->whereNotNull('image')
+                  ->where('image', '!=', '')
+                  ->whereNotNull('link')
+                  ->where('link', '!=', '')
+                  ->orderBy('id', 'DESC')
+                  ->get();
+          @endphp
+          @if($sliderPackages->isNotEmpty())
+          <section class="packages-slider-section">
+              <div class="container-fluid packages-slider-container">
+                  <div class="packages-slider">
+                      @foreach($sliderPackages as $package)
+                      <div class="packages-slide">
+                          <a href="{{ str_starts_with($package->link, 'http') ? $package->link : Helper::url($package->link) }}" class="packages-slide-link">
+                              <div class="packages-slide-image">
+                                  <img src="{{ Helper::image($package->image, 1920, 810, false) }}" alt="{{ $package->title }}" loading="lazy">
+                              </div>
+                              <h3 class="packages-slide-title">{{ $package->title }}</h3>
+                          </a>
+                      </div>
+                      @endforeach
+                  </div>
+              </div>
+          </section>
+          @endif
+
           <section class="accommodation">
             @php $text =  Helper::text(5) @endphp
               <div class="container">

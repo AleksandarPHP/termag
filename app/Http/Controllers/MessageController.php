@@ -104,7 +104,7 @@ class MessageController extends Controller
             'file' => $files,
         ]);
 
-        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+        return redirect()->back()->with(['status' => 'Vaša poruka je uspiješno poslana!']);
     }
 
     public function edit($id) 
@@ -152,10 +152,10 @@ class MessageController extends Controller
         if($request->input('description')!='') $html .= '<b>Napomena:</b> '.htmlspecialchars($request->input('description')).'<br>';
 
         try {
-             Notification::route('mail', 'info@termaghotel.com')->notify(new TransportFormular($html, $request->input('email'), $request->input('name')));
+             Notification::route('mail', 'websajt@termaghotel.com')->notify(new TransportFormular($html, $request->input('email'), $request->input('name')));
         } catch (Exception $e) {}
         
-        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+        return redirect()->back()->with(['status' => 'Vaša poruka je uspiješno poslana!']);
     }
 
     public function formularRestaurant(Request $request)
@@ -198,7 +198,7 @@ class MessageController extends Controller
              Notification::route('mail', 'restoran@termaghotel.com')->notify(new RestaurantFormular($html, $request->input('email'), $request->input('name')));
         } catch (Exception $e) {}
         
-        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+        return redirect()->back()->with(['status' => 'Vaša poruka je uspiješno poslana!']);
     }
 
     public function formularSeminars(Request $request)
@@ -237,10 +237,10 @@ class MessageController extends Controller
         if($request->input('description')!='') $html .= '<b>Dodatni zahtjevi:</b> '.htmlspecialchars($request->input('description')).'<br>';
 
         try {
-             Notification::route('mail', 'info@termaghotel.com')->notify(new SeminarsFormular($html, $request->input('email'), $request->input('name')));
+             Notification::route('mail', 'websajt@termaghotel.com')->notify(new SeminarsFormular($html, $request->input('email'), $request->input('name')));
         } catch (Exception $e) {}
         
-        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+        return redirect()->back()->with(['status' => 'Vaša poruka je uspiješno poslana!']);
     }
 
     public function formularWeddings(Request $request)
@@ -272,10 +272,10 @@ class MessageController extends Controller
         if($request->input('description')!='') $html .= '<b>Dodatni zahtjevi:</b> '.htmlspecialchars($request->input('description')).'<br>';
     
         try {
-             Notification::route('mail', 'info@termaghotel.com')->notify(new WeddingsFormular($html, $request->input('email'), $request->input('name')));
+             Notification::route('mail', 'websajt@termaghotel.com')->notify(new WeddingsFormular($html, $request->input('email'), $request->input('name')));
         } catch (Exception $e) {}
         
-        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+        return redirect()->back()->with(['status' => 'Vaša poruka je uspiješno poslana!']);
     }
 
     public function formularAccomodation(Request $request)
@@ -309,10 +309,10 @@ class MessageController extends Controller
             $html .= htmlspecialchars($value).', ';
         }    
         try {
-             Notification::route('mail', 'info@termaghotel.com')->notify(new AccomodationFormular($html, $request->input('email'), $request->input('name')));
+             Notification::route('mail', 'websajt@termaghotel.com')->notify(new AccomodationFormular($html, $request->input('email'), $request->input('name')));
         } catch (Exception $e) {}
         
-        return redirect()->back()->with(['status' => 'Vasa poruka je uspijesno poslana!']);
+        return redirect()->back()->with(['status' => 'Vaša poruka je uspiješno poslana!']);
     }
     
 }

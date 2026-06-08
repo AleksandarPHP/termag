@@ -34,6 +34,7 @@
           array('cms/videos', 'Video', 'step-forward'),
           array('cms/messages', 'Inbox', 'envelope'),
           array('cms/blogs', 'Blog', 'pencil-square'),
+          array('cms/special-offers', 'Specijalne ponude (slajder)', 'images'),
         );
         @endphp
         @foreach ($moduli as $modul)
