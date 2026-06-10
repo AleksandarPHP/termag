@@ -2050,13 +2050,19 @@ input[type='checkbox'] {
     margin-bottom: 0;
 }
 
-.special-offers-slider-section .special-offers-slider-container {
+.special-offers-slider-section .special-offers-slider-container,
+.special .special-offers-slider-wrap .special-offers-slider-container {
     position: relative;
     z-index: 1;
     max-width: 127rem;
     margin: 0 auto;
     padding-left: 2rem;
     padding-right: 2rem;
+}
+
+.special .special-offers-slider-wrap {
+    margin: 5rem 0 7rem;
+    position: relative;
 }
 
 .special-offers-slider {
@@ -2110,44 +2116,55 @@ input[type='checkbox'] {
 }
 
 .special-offers-slider-section .special-offers-slider .slick-prev,
-.special-offers-slider-section .special-offers-slider .slick-next {
+.special-offers-slider-section .special-offers-slider .slick-next,
+.special .special-offers-slider-wrap .special-offers-slider .slick-prev,
+.special .special-offers-slider-wrap .special-offers-slider .slick-next {
     width: 4.4rem;
     height: 4.4rem;
     z-index: 2;
 }
 
-.special-offers-slider-section .special-offers-slider .slick-prev {
+.special-offers-slider-section .special-offers-slider .slick-prev,
+.special .special-offers-slider-wrap .special-offers-slider .slick-prev {
     left: -2rem;
 }
 
-.special-offers-slider-section .special-offers-slider .slick-next {
+.special-offers-slider-section .special-offers-slider .slick-next,
+.special .special-offers-slider-wrap .special-offers-slider .slick-next {
     right: -2rem;
 }
 
 .special-offers-slider-section .special-offers-slider .slick-prev:before,
-.special-offers-slider-section .special-offers-slider .slick-next:before {
+.special-offers-slider-section .special-offers-slider .slick-next:before,
+.special .special-offers-slider-wrap .special-offers-slider .slick-prev:before,
+.special .special-offers-slider-wrap .special-offers-slider .slick-next:before {
     font-size: 3.2rem;
     color: var(--text-color-primary);
     opacity: 0.7;
 }
 
 .special-offers-slider-section .special-offers-slider .slick-prev:hover:before,
-.special-offers-slider-section .special-offers-slider .slick-next:hover:before {
+.special-offers-slider-section .special-offers-slider .slick-next:hover:before,
+.special .special-offers-slider-wrap .special-offers-slider .slick-prev:hover:before,
+.special .special-offers-slider-wrap .special-offers-slider .slick-next:hover:before {
     color: var(--gold);
     opacity: 1;
 }
 
-.special-offers-slider-section .special-offers-slider .slick-dots {
+.special-offers-slider-section .special-offers-slider .slick-dots,
+.special .special-offers-slider-wrap .special-offers-slider .slick-dots {
     bottom: -4rem;
 }
 
-.special-offers-slider-section .special-offers-slider .slick-dots li {
+.special-offers-slider-section .special-offers-slider .slick-dots li,
+.special .special-offers-slider-wrap .special-offers-slider .slick-dots li {
     width: 70px;
     height: 4px;
     margin: 0 4px;
 }
 
-.special-offers-slider-section .special-offers-slider .slick-dots li button:before {
+.special-offers-slider-section .special-offers-slider .slick-dots li button:before,
+.special .special-offers-slider-wrap .special-offers-slider .slick-dots li button:before {
     content: "";
     width: 70px;
     height: 4px;
@@ -2155,7 +2172,8 @@ input[type='checkbox'] {
     opacity: 1;
 }
 
-.special-offers-slider-section .special-offers-slider .slick-dots li.slick-active button:before {
+.special-offers-slider-section .special-offers-slider .slick-dots li.slick-active button:before,
+.special .special-offers-slider-wrap .special-offers-slider .slick-dots li.slick-active button:before {
     background: #023867;
 }
 
@@ -2178,9 +2196,14 @@ input[type='checkbox'] {
         padding: 3rem 0 5rem;
     }
 
-    .special-offers-slider-section .special-offers-slider-container {
+    .special-offers-slider-section .special-offers-slider-container,
+    .special .special-offers-slider-wrap .special-offers-slider-container {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+    }
+
+    .special .special-offers-slider-wrap {
+        margin: 3rem 0 5rem;
     }
 
     .special-offers-slider .special-offers-slide-career {

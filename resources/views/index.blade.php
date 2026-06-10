@@ -38,6 +38,12 @@
           @endphp
           @if($sliderPackages->isNotEmpty())
           <section class="packages-slider-section">
+              <div class="container">
+                @php $text =  Helper::text(12) @endphp
+                @isset($text->title)
+                <h2 class="title-smaller mb-5" data-aos="fade-right" data-aos-duration="800">{{$text->title}}</h2>                    
+                @endisset
+              </div>
               <div class="container-fluid packages-slider-container">
                   <div class="packages-slider">
                       @foreach($sliderPackages as $package)
@@ -206,56 +212,40 @@ y          </section>
                 @endisset
 
                 @php
-                    $packages = App\Models\Package::where('is_active', 1)->where('special', 0)->orderBy('id', 'DESC')->take(2)->get();
+                    $specialOfferSlides = App\Models\SpecialOfferSlider::where('is_active', 1)
+                        ->whereNotNull('link')
+                        ->where('link', '!=', '')
+                        ->orderBy('priority', 'asc')
+                        ->orderBy('id', 'asc')
+                        ->get();
                 @endphp
-                  <div class="row">
-                    @if ($packages)
-                    @foreach ($packages as $package)
-                      <div class="col-lg-6">
-                        <div class="card" data-aos="fade-right" data-aos-duration="800">
-                          @if ($package->image)
-                            <img src="{{Helper::image($package->image, 645,430, false)}}" class="card-img-top" alt="porodicni paket" loading="lazy">
-                          @endif
-                            <div class="card-body">
-                              <h5>{{$package->title}}</h5>
-                              <p class="txt">
-                                {!!$package->text!!}
-                              </p>
-                              <div>
-                                @if($package->urlTitle!='' && $package->url)<a href="{{Helper::url($package->url)}}" class="btnn btn_gold">{{$package->urlTitle}}</a>@endif
-                              </div>
+                @if($specialOfferSlides->isNotEmpty())
+                <div class="special-offers-slider-wrap">
+                    <div class="container-fluid special-offers-slider-container">
+                        <div class="special-offers-slider">
+                            @foreach($specialOfferSlides as $slide)
+                            <div class="special-offers-slide">
+                                <a href="{{ str_starts_with($slide->link, 'http') ? $slide->link : Helper::url($slide->link) }}" class="special-offers-slide-link">
+                                    <div class="career special-offers-slide-career">
+                                        <div class="bg center" style="background-image: url('{{ Helper::image($slide->image, 1270, 560, false) }}');"></div>
+                                        <div class="container">
+                                            <div class="content-wrapper">
+                                                @if($slide->title)
+                                                <h1>{{ $slide->title }}</h1>
+                                                @endif
+                                                @if($slide->subtitle)
+                                                <p>{{ $slide->subtitle }}</p>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                          </div>
-                      </div>
-                    @endforeach
-                    @endif
-                  </div>
-
-                  <div class="row">
-                    @php
-                      $packages = App\Models\Package::where('is_active', 1)->where('special', 0)->whereNull('special_view')->orderBy('id', 'DESC')->get()->skip(2);
-                    @endphp
-                        @if ($packages)
-                        @foreach ($packages as $package)
-                      <div class="col-lg-4 mb-5">
-                          <div class="card" data-aos="fade-right" data-aos-duration="800">
-                              @if ($package->image)
-                                <img src="{{Helper::image($package->image, 425,250, false)}}" class="card-img-top" alt="Relax Paket" loading="lazy">
-                              @endif
-                              <div class="card-body">
-                                <h5>{{$package->title}}</h5>
-                                <p class="txt">
-                                  {!!$package->text!!}
-                                </p>
-                                <div>
-                                  @if($package->urlTitle!='' && $package->url)<a href="{{Helper::url($package->url)}}" class="btnn btn_gold">{{$package->urlTitle}}</a>@endif
-                                </div>
-                              </div>
-                            </div>
-                      </div>
-                      @endforeach
-                      @endif
-                  </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+                @endif
 
                   <div class="row">
                       <div class="col-lg-12">
