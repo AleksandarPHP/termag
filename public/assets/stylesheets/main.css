@@ -2107,8 +2107,14 @@ input[type='checkbox'] {
     max-height: none !important;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
+}
+
+.special .special-offers-slider-wrap .special-offers-slider .slick-slide,
+.special .special-offers-slider-wrap .special-offers-slider .slick-slide > div,
+.special .special-offers-slider-wrap .special-offers-slide-link {
+    height: auto;
 }
 
 .special-offers-slider {
@@ -2138,6 +2144,15 @@ input[type='checkbox'] {
     z-index: 0;
     max-height: none;
     height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.special-offers-hero-slider-section .special-offers-slide-career.special-offers-hero-slide .bg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .special-offers-slider .special-offers-slide-career::before {
@@ -2296,23 +2311,28 @@ input[type='checkbox'] {
 
 @media only screen and (max-width: 768px) {
     .special-offers-hero-slider-section.career {
-        min-height: 52dvh;
+        min-height: unset;
         padding: 0 !important;
     }
 
-    .special-offers-hero-slider-section .special-offers-hero-slider,
     .special-offers-hero-slider-section .special-offers-hero-slider .slick-list,
     .special-offers-hero-slider-section .special-offers-hero-slider .slick-track,
     .special-offers-hero-slider-section .special-offers-hero-slider .slick-slide,
-    .special-offers-hero-slider-section .special-offers-hero-slider .slick-slide > div {
-        min-height: 52dvh;
-        height: 52dvh;
+    .special-offers-hero-slider-section .special-offers-hero-slider .slick-slide > div,
+    .special-offers-hero-slider-section .special-offers-hero-slider .special-offers-slide-link {
+        height: auto;
     }
 
     .special-offers-hero-slider-section .special-offers-slide-career.special-offers-hero-slide {
-        min-height: 52dvh;
-        height: 52dvh;
+        aspect-ratio: 1270 / 560;
+        min-height: unset;
+        height: auto;
         padding: 0 !important;
+    }
+
+    .special-offers-hero-slider-section .special-offers-slide-career.special-offers-hero-slide .bg {
+        max-height: none !important;
+        height: 100%;
     }
 
     .special-offers-hero-slider-section .special-offers-slide-career.special-offers-hero-slide .content-wrapper h1 {
@@ -2339,8 +2359,9 @@ input[type='checkbox'] {
     }
 
     .special .special-offers-slider-wrap .special-offers-slide-career {
-        aspect-ratio: 16 / 9;
-        min-height: 36rem;
+        aspect-ratio: 1270 / 560;
+        min-height: unset;
+        height: auto;
     }
 
     .special .special-offers-slider-wrap .special-offers-slide-career .bg {
@@ -2348,8 +2369,10 @@ input[type='checkbox'] {
         height: 100%;
     }
 
-    .special-offers-slider .special-offers-slide-career {
-        min-height: 36rem;
+    .special-offers-slider:not(.special-offers-hero-slider) .special-offers-slide-career {
+        min-height: unset;
+        aspect-ratio: 1270 / 560;
+        height: auto;
         padding: 0 !important;
     }
 
@@ -2368,18 +2391,10 @@ input[type='checkbox'] {
 }
 
 @media only screen and (max-width: 480px) {
-    .special-offers-hero-slider-section.career {
-        min-height: 45dvh;
-    }
-
-    .special-offers-hero-slider-section .special-offers-hero-slider,
-    .special-offers-hero-slider-section .special-offers-hero-slider .slick-list,
-    .special-offers-hero-slider-section .special-offers-hero-slider .slick-track,
-    .special-offers-hero-slider-section .special-offers-hero-slider .slick-slide,
-    .special-offers-hero-slider-section .special-offers-hero-slider .slick-slide > div,
     .special-offers-hero-slider-section .special-offers-slide-career.special-offers-hero-slide {
-        min-height: 45dvh;
-        height: 45dvh;
+        aspect-ratio: 1270 / 560;
+        min-height: unset;
+        height: auto;
     }
 
     .special-offers-hero-slider-section .special-offers-slide-career.special-offers-hero-slide .content-wrapper h1 {
@@ -2391,8 +2406,9 @@ input[type='checkbox'] {
     }
 
     .special .special-offers-slider-wrap .special-offers-slide-career {
-        aspect-ratio: 16 / 9;
-        min-height: 30rem;
+        aspect-ratio: 1270 / 560;
+        min-height: unset;
+        height: auto;
     }
 
     .special .special-offers-slider-wrap .special-offers-slide-career .bg {
@@ -2400,8 +2416,10 @@ input[type='checkbox'] {
         height: 100%;
     }
 
-    .special-offers-slider .special-offers-slide-career {
-        min-height: 30rem;
+    .special-offers-slider:not(.special-offers-hero-slider) .special-offers-slide-career {
+        min-height: unset;
+        aspect-ratio: 1270 / 560;
+        height: auto;
         padding: 0 !important;
     }
 
