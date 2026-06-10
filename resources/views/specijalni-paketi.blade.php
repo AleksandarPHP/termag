@@ -3,7 +3,48 @@
     @section('description', Helper::description(173))
     @section('content')
 <main>
-    @php $text =  Helper::text(174) @endphp
+    @php
+        $text = Helper::text(174);
+        $specialOfferSlides = App\Models\SpecialOfferSlider::where('is_active', 1)
+            ->whereNotNull('image')
+            ->where('image', '!=', '')
+            ->orderBy('priority', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+    @endphp
+    @if($specialOfferSlides->isNotEmpty())
+    <section class="career special-offers-hero-slider-section">
+        <div class="special-offers-slider special-offers-hero-slider">
+            @foreach($specialOfferSlides as $slide)
+            <div class="special-offers-slide">
+                @if($slide->link)
+                <a href="{{ str_starts_with($slide->link, 'http') ? $slide->link : Helper::url($slide->link) }}" class="special-offers-slide-link">
+                @else
+                <div class="special-offers-slide-link">
+                @endif
+                    <div class="special-offers-slide-career special-offers-hero-slide">
+                        <div class="bg center" style="background-image: url('{{ Helper::image($slide->image, 1920, 850, false) }}');"></div>
+                        <div class="container">
+                            <div class="content-wrapper">
+                                @if($slide->title)
+                                <h1 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="250">{{ $slide->title }}</h1>
+                                @endif
+                                @if($slide->subtitle)
+                                <p data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">{{ $slide->subtitle }}</p>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                @if($slide->link)
+                </a>
+                @else
+                </div>
+                @endif
+            </div>
+            @endforeach
+        </div>
+    </section>
+    @else
     <section class="career">
         <div class="bg center" style="background-image: url('{{asset("storage/".$text->image)}}');"></div>
         <div class="container">
@@ -17,43 +58,6 @@
                 </p>
                 @endisset
                 @if($text->urlTitle!='' && $text->url)<a href="{{Helper::url($text->url)}}" class="btnn btn_primary">{{$text->urlTitle}}</a>@endif
-            </div>
-        </div>
-    </section>
-    @php
-        $specialOfferSlides = App\Models\SpecialOfferSlider::where('is_active', 1)
-            ->whereNotNull('link')
-            ->where('link', '!=', '')
-            ->orderBy('priority', 'asc')
-            ->orderBy('id', 'asc')
-            ->get();
-    @endphp
-    @if($specialOfferSlides->isNotEmpty())
-    <section class="special-offers-slider-section">
-        <div class="container special-offers-slider-heading">
-            <h2 class="title-smaller text-center">{{ __('Special offers') }}</h2>
-        </div>
-        <div class="container-fluid special-offers-slider-container">
-            <div class="special-offers-slider">
-                @foreach($specialOfferSlides as $slide)
-                <div class="special-offers-slide">
-                    <a href="{{ str_starts_with($slide->link, 'http') ? $slide->link : Helper::url($slide->link) }}" class="special-offers-slide-link">
-                        <div class="career special-offers-slide-career">
-                            <div class="bg center" style="background-image: url('{{ Helper::image($slide->image, 1270, 560, false) }}');"></div>
-                            <div class="container">
-                                <div class="content-wrapper">
-                                    @if($slide->title)
-                                    <h1>{{ $slide->title }}</h1>
-                                    @endif
-                                    @if($slide->subtitle)
-                                    <p>{{ $slide->subtitle }}</p>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                @endforeach
             </div>
         </div>
     </section>

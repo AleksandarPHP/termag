@@ -230,28 +230,67 @@ $(".testimonials-slider").slick({
     autoplaySpeed: 7000,
 });
 
-if ($(".special-offers-slider .special-offers-slide").length) {
-    $(".special-offers-slider").slick({
-        dots: true,
-        arrows: true,
-        infinite: true,
-        speed: 400,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        pauseOnHover: true,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    dots: true,
-                },
-            },
-        ],
+function initSpecialOffersHeroSlider() {
+    $(".special-offers-hero-slider").each(function () {
+        var $slider = $(this);
+
+        if (!$slider.find(".special-offers-slide").length || $slider.hasClass("slick-initialized")) {
+            return;
+        }
+
+        $slider.slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            fade: true,
+            speed: 600,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
+            adaptiveHeight: false,
+        });
     });
 }
+
+function initSpecialOffersSlider() {
+    $(".special-offers-slider").not(".special-offers-hero-slider").each(function () {
+        var $slider = $(this);
+
+        if (!$slider.find(".special-offers-slide").length || $slider.hasClass("slick-initialized")) {
+            return;
+        }
+
+        $slider.slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            speed: 400,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            pauseOnHover: true,
+            adaptiveHeight: false,
+            mobileFirst: false,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    },
+                },
+            ],
+        });
+    });
+}
+
+initSpecialOffersHeroSlider();
+initSpecialOffersSlider();
 
 if ($(".packages-slider .packages-slide").length) {
     $(".packages-slider").slick({
