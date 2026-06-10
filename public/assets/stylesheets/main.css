@@ -2092,6 +2092,25 @@ input[type='checkbox'] {
     position: relative;
 }
 
+.special .special-offers-slider-wrap .special-offers-slide-link {
+    display: block;
+}
+
+.special .special-offers-slider-wrap .special-offers-slide-career {
+    min-height: unset;
+    aspect-ratio: 1270 / 560;
+    width: 100%;
+}
+
+.special .special-offers-slider-wrap .special-offers-slide-career .bg {
+    z-index: 0;
+    max-height: none !important;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .special-offers-slider {
     width: 100%;
     margin: 0 auto;
@@ -2257,6 +2276,11 @@ input[type='checkbox'] {
         font-size: 6.5rem;
     }
 
+    .special .special-offers-slider-wrap .special-offers-slide-career {
+        min-height: unset;
+        aspect-ratio: 1270 / 560;
+    }
+
     .special-offers-slider .special-offers-slide-career {
         min-height: 48rem;
     }
@@ -2314,6 +2338,16 @@ input[type='checkbox'] {
         margin: 3rem 0 5rem;
     }
 
+    .special .special-offers-slider-wrap .special-offers-slide-career {
+        aspect-ratio: 16 / 9;
+        min-height: 36rem;
+    }
+
+    .special .special-offers-slider-wrap .special-offers-slide-career .bg {
+        max-height: none !important;
+        height: 100%;
+    }
+
     .special-offers-slider .special-offers-slide-career {
         min-height: 36rem;
         padding: 0 !important;
@@ -2356,13 +2390,24 @@ input[type='checkbox'] {
         font-size: 1.4rem;
     }
 
+    .special .special-offers-slider-wrap .special-offers-slide-career {
+        aspect-ratio: 16 / 9;
+        min-height: 30rem;
+    }
+
+    .special .special-offers-slider-wrap .special-offers-slide-career .bg {
+        max-height: none !important;
+        height: 100%;
+    }
+
     .special-offers-slider .special-offers-slide-career {
         min-height: 30rem;
         padding: 0 !important;
     }
 
-    .special-offers-slider-section .special-offers-slide-career .bg {
-        max-height: none;
+    .special-offers-slider-section .special-offers-slide-career .bg,
+    .special .special-offers-slider-wrap .special-offers-slide-career .bg {
+        max-height: none !important;
         height: 100%;
     }
 
