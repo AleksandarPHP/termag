@@ -18,7 +18,6 @@
             @foreach($specialOfferSlides as $slide)
             <div class="special-offers-slide">
                 <div class="special-offers-slide-link">
-                @endif
                     <div class="special-offers-slide-career special-offers-hero-slide">
                         <div class="bg center" style="background-image: url('{{ Helper::image($slide->image, 1920, 850, false) }}');"></div>
                         <div class="container">
@@ -33,7 +32,6 @@
                         </div>
                     </div>
                 </div>
-                @endif
             </div>
             @endforeach
         </div>
