@@ -17,9 +17,6 @@
         <div class="special-offers-slider special-offers-hero-slider">
             @foreach($specialOfferSlides as $slide)
             <div class="special-offers-slide">
-                @if($slide->link)
-                <a href="{{ str_starts_with($slide->link, 'http') ? $slide->link : Helper::url($slide->link) }}" class="special-offers-slide-link">
-                @else
                 <div class="special-offers-slide-link">
                 @endif
                     <div class="special-offers-slide-career special-offers-hero-slide">
@@ -35,9 +32,6 @@
                             </div>
                         </div>
                     </div>
-                @if($slide->link)
-                </a>
-                @else
                 </div>
                 @endif
             </div>
