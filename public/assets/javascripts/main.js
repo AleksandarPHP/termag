@@ -292,12 +292,6 @@ function initSpecialOffersSlider() {
 initSpecialOffersHeroSlider();
 initSpecialOffersSlider();
 
-$(window).on("resize orientationchange", function () {
-    $(".special-offers-hero-slider.slick-initialized, .special .special-offers-slider-wrap .special-offers-slider.slick-initialized").each(function () {
-        $(this).slick("setPosition");
-    });
-});
-
 if ($(".packages-slider .packages-slide").length) {
     $(".packages-slider").slick({
         dots: true,
