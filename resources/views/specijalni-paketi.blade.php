@@ -5,12 +5,7 @@
 <main>
     @php
         $text = Helper::text(174);
-        $specialOfferSlides = App\Models\SpecialOfferSlider::where('is_active', 1)
-            ->whereNotNull('image')
-            ->where('image', '!=', '')
-            ->orderBy('priority', 'asc')
-            ->orderBy('id', 'asc')
-            ->get();
+        $specialOfferSlides = App\Models\SpecialOfferSlider::where('is_active', 1)->whereNotNull('image')->where('image', '!=', '')->orderBy('priority', 'asc')->orderBy('id', 'asc')->get();
     @endphp
     @if($specialOfferSlides->isNotEmpty())
     <section class="career special-offers-hero-slider-section">

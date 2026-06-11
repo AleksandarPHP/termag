@@ -2709,7 +2709,7 @@ input[type='checkbox'] {
     .aktivni-izazov {
         min-height: 70rem;
     }
-    .special .bg {
+    .special > .bg {
         display: none;
     }
     .special .row {

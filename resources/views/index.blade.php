@@ -212,12 +212,7 @@ y          </section>
                 @endisset
 
                 @php
-                    $specialOfferSlides = App\Models\SpecialOfferSlider::where('is_active', 1)
-                        ->whereNotNull('link')
-                        ->where('link', '!=', '')
-                        ->orderBy('priority', 'asc')
-                        ->orderBy('id', 'asc')
-                        ->get();
+                    $specialOfferSlides = App\Models\SpecialOfferSlider::where('is_active', 1)->whereNotNull('link')->where('link', '!=', '')->orderBy('priority', 'asc')->orderBy('id', 'asc')->get();
                 @endphp
                 @if($specialOfferSlides->isNotEmpty())
                 <div class="special-offers-slider-wrap">
@@ -227,7 +222,7 @@ y          </section>
                             <div class="special-offers-slide">
                                 <a href="{{ str_starts_with($slide->link, 'http') ? $slide->link : Helper::url($slide->link) }}" class="special-offers-slide-link">
                                     <div class="special-offers-slide-career">
-                                        <div class="bg center" style="background-image: url('{{ Helper::image($slide->image, 1270, 560, false) }}');"></div>
+                                        <div class="bg center" style="background-image: url('{{ Helper::image($slide->image, 1270, 780, false) }}');"></div>
                                         <div class="container">
                                             <div class="content-wrapper">
                                                 @if($slide->title)
